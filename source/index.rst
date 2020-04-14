@@ -8,7 +8,7 @@ Marvin Automation Development Guide
 
 .. toctree::
    :maxdepth: 2
-
+   
    changelog
    start/index
    clikit/index

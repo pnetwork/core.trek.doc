@@ -36,7 +36,6 @@ trek config 提供專案、Global兩種層級的設置，專案設置可以覆�
     {
         "marvin_url": "https://marvin.pentium.network/",
         "marvin_JWT": "{your_marvin_jwt_token}",
-        "marvin_secret": "",
         "router_port": 5000,
         "action_timeout": 30,
         "blcks_code_base": "",
@@ -45,29 +44,14 @@ trek config 提供專案、Global兩種層級的設置，專案設置可以覆�
         "script_repository": "https://hub.pentium.network/scripts/",
         "input_data_path": "",
         "input_event_path": "",
-        "local_inventory_file": "",
         "envs": {
             "BLCKS_DEBUG_LOG_MODE": "table",
             "BLCKS_DEBUG_LOG_TABLE_WIDTH": 100,
             "BLCKS_DEBUG_LOG_FIELDS": "data",
             "BLCKS_DEBUG_LOG_FORMAT": "{message} => inputParams: {data[inputParamsStr]}"
         },
-        "flow_home"
+        "flow_home": "",
+        "local_inventory_file": ""
     }
 
-Trek config.json 支援以下設置：
-
-- marvin_url: marvin 平台 url，於本地端執行時將會使用此平台資產。若不使用透過 api 取得資產則不需要填，像是 ansible / shell。
-- marvin_JWT: marvin 平台 jwt tocken 設置，屬於 marvin_url 的 jwt token。若不使用透過 api 取得資產則不需要填，像是 ansible / shell。
-- marvin_secret: 
-- router_port: 本地端 router 啟用埠號。
-- action_timeout: action 過期時間。
-- blcks_code_base: blcks 腳本於本地端位置(非必填)。
-- ansible_code_base: ansible 腳本於本地端位置(非必填)。
-- shell_script_base: shell 腳本於本地端位置(非必填)。
-- script_repository: nexus server 位置設置。 以 nexus 開發環境來說是 "https://hub-preview.pentium.network/scripts/"
-- input_data_path: 工作流程參數檔案位置(非必填)。
-- input_event_path: 事件參數檔案位置(非必填)。
-- local_inventory_file: ansible inventory 環境設置檔(非必填)。本地端開發執行 ansible 腳本時，服務器資產不一定要在 marvin 平台內，以下為使用範例：
-- env: 
-- flow_home: 
+.. include:: config_list.rst
