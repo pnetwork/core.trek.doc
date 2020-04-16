@@ -6,7 +6,11 @@ Summary of project
 Command list
 ------------------------
 
-Stuff in section
+.. toctree::
+   :glob:
+
+   ../reference/clikit/commands/*
+
 
 How to use/ Example
 ------------------------
