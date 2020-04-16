@@ -13,13 +13,13 @@ Installation dev kit
 -----------------------
 首先我們要安裝 trek cli 工具，請使用以下指令安裝 trek：
 
-::
+.. code-block:: shell
 
     $ pip install trek -i https://package.pentium.network/repository/pypi-group/simple --trusted-host=package.pentium.network
 
 使用指令查看 trek 版本確認安裝成功
 
-::
+:: code-block:: shell
 
     $ trek version
 
