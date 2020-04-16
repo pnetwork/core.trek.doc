@@ -71,7 +71,8 @@ env
 
 flow_home
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-| 管理介面指定要監控的路徑，預設為 http://localhost:5050。
+| 執行管理介面指令 :doc:`../reference/clikit/commands/webserver` 時可以指定要監控的 trek 專案放置路徑。
+| 假設有一個 trek 專案位置為 /User/Pentium/trek/hello_trek_project，則設置 ``flow_home="/User/Pentium/trek/"``。
 
 local_inventory_file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
