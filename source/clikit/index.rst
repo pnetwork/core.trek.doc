@@ -7,7 +7,10 @@ Trek CLI 指令工具將輔助您輕易的開發 Marvin 自動化腳本、工作
 Command list
 ------------------------
 
+.. toctree::
+   :glob:
 
+   ../reference/clikit/commands/*
 
 The first trek project
 ------------------------

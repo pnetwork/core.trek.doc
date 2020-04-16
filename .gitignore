@@ -3,3 +3,6 @@ source/_build
 .vscode
 *.vsix
 run.sh
+
+source/reference/clikit/*
+source/reference/extension/*
