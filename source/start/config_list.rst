@@ -50,10 +50,14 @@ script_repository
 | Packages server 位置設置。
 | 若需遠端安裝、查看腳本，使用指令 install/listscripts，需要設定腳本存放的位置。
 
+.. _config_input_data:
+
 input_data_path
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 | 工作流程參數檔案位置，預設為 inputs/data.yml。
 | 當 workflow template 不想設定可供選擇的值時 (如: chatbot)，可透過工作流程參數檔案設定欄位值，通常於本機執行測試時使用。
+
+.. _config_input_event_path:
 
 input_event_path
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

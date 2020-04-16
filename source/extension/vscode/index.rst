@@ -1,7 +1,6 @@
 Extension Supported Commands
 =============================
 
-Summary of project
 
 Command list
 ------------------------
