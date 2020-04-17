@@ -1,0 +1,463 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>CDN &mdash; Pentium</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/table.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="CertificateManager" href="certificate.html" />
+    <link rel="prev" title="Blcks SDK Guide" href="../../../blcks_sdk.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Marvin Development Guide
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Revision History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html#what-s-new">What’s new</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../start/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../clikit/index.html">CLI Supported Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../extension/vscode/index.html">Extension Supported Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../library/index.html">Library List</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../blcks_sdk.html">Blcks SDK Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../blcks_sdk.html#installation">Installation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../blcks_sdk.html#services">Services</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref.html">Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Marvin Development Guide</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../blcks_sdk.html">Blcks SDK Guide</a> &raquo;</li>
+        
+      <li>CDN</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/pnetwork/core.trek.doc/blob/master/reference/blcks/services/cdn.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cdn">
+<h1>CDN<a class="headerlink" href="#cdn" title="Permalink to this headline">¶</a></h1>
+<p>Pentium CDN (content distribution network) service class</p>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">blcks.services.cdn.</code><code class="sig-name descname">CDN</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cred</span></em>, <em class="sig-param"><span class="n">event</span></em>, <em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span></dt>
+<dd><p>CDN base class</p>
+<dl class="simple">
+<dt>Since class might inheritant from multiple base classes</dt><dd><p>all the functions need a prefix or postfix to distinguish the difference</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">CDN</span><span class="p">(</span><span class="n">cred</span><span class="p">,</span> <span class="n">config</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">bindCDN</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">composedIds</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span></dt>
+<dd><p>auto bind cdn with CNAME</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>composedIds</strong> (<em>list</em>) – </p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>AssertionError</strong> – </p></li>
+<li><p><strong>ServiceError</strong> – </p></li>
+<li><p><strong>AuthenticationError</strong> – </p></li>
+<li><p><strong>ClientError</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">createCDNs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cacheType</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">CDNZone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">originProtocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">originType</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">originAddresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">providerId</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">accountId</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keyId</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subdomainId</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">projectIds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloudCertificateId</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span></dt>
+<dd><p>bulkly create cdns</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cacheType</strong> (<em>str</em>) – </p></li>
+<li><p><strong>CDNZone</strong> (<em>str</em>) – </p></li>
+<li><p><strong>originProtocol</strong> (<em>str</em>) – </p></li>
+<li><p><strong>originAddresses</strong> (<em>list</em>) – </p></li>
+<li><p><strong>providerId</strong> (<em>ProviderId</em><em>(</em><em>official support</em><em>)</em>) – </p></li>
+<li><p><strong>accountId</strong> (<em>str</em>) – </p></li>
+<li><p><strong>keyId</strong> (<em>str</em>) – </p></li>
+<li><p><strong>subdomainId</strong> (<em>str</em>) – </p></li>
+<li><p><strong>projectIds</strong> (<em>list</em>) – </p></li>
+<li><p><strong>cloudCertificateId</strong> (<em>str</em>) – </p></li>
+<li><p><strong>description</strong> (<em>str</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>AssertionError</strong> – </p></li>
+<li><p><strong>ServiceError</strong> – </p></li>
+<li><p><strong>AuthenticationError</strong> – </p></li>
+<li><p><strong>ClientError</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">deleteCDN</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">composedIds</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span></dt>
+<dd><p>delete all given composedIds</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>composedIds</strong> (<em>list</em>) – list of combination of CDNId and subdomainId</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>json</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>AssertionError</strong> – </p></li>
+<li><p><strong>ServiceError</strong> – </p></li>
+<li><p><strong>AuthenticationError</strong> – </p></li>
+<li><p><strong>ClientError</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">getCDN</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">composedId</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Get specific cdn info</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>composedId</strong> (<em>str</em>) – conbination of CDNId and subdomainId</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>dictionary contains all information of this CDN</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p>AssertionError</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>ServiceError, AuthenticationError, ClientError</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">getCDNs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sort</span><span class="o">=</span><span class="default_value">'createdAt'</span></em>, <em class="sig-param"><span class="n">order</span><span class="o">=</span><span class="default_value">'desc'</span></em>, <em class="sig-param"><span class="n">offset</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">limit</span><span class="o">=</span><span class="default_value">30</span></em>, <em class="sig-param"><span class="n">search</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Get all CDNs info</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sort</strong> (<em>str</em>) – field to sort, default is createdAt</p></li>
+<li><p><strong>order</strong> (<em>str</em>) – sorting order, default is desc</p></li>
+<li><p><strong>offset</strong> (<em>int</em>) – The offset for returned data</p></li>
+<li><p><strong>limit</strong> (<em>int</em>) – The number of data to present</p></li>
+<li><p><strong>search</strong> (<em>str</em>) – return only search</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p>AssertionError</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>ServiceError, AuthenticationError, ClientError</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">getCloudCDNs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">providerId</span></em>, <em class="sig-param"><span class="n">keyId</span></em>, <em class="sig-param"><span class="n">offset</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">limit</span><span class="o">=</span><span class="default_value">30</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Get specific cdn info from cloud provider</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>providerId</strong> (<em>str</em>) – The unique ID of cloud service provider</p></li>
+<li><p><strong>keyId</strong> (<em>str</em>) – The unique ID of credential key</p></li>
+<li><p><strong>offset</strong> (<em>int</em>) – The offset for returned data</p></li>
+<li><p><strong>limit</strong> (<em>int</em>) – The number of data to present</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>dictionary contains all information of this CDN from cloud provider</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p>AssertionError</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>ServiceError, AuthenticationError, ClientError</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">partialUpdateCDN</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">composedId</span></em>, <em class="sig-param"><span class="n">dataJson</span></em><span class="sig-paren">)</span></dt>
+<dd><p>partial update cdn</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>composedId</strong> (<em>str</em>) – combination of CDNId and subdomainId</p></li>
+<li><p><strong>dataJson</strong> (<em>dict</em>) – dictionary contains all information to update CDN</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">updateCDN</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">composedId</span></em>, <em class="sig-param"><span class="n">originType</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">originAddresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">originProtocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subdomainId</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">httpHeaders</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">projectIds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloudCertificateId</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cacheTime</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Update CDN with some fields</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>composedId</strong> (<em>str</em>) – combination of CDNId and subdomainId</p></li>
+<li><p><strong>originType</strong> – </p></li>
+<li><p><strong>originAddresses</strong> (<em>list</em>) – </p></li>
+<li><p><strong>originProtocol</strong> (<em>str</em>) – </p></li>
+<li><p><strong>enabled</strong> (<em>bool</em>) – </p></li>
+<li><p><strong>description</strong> (<em>str</em>) – </p></li>
+<li><p><strong>subdomainId</strong> (<em>str</em>) – </p></li>
+<li><p><strong>httpHeaders</strong> (<em>list</em>) – </p></li>
+<li><p><strong>projectIds</strong> (<em>list</em>) – </p></li>
+<li><p><strong>cloudCertificateId</strong> (<em>string</em>) – </p></li>
+<li><p><strong>cacheTime</strong> (<em>integer</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>AssertionError</strong> – </p></li>
+<li><p><strong>ServiceError</strong> – </p></li>
+<li><p><strong>AuthenticationError</strong> – </p></li>
+<li><p><strong>ClientError</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">upsertCDNs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cacheType</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">CDNZone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">originProtocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">originType</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">originAddresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">providerId</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">accountId</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keyId</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subdomainId</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">projectIds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloudCertificateId</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span></dt>
+<dd><p>bulkly create or get cdns
+return origin cdn object if cdn exists, or create a new one</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cacheType</strong> (<em>str</em>) – </p></li>
+<li><p><strong>CDNZone</strong> (<em>str</em>) – </p></li>
+<li><p><strong>originProtocol</strong> (<em>str</em>) – </p></li>
+<li><p><strong>originAddresses</strong> (<em>list</em>) – </p></li>
+<li><p><strong>providerId</strong> (<em>ProviderId</em><em>(</em><em>official support</em><em>)</em>) – </p></li>
+<li><p><strong>accountId</strong> (<em>str</em>) – </p></li>
+<li><p><strong>keyId</strong> (<em>str</em>) – </p></li>
+<li><p><strong>subdomainId</strong> (<em>str</em>) – </p></li>
+<li><p><strong>projectIds</strong> (<em>list</em>) – </p></li>
+<li><p><strong>cloudCertificateId</strong> (<em>str</em>) – </p></li>
+<li><p><strong>description</strong> (<em>str</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>AssertionError</strong> – </p></li>
+<li><p><strong>ServiceError</strong> – </p></li>
+<li><p><strong>AuthenticationError</strong> – </p></li>
+<li><p><strong>ClientError</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="certificate.html" class="btn btn-neutral float-right" title="CertificateManager" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../../../blcks_sdk.html" class="btn btn-neutral float-left" title="Blcks SDK Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Pentium Network Technology Ltd. All rights reserved.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
