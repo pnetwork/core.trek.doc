@@ -7,6 +7,15 @@ Trek 是一個幫助你開發 Marvin 上的自動化開發工具。Pentium Inter
 
 這份 trek 文件會幫助你學習和使用 trek 自動化開發工具，從你的第一個腳本，一直到優化複雜的複雜的工作流程。夠過 "trek" 指令，你可以在本機上完成所有的開發包含撰寫腳本、工作流程、除錯、開發工作流程，最後部署你開發的工具到你指定的 Marvin 平台。
 
+System Requirements
+-------------------
+
+在安裝前請確認系統是否符合需求
+
+* macOS 10.14+
+* Docker 19.03+
+* Python 3.7+
+
 .. _install_trek:
 
 Installation dev kit
