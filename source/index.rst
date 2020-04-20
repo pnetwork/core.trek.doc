@@ -14,7 +14,7 @@ Marvin Automation Development Guide
    clikit/index
    extension/vscode/index
    library/index
-   blcks_sdk
+   blcks/index
    ref
 
 Indices and tables

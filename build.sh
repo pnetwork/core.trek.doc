@@ -62,6 +62,8 @@ if [ "$BUILD_BLCKS" == "1" ]; then
     cd ../../$DIR
     # cp -r ../$BLKCS_SDK_DIR/docs/reference/clients ./source/reference/blcks
     cp -r ../$BLKCS_SDK_DIR/docs/reference/services ./source/reference/blcks
+    cp ../$BLKCS_SDK_DIR/docs/guide/installation.rst ./source/reference/blcks/installation.rst
+    cp ../$BLKCS_SDK_DIR/docs/guide/quickstart.rst ./source/reference/blcks/quickstart.rst
 fi
 
 # copy references from extension repo
@@ -70,3 +72,6 @@ if [ "$BUILD_EXT" == "1" ]; then
 fi
 
 make html
+
+# .nojekyll
+touch ./build/html/.nojekyll
