@@ -19,7 +19,7 @@ Installation dev kit
 
 使用指令查看 trek 版本確認安裝成功
 
-:: code-block:: shell
+.. code-block:: shell
 
     $ trek version
 

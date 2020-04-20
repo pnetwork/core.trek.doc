@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>The project directory structure &mdash; Pentium</title>
+  <title>Services &mdash; Pentium</title>
   
 
   
@@ -86,11 +86,11 @@
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">Revision History</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html#what-s-new">What’s new</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../start/index.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../clikit/index.html">CLI Supported Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../extension/vscode/index.html">Extension Supported Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../library/index.html">Library List</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../blcks/index.html">Blcks SDK Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Blcks SDK Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ref.html">Reference</a></li>
 </ul>
 
@@ -137,14 +137,14 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>The project directory structure</li>
+      <li>Services</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
             
-              <a href="https://github.com/pnetwork/core.trek.doc/blob/master/start/project_folder.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/pnetwork/core.trek.doc/blob/master/blcks/services.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -158,34 +158,22 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="the-project-directory-structure">
-<h1>The project directory structure<a class="headerlink" href="#the-project-directory-structure" title="Permalink to this headline">¶</a></h1>
-<div class="line-block">
-<div class="line">一個完整的 trek 專案目錄結構會如下：</div>
-<div class="line">資料夾 trek_packages、src/ansible、src/blcks、src/shell 若沒有使用指令生成則不會有。</div>
-</div>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ tree hello_trek_project
-hello_trek_project/
-├── .trek
-│   └── config.json     <span class="c1"># 專案層級的設定檔</span>
-├──trek_packages/       <span class="c1"># 腳本安裝位置</span>
-├──inputs               <span class="c1"># 存放參數檔，在執行工作流程時可以用到</span>
-│   ├── data.yml        <span class="c1"># 執行時參照的工作流程參數檔</span>
-│   └── event.yml       <span class="c1"># 執行時參照的事件參數檔</span>
-├── manifest.json       <span class="c1"># 定義 workflow template 檔案位置</span>
-├── packages.json       <span class="c1"># 制定專案所需的 dependencies 安裝包(類似 python requirements.txt)</span>
-└── src                 <span class="c1"># 存放主要程式碼</span>
-    ├── ansible/        <span class="c1"># 存放 ansible 腳本程式的目錄</span>
-    ├── blcks/          <span class="c1"># 存放 blcks 腳本程式的目錄</span>
-    ├── shell/          <span class="c1"># 存放 shell script 腳本程式的目錄</span>
-    └── graph.yml       <span class="c1"># 預設產生的 workflow template 檔案，定義工作流程長相的主要檔案</span>
-</pre></div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<ul class="simple">
-<li><p>若要使用 inputs/data.yaml 需要配置 config.json 中的 <a class="reference internal" href="index.html#config-input-data"><span class="std std-ref">input_data_path 欄位</span></a> 指定檔案位置。</p></li>
-<li><p>若要使用 inputs/event.yaml 需要配置 config.json 中的 <a class="reference internal" href="index.html#config-input-event-path"><span class="std std-ref">input_event_path 欄位</span></a> 指定檔案位置。</p></li>
+  <div class="section" id="services">
+<h1>Services<a class="headerlink" href="#services" title="Permalink to this headline">¶</a></h1>
+<p>Here ara available services:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../reference/blcks/services/cdn.html">CDN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/blcks/services/certificate.html">CertificateManager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/blcks/services/channel.html">ChannelManager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/blcks/services/cloud_account.html">CloudAccountManager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/blcks/services/domain.html">DomainManager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/blcks/services/hosts.html">HostsManager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/blcks/services/misc.html">MiscManager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/blcks/services/rbac.html">RBACManager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/blcks/services/tags.html">TagManager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/blcks/services/tunnel.html">TunnelManager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/blcks/services/workflow.html">WorkflowManager</a></li>
 </ul>
 </div>
 </div>
