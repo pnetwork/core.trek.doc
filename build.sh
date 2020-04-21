@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 DIR=core.trek.doc
-MFLOW_DIR=core.tool.python.mflow
+TREK_DIR=core.tool.python.mflow
 BLKCS_SDK_DIR=core.sdk.python.blcks
-BUILD_MFLOW="0"
+VSCODE_EXTENSION_DIR=core.vscode.extension.mflow
+BUILD_TREK="0"
 BUILD_EXT="0"
 BUILD_BLCKS="0"
 
@@ -13,13 +14,13 @@ while test $# -gt 0; do
       echo " "
       echo "options:"
       echo "-h, --help                show brief help"
-      echo "--mflow                   build from mflow repo"
+      echo "--trek                    build from trek repo"
       echo "--vse                     build from Vscode extension repo"
       echo "--blcks                   build from blcks sdk repo"
       exit 0
       ;;
-    --mflow)
-      BUILD_MFLOW="1"  
+    --trek)
+      BUILD_TREK="1"  
       shift
       ;;
     --vse)
@@ -38,16 +39,16 @@ done
 
 make clean
 
-# copy references from mflow repo
-if [ "$BUILD_MFLOW" == "1" ]; then
-    echo "build document of mflow"
-    cd ../$MFLOW_DIR
+# copy references from trek repo
+if [ "$BUILD_TREK" == "1" ]; then
+    echo "build document of trek"
+    cd ../$TREK_DIR
     pip install -r requirements-docs.txt
     cd docs
     make html
     cd ../../$DIR
-    cp -r ../$MFLOW_DIR/docs/reference/commands ./source/reference/clikit/
-    # cp ../$MFLOW_DIR/docs/guide/quickstart.rst ./source/reference/clikit/quickstart.rst
+    cp -r ../$TREK_DIR/docs/reference/commands ./source/reference/clikit/
+    # cp ../$TREK_DIR/docs/guide/quickstart.rst ./source/reference/clikit/quickstart.rst
 fi
 
 # copy references from blcks sdk repo
@@ -64,6 +65,17 @@ if [ "$BUILD_BLCKS" == "1" ]; then
     cp -r ../$BLKCS_SDK_DIR/docs/reference/services ./source/reference/blcks
     cp ../$BLKCS_SDK_DIR/docs/guide/installation.rst ./source/reference/blcks/installation.rst
     cp ../$BLKCS_SDK_DIR/docs/guide/quickstart.rst ./source/reference/blcks/quickstart.rst
+fi
+
+# copy references from trek vscode extension repo
+if [ "$BUILD_EXT" == "1" ]; then
+    echo "build document of trek vscode extension"
+    cd ../$VSCODE_EXTENSION_DIR
+    pip install -r requirements-docs.txt
+    cd docs
+    make html
+    cd ../../$DIR
+    cp -r ../$VSCODE_EXTENSION_DIR/docs/reference/commands ./source/reference/extension/
 fi
 
 # copy references from extension repo

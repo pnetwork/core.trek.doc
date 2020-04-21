@@ -190,7 +190,7 @@ Step 3. Install scripts
 
 Step 4. Edit workflow template
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-| 決定好腳本後，開始編輯 workflow template 檔案，定義好整個工作流程：
+| 決定好腳本後，開啟專案下的 ``src/graph.yml`` 開始編輯 workflow template 檔案，定義好整個工作流程：
 
 .. code-block:: yaml
 
