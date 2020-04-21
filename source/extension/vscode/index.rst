@@ -25,7 +25,7 @@ Command list
 The first trek project
 ------------------------
 | 假設我們的開發範例：
-| 監控 redis 的連線，若連線不到標註 <redis:unreachable> 標籤，並發送 chatbot 通知。
+| 監控 redis 的連線，若連線不到標註 ``<redis:unreachable>`` 標籤，並發送 chatbot 通知。
 | 因此 workflow 需要三個腳本：
 
 1. 撈出特定服務器來檢查 redis 是否正常
