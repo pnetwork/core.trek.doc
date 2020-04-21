@@ -56,18 +56,18 @@ Step 2. Create blcks
 .. image:: ../../_static/images/create_blcks.gif
 
 #. 輸入 blcks 腳本名稱為「detectredis」，產生的腳本位置於 *host.detect.redis/src/blcks/* 下。
-#. 定義腳本輸入輸出欄位 :examplelink:`detectredis/detectredis.para <host.detect.redis/src/blcks/detectredis/detectredis.para>` ：
+#. 定義腳本輸入輸出欄位於檔案 *detectredis/detectredis.para* ：
 
-   | Inputs: 服務器標籤，撈取含此標籤的服務器做檢查，此範例標籤會是 ``<redis>``；
-   | Outputs: 連線不到的服務器、和其數量。
+    - Inputs: 服務器標籤。撈取含此標籤的服務器做檢查，此範例標籤會是 ``<redis>``；
+    - Outputs: 連線不到的服務器、和其數量。
 
 #. 撰寫腳本主程式：
 
-    | 主程式檔案位於 :examplelink:`detectredis/handler/handler.py <host.detect.redis/src/blcks/detectredis/handler/handler.py>`；
+    | 主程式檔案位於 *detectredis/handler/handler.py*；
     | 撈取含 ``<redis>`` 的服務器，並檢查是否可連線，若連線失敗就把此台服務器加入 outputs 中。
 
     .. warning::
-        - 記得將主程式中使用的套件寫入 `handler/requirements.txt` 中。
+        - 記得將主程式中使用的套件寫入 *handler/requirements.txt* 中。
         - process function 的參數與 return 要跟 para schema 定義的一致。
 
 Step 3. Install scripts
@@ -83,7 +83,7 @@ Step 3. Install scripts
 
 Step 4. Edit workflow template
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-| 接著開啟專案下的 :examplelink:`src/graph.yml <src/graph.yml>` ，開始編輯 workflow template 檔案，定義好整個工作流程。
+| 接著開啟專案下的 *src/graph.yml* ，開始編輯 workflow template 檔案，定義好整個工作流程。
 | 編輯完成，可以在 vscode  workflow template 的編輯區塊上按右鍵選擇「View Workflow Template Graph」，檢視 workflow 流程圖。
 
 .. image:: ../../_static/images/view_graph.gif

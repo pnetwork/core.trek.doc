@@ -30,23 +30,23 @@ outputs:
       type: object
       properties:
         id:
-          name: 服务器ID
-          title: 服务器ID
+          name: Host id
+          title: Host id
           type: string
-          description: 服务器ID
+          description: Host id
           examples:
           - S-ajvw371v9
         name:
-          name: 服务器名称
-          title: 服务器名称
-          description: 服务器名称
+          name: Host namne
+          title: Host namne
+          description: Host namne
           type: string
           examples:
           - OS-Ubuntu18.04
         ip:
-          name: 服务器IP
-          title: 服务器IP
-          description: 服务器IP
+          name: Host ip
+          title: Host ip
+          description: Host ip
           type: string
           examples:
           - 1.1.1.1
