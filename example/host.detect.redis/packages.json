@@ -1,0 +1,6 @@
+{
+    "packages": {
+        "blckssettags": "==0.3.0",
+        "notification": "==0.5.0"
+    }
+}

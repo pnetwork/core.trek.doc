@@ -14,7 +14,6 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
-
 # -- Project information -----------------------------------------------------
 
 project = "Marvin Development Guide"
@@ -33,9 +32,7 @@ version = release
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = [
-  "sphinx.ext.autodoc",
-]
+extensions = ["sphinx.ext.autodoc", "sphinx.ext.extlinks"]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
@@ -78,3 +75,9 @@ html_context = {
     "github_repo": "core.trek.doc",
     "github_version": "master/source/",
 }
+
+extlinks = {
+    "gitlink": ("https://github.com/pnetwork/core.trek.doc/%s", "github "),
+    "examplelink": ("https://github.com/pnetwork/core.trek.doc/tree/master/example/%s", "example project "),
+}
+

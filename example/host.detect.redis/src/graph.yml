@@ -1,0 +1,95 @@
+$schema: 'http://json-schema.pentium.network/marvin-workflows/0.1/schema'
+graph:
+  metadata:
+    version: 0.0.0
+    title: Redis monitor
+    templateId: host.detect.redis
+    description: "Redis monitor"
+    tags: []
+    author: mflow
+  nodes:
+    - metadata:
+        sources: []
+        type: trigger
+        title: trigger
+        description: ''
+      id: '0'
+    - metadata:
+        type: terminator
+        title: terminator
+        description: ''
+      id: '1'
+    - metadata:
+        type: action
+        title: 'Monitor redis'
+        description: ''
+        script: 
+          id: detectredis
+      id: '2'
+    - metadata:
+        type: action
+        title: 'Tag host'
+        description: ''
+        script: 
+          id: blckssettags
+      id: '3'
+    - metadata:
+        type: selector
+        title: selector
+      id: '4'
+    - metadata:
+        type: action
+        title: 'Notify'
+        description: ''
+        script: 
+          id: notification
+      id: '5'
+  edges:
+    - source: '0'
+      target: '2'
+      metadata:
+        binding:
+        - property: tag_name
+          value: 'redis:unreachable'
+          type: 'string'
+    - source: '2'
+      target: '3'
+      metadata:
+        binding:
+        - property: name
+          value: 'redis:unreachable'
+          type: 'string'
+        - property: tagged
+          value: true
+          type: 'boolean'
+        - property: asset_type
+          value: server
+          type: 'string'
+        - property: ids
+          value: '{{ 2.fail_hosts[].id }}'
+          type: 'array'
+    - source: '3'
+      target: '4'
+    - source: '4'
+      target: '5'
+      metadata:
+        filters:
+          property: nodes.2.fail_hosts_count
+          operator: '>'
+          value: 0
+        binding:
+        - property: str_message
+          value: 'The following host redis connection fail: {{ 2.fail_hosts }}'
+          type: 'string'
+        - property: bot_infos.0
+          value: '{input your chatbot id}' # 此欄位為 chatbot id，請依 marvin 平台設置
+          type: 'string'
+    - source: '4'
+      target: '1'
+      metadata:
+        filters:
+          property: nodes.2.fail_hosts_count
+          operator: '<='
+          value: 0
+    - source: '5'
+      target: '1'
