@@ -1,7 +1,7 @@
 $schema: 'http://json-schema.pentium.network/marvin-workflows/0.1/schema'
 graph:
   metadata:
-    version: 0.0.0
+    version: 0.1.0
     title: Redis monitor
     templateId: host.detect.redis
     description: "Redis monitor"

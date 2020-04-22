@@ -75,6 +75,7 @@ html_context = {
     "github_repo": "core.trek.doc",
     "github_version": "master/source/",
 }
+smartquotes=False
 
 extlinks = {
     "gitlink": ("https://github.com/pnetwork/core.trek.doc/%s", "github "),

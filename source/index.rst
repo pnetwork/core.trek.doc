@@ -16,7 +16,7 @@ Marvin Automation Development Guide
    library/index
    blcks/index
    ref
-   Issue Report <https://github.com/pnetwork/core.trek.doc/issue/>
+   Issues Report <https://github.com/pnetwork/core.trek.doc/issues/>
 
 Indices and tables
 ==================

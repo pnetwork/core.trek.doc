@@ -2,7 +2,6 @@ Extension Supported Commands
 =============================
 Trek vscode extension 讓您在 vscode 上輕鬆的開發 Marvin 自動化腳本、工作流程，透過 vscode 的命令即可在本機測試、以及把完成的腳本/工作流程打包佈署至您的 Marvin 平台。
 
-
 Before you begin
 ------------------------
 - 請先安裝 trek cli tool，如何安裝 :ref:`可參考 <install_trek>`。
@@ -36,11 +35,11 @@ The first trek project
 
 .. note::
     
-    請參考 :examplelink:`範例專案 < >`。
+    以下專案程式請參考 :examplelink:`範例專案 < >`。
 
 Step 1. Create project
 ^^^^^^^^^^^^^^^^^^^^^^^^
-| 使用 Command Palette 叫出「Trek: Create Project」指令，並填入以下資訊：
+使用 Command Palette 叫出「 :doc:`../../reference/extension/commands/Trek: Create Project` 」指令，並填入以下資訊：
 
 .. image:: ../../_static/images/create_project.gif
 
@@ -51,7 +50,8 @@ Step 1. Create project
 
 Step 2. Create blcks
 ^^^^^^^^^^^^^^^^^^^^^^^^^
-| 使用「Trek: Create Blcks」指令建立 blcks 腳本：
+| 建立一個 blcks 腳本，用來檢查 redis 連線。
+| 使用「 :doc:`../../reference/extension/commands/Trek: Create Blcks` 」指令建立 blcks 腳本：
 
 .. image:: ../../_static/images/create_blcks.gif
 
@@ -70,6 +70,7 @@ Step 2. Create blcks
         - 記得將主程式中使用的套件寫入 *handler/requirements.txt* 中。
         - process function 的參數與 return 要跟 para schema 定義的一致。
 
+
 Step 3. Install scripts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 | 執行「Trek: Install Script」指令，安裝腳本：
@@ -84,14 +85,15 @@ Step 3. Install scripts
 Step 4. Edit workflow template
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 | 接著開啟專案下的 *src/graph.yml* ，開始編輯 workflow template 檔案，定義好整個工作流程。
-| 編輯完成，可以在 vscode  workflow template 的編輯區塊上按右鍵選擇「View Workflow Template Graph」，檢視 workflow 流程圖。
+| 編輯完成，若要使用進階功能查看 workflow 流程圖，參考  :doc:`指令說明<../../reference/clikit/commands/graph>`。
+| 在 vscode  workflow template 的編輯區塊上按右鍵選擇「View Workflow Template Graph」，檢視 workflow 流程圖。
 
 .. image:: ../../_static/images/view_graph.gif
 
 Step 5. Run
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 | 在 vscode extension 執行工作流程很簡單，先打開 workflow template 檔案，此時編輯視窗右上方會出現按鈕 |run_icon|，按下即可執行：
-| 等同於執行「Trek: Run」指令。
+| 等同於執行「 :doc:`../../reference/extension/commands/Trek: Run` 」指令。
 
 .. |run_icon| image:: ../../_static/images/run_icon.png
 
@@ -101,14 +103,14 @@ Step 5. Run
 
 .. image:: ../../_static/images/run_result.png
 
-若需要停止執行的環境請使用 |stop_icon|，等同於執行「Trek: Shutdown Env」指令。
+若需要停止執行的環境請使用 |stop_icon|，等同於執行「 :doc:`../../reference/extension/commands/Trek: Shutdown Env` 」指令。
 
 .. |stop_icon| image:: ../../_static/images/stop_icon.png
 
 Step 6. Deploy
 ^^^^^^^^^^^^^^^^^^^^^^^^
 | 在本機執行正確後，即可佈署至 Marvin 平台。
-| 執行「Trek: Deploy to Marvin」指令，將會進行建置、push to dockerhub、打包和佈署。
+| 執行「 :doc:`../../reference/extension/commands/Trek: Deploy to Marvin` 」指令，將會進行建置、push to dockerhub、打包和佈署。
 
 .. image:: ../../_static/images/deploy.gif
 
