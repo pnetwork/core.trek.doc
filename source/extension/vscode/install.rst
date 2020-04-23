@@ -10,7 +10,7 @@ Installing trek vscode extension
 .. image:: ../../_static/images/install_vsix1.png
 
 | **安裝方式 2.**
-| 叫出 Command Palette，選擇「Extension: Install from VSIX」後，選擇 mflow vsix 安裝檔。
+| 叫出 Command Palette，選擇「Extension: Install from VSIX」後，選擇 trek vsix 安裝檔。
 
 .. image:: ../../_static/images/install_vsix2.png
 

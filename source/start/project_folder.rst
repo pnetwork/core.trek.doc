@@ -2,7 +2,7 @@ The project directory structure
 -----------------------------------
 
 | 一個完整的 trek 專案目錄結構會如下：
-| 資料夾 trek_packages、src/ansible、src/blcks、src/shell 若沒有使用指令生成則不會有。
+| 資料夾 *trek_packages*、*src/ansible*、*src/blcks*、*src/shell* 需要使用相關指令才會生成。
 
 .. code-block:: shell
 
@@ -23,5 +23,5 @@ The project directory structure
         └── graph.yml       # 預設產生的 workflow template 檔案，定義工作流程長相的主要檔案
 
 .. note:: 
-    - 若要使用 inputs/data.yaml 需要配置 config.json 中的 :ref:`input_data_path 欄位 <config_input_data>` 指定檔案位置。
-    - 若要使用 inputs/event.yaml 需要配置 config.json 中的 :ref:`input_event_path 欄位 <config_input_event_path>` 指定檔案位置。
+    - 若要使用 *inputs/data.yaml* 需要配置 config.json 中的 :ref:`input_data_path 欄位 <config_input_data>` 指定檔案位置。
+    - 若要使用 *inputs/event.yaml* 需要配置 config.json 中的 :ref:`input_event_path 欄位 <config_input_event_path>` 指定檔案位置。

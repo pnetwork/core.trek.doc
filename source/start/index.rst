@@ -15,6 +15,7 @@ System Requirements
 * macOS 10.14+
 * Docker 19.03+
 * Python 3.7+
+* graphviz 2.42.2+
 
 .. _install_trek:
 
@@ -39,9 +40,9 @@ Installation dev kit
 Config development environment
 -----------------------------------
 成功安裝 trek cli 工具後，我們需要設置 trek config。
-trek config 提供專案、Global兩種層級的設置，專案設置可以覆蓋 Global 設置。舉例來說，若 Global 和專案皆設置了 router_port 欄位，mflow 將優先以專案設置的為主。
+Trek config 提供專案、Global兩種層級的設置，專案設置可以覆蓋 Global 設置。舉例來說，若 Global 和專案皆設置了 ``router_port`` 欄位，trek 將優先以專案設置的為主。
 
-專案設定檔位於專案內 ``{your_trek_project_path}/.trek/config.json``，Global 位於 ``~/.trek/config.json``。
+專案設定檔位於專案內 *{your_trek_project_path}/.trek/config.json*，Global 位於 *~/.trek/config.json*。
 
 ::
 

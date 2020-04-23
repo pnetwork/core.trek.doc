@@ -6,7 +6,7 @@ graph:
     templateId: host.detect.redis
     description: "Redis monitor"
     tags: []
-    author: mflow
+    author: trek
   nodes:
     - metadata:
         sources: []
