@@ -86,14 +86,14 @@
             
             
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Revision History</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html#what-s-new">What’s new</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../start/index.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../clikit/index.html">CLI Supported Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../extension/vscode/index.html">Extension Supported Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../library/index.html">Library List</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../blcks/index.html">Blcks SDK Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog/index.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../ref.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/issues/">Issues Report</a></li>
 </ul>
 
             
@@ -147,10 +147,6 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            
-              <a href="https://github.com/pnetwork/core.trek.doc/blob/master/reference/blcks/services/tags.rst" class="fa fa-github"> Edit on GitHub</a>
-            
-          
         
       </li>
     
@@ -168,8 +164,8 @@
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">blcks.services.tags.</code><code class="sig-name descname">TagManager</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cred</span></em>, <em class="sig-param"><span class="n">event</span></em>, <em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span></dt>
-<dd><p>TagManager: Tag management base class
-since class might inheritant from multiple base classes,
+<dd><p>Tag management base class</p>
+<p>since class might inheritant from multiple base classes,
 all the functions need a prefix or postfix to distinguish the difference</p>
 <dl class="py method">
 <dt>
@@ -178,16 +174,44 @@ all the functions need a prefix or postfix to distinguish the difference</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>tag</strong> (<em>String</em>) – specific tag</p></li>
-<li><p><strong>sort</strong> (<em>str</em>) – which elements you want to sort</p></li>
-<li><p><strong>order</strong> (<em>OrderBy</em>) – sorting order, now support OrderBy.Desc and OrderBy.Asc</p></li>
-<li><p><strong>offset</strong> (<em>int</em>) – the offset of the object array index,             default is 0 if this parameter is not presented</p></li>
-<li><p><strong>limit</strong> (<em>int</em>) – the amount of object will be returned from the specified offset,             default is 10 if its’ not presented</p></li>
-<li><p><strong>search</strong> (<em>str</em>) – the search tags user input</p></li>
-<li><p><strong>simple</strong> (<em>bool</em>) – True or False</p></li>
+<li><p><strong>tag</strong> (<em>String</em>) -- specific tag</p></li>
+<li><p><strong>sort</strong> (<em>str</em>) -- which elements you want to sort</p></li>
+<li><p><strong>order</strong> (<em>OrderBy</em>) -- sorting order, now support OrderBy.Desc and OrderBy.Asc</p></li>
+<li><p><strong>offset</strong> (<em>int</em>) -- the offset of the object array index,             default is 0 if this parameter is not presented</p></li>
+<li><p><strong>limit</strong> (<em>int</em>) -- the amount of object will be returned from the specified offset,             default is 10 if its’ not presented</p></li>
+<li><p><strong>search</strong> (<em>str</em>) -- the search tags user input</p></li>
+<li><p><strong>simple</strong> (<em>bool</em>) -- True or False</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Return all assets with specific tag</p>
+</dd>
 </dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;limit&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;offset&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;order&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;search&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;sort&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;taggedAt&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;permission&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;READ&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nt">&quot;UPDATE&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nt">&quot;DEPLOY&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nt">&quot;DELETE&quot;</span><span class="p">:</span> <span class="kc">true</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;pn-task-id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -196,9 +220,36 @@ all the functions need a prefix or postfix to distinguish the difference</p>
 <dd><p>update tag</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>dataJson</strong> (<em>Array</em>) – Array contains all information to update tags</p>
+<dd class="field-odd"><p><strong>dataJson</strong> (<em>Array</em>) -- Array contains all information to update tags</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Update tag/untagged for specified asset.</p>
 </dd>
 </dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;tagged&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;assets&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;requestBody&quot;</span><span class="p">:</span> <span class="p">{},</span>
+            <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;pn-task-id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </dd></dl>

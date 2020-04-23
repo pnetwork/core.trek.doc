@@ -86,14 +86,14 @@
             
             
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Revision History</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html#what-s-new">What’s new</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../start/index.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../clikit/index.html">CLI Supported Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../extension/vscode/index.html">Extension Supported Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../library/index.html">Library List</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../blcks/index.html">Blcks SDK Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog/index.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../ref.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/issues/">Issues Report</a></li>
 </ul>
 
             
@@ -147,10 +147,6 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            
-              <a href="https://github.com/pnetwork/core.trek.doc/blob/master/reference/blcks/services/hosts.rst" class="fa fa-github"> Edit on GitHub</a>
-            
-          
         
       </li>
     
@@ -168,7 +164,7 @@
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">blcks.services.hosts.</code><code class="sig-name descname">HostsManager</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cred</span></em>, <em class="sig-param"><span class="n">event</span></em>, <em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span></dt>
-<dd><p>HostsManager: Hosts management base class</p>
+<dd><p>Hosts management base class</p>
 <p>since class might inheritant from multiple base classes,
 all the functions need a prefix or postfix to distinguish the difference</p>
 <dl class="py method">
@@ -176,17 +172,19 @@ all the functions need a prefix or postfix to distinguish the difference</p>
 <code class="sig-name descname">getFluentdEntrance</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>get FluentD entrance information</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>dist</p>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>dictionary contains entrance information of FluentD</p>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>dictionary contains entrance information of FluentD</p>
-</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;ip&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p>AssertionError</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p>ServiceError, AuthenticationError, ClientError</p>
+<dd class="field-odd"><p>AssertionError, ServiceError, AuthenticationError, ClientError</p>
 </dd>
 </dl>
 </dd></dl>
@@ -198,29 +196,181 @@ all the functions need a prefix or postfix to distinguish the difference</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>secrets</strong> (<em>bool</em>) – to get encrypted ssh password and keyPair content</p></li>
-<li><p><strong>HostIds</strong> (<em>str</em>) – to get specifict host with ids arary string,             ex: s-abc,s-bbb,s-ccc</p></li>
-<li><p><strong>HostId</strong> (<em>str</em>) – to get specifict host with id</p></li>
-<li><p><strong>offset</strong> (<em>int</em>) – The offset of the object array index, the default value is 0 if             this parameter is not presented</p></li>
-<li><p><strong>limit</strong> (<em>int</em>) – The amount of object will be returned from the specified offset,             default is 10 if its’ not presented</p></li>
-<li><p><strong>search</strong> (<em>str</em>) – A search string that specify the qualification condition</p></li>
-<li><p><strong>order</strong> (<em>OrderBy</em>) – The order of Sort</p></li>
-<li><p><strong>sort</strong> (<em>str</em>) – which elements you want to sort</p></li>
-<li><p><strong>hostUsage</strong> (<em>HostUsage</em>) – to identify server usage  EX. PROXY NORMAL</p></li>
-<li><p><strong>isCloud</strong> (<em>bool</em>) – to identify the source of host is from cloud or not</p></li>
+<li><p><strong>secrets</strong> (<em>bool</em>) -- to get encrypted ssh password and keyPair content</p></li>
+<li><p><strong>HostIds</strong> (<em>str</em>) -- to get specifict host with ids arary string,             ex: s-abc,s-bbb,s-ccc</p></li>
+<li><p><strong>HostId</strong> (<em>str</em>) -- to get specifict host with id</p></li>
+<li><p><strong>offset</strong> (<em>int</em>) -- The offset of the object array index, the default value is 0 if             this parameter is not presented</p></li>
+<li><p><strong>limit</strong> (<em>int</em>) -- The amount of object will be returned from the specified offset,             default is 10 if its’ not presented</p></li>
+<li><p><strong>search</strong> (<em>str</em>) -- A search string that specify the qualification condition</p></li>
+<li><p><strong>order</strong> (<em>OrderBy</em>) -- The order of Sort</p></li>
+<li><p><strong>sort</strong> (<em>str</em>) -- which elements you want to sort</p></li>
+<li><p><strong>hostUsage</strong> (<em>HostUsage</em>) -- to identify server usage  EX. PROXY NORMAL</p></li>
+<li><p><strong>isCloud</strong> (<em>bool</em>) -- to identify the source of host is from cloud or not</p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>dist</p>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dictionary contains all information of Hosts</p>
 </dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>dictionary contains all information of Hosts</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p>AssertionError</p>
-</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;offset&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;limit&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;search&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;order&quot;</span><span class="p">:</span> <span class="s2">&quot;desc&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;sort&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;createdBy&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;updatedBy&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;permission&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;READ&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nt">&quot;UPDATE&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nt">&quot;DEPLOY&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nt">&quot;DELETE&quot;</span><span class="p">:</span> <span class="kc">true</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;instanceId&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;instanceType&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;isCloud&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;pendingAt&quot;</span><span class="p">:</span> <span class="mi">1234567890</span><span class="p">,</span>
+            <span class="nt">&quot;syncFailed&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;syncedAt&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;cloudProvider&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;cloudKey&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;isValid&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nt">&quot;failedAt&quot;</span><span class="p">:</span> <span class="mi">1547437264</span><span class="p">,</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;apiId&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;cloudAccount&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;securityGroups&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;rules&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;hostCreatedAt&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;resourceType&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;NORMAL&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;account&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;addresses&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;ip&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;order&quot;</span><span class="p">:</span> <span class="mi">0</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;services&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;ssh&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;ip&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;isDefault&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                    <span class="nt">&quot;order&quot;</span><span class="p">:</span> <span class="mi">0</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;domainName&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;CLOUD&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;projects&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;projectType&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;connectionType&quot;</span><span class="p">:</span> <span class="s2">&quot;sshPassword&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;ip&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;sshPassword&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;machineParams&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;ipStatus&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;dnsStatus&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;banned&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nt">&quot;os&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;osDistro&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;arch&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;cpu&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;coreCount&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="nt">&quot;memPhysical&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="nt">&quot;memVirtual&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="nt">&quot;hdds&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;size&quot;</span><span class="p">:</span> <span class="mi">0</span>
+                    <span class="p">}</span>
+                <span class="p">],</span>
+                <span class="nt">&quot;netCards&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;ip&quot;</span><span class="p">:</span> <span class="p">[</span>
+                            <span class="s2">&quot;string&quot;</span>
+                        <span class="p">],</span>
+                        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">],</span>
+                <span class="nt">&quot;mbName&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;mbSerialNo&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;mbManufacturer&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;systemManufacturer&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;systemProductName&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;systemVersion&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;ethernets&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;string&quot;</span>
+                <span class="p">],</span>
+                <span class="nt">&quot;proxyClientEnable&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nt">&quot;proxyServerEnable&quot;</span><span class="p">:</span> <span class="kc">true</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;monitorAgentInstalled&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;online&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;expiredAt&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;gateOnePassword&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;statusCode&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;string&quot;</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;zoneId&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;protectActions&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;string&quot;</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;envType&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p>ServiceError, AuthenticationError, ClientError</p>
+<dd class="field-odd"><p>AssertionError, ServiceError, AuthenticationError, ClientError</p>
 </dd>
 </dl>
 </dd></dl>
@@ -230,17 +380,33 @@ all the functions need a prefix or postfix to distinguish the difference</p>
 <code class="sig-name descname">getImportedKeys</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>get All Hosts imported keys</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>dist</p>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>dictionary contains all information of Hosts</p>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>dictionary contains all information of Hosts</p>
-</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;projects&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;projectType&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;cloudProvider&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p>AssertionError</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p>ServiceError, AuthenticationError, ClientError</p>
+<dd class="field-odd"><p>AssertionError, ServiceError, AuthenticationError, ClientError</p>
 </dd>
 </dl>
 </dd></dl>
@@ -252,21 +418,174 @@ all the functions need a prefix or postfix to distinguish the difference</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>secrets</strong> (<em>bool</em>) – to get encrypted ssh password and keyPair content</p></li>
-<li><p><strong>HostId</strong> (<em>str</em>) – to get specifict host with id</p></li>
+<li><p><strong>secrets</strong> (<em>bool</em>) -- to get encrypted ssh password and keyPair content</p></li>
+<li><p><strong>HostId</strong> (<em>str</em>) -- to get specifict host with id</p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>dist</p>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dictionary contains all information of Hosts</p>
 </dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>dictionary contains all information of Hosts</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p>AssertionError</p>
-</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;createdBy&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;updatedBy&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;permission&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;READ&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nt">&quot;UPDATE&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nt">&quot;DEPLOY&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nt">&quot;DELETE&quot;</span><span class="p">:</span> <span class="kc">true</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;instanceId&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;instanceType&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;isCloud&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;pendingAt&quot;</span><span class="p">:</span> <span class="mi">1234567890</span><span class="p">,</span>
+            <span class="nt">&quot;syncFailed&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;syncedAt&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;cloudProvider&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;cloudKey&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;isValid&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nt">&quot;failedAt&quot;</span><span class="p">:</span> <span class="mi">1547437264</span><span class="p">,</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;apiId&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;cloudAccount&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;securityGroups&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;rules&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;hostCreatedAt&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;resourceType&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;NORMAL&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;account&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;addresses&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;ip&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;order&quot;</span><span class="p">:</span> <span class="mi">0</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;services&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;ssh&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;ip&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;isDefault&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                    <span class="nt">&quot;order&quot;</span><span class="p">:</span> <span class="mi">0</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;domainName&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;CLOUD&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;projects&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;projectType&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;connectionType&quot;</span><span class="p">:</span> <span class="s2">&quot;sshPassword&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;ip&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;sshPassword&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;machineParams&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;ipStatus&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;dnsStatus&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;banned&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nt">&quot;os&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;osDistro&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;arch&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;cpu&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;coreCount&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="nt">&quot;memPhysical&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="nt">&quot;memVirtual&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="nt">&quot;hdds&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;size&quot;</span><span class="p">:</span> <span class="mi">0</span>
+                    <span class="p">}</span>
+                <span class="p">],</span>
+                <span class="nt">&quot;netCards&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;ip&quot;</span><span class="p">:</span> <span class="p">[</span>
+                            <span class="s2">&quot;string&quot;</span>
+                        <span class="p">],</span>
+                        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">],</span>
+                <span class="nt">&quot;mbName&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;mbSerialNo&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;mbManufacturer&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;systemManufacturer&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;systemProductName&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;systemVersion&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;ethernets&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;string&quot;</span>
+                <span class="p">],</span>
+                <span class="nt">&quot;proxyClientEnable&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nt">&quot;proxyServerEnable&quot;</span><span class="p">:</span> <span class="kc">true</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;monitorAgentInstalled&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;online&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;expiredAt&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;gateOnePassword&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;statusCode&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;string&quot;</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;zoneId&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;protectActions&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;string&quot;</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;envType&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;requestBody&quot;</span><span class="p">:</span> <span class="p">{},</span>
+            <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p>ServiceError, AuthenticationError, ClientError</p>
+<dd class="field-odd"><p>AssertionError, ServiceError, AuthenticationError, ClientError</p>
 </dd>
 </dl>
 </dd></dl>
@@ -278,21 +597,35 @@ all the functions need a prefix or postfix to distinguish the difference</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>secrets</strong> – to identify server usage  EX. PROXY NORMAL</p></li>
-<li><p><strong>keys</strong> (<em>list</em>) – a list of key ids</p></li>
+<li><p><strong>secrets</strong> -- to identify server usage  EX. PROXY NORMAL</p></li>
+<li><p><strong>keys</strong> (<em>list</em>) -- a list of key ids</p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>dist</p>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dictionary contains all information of Hosts</p>
 </dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>dictionary contains all information of Hosts</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p>AssertionError</p>
-</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;keyId&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;apiId&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;taskId&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;requestBody&quot;</span><span class="p">:</span> <span class="p">{},</span>
+            <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p>ServiceError, AuthenticationError, ClientError</p>
+<dd class="field-odd"><p>AssertionError, ServiceError, AuthenticationError, ClientError</p>
 </dd>
 </dl>
 </dd></dl>
@@ -303,19 +636,22 @@ all the functions need a prefix or postfix to distinguish the difference</p>
 <dd><p>batch update hosts</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>update_list</strong> (<em>list</em>) – update host</p>
+<dd class="field-odd"><p><strong>update_list</strong> (<em>list</em>) -- update host</p>
 </dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>dist</p>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dictionary contains all information of Hosts</p>
 </dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>dictionary contains all information of Hosts</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p>AssertionError</p>
-</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span><span class="nt">&quot;same data with get_host&quot;</span><span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p>ServiceError, AuthenticationError, ClientError</p>
+<dd class="field-odd"><p>AssertionError, ServiceError, AuthenticationError, ClientError</p>
 </dd>
 </dl>
 </dd></dl>

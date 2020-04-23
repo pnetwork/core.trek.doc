@@ -86,14 +86,14 @@
             
             
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Revision History</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html#what-s-new">What’s new</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../start/index.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../clikit/index.html">CLI Supported Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../extension/vscode/index.html">Extension Supported Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../library/index.html">Library List</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../blcks/index.html">Blcks SDK Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog/index.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../ref.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/issues/">Issues Report</a></li>
 </ul>
 
             
@@ -147,10 +147,6 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            
-              <a href="https://github.com/pnetwork/core.trek.doc/blob/master/reference/blcks/services/rbac.rst" class="fa fa-github"> Edit on GitHub</a>
-            
-          
         
       </li>
     
@@ -168,7 +164,7 @@
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">blcks.services.rbac.</code><code class="sig-name descname">RBACManager</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cred</span></em>, <em class="sig-param"><span class="n">event</span></em>, <em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span></dt>
-<dd><p>RBACManager: RBAC management base class</p>
+<dd><p>RBAC management base class</p>
 <dl class="py method">
 <dt>
 <code class="sig-name descname">getRolebyId</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">roleId</span></em><span class="sig-paren">)</span></dt>
@@ -178,19 +174,57 @@
 <dd class="field-odd"><p>str</p>
 </dd>
 <dt class="field-even">Parameters</dt>
-<dd class="field-even"><p><strong>roleId</strong> – The ID of role</p>
+<dd class="field-even"><p><strong>roleId</strong> -- The ID of role</p>
 </dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>dist</p>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>dictionary role</p>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>dictionary role</p>
-</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;isDefault&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;project&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="mi">0</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;policies&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;users&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;account&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;user@example.com&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;createdBy&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;updatedBy&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p>AssertionError</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p>ServiceError, AuthenticationError, ClientError</p>
+<dd class="field-odd"><p>AssertionError, ServiceError, AuthenticationError, ClientError</p>
 </dd>
 </dl>
 </dd></dl>
@@ -204,19 +238,170 @@
 <dd class="field-odd"><p>str</p>
 </dd>
 <dt class="field-even">Parameters</dt>
-<dd class="field-even"><p><strong>project_id</strong> – The ID of Project</p>
+<dd class="field-even"><p><strong>project_id</strong> -- The ID of Project</p>
 </dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>dist</p>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>dictionary contains all information of Tunnels</p>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>dictionary contains all information of Tunnels</p>
-</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;createdBy&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;updatedBy&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;protectActions&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;string&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;permission&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;READ&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nt">&quot;UPDATE&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nt">&quot;DEPLOY&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nt">&quot;DELETE&quot;</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;projectType&quot;</span><span class="p">:</span> <span class="s2">&quot;NORMAL&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;servicesNum&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;membersNum&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;tunnelsNum&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;allowedHost&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;envVars&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;policies&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;isDefault&quot;</span><span class="p">:</span> <span class="kc">true</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;roles&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;isDefault&quot;</span><span class="p">:</span> <span class="kc">true</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;services&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;SERVER&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;DOMAIN&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;PLAYBOOK&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;KEYPAIR&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;CLOUD_ACCOUNT&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;TUNNEL&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;DATABASE&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;CHANNEL&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;CDN&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;WORKFLOW&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;CERTIFICATE&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p>AssertionError</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p>ServiceError, AuthenticationError, ClientError</p>
+<dd class="field-odd"><p>AssertionError, ServiceError, AuthenticationError, ClientError</p>
 </dd>
 </dl>
 </dd></dl>
@@ -226,17 +411,48 @@
 <code class="sig-name descname">get_projects</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Get Project Info with specified Project Id</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>dist</p>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>dictionary contains all information of Tunnels</p>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>dictionary contains all information of Tunnels</p>
-</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;offset&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;limit&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;search&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;sort&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;order&quot;</span><span class="p">:</span> <span class="s2">&quot;ASC&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;pn-task-id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;protectActions&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;string&quot;</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;permission&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;READ&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nt">&quot;UPDATE&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nt">&quot;DEPLOY&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nt">&quot;DELETE&quot;</span><span class="p">:</span> <span class="kc">true</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;projectType&quot;</span><span class="p">:</span> <span class="s2">&quot;NORMAL&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;servicesNum&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;membersNum&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;tunnelsNum&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;isHide&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;allowedHost&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p>AssertionError</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p>ServiceError, AuthenticationError, ClientError</p>
+<dd class="field-odd"><p>AssertionError, ServiceError, AuthenticationError, ClientError</p>
 </dd>
 </dl>
 </dd></dl>
@@ -246,17 +462,243 @@
 <code class="sig-name descname">get_users_me</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
 <dd><p>Returns me</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>dist</p>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The user profile response object</p>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The user profile response object</p>
-</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;account&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;user@example.com&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;projects&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;createdBy&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;updatedBy&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;protectActions&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;string&quot;</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;permission&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;READ&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nt">&quot;UPDATE&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nt">&quot;DEPLOY&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nt">&quot;DELETE&quot;</span><span class="p">:</span> <span class="kc">true</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;projectType&quot;</span><span class="p">:</span> <span class="s2">&quot;NORMAL&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;servicesNum&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;membersNum&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;tunnelsNum&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;allowedHost&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;envVars&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;policies&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;isDefault&quot;</span><span class="p">:</span> <span class="kc">true</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;roles&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;isDefault&quot;</span><span class="p">:</span> <span class="kc">true</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;services&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;SERVER&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="p">{</span>
+                            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                        <span class="p">}</span>
+                    <span class="p">],</span>
+                    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">0</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;DOMAIN&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="p">{</span>
+                            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                        <span class="p">}</span>
+                    <span class="p">],</span>
+                    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">0</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;PLAYBOOK&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="p">{</span>
+                            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                        <span class="p">}</span>
+                    <span class="p">],</span>
+                    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">0</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;KEYPAIR&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="p">{</span>
+                            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                        <span class="p">}</span>
+                    <span class="p">],</span>
+                    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">0</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;CLOUD_ACCOUNT&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="p">{</span>
+                            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                        <span class="p">}</span>
+                    <span class="p">],</span>
+                    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">0</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;TUNNEL&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="p">{</span>
+                            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                        <span class="p">}</span>
+                    <span class="p">],</span>
+                    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">0</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;DATABASE&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="p">{</span>
+                            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                        <span class="p">}</span>
+                    <span class="p">],</span>
+                    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">0</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;CHANNEL&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="p">{</span>
+                            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                        <span class="p">}</span>
+                    <span class="p">],</span>
+                    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">0</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;CDN&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="p">{</span>
+                            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                        <span class="p">}</span>
+                    <span class="p">],</span>
+                    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">0</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;WORKFLOW&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="p">{</span>
+                            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                        <span class="p">}</span>
+                    <span class="p">],</span>
+                    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">0</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;CERTIFICATE&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="p">{</span>
+                            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                        <span class="p">}</span>
+                    <span class="p">],</span>
+                    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">0</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;createdBy&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;updatedBy&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;services&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;SERVER_CREATE&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;string&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;SERVER_IMPORT&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;string&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;DOMAIN_CREATE&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;string&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;DOMAIN_IMPORT&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;string&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;PLAYBOOK_CREATE&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;string&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;KEYPAIR_CREATE&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;string&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;CLOUD_ACCOUNT_CREATE&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;string&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;TUNNEL_CREATE&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;string&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;SERVER_GROUP_CREATE&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;string&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;TOOL_CREATE&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;string&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;PROJECT_CREATE&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;string&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;REGION_MANAGEMENT_CREATE&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;string&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;REGION_MANAGEMENT_UPDATE&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;string&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;REGION_MANAGEMENT_DELETE&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;string&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;USER_MANAGEMENT_READ&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;string&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;USER_MANAGEMENT_CREATE&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;string&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;USER_MANAGEMENT_UPDATE&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;string&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;USER_MANAGEMENT_DELETE&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;string&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;USER_MANAGEMENT_SUSPENSION_AND_REINSTATEMENT&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;string&quot;</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p>AssertionError</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p>ServiceError, AuthenticationError, ClientError</p>
+<dd class="field-odd"><p>AssertionError, ServiceError, AuthenticationError, ClientError</p>
 </dd>
 </dl>
 </dd></dl>
@@ -271,24 +713,25 @@
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>roleId</strong> – The ID of role</p></li>
-<li><p><strong>dataJson</strong> – The role dict for patch</p></li>
+<li><p><strong>roleId</strong> -- The ID of role</p></li>
+<li><p><strong>dataJson</strong> -- The role dict for patch</p></li>
 </ul>
 </dd>
 <dt class="field-odd">DataJson type</dt>
 <dd class="field-odd"><p>dict</p>
 </dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>dist</p>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dictionary role</p>
 </dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>dictionary role</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p>AssertionError</p>
-</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;object same with getRolebyId&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p>ServiceError, AuthenticationError, ClientError</p>
+<dd class="field-odd"><p>AssertionError, ServiceError, AuthenticationError, ClientError</p>
 </dd>
 </dl>
 </dd></dl>
@@ -303,24 +746,25 @@
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>project_id</strong> – The ID of Project</p></li>
-<li><p><strong>allow_hosts</strong> – The hosts of Projects</p></li>
+<li><p><strong>project_id</strong> -- The ID of Project</p></li>
+<li><p><strong>allow_hosts</strong> -- The hosts of Projects</p></li>
 </ul>
 </dd>
 <dt class="field-odd">Allow_hosts type</dt>
 <dd class="field-odd"><p>str</p>
 </dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>dist</p>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dictionary contains all information of Tunnels</p>
 </dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>dictionary contains all information of Tunnels</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p>AssertionError</p>
-</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;object same with get_project&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p>ServiceError, AuthenticationError, ClientError</p>
+<dd class="field-odd"><p>AssertionError, ServiceError, AuthenticationError, ClientError</p>
 </dd>
 </dl>
 </dd></dl>

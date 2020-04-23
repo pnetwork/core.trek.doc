@@ -86,14 +86,14 @@
             
             
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Revision History</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html#what-s-new">What’s new</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../start/index.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../clikit/index.html">CLI Supported Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../extension/vscode/index.html">Extension Supported Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../library/index.html">Library List</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../blcks/index.html">Blcks SDK Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog/index.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../ref.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/issues/">Issues Report</a></li>
 </ul>
 
             
@@ -147,10 +147,6 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            
-              <a href="https://github.com/pnetwork/core.trek.doc/blob/master/reference/blcks/services/tunnel.rst" class="fa fa-github"> Edit on GitHub</a>
-            
-          
         
       </li>
     
@@ -168,26 +164,82 @@
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">blcks.services.tunnel.</code><code class="sig-name descname">TunnelManager</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cred</span></em>, <em class="sig-param"><span class="n">event</span></em>, <em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span></dt>
-<dd><p>TunnelManager: Tunnel management base class</p>
+<dd><p>Tunnel management base class</p>
 <dl class="py method">
 <dt>
 <code class="sig-name descname">deleteTunnels</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">tunnelIds</span></em><span class="sig-paren">)</span></dt>
 <dd><p>Get Tunnels info</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>tunnelId</strong> – The unique IDs of tunnel need to be delete</p>
+<dd class="field-odd"><p><strong>tunnelId</strong> -- The unique IDs of tunnel need to be delete</p>
 </dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>dist</p>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dictionary contains all information of Tunnels</p>
 </dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>dictionary contains all information of Tunnels</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p>AssertionError</p>
-</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;enable&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nt">&quot;enableToConnect&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nt">&quot;lastConnectionTestTime&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;createdBy&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;updatedBy&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;projects&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;projectType&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+        <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;nodes&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;sequence&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;outgoing&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;ip&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;serviceInstalled&quot;</span><span class="p">:</span> <span class="kc">true</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;incoming&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;ip&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;serviceInstalled&quot;</span><span class="p">:</span> <span class="kc">true</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;string&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;protectActions&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;string&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;resourceType&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;permission&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;READ&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;UPDATE&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;DELETE&quot;</span><span class="p">:</span> <span class="kc">true</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;lastRunWorkflowTaskId&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;lastRunWorkflowId&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p>ServiceError, AuthenticationError, ClientError</p>
+<dd class="field-odd"><p>AssertionError, ServiceError, AuthenticationError, ClientError</p>
 </dd>
 </dl>
 </dd></dl>
@@ -199,25 +251,79 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>tunnelId</strong> (<em>str</em>) – The unique ID of tunnel</p></li>
-<li><p><strong>offset</strong> (<em>int</em>) – The offset of the object array index, the default value is 0 if             this parameter is not presented</p></li>
-<li><p><strong>limit</strong> (<em>int</em>) – The amount of object will be returned from the specified offset,             default is 0 if its’ not presented</p></li>
-<li><p><strong>search</strong> (<em>str</em>) – A search string that specify the qualification condition</p></li>
-<li><p><strong>order</strong> (<em>OrderBy</em>) – The order of Sort</p></li>
-<li><p><strong>sort</strong> (<em>str</em>) – which elements you want to sort</p></li>
+<li><p><strong>tunnelId</strong> (<em>str</em>) -- The unique ID of tunnel</p></li>
+<li><p><strong>offset</strong> (<em>int</em>) -- The offset of the object array index, the default value is 0 if             this parameter is not presented</p></li>
+<li><p><strong>limit</strong> (<em>int</em>) -- The amount of object will be returned from the specified offset,             default is 0 if its’ not presented</p></li>
+<li><p><strong>search</strong> (<em>str</em>) -- A search string that specify the qualification condition</p></li>
+<li><p><strong>order</strong> (<em>OrderBy</em>) -- The order of Sort</p></li>
+<li><p><strong>sort</strong> (<em>str</em>) -- which elements you want to sort</p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>dist</p>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dictionary contains all information of Tunnels</p>
 </dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>dictionary contains all information of Tunnels</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p>AssertionError</p>
-</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;enable&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;enableToConnect&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;lastConnectionTestTime&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;createdBy&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;updatedBy&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;projects&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;projectType&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;nodes&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+        <span class="nt">&quot;sequence&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;outgoing&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;ip&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;serviceInstalled&quot;</span><span class="p">:</span> <span class="kc">true</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;incoming&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;ip&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;serviceInstalled&quot;</span><span class="p">:</span> <span class="kc">true</span>
+        <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;string&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;protectActions&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;string&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;resourceType&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;permission&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;READ&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nt">&quot;UPDATE&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nt">&quot;DELETE&quot;</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;lastRunWorkflowTaskId&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;lastRunWorkflowId&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p>ServiceError, AuthenticationError, ClientError</p>
+<dd class="field-odd"><p>AssertionError, ServiceError, AuthenticationError, ClientError</p>
 </dd>
 </dl>
 </dd></dl>
@@ -229,24 +335,88 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>offset</strong> (<em>int</em>) – The offset of the object array index, the default value is 0 if             this parameter is not presented</p></li>
-<li><p><strong>limit</strong> (<em>int</em>) – The amount of object will be returned from the specified offset,             default is 0 if its’ not presented</p></li>
-<li><p><strong>search</strong> (<em>str</em>) – A search string that specify the qualification condition</p></li>
-<li><p><strong>order</strong> (<em>OrderBy</em>) – The order of Sort</p></li>
-<li><p><strong>sort</strong> (<em>str</em>) – which elements you want to sort</p></li>
+<li><p><strong>offset</strong> (<em>int</em>) -- The offset of the object array index, the default value is 0 if             this parameter is not presented</p></li>
+<li><p><strong>limit</strong> (<em>int</em>) -- The amount of object will be returned from the specified offset,             default is 0 if its’ not presented</p></li>
+<li><p><strong>search</strong> (<em>str</em>) -- A search string that specify the qualification condition</p></li>
+<li><p><strong>order</strong> (<em>OrderBy</em>) -- The order of Sort</p></li>
+<li><p><strong>sort</strong> (<em>str</em>) -- which elements you want to sort</p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>dist</p>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dictionary contains all information of Tunnels</p>
 </dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>dictionary contains all information of Tunnels</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p>AssertionError</p>
-</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;offset&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;limit&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;search&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;sort&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;order&quot;</span><span class="p">:</span> <span class="s2">&quot;asc&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;enable&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nt">&quot;enableToConnect&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nt">&quot;lastConnectionTestTime&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;createdBy&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;updatedBy&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;projects&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;projectType&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;nodes&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+            <span class="nt">&quot;sequence&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;outgoing&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;ip&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;serviceInstalled&quot;</span><span class="p">:</span> <span class="kc">true</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;incoming&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;ip&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;serviceInstalled&quot;</span><span class="p">:</span> <span class="kc">true</span>
+            <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;string&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;protectActions&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;string&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;resourceType&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;permission&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;READ&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;UPDATE&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;DELETE&quot;</span><span class="p">:</span> <span class="kc">true</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;lastRunWorkflowTaskId&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;lastRunWorkflowId&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p>ServiceError, AuthenticationError, ClientError</p>
+<dd class="field-odd"><p>AssertionError, ServiceError, AuthenticationError, ClientError</p>
 </dd>
 </dl>
 </dd></dl>
@@ -258,22 +428,76 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>tunnelId</strong> (<em>str</em>) – The unique ID of tunnel</p></li>
-<li><p><strong>lastRunWorkflowTaskId</strong> – Set tunnel Lastest Workflow TaskId</p></li>
-<li><p><strong>lastRunWorkflowId</strong> – Set tunnel Lastest WorkflowId</p></li>
+<li><p><strong>tunnelId</strong> (<em>str</em>) -- The unique ID of tunnel</p></li>
+<li><p><strong>lastRunWorkflowTaskId</strong> -- Set tunnel Lastest Workflow TaskId</p></li>
+<li><p><strong>lastRunWorkflowId</strong> -- Set tunnel Lastest WorkflowId</p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>dist</p>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dictionary contains all information of Tunnels</p>
 </dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>dictionary contains all information of Tunnels</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p>AssertionError</p>
-</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;enable&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;enableToConnect&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;lastConnectionTestTime&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;createdBy&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;updatedBy&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;projects&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;projectType&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;nodes&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+        <span class="nt">&quot;sequence&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;outgoing&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;ip&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;serviceInstalled&quot;</span><span class="p">:</span> <span class="kc">true</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;incoming&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;ip&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;serviceInstalled&quot;</span><span class="p">:</span> <span class="kc">true</span>
+        <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;string&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;protectActions&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;string&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;resourceType&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;permission&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;READ&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nt">&quot;UPDATE&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nt">&quot;DELETE&quot;</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;lastRunWorkflowTaskId&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;lastRunWorkflowId&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p>ServiceError, AuthenticationError, ClientError</p>
+<dd class="field-odd"><p>AssertionError, ServiceError, AuthenticationError, ClientError</p>
 </dd>
 </dl>
 </dd></dl>

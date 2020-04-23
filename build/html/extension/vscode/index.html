@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../../_static/css/table.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Library List" href="../../library/index.html" />
+    <link rel="next" title="Before you begin" href="config.html" />
     <link rel="prev" title="webserver" href="../../reference/clikit/commands/webserver.html" /> 
 </head>
 
@@ -86,21 +86,22 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Revision History</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../changelog.html#what-s-new">What’s new</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../start/index.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../clikit/index.html">CLI Supported Commands</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Extension Supported Commands</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#before-you-begin">Before you begin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#installing-trek-vscode-extension">Installing trek vscode extension</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#configuring-trek-vscode-extension">Configuring trek vscode extension</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#command-list">Command list</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#the-first-trek-project">The first trek project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config.html">Before you begin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config.html#installing-trek-vscode-extension">Installing trek vscode extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config.html#configuring-trek-vscode-extension">Configuring trek vscode extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html">Command list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usecase.html">The first trek project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html">Changelog</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../library/index.html">Library List</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../blcks/index.html">Blcks SDK Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog/index.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../ref.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/issues/">Issues Report</a></li>
 </ul>
 
             
@@ -152,10 +153,6 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            
-              <a href="https://github.com/pnetwork/core.trek.doc/blob/master/extension/vscode/index.rst" class="fa fa-github"> Edit on GitHub</a>
-            
-          
         
       </li>
     
@@ -170,83 +167,46 @@
   <div class="section" id="extension-supported-commands">
 <h1>Extension Supported Commands<a class="headerlink" href="#extension-supported-commands" title="Permalink to this headline">¶</a></h1>
 <p>Trek vscode extension 讓您在 vscode 上輕鬆的開發 Marvin 自動化腳本、工作流程，透過 vscode 的命令即可在本機測試、以及把完成的腳本/工作流程打包佈署至您的 Marvin 平台。</p>
-<div class="section" id="before-you-begin">
-<h2>Before you begin<a class="headerlink" href="#before-you-begin" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>請先安裝 trek cli tool，如何安裝 <a class="reference internal" href="../../start/index.html#install-trek"><span class="std std-ref">可參考</span></a>。</p></li>
-<li><p>請先準備好 Pentium trek vscode extension 的 vsix 安裝檔。</p></li>
-<li><p>以下會經常用到快捷鍵 Ctrl+Shit+P ( or ⌘+⇧+P ) 呼叫出 Command Palette 並執行 trek vscode extension 指令，故接下來不再贅述。</p></li>
-<li><p>mflow vscode extension 指令都以「mflow: XXX」方式命名。</p></li>
-<li><p>本機必需要有啟動中的 docker。</p></li>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="config.html">Before you begin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html#installing-trek-vscode-extension">Installing trek vscode extension</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html#configuring-trek-vscode-extension">Configuring trek vscode extension</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commands.html">Command list</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/extension/commands/build_and_push.html">Trek: Build and Push</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/extension/commands/create_ansible.html">Trek: Create Ansible</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/extension/commands/create_blcks.html">Trek: Create Blcks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/extension/commands/create_project.html">Trek: Create Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/extension/commands/create_shell.html">Trek: Create Shell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/extension/commands/deploy_packed_packages_to_marvin.html">Trek: Deploy Packed Packages to Marvin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/extension/commands/deploy_to_marvin.html">Trek: Deploy to Marvin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/extension/commands/init_env.html">Trek: Init Env</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/extension/commands/install_script.html">Trek: Install Script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/extension/commands/list_installed_scripts.html">Trek: List Installed Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/extension/commands/list_remote_scripts.html">Trek: List Remote Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/extension/commands/login_to_marvin.html">Trek: Login to Marvin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/extension/commands/logs.html">Trek: Logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/extension/commands/pack.html">Trek: Pack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/extension/commands/run.html">Trek: Run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/extension/commands/shutdown_env.html">Trek: Shutdown Env</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/extension/commands/uninstall_script.html">Trek: Uninstall Script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/extension/commands/version.html">Trek: Version</a></li>
 </ul>
-</div>
-<div class="section" id="installing-trek-vscode-extension">
-<h2>Installing trek vscode extension<a class="headerlink" href="#installing-trek-vscode-extension" title="Permalink to this headline">¶</a></h2>
-<p>請使用以下任一方式安裝：</p>
-<div class="line-block">
-<div class="line"><strong>安裝方式 1.</strong></div>
-<div class="line">打開 vscode，點選左側 Extension，點選右上角「…」，選擇 「Install from VSIX…」後，選擇 trek vsix 安裝檔：</div>
-</div>
-<img alt="../../_images/install_vsix1.png" src="../../_images/install_vsix1.png" />
-<div class="line-block">
-<div class="line"><strong>安裝方式 2.</strong></div>
-<div class="line">叫出 Command Palette，選擇「Extension: Install from VSIX」後，選擇 mflow vsix 安裝檔。</div>
-</div>
-<img alt="../../_images/install_vsix2.png" src="../../_images/install_vsix2.png" />
-<p>成功安裝後，右下角會出現「Completed installing the extension Pentium Trek.」提示訊息。</p>
-<img alt="../../_images/install_suc.png" src="../../_images/install_suc.png" />
-<p>叫出 Command Palette，輸入 <code class="docutils literal notranslate"><span class="pre">trek</span></code> 顯示多項 trek 指令，即表示安裝完成。</p>
-<img alt="../../_images/show_cmds.png" src="../../_images/show_cmds.png" />
-</div>
-<div class="section" id="configuring-trek-vscode-extension">
-<h2>Configuring trek vscode extension<a class="headerlink" href="#configuring-trek-vscode-extension" title="Permalink to this headline">¶</a></h2>
-<div class="line-block">
-<div class="line">在使用 trek vscode extension 之前，請先指定已安裝 trek cli 的位置，若是安裝於 global (非虛擬環境)，可不用特別設定。</div>
-<div class="line">開啟 vscode 設定檔，尋找 Extensions 下的 Pentium Trek，並設定 trek cli 位置。</div>
-</div>
-<img alt="../../_images/config_trek_path.gif" src="../../_images/config_trek_path.gif" />
-</div>
-<div class="section" id="command-list">
-<h2>Command list<a class="headerlink" href="#command-list" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="the-first-trek-project">
-<h2>The first trek project<a class="headerlink" href="#the-first-trek-project" title="Permalink to this headline">¶</a></h2>
-<div class="line-block">
-<div class="line">假設我們的開發範例：</div>
-<div class="line">監控 redis 的連線，若連線不到標註 &lt;redis:unreachable&gt; 標籤，並發送 chatbot 通知。</div>
-<div class="line">因此 workflow 需要三個腳本：</div>
-</div>
-<ol class="arabic simple">
-<li><p>撈出特定服務器來檢查 redis 是否正常</p></li>
-<li><p>針對結果打上標籤</p></li>
-<li><p>發送通知 (若有不正常的)</p></li>
-</ol>
-<p>其中 1 為此次新增腳本，2, 3 則為既有腳本可直接安裝</p>
-<div class="section" id="create-project">
-<h3>Create project<a class="headerlink" href="#create-project" title="Permalink to this headline">¶</a></h3>
-<div class="line-block">
-<div class="line">使用 Command Palette 叫出「Trek: Create Project」指令，並填入以下資訊：</div>
-</div>
-<img alt="../../_images/create_project.gif" src="../../_images/create_project.gif" />
-<ol class="arabic simple">
-<li><p>選擇專案存放位置</p></li>
-<li><p>輸入專案名稱為「host.detect.redis」</p></li>
-<li><p>輸入「N」不產生範本專案</p></li>
-<li><p>右下角顯示建立專案成功訊息，並以 workspace 方式開啟專案</p></li>
-</ol>
-</div>
-<div class="section" id="create-blcks">
-<h3>Create blcks<a class="headerlink" href="#create-blcks" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="install-scripts">
-<h3>Install scripts<a class="headerlink" href="#install-scripts" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="run">
-<h3>Run<a class="headerlink" href="#run" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="deploy">
-<h3>Deploy<a class="headerlink" href="#deploy" title="Permalink to this headline">¶</a></h3>
-</div>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usecase.html">The first trek project</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usecase.html#step-1-create-project">Step 1. Create project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usecase.html#step-2-create-blcks">Step 2. Create blcks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usecase.html#step-3-install-scripts">Step 3. Install scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usecase.html#step-4-edit-workflow-template">Step 4. Edit workflow template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usecase.html#step-5-run">Step 5. Run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usecase.html#step-6-deploy">Step 6. Deploy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#version-v1-0-0-beta">Version v1.0.0-beta</a></li>
+</ul>
+</li>
+</ul>
 </div>
 </div>
 
@@ -258,7 +218,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../library/index.html" class="btn btn-neutral float-right" title="Library List" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="config.html" class="btn btn-neutral float-right" title="Before you begin" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../../reference/clikit/commands/webserver.html" class="btn btn-neutral float-left" title="webserver" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

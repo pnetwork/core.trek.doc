@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Configuring trek vscode extension &mdash; Pentium</title>
+  <title>Before you begin &mdash; Pentium</title>
   
 
   
@@ -35,7 +35,9 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/table.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Command list" href="commands.html" />
+    <link rel="prev" title="Extension Supported Commands" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -83,15 +85,23 @@
               
             
             
-              <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Revision History</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../changelog.html#what-s-new">What’s new</a></li>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../start/index.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../clikit/index.html">CLI Supported Commands</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index.html">Extension Supported Commands</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Extension Supported Commands</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Before you begin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-trek-vscode-extension">Installing trek vscode extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuring-trek-vscode-extension">Configuring trek vscode extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html">Command list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usecase.html">The first trek project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../library/index.html">Library List</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../blcks/index.html">Blcks SDK Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog/index.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../ref.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/issues/">Issues Report</a></li>
 </ul>
 
             
@@ -137,16 +147,14 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-      <li>Configuring trek vscode extension</li>
+          <li><a href="index.html">Extension Supported Commands</a> &raquo;</li>
+        
+      <li>Before you begin</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            
-              <a href="https://github.com/pnetwork/core.trek.doc/blob/master/extension/vscode/config.rst" class="fa fa-github"> Edit on GitHub</a>
-            
-          
         
       </li>
     
@@ -158,11 +166,38 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="configuring-trek-vscode-extension">
+  <div class="section" id="before-you-begin">
+<h1>Before you begin<a class="headerlink" href="#before-you-begin" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic simple">
+<li><p>請先安裝 trek cli tool，如何安裝 <a class="reference internal" href="../../start/index.html#install-trek"><span class="std std-ref">可參考</span></a>。</p></li>
+<li><p>以下會經常用到快捷鍵 Ctrl+Shit+P ( or ⌘+⇧+P ) 呼叫出 Command Palette 並執行 trek vscode extension 指令，Trek 相關指令都以「Trek: XXX」方式命名。</p></li>
+<li><p>本機必需要有啟動中的 docker。</p></li>
+</ol>
+</div>
+<div class="section" id="installing-trek-vscode-extension">
+<h1>Installing trek vscode extension<a class="headerlink" href="#installing-trek-vscode-extension" title="Permalink to this headline">¶</a></h1>
+<p>請先準備好 Pentium trek vscode extension 的 vsix 安裝檔。</p>
+<p>請使用以下任一方式安裝：</p>
+<div class="line-block">
+<div class="line"><strong>安裝方式 1.</strong></div>
+<div class="line">打開 vscode，點選左側 Extension，點選右上角「...」，選擇 「Install from VSIX...」後，選擇 trek vsix 安裝檔：</div>
+</div>
+<img alt="../../_images/install_vsix1.png" src="../../_images/install_vsix1.png" />
+<div class="line-block">
+<div class="line"><strong>安裝方式 2.</strong></div>
+<div class="line">叫出 Command Palette，選擇「Extension: Install from VSIX」後，選擇 trek vsix 安裝檔。</div>
+</div>
+<img alt="../../_images/install_vsix2.png" src="../../_images/install_vsix2.png" />
+<p>成功安裝後，右下角會出現「Completed installing the extension Pentium Trek.」提示訊息。</p>
+<img alt="../../_images/install_suc.png" src="../../_images/install_suc.png" />
+<p>叫出 Command Palette，輸入 <code class="docutils literal notranslate"><span class="pre">trek</span></code> 顯示多項 trek 指令，即表示安裝完成。</p>
+<img alt="../../_images/show_cmds.png" src="../../_images/show_cmds.png" />
+</div>
+<div class="section" id="configuring-trek-vscode-extension">
 <h1>Configuring trek vscode extension<a class="headerlink" href="#configuring-trek-vscode-extension" title="Permalink to this headline">¶</a></h1>
 <div class="line-block">
 <div class="line">在使用 trek vscode extension 之前，請先指定已安裝 trek cli 的位置，若是安裝於 global (非虛擬環境)，可不用特別設定。</div>
-<div class="line">開啟 vscode 設定檔，尋找 Extensions 下的 Pentium Trek，並設定 trek cli 位置。</div>
+<div class="line">開啟 vscode 設定檔，尋找 Extensions 下的 Pentium Trek，並設定 trek cli 位置，如: <em>/User/pentium/trek/env_trek/bin/trek</em>。</div>
 </div>
 <img alt="../../_images/config_trek_path.gif" src="../../_images/config_trek_path.gif" />
 </div>
@@ -172,6 +207,15 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="commands.html" class="btn btn-neutral float-right" title="Command list" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Extension Supported Commands" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

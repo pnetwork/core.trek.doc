@@ -86,14 +86,14 @@
             
             
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Revision History</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html#what-s-new">What’s new</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../start/index.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../clikit/index.html">CLI Supported Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../extension/vscode/index.html">Extension Supported Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../library/index.html">Library List</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../blcks/index.html">Blcks SDK Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog/index.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../ref.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/issues/">Issues Report</a></li>
 </ul>
 
             
@@ -147,10 +147,6 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            
-              <a href="https://github.com/pnetwork/core.trek.doc/blob/master/reference/blcks/services/cloud_account.rst" class="fa fa-github"> Edit on GitHub</a>
-            
-          
         
       </li>
     
@@ -177,9 +173,31 @@ all the functions need a prefix or postfix to distinguish the difference</p>
 <dd><p>Get specific Hosts info</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>keyIds</strong> (<em>list</em>) – to get all cloud accounts keys under account</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>credentialIds</strong> (<em>list</em>) -- list of certificates</p></li>
+<li><p><strong>sort</strong> (<em>str</em>) -- field to sort, default is createdAt</p></li>
+<li><p><strong>order</strong> (<em>str</em>) -- sorting order, default is desc</p></li>
+<li><p><strong>offset</strong> (<em>int</em>) -- The offset for returned data</p></li>
+<li><p><strong>limit</strong> (<em>int</em>) -- The number of data to present</p></li>
+<li><p><strong>search</strong> (<em>str</em>) -- return only search</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>return the credit of specified credentail’s information</p>
 </dd>
 </dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;accountName&quot;</span><span class="p">:</span> <span class="s2">&quot;AccountForAliyun&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;contextType&quot;</span><span class="p">:</span> <span class="s2">&quot;cash&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;credits&quot;</span><span class="p">:</span> <span class="s2">&quot;1000&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;CNY&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -188,15 +206,274 @@ all the functions need a prefix or postfix to distinguish the difference</p>
 <dd><p>Get specific Hosts info</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>providerId</strong> (<em>str</em>) – to get all cloud accounts under the provider</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>providerId</strong> (<em>str</em>) -- to get all cloud accounts under the provider</p></li>
+<li><p><strong>sort</strong> (<em>str</em>) -- field to sort, default is createdAt</p></li>
+<li><p><strong>order</strong> (<em>str</em>) -- sorting order, default is desc</p></li>
+<li><p><strong>offset</strong> (<em>int</em>) -- The offset for returned data</p></li>
+<li><p><strong>limit</strong> (<em>int</em>) -- The number of data to present</p></li>
+<li><p><strong>search</strong> (<em>str</em>) -- return only search</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of accounts</p>
 </dd>
 </dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;sort&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;order&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;timezone&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;offset&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;limit&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;search&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="mi">1536819659</span><span class="p">,</span>
+            <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="mi">1536819659</span><span class="p">,</span>
+            <span class="nt">&quot;createdBy&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;xw61lq&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;測試專用 - 超級管理員&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;updatedBy&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;xw61lq&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;測試專用 - 超級管理員&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ONLINE&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;resourceType&quot;</span><span class="p">:</span> <span class="s2">&quot;CLOUD_ACCOUNT&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;projects&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;provider&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;keyname&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;permission&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;DELETE&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nt">&quot;READ&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nt">&quot;UPDATE&quot;</span><span class="p">:</span> <span class="kc">true</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;credentials&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;apiId&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;secret&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;remark&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;isValid&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                    <span class="nt">&quot;failedAt&quot;</span><span class="p">:</span> <span class="mi">1536819659</span><span class="p">,</span>
+                    <span class="nt">&quot;assets&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;cdns&quot;</span><span class="p">:</span> <span class="p">[</span>
+                            <span class="p">{</span>
+                                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;protectActions&quot;</span><span class="p">:</span> <span class="p">[</span>
+                                    <span class="s2">&quot;string&quot;</span>
+                                <span class="p">]</span>
+                            <span class="p">}</span>
+                        <span class="p">],</span>
+                        <span class="nt">&quot;databases&quot;</span><span class="p">:</span> <span class="p">[</span>
+                            <span class="p">{</span>
+                                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;protectActions&quot;</span><span class="p">:</span> <span class="p">[</span>
+                                    <span class="s2">&quot;string&quot;</span>
+                                <span class="p">]</span>
+                            <span class="p">}</span>
+                        <span class="p">],</span>
+                        <span class="nt">&quot;domains&quot;</span><span class="p">:</span> <span class="p">[</span>
+                            <span class="p">{</span>
+                                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;protectActions&quot;</span><span class="p">:</span> <span class="p">[</span>
+                                    <span class="s2">&quot;string&quot;</span>
+                                <span class="p">]</span>
+                            <span class="p">}</span>
+                        <span class="p">],</span>
+                        <span class="nt">&quot;servers&quot;</span><span class="p">:</span> <span class="p">[</span>
+                            <span class="p">{</span>
+                                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;protectActions&quot;</span><span class="p">:</span> <span class="p">[</span>
+                                    <span class="s2">&quot;string&quot;</span>
+                                <span class="p">]</span>
+                            <span class="p">}</span>
+                        <span class="p">],</span>
+                        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="mi">1536819659</span><span class="p">,</span>
+                        <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="mi">1536819659</span><span class="p">,</span>
+                        <span class="nt">&quot;createdBy&quot;</span><span class="p">:</span> <span class="p">{</span>
+                            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;xw61lq&quot;</span><span class="p">,</span>
+                            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;測試專用 - 超級管理員&quot;</span>
+                        <span class="p">},</span>
+                        <span class="nt">&quot;updatedBy&quot;</span><span class="p">:</span> <span class="p">{</span>
+                            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;xw61lq&quot;</span><span class="p">,</span>
+                            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;測試專用 - 超級管理員&quot;</span>
+                        <span class="p">}</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;pn-task-id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py method">
 <dt>
 <code class="sig-name descname">getProviders</code><span class="sig-paren">(</span><em class="sig-param">offset=0</em>, <em class="sig-param">limit=0</em>, <em class="sig-param">search=None</em>, <em class="sig-param">order=&lt;OrderBy.Desc: 'desc'&gt;</em>, <em class="sig-param">sort='createdAt'</em><span class="sig-paren">)</span></dt>
 <dd><p>Get providers with given query parameters</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sort</strong> (<em>str</em>) -- field to sort, default is createdAt</p></li>
+<li><p><strong>order</strong> (<em>str</em>) -- sorting order, default is desc</p></li>
+<li><p><strong>offset</strong> (<em>int</em>) -- The offset for returned data</p></li>
+<li><p><strong>limit</strong> (<em>int</em>) -- The number of data to present</p></li>
+<li><p><strong>search</strong> (<em>str</em>) -- return only search</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>return the information of providers</p>
+</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;sort&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;order&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;search&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;offset&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;limit&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;isOfficial&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;protectActions&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;string&quot;</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;accountAmount&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;accounts&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="mi">1536819659</span><span class="p">,</span>
+                    <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="mi">1536819659</span><span class="p">,</span>
+                    <span class="nt">&quot;createdBy&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;xw61lq&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;測試專用 - 超級管理員&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;updatedBy&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;xw61lq&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;測試專用 - 超級管理員&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ONLINE&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;resourceType&quot;</span><span class="p">:</span> <span class="s2">&quot;CLOUD_ACCOUNT&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;projects&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="p">{</span>
+                            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                        <span class="p">}</span>
+                    <span class="p">],</span>
+                    <span class="nt">&quot;provider&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;keyname&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;permission&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;DELETE&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                        <span class="nt">&quot;READ&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                        <span class="nt">&quot;UPDATE&quot;</span><span class="p">:</span> <span class="kc">true</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;credentials&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="p">{</span>
+                            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                            <span class="nt">&quot;apiId&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                            <span class="nt">&quot;secret&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                            <span class="nt">&quot;remark&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                            <span class="nt">&quot;isValid&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                            <span class="nt">&quot;failedAt&quot;</span><span class="p">:</span> <span class="mi">1536819659</span><span class="p">,</span>
+                            <span class="nt">&quot;assets&quot;</span><span class="p">:</span> <span class="p">{</span>
+                                <span class="nt">&quot;cdns&quot;</span><span class="p">:</span> <span class="p">[</span>
+                                    <span class="p">{</span>
+                                        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                                        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                                        <span class="nt">&quot;protectActions&quot;</span><span class="p">:</span> <span class="p">[</span>
+                                            <span class="s2">&quot;string&quot;</span>
+                                        <span class="p">]</span>
+                                    <span class="p">}</span>
+                                <span class="p">],</span>
+                                <span class="nt">&quot;databases&quot;</span><span class="p">:</span> <span class="p">[</span>
+                                    <span class="p">{</span>
+                                        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                                        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                                        <span class="nt">&quot;protectActions&quot;</span><span class="p">:</span> <span class="p">[</span>
+                                            <span class="s2">&quot;string&quot;</span>
+                                        <span class="p">]</span>
+                                    <span class="p">}</span>
+                                <span class="p">],</span>
+                                <span class="nt">&quot;domains&quot;</span><span class="p">:</span> <span class="p">[</span>
+                                    <span class="p">{</span>
+                                        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                                        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                                        <span class="nt">&quot;protectActions&quot;</span><span class="p">:</span> <span class="p">[</span>
+                                            <span class="s2">&quot;string&quot;</span>
+                                        <span class="p">]</span>
+                                    <span class="p">}</span>
+                                <span class="p">],</span>
+                                <span class="nt">&quot;servers&quot;</span><span class="p">:</span> <span class="p">[</span>
+                                    <span class="p">{</span>
+                                        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                                        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                                        <span class="nt">&quot;protectActions&quot;</span><span class="p">:</span> <span class="p">[</span>
+                                            <span class="s2">&quot;string&quot;</span>
+                                        <span class="p">]</span>
+                                    <span class="p">}</span>
+                                <span class="p">],</span>
+                                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="mi">1536819659</span><span class="p">,</span>
+                                <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="mi">1536819659</span><span class="p">,</span>
+                                <span class="nt">&quot;createdBy&quot;</span><span class="p">:</span> <span class="p">{</span>
+                                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;xw61lq&quot;</span><span class="p">,</span>
+                                    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;測試專用 - 超級管理員&quot;</span>
+                                <span class="p">},</span>
+                                <span class="nt">&quot;updatedBy&quot;</span><span class="p">:</span> <span class="p">{</span>
+                                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;xw61lq&quot;</span><span class="p">,</span>
+                                    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;測試專用 - 超級管理員&quot;</span>
+                                <span class="p">}</span>
+                            <span class="p">}</span>
+                        <span class="p">}</span>
+                    <span class="p">]</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="mi">1536819659</span><span class="p">,</span>
+            <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="mi">1536819659</span><span class="p">,</span>
+            <span class="nt">&quot;createdBy&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;xw61lq&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;測試專用 - 超級管理員&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;updatedBy&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;xw61lq&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;測試專用 - 超級管理員&quot;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </dd></dl>

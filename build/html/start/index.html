@@ -37,7 +37,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="CLI Supported Commands" href="../clikit/index.html" />
-    <link rel="prev" title="Revision History" href="../changelog.html" /> 
+    <link rel="prev" title="Marvin Automation Development Guide" href="../index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -86,10 +86,9 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Revision History</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../changelog.html#what-s-new">What’s new</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#system-requirements">System Requirements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#installation-dev-kit">Installation dev kit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#config-development-environment">Config development environment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#the-project-directory-structure">The project directory structure</a></li>
@@ -99,7 +98,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../extension/vscode/index.html">Extension Supported Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../library/index.html">Library List</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../blcks/index.html">Blcks SDK Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog/index.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ref.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/issues/">Issues Report</a></li>
 </ul>
 
             
@@ -151,10 +152,6 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            
-              <a href="https://github.com/pnetwork/core.trek.doc/blob/master/start/index.rst" class="fa fa-github"> Edit on GitHub</a>
-            
-          
         
       </li>
     
@@ -171,7 +168,17 @@
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>Trek 是一個幫助你開發 Marvin 上的自動化開發工具。Pentium Internet (奔騰網路) 提供多種開發環境，你可以透過 CLI 界面或 VScode 擴展開發自動化流程腳本。</p>
-<p>這份 trek 文件會幫助你學習和使用 trek 自動化開發工具，從你的第一個腳本，一直到優化複雜的複雜的工作流程。夠過 “trek” 指令，你可以在本機上完成所有的開發包含撰寫腳本、工作流程、除錯、開發工作流程，最後部署你開發的工具到你指定的 Marvin 平台。</p>
+<p>這份 trek 文件會幫助你學習和使用 trek 自動化開發工具，從你的第一個腳本，一直到優化複雜的複雜的工作流程。夠過 &quot;trek&quot; 指令，你可以在本機上完成所有的開發包含撰寫腳本、工作流程、除錯、開發工作流程，最後部署你開發的工具到你指定的 Marvin 平台。</p>
+</div>
+<div class="section" id="system-requirements">
+<h2>System Requirements<a class="headerlink" href="#system-requirements" title="Permalink to this headline">¶</a></h2>
+<p>在安裝前請確認系統是否符合需求</p>
+<ul class="simple">
+<li><p>macOS 10.14+</p></li>
+<li><p>Docker 19.03+</p></li>
+<li><p>Python 3.7+</p></li>
+<li><p>graphviz 2.42.2+</p></li>
+</ul>
 </div>
 <div class="section" id="installation-dev-kit">
 <span id="install-trek"></span><h2>Installation dev kit<a class="headerlink" href="#installation-dev-kit" title="Permalink to this headline">¶</a></h2>
@@ -188,8 +195,8 @@
 <div class="section" id="config-development-environment">
 <span id="config-trek"></span><h2>Config development environment<a class="headerlink" href="#config-development-environment" title="Permalink to this headline">¶</a></h2>
 <p>成功安裝 trek cli 工具後，我們需要設置 trek config。
-trek config 提供專案、Global兩種層級的設置，專案設置可以覆蓋 Global 設置。舉例來說，若 Global 和專案皆設置了 router_port 欄位，mflow 將優先以專案設置的為主。</p>
-<p>專案設定檔位於專案內 <code class="docutils literal notranslate"><span class="pre">{your_trek_project_path}/.trek/config.json</span></code>，Global 位於 <code class="docutils literal notranslate"><span class="pre">~/.trek/config.json</span></code>。</p>
+Trek config 提供專案、Global兩種層級的設置，專案設置可以覆蓋 Global 設置。舉例來說，若 Global 和專案皆設置了 <code class="docutils literal notranslate"><span class="pre">router_port</span></code> 欄位，trek 將優先以專案設置的為主。</p>
+<p>專案設定檔位於專案內 <em>{your_trek_project_path}/.trek/config.json</em>，Global 位於 <em>~/.trek/config.json</em>。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ vim ~/.trek/config.json
 {
     &quot;marvin_url&quot;: &quot;https://marvin.pentium.network/&quot;,
@@ -218,18 +225,18 @@ trek config 提供專案、Global兩種層級的設置，專案設置可以覆�
 <h3>marvin_url <span class="red">*</span><a class="headerlink" href="#marvin-url" title="Permalink to this headline">¶</a></h3>
 <div class="line-block">
 <div class="line">Marvin 平台 url。</div>
-<div class="line">若需使用 Marvin 平台資產時必需填入若不使用 API 取得資產的話則不需要填，像是可於本機執行的 ansible / shell 腳本。</div>
+<div class="line">若需使用 Marvin 平台資產、或佈署時必需填入，若不使用則可以不需要填。</div>
 </div>
 </div>
 <div class="section" id="marvin-jwt">
 <h3>marvin_JWT <span class="red">*</span><a class="headerlink" href="#marvin-jwt" title="Permalink to this headline">¶</a></h3>
 <div class="line-block">
-<div class="line">Marvin 平台 jwt tocken 設置，屬於 marvin_url 的 jwt token。</div>
-<div class="line">若僅知道 marvin 帳號密碼，可以使用 login 指令進行平台登入，系統即自動填入 marvin_JWT 欄位。</div>
+<div class="line">Marvin 平台 jwt tocken 設置，屬於 <code class="docutils literal notranslate"><span class="pre">marvin_url</span></code> 的 jwt token。</div>
+<div class="line">若僅知道 marvin 帳號密碼，可以使用 <a class="reference internal" href="../reference/clikit/commands/login.html"><span class="doc">login</span></a> 指令進行平台登入，系統即自動填入專案層級的 <code class="docutils literal notranslate"><span class="pre">marvin_JWT</span></code> 欄位。</div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>若 marvin_url 有設置需求時，marvin_JWT 也必需設置。</p>
+<p>若 <code class="docutils literal notranslate"><span class="pre">marvin_url</span></code> 有設置需求時，<code class="docutils literal notranslate"><span class="pre">marvin_JWT</span></code> 也必需設置。</p>
 </div>
 </div>
 <div class="section" id="router-port">
@@ -248,7 +255,7 @@ trek config 提供專案、Global兩種層級的設置，專案設置可以覆�
 <h3>blcks_code_base<a class="headerlink" href="#blcks-code-base" title="Permalink to this headline">¶</a></h3>
 <div class="line-block">
 <div class="line">Blcks 腳本於本地端的資料夾位置。</div>
-<div class="line">假設資料夾 /User/pentium/trek/blcks/ 下有多個 blcks 腳本(如下)，則 blcks_code_base 可設置為 <code class="docutils literal notranslate"><span class="pre">/User/pentium/trek/blcks</span></code>。</div>
+<div class="line">假設資料夾 <em>/User/pentium/trek/blcks/</em> 下有多個 blcks 腳本(如下)，則 <code class="docutils literal notranslate"><span class="pre">blcks_code_base</span></code> 可設置為 <em>/User/pentium/trek/blcks</em>。</div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ tree /User/pentium/trek/blcks
 /User/pentium/trek/blcks
@@ -262,33 +269,33 @@ trek config 提供專案、Global兩種層級的設置，專案設置可以覆�
 <div class="section" id="ansible-code-base">
 <h3>ansible_code_base<a class="headerlink" href="#ansible-code-base" title="Permalink to this headline">¶</a></h3>
 <div class="line-block">
-<div class="line">Ansible 腳本於本地端位置。設置方式如同 blcks_code_base 。</div>
+<div class="line">Ansible 腳本於本地端位置。設置方式如同 <code class="docutils literal notranslate"><span class="pre">blcks_code_base</span></code>。</div>
 </div>
 </div>
 <div class="section" id="shell-script-base">
 <h3>shell_script_base<a class="headerlink" href="#shell-script-base" title="Permalink to this headline">¶</a></h3>
 <div class="line-block">
-<div class="line">Shell 腳本於本地端位置。設置方式如同 blcks_code_base 。</div>
+<div class="line">Shell 腳本於本地端位置。設置方式如同 <code class="docutils literal notranslate"><span class="pre">blcks_code_base</span></code> 。</div>
 </div>
 </div>
 <div class="section" id="script-repository">
 <h3>script_repository<a class="headerlink" href="#script-repository" title="Permalink to this headline">¶</a></h3>
 <div class="line-block">
-<div class="line">Packages server 位置設置。</div>
-<div class="line">若需遠端安裝、查看腳本，使用指令 install/listscripts，需要設定腳本存放的位置。</div>
+<div class="line">腳本下載 Packages server 位置設置。</div>
+<div class="line">若需遠端安裝、查看腳本，使用指令 <a class="reference internal" href="../reference/clikit/commands/install.html"><span class="doc">install</span></a>、<a class="reference internal" href="../reference/clikit/commands/listscripts.html"><span class="doc">listscripts</span></a> 需要設定腳本存放的位置。</div>
 </div>
 </div>
 <div class="section" id="input-data-path">
 <span id="config-input-data"></span><h3>input_data_path<a class="headerlink" href="#input-data-path" title="Permalink to this headline">¶</a></h3>
 <div class="line-block">
-<div class="line">工作流程參數檔案位置，預設為 inputs/data.yml。</div>
+<div class="line">工作流程參數檔案位置，預設為 <em>{your_trek_project_path}/inputs/data.yml</em> 。</div>
 <div class="line">當 workflow template 不想設定可供選擇的值時 (如: chatbot)，可透過工作流程參數檔案設定欄位值，通常於本機執行測試時使用。</div>
 </div>
 </div>
 <div class="section" id="input-event-path">
 <span id="config-input-event-path"></span><h3>input_event_path<a class="headerlink" href="#input-event-path" title="Permalink to this headline">¶</a></h3>
 <div class="line-block">
-<div class="line">工作流程事件參數檔案位置，預設為 inputs/event.yml。</div>
+<div class="line">工作流程事件參數檔案位置，預設為 <em>{your_trek_project_path}/inputs/event.yml</em>。</div>
 <div class="line">當工作流程為事件觸發時，此參數將指定事件內容檔案位置。</div>
 </div>
 </div>
@@ -296,14 +303,14 @@ trek config 提供專案、Global兩種層級的設置，專案設置可以覆�
 <h3>env<a class="headerlink" href="#env" title="Permalink to this headline">¶</a></h3>
 <div class="line-block">
 <div class="line">腳本環境變數。</div>
-<div class="line">若腳本需要謮取環境變數時，可以在此欄位進行設置。</div>
+<div class="line">若腳本需要讀取環境變數時，可以在此欄位進行設置。</div>
 </div>
 </div>
 <div class="section" id="flow-home">
 <h3>flow_home<a class="headerlink" href="#flow-home" title="Permalink to this headline">¶</a></h3>
 <div class="line-block">
 <div class="line">執行管理介面指令 <a class="reference internal" href="../reference/clikit/commands/webserver.html"><span class="doc">webserver</span></a> 時可以指定要監控的 trek 專案放置路徑。</div>
-<div class="line">假設有一個 trek 專案位置為 /User/Pentium/trek/hello_trek_project，則設置 <code class="docutils literal notranslate"><span class="pre">flow_home=&quot;/User/Pentium/trek/&quot;</span></code>。</div>
+<div class="line">假設有一個 trek 專案位置為 <em>/User/Pentium/trek/hello_trek_project</em>，則設置 <code class="docutils literal notranslate"><span class="pre">flow_home=&quot;/User/Pentium/trek/&quot;</span></code>。</div>
 </div>
 </div>
 <div class="section" id="local-inventory-file">
@@ -319,7 +326,7 @@ trek config 提供專案、Global兩種層級的設置，專案設置可以覆�
 </pre></div>
 </div>
 <div class="line-block">
-<div class="line">將 config.json 中的 local_inventory_file 設置為 /Users/pentium/ansible/inventory.ini：</div>
+<div class="line">將 config.json 中的 <code class="docutils literal notranslate"><span class="pre">local_inventory_file</span></code> 設置為 <em>/Users/pentium/ansible/inventory.ini</em>：</div>
 </div>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;local_inventory_file&quot;</span><span class="p">:</span><span class="s2">&quot;/Users/pentium/ansible/inventory.ini&quot;</span>
@@ -327,7 +334,7 @@ trek config 提供專案、Global兩種層級的設置，專案設置可以覆�
 </pre></div>
 </div>
 <div class="line-block">
-<div class="line">在 workflow template file 的服務器資產指定為 _local_ ：</div>
+<div class="line">在 workflow template file 的服務器資產指定為 <code class="docutils literal notranslate"><span class="pre">_local_</span></code> ：</div>
 </div>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1">#FileName: Workflow template file</span>
 <span class="nn">...</span>
@@ -349,7 +356,7 @@ trek config 提供專案、Global兩種層級的設置，專案設置可以覆�
 <h2>The project directory structure<a class="headerlink" href="#the-project-directory-structure" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line">一個完整的 trek 專案目錄結構會如下：</div>
-<div class="line">資料夾 trek_packages、src/ansible、src/blcks、src/shell 若沒有使用指令生成則不會有。</div>
+<div class="line">資料夾 <em>trek_packages</em>、<em>src/ansible</em>、<em>src/blcks</em>、<em>src/shell</em> 需要使用相關指令才會生成。</div>
 </div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ tree hello_trek_project
 hello_trek_project/
@@ -371,8 +378,8 @@ hello_trek_project/
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul class="simple">
-<li><p>若要使用 inputs/data.yaml 需要配置 config.json 中的 <a class="reference internal" href="#config-input-data"><span class="std std-ref">input_data_path 欄位</span></a> 指定檔案位置。</p></li>
-<li><p>若要使用 inputs/event.yaml 需要配置 config.json 中的 <a class="reference internal" href="#config-input-event-path"><span class="std std-ref">input_event_path 欄位</span></a> 指定檔案位置。</p></li>
+<li><p>若要使用 <em>inputs/data.yaml</em> 需要配置 config.json 中的 <a class="reference internal" href="#config-input-data"><span class="std std-ref">input_data_path 欄位</span></a> 指定檔案位置。</p></li>
+<li><p>若要使用 <em>inputs/event.yaml</em> 需要配置 config.json 中的 <a class="reference internal" href="#config-input-event-path"><span class="std std-ref">input_event_path 欄位</span></a> 指定檔案位置。</p></li>
 </ul>
 </div>
 </div>
@@ -389,7 +396,7 @@ hello_trek_project/
         <a href="../clikit/index.html" class="btn btn-neutral float-right" title="CLI Supported Commands" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../changelog.html" class="btn btn-neutral float-left" title="Revision History" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="Marvin Automation Development Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
