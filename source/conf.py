@@ -73,12 +73,12 @@ html_context = {
     "display_github": False,
     "github_user": "pnetwork",
     "github_repo": "core.trek.doc",
-    "github_version": "master/source/",
+    "github_version": "gh-pages/source/",
 }
 smartquotes=False
 
 extlinks = {
     "gitlink": ("https://github.com/pnetwork/core.trek.doc/%s", "github "),
-    "examplelink": ("https://github.com/pnetwork/core.trek.doc/tree/master/example/%s", "example project "),
+    "examplelink": ("https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/%s", "example project "),
 }
 
