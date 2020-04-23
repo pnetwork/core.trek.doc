@@ -6,14 +6,14 @@ Trek config.json 提供以下設定：
 marvin_url :red:`*` 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 | Marvin 平台 url。
-| 若需使用 Marvin 平台資產時必需填入若不使用 API 取得資產的話則不需要填，像是可於本機執行的 ansible / shell 腳本。
+| 若需使用 Marvin 平台資產、或佈署時必需填入，若不使用則可以不需要填。
 
 marvin_JWT :red:`*` 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-| Marvin 平台 jwt tocken 設置，屬於 marvin_url 的 jwt token。
-| 若僅知道 marvin 帳號密碼，可以使用 login 指令進行平台登入，系統即自動填入 marvin_JWT 欄位。
+| Marvin 平台 jwt tocken 設置，屬於 ``marvin_url`` 的 jwt token。
+| 若僅知道 marvin 帳號密碼，可以使用 :doc:`../reference/clikit/commands/login` 指令進行平台登入，系統即自動填入專案層級的 ``marvin_JWT`` 欄位。
 
-.. note:: 若 marvin_url 有設置需求時，marvin_JWT 也必需設置。
+.. note:: 若 ``marvin_url`` 有設置需求時，``marvin_JWT`` 也必需設置。
 
 router_port
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -26,7 +26,7 @@ action_timeout
 blcks_code_base
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 | Blcks 腳本於本地端的資料夾位置。
-| 假設資料夾 /User/pentium/trek/blcks/ 下有多個 blcks 腳本(如下)，則 blcks_code_base 可設置為 ``/User/pentium/trek/blcks``。
+| 假設資料夾 */User/pentium/trek/blcks/* 下有多個 blcks 腳本(如下)，則 ``blcks_code_base`` 可設置為 */User/pentium/trek/blcks*。
 
 ::
 
@@ -39,40 +39,40 @@ blcks_code_base
 
 ansible_code_base
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-| Ansible 腳本於本地端位置。設置方式如同 blcks_code_base 。
+| Ansible 腳本於本地端位置。設置方式如同 ``blcks_code_base``。
 
 shell_script_base
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-| Shell 腳本於本地端位置。設置方式如同 blcks_code_base 。
+| Shell 腳本於本地端位置。設置方式如同 ``blcks_code_base`` 。
 
 script_repository
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-| Packages server 位置設置。
-| 若需遠端安裝、查看腳本，使用指令 install/listscripts，需要設定腳本存放的位置。
+| 腳本下載 Packages server 位置設置。
+| 若需遠端安裝、查看腳本，使用指令 :doc:`../reference/clikit/commands/install`、:doc:`../reference/clikit/commands/listscripts` 需要設定腳本存放的位置。
 
 .. _config_input_data:
 
 input_data_path
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-| 工作流程參數檔案位置，預設為 inputs/data.yml。
+| 工作流程參數檔案位置，預設為 *{your_trek_project_path}/inputs/data.yml* 。
 | 當 workflow template 不想設定可供選擇的值時 (如: chatbot)，可透過工作流程參數檔案設定欄位值，通常於本機執行測試時使用。
 
 .. _config_input_event_path:
 
 input_event_path
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-| 工作流程事件參數檔案位置，預設為 inputs/event.yml。
+| 工作流程事件參數檔案位置，預設為 *{your_trek_project_path}/inputs/event.yml*。
 | 當工作流程為事件觸發時，此參數將指定事件內容檔案位置。
 
 env
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 | 腳本環境變數。
-| 若腳本需要謮取環境變數時，可以在此欄位進行設置。
+| 若腳本需要讀取環境變數時，可以在此欄位進行設置。
 
 flow_home
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 | 執行管理介面指令 :doc:`../reference/clikit/commands/webserver` 時可以指定要監控的 trek 專案放置路徑。
-| 假設有一個 trek 專案位置為 /User/Pentium/trek/hello_trek_project，則設置 ``flow_home="/User/Pentium/trek/"``。
+| 假設有一個 trek 專案位置為 */User/Pentium/trek/hello_trek_project*，則設置 ``flow_home="/User/Pentium/trek/"``。
 
 local_inventory_file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -86,7 +86,7 @@ local_inventory_file
    [hosts]
    192.168.101.231 ansible_user=root ansible_password=pentiumvm ansible_port=22
 
-| 將 config.json 中的 local_inventory_file 設置為 /Users/pentium/ansible/inventory.ini：
+| 將 config.json 中的 ``local_inventory_file`` 設置為 */Users/pentium/ansible/inventory.ini*：
 
 .. code-block:: json
 
@@ -94,7 +94,7 @@ local_inventory_file
        "local_inventory_file":"/Users/pentium/ansible/inventory.ini"
    }
 
-| 在 workflow template file 的服務器資產指定為 _local_ ：
+| 在 workflow template file 的服務器資產指定為 ``_local_`` ：
 
 .. code-block:: yaml
 

@@ -1,0 +1,11 @@
+apiVersion: skaffold/v1beta10
+kind: Config
+build:
+  artifacts:
+  - image: 
+    context: build/
+    docker:
+      noCache: true
+deploy:
+  kustomize:
+    path: github.com/pnetwork/pnbase///?ref=master
