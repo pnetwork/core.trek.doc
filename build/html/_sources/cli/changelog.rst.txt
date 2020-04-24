@@ -1,4 +1,4 @@
-Trek Clikit Changelog
+Trek CLI Changelog
 =========================
 
 Version v1.0.0-beta

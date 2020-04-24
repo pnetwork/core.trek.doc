@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../_static/css/table.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Clikit Supported Commands" href="../cli/index.html" />
+    <link rel="next" title="CLI Supported Commands" href="../cli/index.html" />
     <link rel="prev" title="Marvin Automation Development Guide" href="../index.html" /> 
 </head>
 
@@ -89,7 +89,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#system-requirements">System Requirements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#installation-trek-cli">Installation Trek Cli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#installation-trek-cli">Installation Trek CLI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#config-development-environment">Config Development Environment</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#marvin-url">marvin_url <span class="red">*</span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#marvin-jwt">marvin_JWT <span class="red">*</span></a></li>
@@ -110,7 +110,7 @@
 </ul>
 <p class="caption"><span class="caption-text">USER GUIDE</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../cli/index.html">Clikit Supported Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cli/index.html">CLI Supported Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../extension/vscode/index.html">Extension Supported Commands</a></li>
 </ul>
 <p class="caption"><span class="caption-text">REFERENCE</span></p>
@@ -120,7 +120,7 @@
 </ul>
 <p class="caption"><span class="caption-text">ABOUT</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../cli/changelog.html">Trek Clikit Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cli/changelog.html">Trek CLI Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../extension/vscode/changelog.html">Vscode Extension Changelog</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/issues/">Issues Report</a></li>
 </ul>
@@ -187,7 +187,7 @@
             
   <div class="section" id="introduction">
 <h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
-<p>Trek 是一個幫助你開發 Marvin 上的自動化開發工具。Pentium Internet (奔騰網路) 提供多種開發環境，你可以透過 cli 界面或 VScode 擴展開發自動化流程腳本。</p>
+<p>Trek 是一個幫助你開發 Marvin 上的自動化開發工具。Pentium Internet (奔騰網路) 提供多種開發環境，你可以透過 CLI 界面或 VScode 擴展開發自動化流程腳本。</p>
 <p>這份 Trek 文件會幫助你學習和使用 Trek 自動化開發工具，從你的第一個腳本，一直到優化複雜的複雜的工作流程。夠過 <code class="docutils literal notranslate"><span class="pre">trek</span></code> 指令，你可以在本機上完成所有的開發包含撰寫腳本、工作流程、除錯、開發工作流程，最後部署你開發的工具到你指定的 Marvin 平台。</p>
 </div>
 <div class="section" id="system-requirements">
@@ -201,8 +201,8 @@
 </ul>
 </div>
 <div class="section" id="installation-trek-cli">
-<span id="install-trek"></span><h1>Installation Trek Cli<a class="headerlink" href="#installation-trek-cli" title="Permalink to this headline">¶</a></h1>
-<p>首先我們要安裝 Trek cli 工具，請使用以下指令安裝 trek：</p>
+<span id="install-trek"></span><h1>Installation Trek CLI<a class="headerlink" href="#installation-trek-cli" title="Permalink to this headline">¶</a></h1>
+<p>首先我們要安裝 Trek CLI 工具，請使用以下指令安裝 trek：</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ pip install trek -i https://package.pentium.network/repository/pypi-group/simple --trusted-host<span class="o">=</span>package.pentium.network
 </pre></div>
 </div>
@@ -214,7 +214,7 @@
 </div>
 <div class="section" id="config-development-environment">
 <span id="config-trek"></span><h1>Config Development Environment<a class="headerlink" href="#config-development-environment" title="Permalink to this headline">¶</a></h1>
-<p>成功安裝 Trek cli 工具後，我們需要設置 Trek config。
+<p>成功安裝 Trek CLI 工具後，我們需要設置 Trek config。
 Trek config 提供專案、Global兩種層級的設置，專案設置可以覆蓋 Global 設置。舉例來說，若 Global 和專案皆設置了 <code class="docutils literal notranslate"><span class="pre">router_port</span></code> 欄位，trek 將優先以專案設置的為主。</p>
 <p>專案設定檔位於專案內 <em>{your_trek_project_path}/.trek/config.json</em>，Global 位於 <em>~/.trek/config.json</em>。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ vim ~/.trek/config.json
@@ -302,7 +302,7 @@ Trek config 提供專案、Global兩種層級的設置，專案設置可以覆�
 <h2>script_repository<a class="headerlink" href="#script-repository" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line">腳本下載 Packages server 位置設置。</div>
-<div class="line">若需遠端安裝、查看腳本，使用指令 <span class="xref std std-doc">../reference/clik/commands/install</span>、<a class="reference internal" href="../reference/cli/commands/listscripts.html"><span class="doc">listscripts</span></a> 需要設定腳本存放的位置。</div>
+<div class="line">若需遠端安裝、查看腳本，使用指令 <a class="reference internal" href="../reference/cli/commands/install.html"><span class="doc">install</span></a>、<a class="reference internal" href="../reference/cli/commands/listscripts.html"><span class="doc">listscripts</span></a> 需要設定腳本存放的位置。</div>
 </div>
 </div>
 <div class="section" id="input-data-path">
@@ -412,7 +412,7 @@ hello_trek_project/
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../cli/index.html" class="btn btn-neutral float-right" title="Clikit Supported Commands" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../cli/index.html" class="btn btn-neutral float-right" title="CLI Supported Commands" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../index.html" class="btn btn-neutral float-left" title="Marvin Automation Development Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
