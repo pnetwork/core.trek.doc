@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../../_static/css/table.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Before you begin" href="config.html" />
-    <link rel="prev" title="webserver" href="../../reference/clikit/commands/webserver.html" /> 
+    <link rel="next" title="Before You Begin" href="config.html" />
+    <link rel="prev" title="webserver" href="../../reference/cli/commands/webserver.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -85,22 +85,35 @@
               
             
             
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../start/index.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../clikit/index.html">CLI Supported Commands</a></li>
+              <p class="caption"><span class="caption-text">GETTING STARTED</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../start/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../start/index.html#system-requirements">System Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../start/index.html#installation-trek-cli">Installation Trek Cli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../start/index.html#config-development-environment">Config Development Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../start/index.html#the-project-directory-structure">The Project Directory Structure</a></li>
+</ul>
+<p class="caption"><span class="caption-text">USER GUIDE</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cli/index.html">Clikit Supported Commands</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Extension Supported Commands</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="config.html">Before you begin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="config.html#installing-trek-vscode-extension">Installing trek vscode extension</a></li>
-<li class="toctree-l2"><a class="reference internal" href="config.html#configuring-trek-vscode-extension">Configuring trek vscode extension</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html">Command list</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usecase.html">The first trek project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config.html">Before You Begin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config.html#installing-trek-vscode-extension">Installing Trek Vscode Extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config.html#configuring-trek-vscode-extension">Configuring Trek Vscode Extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html">Command List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usecase.html">The First Trek Project</a></li>
 </ul>
 </li>
+</ul>
+<p class="caption"><span class="caption-text">REFERENCE</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../../library/index.html">Library List</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../blcks/index.html">Blcks SDK Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../changelog/index.html">Changelog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../ref.html">Reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ABOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cli/changelog.html">Trek Clikit Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Vscode Extension Changelog</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/issues/">Issues Report</a></li>
 </ul>
 
@@ -169,10 +182,10 @@
 <p>Trek vscode extension 讓您在 vscode 上輕鬆的開發 Marvin 自動化腳本、工作流程，透過 vscode 的命令即可在本機測試、以及把完成的腳本/工作流程打包佈署至您的 Marvin 平台。</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="config.html">Before you begin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="config.html#installing-trek-vscode-extension">Installing trek vscode extension</a></li>
-<li class="toctree-l1"><a class="reference internal" href="config.html#configuring-trek-vscode-extension">Configuring trek vscode extension</a></li>
-<li class="toctree-l1"><a class="reference internal" href="commands.html">Command list</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="config.html">Before You Begin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html#installing-trek-vscode-extension">Installing Trek Vscode Extension</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html#configuring-trek-vscode-extension">Configuring Trek Vscode Extension</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commands.html">Command List</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../reference/extension/commands/build_and_push.html">Trek: Build and Push</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../reference/extension/commands/create_ansible.html">Trek: Create Ansible</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../reference/extension/commands/create_blcks.html">Trek: Create Blcks</a></li>
@@ -193,17 +206,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../../reference/extension/commands/version.html">Trek: Version</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="usecase.html">The first trek project</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="usecase.html">The First Trek Project</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="usecase.html#step-1-create-project">Step 1. Create project</a></li>
 <li class="toctree-l2"><a class="reference internal" href="usecase.html#step-2-create-blcks">Step 2. Create blcks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="usecase.html#step-3-install-scripts">Step 3. Install scripts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="usecase.html#step-4-edit-workflow-template">Step 4. Edit workflow template</a></li>
 <li class="toctree-l2"><a class="reference internal" href="usecase.html#step-5-run">Step 5. Run</a></li>
 <li class="toctree-l2"><a class="reference internal" href="usecase.html#step-6-deploy">Step 6. Deploy</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#version-v1-0-0-beta">Version v1.0.0-beta</a></li>
 </ul>
 </li>
 </ul>
@@ -218,10 +227,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="config.html" class="btn btn-neutral float-right" title="Before you begin" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="config.html" class="btn btn-neutral float-right" title="Before You Begin" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../../reference/clikit/commands/webserver.html" class="btn btn-neutral float-left" title="webserver" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../../reference/cli/commands/webserver.html" class="btn btn-neutral float-left" title="webserver" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

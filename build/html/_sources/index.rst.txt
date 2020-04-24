@@ -1,21 +1,31 @@
-.. core.trek.doc documentation master file, created by
-   sphinx-quickstart on Thu Apr  9 14:57:48 2020.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 Marvin Automation Development Guide
 =========================================
 
 .. toctree::
-   :maxdepth: 2
-   
+   :maxdepth: 1
+   :caption: GETTING STARTED
+
    start/index
-   clikit/index
+
+.. toctree::
+   :maxdepth: 2
+   :caption: USER GUIDE
+
+   cli/index
    extension/vscode/index
+
+.. toctree::
+   :maxdepth: 2
+   :caption: REFERENCE
+
    library/index
    blcks/index
-   changelog/index
-   ref
+
+.. toctree::
+   :caption: ABOUT
+
+   cli/changelog
+   extension/vscode/changelog
    Issues Report <https://github.com/pnetwork/core.trek.doc/issues/>
 
 Indices and tables

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>The first trek project &mdash; Pentium</title>
+  <title>The First Trek Project &mdash; Pentium</title>
   
 
   
@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../../_static/css/table.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Changelog" href="changelog.html" />
+    <link rel="next" title="Library List" href="../../library/index.html" />
     <link rel="prev" title="Trek: Version" href="../../reference/extension/commands/version.html" /> 
 </head>
 
@@ -85,22 +85,35 @@
               
             
             
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../start/index.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../clikit/index.html">CLI Supported Commands</a></li>
+              <p class="caption"><span class="caption-text">GETTING STARTED</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../start/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../start/index.html#system-requirements">System Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../start/index.html#installation-trek-cli">Installation Trek Cli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../start/index.html#config-development-environment">Config Development Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../start/index.html#the-project-directory-structure">The Project Directory Structure</a></li>
+</ul>
+<p class="caption"><span class="caption-text">USER GUIDE</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cli/index.html">Clikit Supported Commands</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Extension Supported Commands</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="config.html">Before you begin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="config.html#installing-trek-vscode-extension">Installing trek vscode extension</a></li>
-<li class="toctree-l2"><a class="reference internal" href="config.html#configuring-trek-vscode-extension">Configuring trek vscode extension</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html">Command list</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">The first trek project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config.html">Before You Begin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config.html#installing-trek-vscode-extension">Installing Trek Vscode Extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config.html#configuring-trek-vscode-extension">Configuring Trek Vscode Extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html">Command List</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">The First Trek Project</a></li>
 </ul>
 </li>
+</ul>
+<p class="caption"><span class="caption-text">REFERENCE</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../../library/index.html">Library List</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../blcks/index.html">Blcks SDK Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../changelog/index.html">Changelog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../ref.html">Reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ABOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cli/changelog.html">Trek Clikit Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Vscode Extension Changelog</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/issues/">Issues Report</a></li>
 </ul>
 
@@ -149,7 +162,7 @@
         
           <li><a href="index.html">Extension Supported Commands</a> &raquo;</li>
         
-      <li>The first trek project</li>
+      <li>The First Trek Project</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -167,7 +180,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="the-first-trek-project">
-<h1>The first trek project<a class="headerlink" href="#the-first-trek-project" title="Permalink to this headline">¶</a></h1>
+<h1>The First Trek Project<a class="headerlink" href="#the-first-trek-project" title="Permalink to this headline">¶</a></h1>
 <div class="line-block">
 <div class="line">假設我們的開發範例：</div>
 <div class="line">監控 redis 的連線，若連線不到標註 <code class="docutils literal notranslate"><span class="pre">&lt;redis:unreachable&gt;</span></code> 標籤，並發送 chatbot 通知。</div>
@@ -181,7 +194,7 @@
 <p>其中 1 為此次新增腳本，2, 3 則為既有腳本可直接安裝</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>以下專案程式請參考 <a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/master/example/ ">範例專案</a>。</p>
+<p>以下專案程式請參考 <a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/ ">範例專案</a>。</p>
 </div>
 <div class="section" id="step-1-create-project">
 <h2>Step 1. Create project<a class="headerlink" href="#step-1-create-project" title="Permalink to this headline">¶</a></h2>
@@ -222,6 +235,7 @@
 <ul class="simple">
 <li><p>記得將主程式中使用的套件寫入 <em>handler/requirements.txt</em> 中。</p></li>
 <li><p>process function 的參數與 return 要跟 para schema 定義的一致。</p></li>
+<li><p>在 <code class="docutils literal notranslate"><span class="pre">handler.py</span></code> 中可以使用 blcks sdk 提供的 service 來操作 Marvin 平台上的資產，請參考 <a class="reference internal" href="../../blcks/index.html"><span class="doc">Blcks SDK Guide</span></a> 。</p></li>
 </ul>
 </div>
 </div></blockquote>
@@ -231,6 +245,7 @@
 <div class="section" id="step-3-install-scripts">
 <h2>Step 3. Install scripts<a class="headerlink" href="#step-3-install-scripts" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
+<div class="line">從 script repository 安裝腳本。</div>
 <div class="line">執行「Trek: Install Script」指令，安裝腳本：</div>
 </div>
 <ul class="simple">
@@ -241,12 +256,19 @@
 <div class="line">Vscode Terminal 視窗將顯示安裝的進度和結果：</div>
 </div>
 <img alt="../../_images/install_script.gif" src="../../_images/install_script.gif" />
+<div class="line-block">
+<div class="line">安裝下載的腳本檔案放在 <em>trek_packages/</em> 資料夾下； 同時也寫入一筆腳本至依賴安裝描述檔 <code class="docutils literal notranslate"><span class="pre">packages.json</span></code>。</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>可下載的腳本清單來自Pentium 提供的公眾腳本 <a class="reference internal" href="../../library/index.html#scripts-list"><span class="std std-ref">Scripts list</span></a>。</p>
+</div>
 </div>
 <div class="section" id="step-4-edit-workflow-template">
 <h2>Step 4. Edit workflow template<a class="headerlink" href="#step-4-edit-workflow-template" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line">接著開啟專案下的 <em>src/graph.yml</em> ，開始編輯 workflow template 檔案，定義好整個工作流程。</div>
-<div class="line">編輯完成，若要使用進階功能查看 workflow 流程圖，參考  <a class="reference internal" href="../../reference/clikit/commands/graph.html"><span class="doc">指令說明</span></a>。</div>
+<div class="line">編輯完成，若要使用進階功能查看 workflow 流程圖，參考  <a class="reference internal" href="../../reference/cli/commands/graph.html"><span class="doc">指令說明</span></a>。</div>
 <div class="line">在 vscode  workflow template 的編輯區塊上按右鍵選擇「View Workflow Template Graph」，檢視 workflow 流程圖。</div>
 </div>
 <img alt="../../_images/view_graph.gif" src="../../_images/view_graph.gif" />
@@ -288,7 +310,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="changelog.html" class="btn btn-neutral float-right" title="Changelog" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../../library/index.html" class="btn btn-neutral float-right" title="Library List" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../../reference/extension/commands/version.html" class="btn btn-neutral float-left" title="Trek: Version" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

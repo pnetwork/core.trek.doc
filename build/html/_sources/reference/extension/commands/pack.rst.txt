@@ -5,7 +5,7 @@ Trek: Pack
 
 Purpose:
 
-  | 打包 trek 專案。  
+  | 打包 Trek 專案。  
   | 將產生 workflow template 任務節點位置，與 inline script 一起打包成 zip 並放置於 *{your_trek_project_path}/bin* 資料夾中。
 
 

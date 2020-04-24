@@ -1,5 +1,5 @@
-The first trek project
-------------------------
+The First Trek Project
+----------------------------
 | 假設我們的開發範例：
 | 監控 redis 的連線，若連線不到標註 ``<redis:unreachable>`` 標籤，並發送 chatbot 通知。
 | 因此 workflow 需要三個腳本：
@@ -46,10 +46,12 @@ Step 2. Create blcks
     .. warning::
         - 記得將主程式中使用的套件寫入 *handler/requirements.txt* 中。
         - process function 的參數與 return 要跟 para schema 定義的一致。
+        - 在 ``handler.py`` 中可以使用 blcks sdk 提供的 service 來操作 Marvin 平台上的資產，請參考 :doc:`../../blcks/index` 。
 
 
 Step 3. Install scripts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+| 從 script repository 安裝腳本。  
 | 執行「Trek: Install Script」指令，安裝腳本：
 
 - 資產設定標籤(blckssettags)
@@ -59,10 +61,15 @@ Step 3. Install scripts
 
 .. image:: ../../_static/images/install_script.gif
 
+| 安裝下載的腳本檔案放在 *trek_packages/* 資料夾下； 同時也寫入一筆腳本至依賴安裝描述檔 ``packages.json``。
+
+.. note::
+    可下載的腳本清單來自Pentium 提供的公眾腳本 :ref:`scripts_list`。
+
 Step 4. Edit workflow template
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 | 接著開啟專案下的 *src/graph.yml* ，開始編輯 workflow template 檔案，定義好整個工作流程。
-| 編輯完成，若要使用進階功能查看 workflow 流程圖，參考  :doc:`指令說明<../../reference/clikit/commands/graph>`。
+| 編輯完成，若要使用進階功能查看 workflow 流程圖，參考  :doc:`指令說明<../../reference/cli/commands/graph>`。
 | 在 vscode  workflow template 的編輯區塊上按右鍵選擇「View Workflow Template Graph」，檢視 workflow 流程圖。
 
 .. image:: ../../_static/images/view_graph.gif

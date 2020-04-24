@@ -4,7 +4,7 @@ source/_build
 *.vsix
 run.sh
 
-source/reference/clikit/*
+source/reference/cli/*
 source/reference/extension/*
 source/reference/blcks/*
 example/host.detect.redis/.pytest.cache

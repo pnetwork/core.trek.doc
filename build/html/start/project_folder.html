@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>The project directory structure &mdash; Pentium</title>
+  <title>The Project Directory Structure &mdash; Pentium</title>
   
 
   
@@ -83,14 +83,28 @@
               
             
             
-              <ul>
-<li class="toctree-l1"><a class="reference internal" href="index.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../clikit/index.html">CLI Supported Commands</a></li>
+              <p class="caption"><span class="caption-text">GETTING STARTED</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#system-requirements">System Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#installation-trek-cli">Installation Trek Cli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#config-development-environment">Config Development Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#the-project-directory-structure">The Project Directory Structure</a></li>
+</ul>
+<p class="caption"><span class="caption-text">USER GUIDE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cli/index.html">Clikit Supported Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../extension/vscode/index.html">Extension Supported Commands</a></li>
+</ul>
+<p class="caption"><span class="caption-text">REFERENCE</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../library/index.html">Library List</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../blcks/index.html">Blcks SDK Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../changelog/index.html">Changelog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ref.html">Reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ABOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cli/changelog.html">Trek Clikit Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extension/vscode/changelog.html">Vscode Extension Changelog</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/issues/">Issues Report</a></li>
 </ul>
 
@@ -137,7 +151,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>The project directory structure</li>
+      <li>The Project Directory Structure</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -155,9 +169,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="the-project-directory-structure">
-<h1>The project directory structure<a class="headerlink" href="#the-project-directory-structure" title="Permalink to this headline">¶</a></h1>
+<h1>The Project Directory Structure<a class="headerlink" href="#the-project-directory-structure" title="Permalink to this headline">¶</a></h1>
 <div class="line-block">
-<div class="line">一個完整的 trek 專案目錄結構會如下：</div>
+<div class="line">一個完整的 Trek 專案目錄結構會如下：</div>
 <div class="line">資料夾 <em>trek_packages</em>、<em>src/ansible</em>、<em>src/blcks</em>、<em>src/shell</em> 需要使用相關指令才會生成。</div>
 </div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ tree hello_trek_project
@@ -166,8 +180,8 @@ hello_trek_project/
 │   └── config.json     <span class="c1"># 專案層級的設定檔</span>
 ├──trek_packages/       <span class="c1"># 腳本安裝位置</span>
 ├──inputs               <span class="c1"># 存放參數檔，在執行工作流程時可以用到</span>
-│   ├── data.yml        <span class="c1"># 執行時參照的工作流程參數檔</span>
-│   └── event.yml       <span class="c1"># 執行時參照的事件參數檔</span>
+│   ├── data.yml        <span class="c1"># 執行時參照的工作流程參數檔，同時支援 yaml(預設), json 格式</span>
+│   └── event.yml       <span class="c1"># 執行時參照的事件參數檔，同時支援 yaml(預設), json 格式</span>
 ├── manifest.json       <span class="c1"># 定義 workflow template 檔案位置</span>
 ├── packages.json       <span class="c1"># 制定專案所需的 dependencies 安裝包(類似 python requirements.txt)</span>
 └── src                 <span class="c1"># 存放主要程式碼</span>
