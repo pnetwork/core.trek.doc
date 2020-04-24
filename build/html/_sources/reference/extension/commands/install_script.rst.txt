@@ -5,7 +5,7 @@ Trek: Install Script
 
 Purpose:
 
-  | 從遠端下載腳本並安裝至 trek 專案中。  
+  | 從遠端下載腳本並安裝至 Trek 專案中。  
   | 可下載指定腳本、或將 *packages.json* 檔案中定義的腳本全部下載。  
   | 遠端機器位置於 *config.json* 中 ``script_repository`` 欄位設定
 
@@ -16,7 +16,7 @@ Usage:
     | 填入 pattern 為 ``*`` 或 ``{scriptid}=={version}``。
     | 請輸入腳本 id 及版號，以安裝 notification 腳本為例：
     
-    - ``*`` : 依 trek project 的 *./packages.json* 檔案中所描述的腳本進行下載。
+    - ``*`` : 依 Trek project 的 *./packages.json* 檔案中所描述的腳本進行下載。
       
         .. code-block:: shell
 

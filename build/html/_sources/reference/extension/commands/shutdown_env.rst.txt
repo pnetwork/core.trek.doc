@@ -6,5 +6,5 @@ Trek: Shutdown Env
 Purpose:
 
   | 關閉執行環境。  
-  | 關閉所有與由 trek 產生的 docker containers。
+  | 關閉所有與由 Trek 產生的 docker containers。
 

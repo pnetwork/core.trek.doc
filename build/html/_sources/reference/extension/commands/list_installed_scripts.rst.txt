@@ -5,6 +5,6 @@ Trek: List Installed Scripts
 
 Purpose:
 
-  | 列出 trek 專案已安裝腳本及版號。  
+  | 列出 Trek 專案已安裝腳本及版號。  
   | 遠端機器位置於 *config.json* 中 ``script_repository`` 欄位設定。
 

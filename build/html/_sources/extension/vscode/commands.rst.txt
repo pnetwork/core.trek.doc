@@ -1,4 +1,4 @@
-Command list
+Command List
 ------------------------
 
 .. toctree::

@@ -11,7 +11,7 @@ marvin_url :red:`*`
 marvin_JWT :red:`*` 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 | Marvin 平台 jwt tocken 設置，屬於 ``marvin_url`` 的 jwt token。
-| 若僅知道 marvin 帳號密碼，可以使用 :doc:`../reference/clikit/commands/login` 指令進行平台登入，系統即自動填入專案層級的 ``marvin_JWT`` 欄位。
+| 若僅知道 marvin 帳號密碼，可以使用 :doc:`../reference/cli/commands/login` 指令進行平台登入，系統即自動填入專案層級的 ``marvin_JWT`` 欄位。
 
 .. note:: 若 ``marvin_url`` 有設置需求時，``marvin_JWT`` 也必需設置。
 
@@ -48,20 +48,20 @@ shell_script_base
 script_repository
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 | 腳本下載 Packages server 位置設置。
-| 若需遠端安裝、查看腳本，使用指令 :doc:`../reference/clikit/commands/install`、:doc:`../reference/clikit/commands/listscripts` 需要設定腳本存放的位置。
+| 若需遠端安裝、查看腳本，使用指令 :doc:`../reference/clik/commands/install`、:doc:`../reference/cli/commands/listscripts` 需要設定腳本存放的位置。
 
 .. _config_input_data:
 
 input_data_path
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-| 工作流程參數檔案位置，預設為 *{your_trek_project_path}/inputs/data.yml* 。
+| 工作流程參數檔案位置，預設為 *{your_trek_project_path}/inputs/data.yml*，支援 yaml, json 兩種格式。
 | 當 workflow template 不想設定可供選擇的值時 (如: chatbot)，可透過工作流程參數檔案設定欄位值，通常於本機執行測試時使用。
 
 .. _config_input_event_path:
 
 input_event_path
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-| 工作流程事件參數檔案位置，預設為 *{your_trek_project_path}/inputs/event.yml*。
+| 工作流程事件參數檔案位置，預設為 *{your_trek_project_path}/inputs/event.yml*，支援 yaml, json 兩種格式。
 | 當工作流程為事件觸發時，此參數將指定事件內容檔案位置。
 
 env
@@ -71,8 +71,8 @@ env
 
 flow_home
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-| 執行管理介面指令 :doc:`../reference/clikit/commands/webserver` 時可以指定要監控的 trek 專案放置路徑。
-| 假設有一個 trek 專案位置為 */User/Pentium/trek/hello_trek_project*，則設置 ``flow_home="/User/Pentium/trek/"``。
+| 執行管理介面指令 :doc:`../reference/cli/commands/webserver` 時可以指定要監控的 Trek 專案放置路徑。
+| 假設有一個 Trek 專案位置為 */User/Pentium/trek/hello_trek_project*，則設置 ``flow_home="/User/Pentium/trek/"``。
 
 local_inventory_file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -84,7 +84,7 @@ local_inventory_file
    #FilePath: /Users/pentium/ansible/inventory.ini
    #FileName: Ansible inventory.ini 
    [hosts]
-   192.168.101.231 ansible_user=root ansible_password=pentiumvm ansible_port=22
+   192.168.101.231 ansible_user=pentium ansible_password=pentium_password ansible_port=22
 
 | 將 config.json 中的 ``local_inventory_file`` 設置為 */Users/pentium/ansible/inventory.ini*：
 
