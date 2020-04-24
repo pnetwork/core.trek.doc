@@ -1,8 +1,8 @@
 Clikit Supported Commands
 =========================
-Trek clikit 指令工具將輔助您輕易的開發 Marvin 自動化腳本、工作流程，只需要幾個指令即可在本機測試、以及把完成的腳本/工作流程打包佈署至您的 Marvin 平台。
+Trek cli 指令工具將輔助您輕易的開發 Marvin 自動化腳本、工作流程，只需要幾個指令即可在本機測試、以及把完成的腳本/工作流程打包佈署至您的 Marvin 平台。
 
-.. note:: Trek clikit 工具安裝方法 :ref:`請參考 <install_trek>`。
+.. note:: Trek cli 工具安裝方法 :ref:`請參考 <install_trek>`。
 
 Command list
 ------------------------
@@ -11,7 +11,7 @@ Command list
    :maxdepth: 1
    :glob:
 
-   ../reference/clikit/commands/*
+   ../reference/cli/commands/*
 
 The First Trek Project
 ------------------------
@@ -31,8 +31,8 @@ The First Trek Project
 
 Step 1. Create project
 ^^^^^^^^^^^^^^^^^^^^^^^^
-| 開始建立一個 trek 專案。
-| 執行 :doc:`../../reference/clikit/commands/createproject` 指令建立 host.detect.redis 專案，同時它會問你是否要設定 marvin 相關專案層級的設置，若不需要專案層級的設置則可不輸入文字直接按下 enter：
+| 開始建立一個 Trek 專案。
+| 執行 :doc:`../../reference/cli/commands/createproject` 指令建立 host.detect.redis 專案，同時它會問你是否要設定 marvin 相關專案層級的設置，若不需要專案層級的設置則可不輸入文字直接按下 enter：
 
 .. code-block:: shell
 
@@ -44,9 +44,9 @@ Step 1. Create project
     Marvin secret []:
     Done
 
-| 每個 trek 專案都有一份設定檔 ``config.json``，您可以決定要定義專案層級的設置、或是全局的設置，config 詳細欄位介紹 :ref:`請參考 <config_trek>`。
+| 每個 Trek 專案都有一份設定檔 ``config.json``，您可以決定要定義專案層級的設置、或是全局的設置，config 詳細欄位介紹 :ref:`請參考 <config_trek>`。
 
-| 創建成功的 trek 專案目錄結構會如下：
+| 創建成功的 Trek 專案目錄結構會如下：
 
 .. code-block:: shell
 
@@ -68,7 +68,7 @@ Step 1. Create project
 Step 2. Create blcks
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 | 建立一個 blcks 腳本，用來檢查 redis 連線。
-| 在專案目錄下，執行 :doc:`../../reference/clikit/commands/createblcks` 指令產生 blcks detectredis 腳本：
+| 在專案目錄下，執行 :doc:`../../reference/cli/commands/createblcks` 指令產生 blcks detectredis 腳本：
 
 .. code-block:: shell
 
@@ -117,11 +117,12 @@ Step 2. Create blcks
 .. warning::
     - 記得將主程式中使用的套件寫入 *handler/requirements.txt* 中。
     - process function 的參數與 return 要跟 para schema 定義的一致。
+    - 在 ``handler.py`` 中可以使用 blcks sdk 提供的 service 來操作 Marvin 平台上的資產，請參考 :doc:`../../blcks/index` 。
 
 Step 3. Install scripts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
-| 從 script repository 安裝腳本。
-| 執行安裝指令 :doc:`../../reference/clikit/commands/install`，現在我們要安裝腳本：
+| 從 script repository 下載安裝腳本。
+| 執行安裝指令 :doc:`../../reference/cli/commands/install`，現在我們要安裝腳本：
 
 - 資產設定標籤(blckssettags)
 - 傳送訊息至指定頻道(notification)
@@ -158,10 +159,13 @@ Step 3. Install scripts
         }
     }
 
+.. note::
+    可下載的腳本清單來自Pentium 提供的公眾腳本 :ref:`scripts_list`。
+
 Step 4. Edit workflow template
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 | 決定好腳本後，開啟專案下的 *src/graph.yml* 開始編輯 workflow template 檔案，定義好整個工作流程。
-| 編輯完成，若要使用進階功能查看workflow 流程圖，參考 :doc:`指令說明 <../../reference/clikit/commands/graph>`：
+| 編輯完成，若要使用進階功能查看workflow 流程圖，參考 :doc:`指令說明 <../../reference/cli/commands/graph>`：
 
 .. code-block:: shell
 
@@ -193,7 +197,7 @@ Step 5. Run
 
 方法 1. 自動執行
 """""""""""""""""""""""""""""""""""""""""""""
-| 使用自動執行，當程式有異動時，使用 :doc:`run --auto <../../reference/clikit/commands/run>` 自動偵測環境是否需要重啟。
+| 使用自動執行，當程式有異動時，使用 :doc:`run --auto <../../reference/cli/commands/run>` 自動偵測環境是否需要重啟。
 
 .. code-block:: shell
 
@@ -225,8 +229,8 @@ Step 5. Run
 方法 2. 手動執行
 """""""""""""""""""""""""""""""""""""""""""
 | 不需要靠系統自動偵測，直接手動啟動或停止執行環境。
-| 當 ``config.json`` 的環境參數、或是 workflow template 的圖結構有異動時，需要重啟 (先 :doc:`../../reference/clikit/commands/shutdownenv` 再 :doc:`../../reference/clikit/commands/initenv`)。
-| 首先使用指令 :doc:`../../reference/clikit/commands/initenv` 啟動執行環境：
+| 當 ``config.json`` 的環境參數、或是 workflow template 的圖結構有異動時，需要重啟 (先 :doc:`../../reference/cli/commands/shutdownenv` 再 :doc:`../../reference/cli/commands/initenv`)。
+| 首先使用指令 :doc:`../../reference/cli/commands/initenv` 啟動執行環境：
 
 .. code-block:: shell
 
@@ -260,7 +264,7 @@ Step 5. Run
 
 | 執行完成後可以查看剛剛設定在 workflow template 的 chatbot，若 redis 連線異常會有告警訊息!
 |
-| 如果想要手動停止執行環境，可以使用 :doc:`../../reference/clikit/commands/shutdownenv` 指令：
+| 如果想要手動停止執行環境，可以使用 :doc:`../../reference/cli/commands/shutdownenv` 指令：
 
 .. code-block:: shell
 
@@ -282,7 +286,7 @@ Step 6. Deploy
 
 方法 1. 自動佈署
 """""""""""""""""""""""""""""""""""""""""""
-自動佈署 :doc:`../../reference/clikit/commands/deploy` 動作包含建置、打包、佈署：
+自動佈署 :doc:`../../reference/cli/commands/deploy` 動作包含建置、打包、佈署：
 
 .. code-block:: shell
 
@@ -315,7 +319,7 @@ Step 6. Deploy
 方法 2. 手動佈署
 """""""""""""""""""""""""""""""""""""""""""
 
-#.  :doc:`../../reference/clikit/commands/build`: 手動佈署首先要建置腳本的 image 檔
+#.  :doc:`../../reference/cli/commands/build`: 手動佈署首先要建置腳本的 image 檔
 
     .. code-block:: shell
 
@@ -332,7 +336,7 @@ Step 6. Deploy
         Blcks image complete.
         Finish building. [detectredis]
 
-#.  :doc:`../../reference/clikit/commands/push`: 將 image 檔推到 dockerhub 上
+#.  :doc:`../../reference/cli/commands/push`: 將 image 檔推到 dockerhub 上
 
     .. code-block:: shell
 
@@ -344,7 +348,7 @@ Step 6. Deploy
         ...
         Finish pushing. [detectredis]
 
-#.  :doc:`../../reference/clikit/commands/pack`: 打包要上傳到 marvin 平台的檔案：
+#.  :doc:`../../reference/cli/commands/pack`: 打包要上傳到 marvin 平台的檔案：
 
     .. code-block:: shell
 
@@ -353,7 +357,7 @@ Step 6. Deploy
         Packing blcks: {your_trek_project_path}/host.detect.redis/src/blcks/detectredis
         Success packing, output: {your_trek_project_path}/host.detect.redis/bin/blcks.detectredis-0.1.0.zip
 
-#.  :doc:`../../reference/clikit/commands/deploy`: 佈署至 marvin 平台：
+#.  :doc:`../../reference/cli/commands/deploy`: 佈署至 marvin 平台：
 
     .. code-block:: shell
 
@@ -363,4 +367,4 @@ Step 6. Deploy
         Deploying: {your_trek_project_path}/host.detect.redis/bin/host.detect.redis-0.0.0.zip
         Done
 
-恭喜! 第一個 trek 專案完成了。
+恭喜! 第一個 Trek 專案完成了。

@@ -47,8 +47,7 @@ if [ "$BUILD_TREK" == "1" ]; then
     cd docs
     make html
     cd ../../$DIR
-    cp -r ../$TREK_DIR/docs/reference/commands ./source/reference/clikit/
-    # cp ../$TREK_DIR/docs/guide/quickstart.rst ./source/reference/clikit/quickstart.rst
+    cp -r ../$TREK_DIR/docs/reference/commands ./source/reference/cli/
 fi
 
 # copy references from blcks sdk repo

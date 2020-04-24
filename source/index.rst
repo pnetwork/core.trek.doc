@@ -11,7 +11,7 @@ Marvin Automation Development Guide
    :maxdepth: 2
    :caption: USER GUIDE
 
-   clikit/index
+   cli/index
    extension/vscode/index
 
 .. toctree::
@@ -24,7 +24,7 @@ Marvin Automation Development Guide
 .. toctree::
    :caption: ABOUT
 
-   clikit/changelog
+   cli/changelog
    extension/vscode/changelog
    Issues Report <https://github.com/pnetwork/core.trek.doc/issues/>
 
