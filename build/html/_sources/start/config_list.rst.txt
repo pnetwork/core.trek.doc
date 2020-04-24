@@ -48,7 +48,7 @@ shell_script_base
 script_repository
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 | 腳本下載 Packages server 位置設置。
-| 若需遠端安裝、查看腳本，使用指令 :doc:`../reference/clik/commands/install`、:doc:`../reference/cli/commands/listscripts` 需要設定腳本存放的位置。
+| 若需遠端安裝、查看腳本，使用指令 :doc:`../reference/cli/commands/install`、:doc:`../reference/cli/commands/listscripts` 需要設定腳本存放的位置。
 
 .. _config_input_data:
 
