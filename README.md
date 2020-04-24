@@ -1,11 +1,11 @@
 # Marvin Automation Development Guide
 
-Pentium Internet (奔騰網路) 提供多種開發環境，你可以透過 CLI 界面或 VScode 擴展開發自動化流程腳本。 
+Pentium Internet (奔騰網路) 提供多種開發環境，你可以透過 clikit 界面或 VScode 擴展開發自動化流程腳本。 
 
 
 ## 開發工具
 
-- Trek CLI
+- Trek Clikit
 - Trek VSCode Extension
 
 

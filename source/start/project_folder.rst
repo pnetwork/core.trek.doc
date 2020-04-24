@@ -1,5 +1,5 @@
-The project directory structure
------------------------------------
+The Project Directory Structure
+===================================
 
 | 一個完整的 trek 專案目錄結構會如下：
 | 資料夾 *trek_packages*、*src/ansible*、*src/blcks*、*src/shell* 需要使用相關指令才會生成。

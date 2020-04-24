@@ -1,8 +1,8 @@
-CLI Supported Commands
+Clikit Supported Commands
 =========================
-Trek CLI 指令工具將輔助您輕易的開發 Marvin 自動化腳本、工作流程，只需要幾個指令即可在本機測試、以及把完成的腳本/工作流程打包佈署至您的 Marvin 平台。
+Trek clikit 指令工具將輔助您輕易的開發 Marvin 自動化腳本、工作流程，只需要幾個指令即可在本機測試、以及把完成的腳本/工作流程打包佈署至您的 Marvin 平台。
 
-.. note:: Trek CLI 工具安裝方法 :ref:`請參考 <install_trek>`。
+.. note:: Trek clikit 工具安裝方法 :ref:`請參考 <install_trek>`。
 
 Command list
 ------------------------
@@ -13,7 +13,7 @@ Command list
 
    ../reference/clikit/commands/*
 
-The first trek project
+The First Trek Project
 ------------------------
 | 假設我們的開發範例：
 | 監控 redis 的連線，若連線不到標註 ``<redis:unreachable>`` 標籤，並發送 chatbot 通知。

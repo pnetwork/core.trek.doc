@@ -2,15 +2,30 @@ Marvin Automation Development Guide
 =========================================
 
 .. toctree::
-   :maxdepth: 2
-   
+   :maxdepth: 1
+   :caption: GETTING STARTED
+
    start/index
+
+.. toctree::
+   :maxdepth: 2
+   :caption: USER GUIDE
+
    clikit/index
    extension/vscode/index
+
+.. toctree::
+   :maxdepth: 2
+   :caption: REFERENCE
+
    library/index
    blcks/index
-   changelog/index
-   ref
+
+.. toctree::
+   :caption: ABOUT
+
+   clikit/changelog
+   extension/vscode/changelog
    Issues Report <https://github.com/pnetwork/core.trek.doc/issues/>
 
 Indices and tables

@@ -1,4 +1,4 @@
-Installing trek vscode extension
+Installing Trek Vscode Extension
 -------------------------------------
 請先準備好 Pentium trek vscode extension 的 vsix 安裝檔。
 
