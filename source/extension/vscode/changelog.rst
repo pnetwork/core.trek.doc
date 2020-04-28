@@ -1,4 +1,4 @@
-Vscode Extension Changelog
+VSCode Extension Changelog
 ============================
 
 Version v1.0.0-beta

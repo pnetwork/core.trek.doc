@@ -18,6 +18,7 @@ Marvin Automation Development Guide
    :maxdepth: 2
    :caption: REFERENCE
 
+   workflow/index
    library/index
    blcks/index
 

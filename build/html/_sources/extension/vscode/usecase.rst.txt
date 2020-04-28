@@ -57,7 +57,7 @@ Step 3. Install scripts
 - 資產設定標籤(blckssettags)
 - 傳送訊息至指定頻道(notification)
 
-| Vscode Terminal 視窗將顯示安裝的進度和結果：
+| VSCode Terminal 視窗將顯示安裝的進度和結果：
 
 .. image:: ../../_static/images/install_script.gif
 
@@ -83,7 +83,7 @@ Step 5. Run
 
 .. image:: ../../_static/images/run.png
 
-| Vscode Terminal 視窗將顯示執行進度和結果：
+| VSCode Terminal 視窗將顯示執行進度和結果：
 
 .. image:: ../../_static/images/run_result.png
 
@@ -100,5 +100,5 @@ Step 6. Deploy
 
 #. 選擇佈署來源為「The Trek Project」。
 #. 輸入「Y」表示覆蓋 Marvin 平台同名腳本及工作流程。
-#. Vscode Terminal 視窗將顯示佈署進度和結果。
+#. VSCode Terminal 視窗將顯示佈署進度和結果。
 #. 可以至 Marvin 平台使用此次佈署的腳本及工作流程。

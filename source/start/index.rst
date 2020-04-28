@@ -10,9 +10,21 @@ System Requirements
 在安裝前請確認系統是否符合需求
 
 * macOS 10.14+
-* Docker 19.03+
-* Python 3.7+
-* graphviz 2.42.2+ : 使用指令 :doc:`../../reference/cli/commands/graph` 時用到。
+* Docker 19.03+ ( |docker_link| )
+* Python 3.7+ ( |python_link| )
+* graphviz 2.42.2+ : 使用指令 :doc:`../../reference/cli/commands/graph` 時用到。 ( |graphviz_link| )
+
+.. |docker_link| raw:: html
+
+   <a href="https://docs.docker.com/get-docker/" target="_blank">Download here</a>
+
+.. |python_link| raw:: html
+
+   <a href="https://www.python.org/downloads/" target="_blank">Download here</a>
+
+.. |graphviz_link| raw:: html
+
+   <a href="https://www.graphviz.org/download/" target="_blank">Download here</a>
 
 .. _install_trek:
 
