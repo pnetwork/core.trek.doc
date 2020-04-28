@@ -7,7 +7,7 @@ Before You Begin
 
 .. include:: install.rst
 
-Configuring Trek Vscode Extension
+Configuring Trek VSCode Extension
 -------------------------------------
 | 在使用 Trek vscode extension 之前，請先指定已安裝 Trek CLI 的位置，若是安裝於 global (非虛擬環境)，可不用特別設定。
 | 開啟 vscode 設定檔，尋找 Extensions 下的 Pentium Trek，並設定 Trek CLI 位置，如: */User/pentium/trek/env_trek/bin/trek*。

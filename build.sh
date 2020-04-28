@@ -15,7 +15,7 @@ while test $# -gt 0; do
       echo "options:"
       echo "-h, --help                show brief help"
       echo "--trek                    build from trek repo"
-      echo "--vse                     build from Vscode extension repo"
+      echo "--vse                     build from VSCode extension repo"
       echo "--blcks                   build from blcks sdk repo"
       exit 0
       ;;
