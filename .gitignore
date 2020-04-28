@@ -1,0 +1,15 @@
+build/*
+build/doctrees/
+source/_build
+.vscode
+*.vsix
+run.sh
+
+source/reference/cli/*
+source/reference/extension/*
+source/reference/blcks/*
+example/host.detect.redis/.pytest.cache
+example/host.detect.redis/.trek/last_run
+example/host.detect.redis/.trek/last_up
+example/host.detect.redis/.trek/logs
+

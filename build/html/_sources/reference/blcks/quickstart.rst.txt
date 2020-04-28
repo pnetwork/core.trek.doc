@@ -1,0 +1,76 @@
+
+***********
+Quick Start
+***********
+
+You can use ``Trek`` CLI to create a blcks project.
+
+.. code:: console
+
+    $ trek createblcks myblcks
+    Blcks [myblcks] creating...
+    Done
+
+
+And then, you got a new blcks project named myblcks.
+You can write some codes in ``handler/handler.py``
+
+.. code:: python
+
+    from blcks import blcks
+
+    FAAS_METHOD_NAME = "myblcks"
+    logger = blcks.logger
+
+    @blcks
+    def main(event, context):
+        pass
+
+    @blcks.script(FAAS_METHOD_NAME)
+    def process(message):
+        result = {
+            "code": 0,
+            "msg": message,
+            "result": "success",
+        }
+
+        # write your code here
+        print("Hello world.")
+
+        return result
+
+
+Using Services
+~~~~~~~~~~~~~~
+
+``Service`` is a Marvin API request utility. You can use them to send requests to Marvin and control assets.
+
+Use service in your code:
+
+.. code:: python
+
+    from blcks import ServiceName
+    service = blcks.createService(ServiceName.RBACManager)
+    result = service.get_users_me()
+
+
+So you can use it to get user information in blcks handler like:
+
+.. code:: python
+
+    from blcks import blcks, ServiceName
+
+    @blcks.script(FAAS_METHOD_NAME)
+    def process(message):
+        result = {
+            "code": 0,
+            "msg": message,
+            "result": "success",
+        }
+
+        service = blcks.createService(ServiceName.RBACManager)
+        response = service.get_users_me()
+        print(response)
+        # {'createdBy': {'name': '预设管理员', 'id': 'system1'}, 'actions': {'PLAYBOOK_READ'...
+
+        return result
