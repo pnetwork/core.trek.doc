@@ -1,10 +1,10 @@
 VSCode Extension Changelog
 ============================
 
-Version v1.0.0-beta
+Version v1.0.1-beta
 ----------------------
 
 
-:Date: April 23, 2020
+:Date: April 28, 2020
 
 First release.
