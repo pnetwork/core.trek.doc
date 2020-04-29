@@ -1,0 +1,14 @@
+
+*****************************************************************
+Trek: Create Shell
+*****************************************************************
+
+Purpose:
+
+  | 建立一個 shell 專案。  
+  | 建置位址會在 ``{your_trek_project_path}/src/ansible/{your_shell_project}`` 。
+
+
+Usage:
+
+- :Please enter shell name: 請輸入 shell 腳本專案的名稱。

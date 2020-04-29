@@ -1,0 +1,11 @@
+provider:
+  name: faas
+  gateway: http://jhow-liu-openfaas-deploy.pentium.network
+functions:
+  blckssettags:
+    lang: python3_blcks_flask
+    handler: blcks.python.tag.settags/handler
+    image: cr.pentium.network/blckssettags:5ccc054.20200320155451
+    secrets:
+    - pn-faas-secret
+    - pn-faas-secret-blcks

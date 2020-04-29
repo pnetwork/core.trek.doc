@@ -1,0 +1,53 @@
+---
+id: detectredis
+schemaVersion: '0.2'
+name: Redis connection monitor
+title: Redis connection monitor
+version: "0.1.0"
+description: ""
+namespace: network.pentium
+assets:
+  - SCRIPT
+
+inputs:
+  tag_name:
+    name: Tag name
+    title: Tag name
+    type: string
+
+outputs:
+  fail_hosts_count:
+    name: Fail host count
+    title: Fail host count
+    type: integer
+    description: ""
+  fail_hosts:
+    name: Fail result
+    title: Fail result
+    type: array
+    description: "Fail result"
+    items:
+      type: object
+      properties:
+        id:
+          name: Host id
+          title: Host id
+          type: string
+          description: Host id
+          examples:
+          - S-ajvw371v9
+        name:
+          name: Host namne
+          title: Host namne
+          description: Host namne
+          type: string
+          examples:
+          - OS-Ubuntu18.04
+        ip:
+          name: Host ip
+          title: Host ip
+          description: Host ip
+          type: string
+          examples:
+          - 1.1.1.1
+
