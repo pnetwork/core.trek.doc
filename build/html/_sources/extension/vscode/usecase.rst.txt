@@ -32,27 +32,42 @@ Step 2. Create blcks
 
 .. image:: ../../_static/images/create_blcks.gif
 
-#. 輸入 blcks 腳本名稱為「detectredis」，產生的腳本位置於 *host.detect.redis/src/blcks/* 下。
-#. 定義腳本輸入輸出欄位於檔案 *detectredis/detectredis.para* ：
+#. 輸入 blcks 腳本名稱為「detectredis」，產生的腳本位置於 :examplelink:`host.detect.redis/src/blcks/ <src/blcks/>` 下。
+#. 定義腳本輸入輸出欄位於檔案 :examplelink:`detectredis/detectredis.para <src/blcks/detectredis/detectredis.para>`：
 
     - Inputs: 服務器標籤。撈取含此標籤的服務器做檢查，此範例標籤會是 ``<redis>``；
     - Outputs: 連線不到的服務器、和其數量。
+    
+    .. literalinclude:: ../../../example/host.detect.redis/src/blcks/detectredis/detectredis.para
+        :language: yaml
+        :linenos:
 
 #. 撰寫腳本主程式：
 
-    | 主程式檔案位於 *detectredis/handler/handler.py*；
+    | 主程式檔案位於  :examplelink:`detectredis/handler/handler.py <src/blcks/detectredis/handler/handler.py>`；
     | 撈取含 ``<redis>`` 的服務器，並檢查是否可連線，若連線失敗就把此台服務器加入 outputs 中。
 
-    .. warning::
-        - 記得將主程式中使用的套件寫入 *handler/requirements.txt* 中。
-        - process function 的參數與 return 要跟 para schema 定義的一致。
-        - 在 ``handler.py`` 中可以使用 blcks sdk 提供的 service 來操作 Marvin 平台上的資產，請參考 :doc:`../../blcks/index` 。
+    - 主要程式會放在 process( ) function：
 
+        - Function 參數 (tag_name) 與 para schema 的 inputs 欄位一致。
+        - Function return (fail_hosts_count, fail_hosts...) 要與 para schema 的 outputs 定義的欄位一致。
+
+    - 在 ``handler.py`` 中可以使用 blcks sdk 提供的 service 來操作 Marvin 平台上的資產，請參考 :doc:`../../blcks/index` 。
+
+    .. literalinclude:: ../../../example/host.detect.redis/src/blcks/detectredis/handler/handler.py
+        :language: python
+        :linenos:
+    
+    接著，記得將主程式中使用的套件 ``redis`` 寫入 :examplelink:`handler/requirements.txt <src/blcks/detectredis/handler/requirements.txt>` 中：
+
+    .. literalinclude:: ../../../example/host.detect.redis/src/blcks/detectredis/handler/requirements.txt
+        :language: python
+        :linenos:
 
 Step 3. Install scripts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 | 從 script repository 安裝腳本。  
-| 執行「Trek: Install Script」指令，安裝腳本：
+| 執行「 :doc:`../../reference/extension/commands/install_script` 」指令，安裝腳本：
 
 - 資產設定標籤(blckssettags)
 - 傳送訊息至指定頻道(notification)
@@ -61,14 +76,23 @@ Step 3. Install scripts
 
 .. image:: ../../_static/images/install_script.gif
 
-| 安裝下載的腳本檔案放在 *trek_packages/* 資料夾下； 同時也寫入一筆腳本至依賴安裝描述檔 ``packages.json``。
+| 安裝下載的腳本檔案放在 :examplelink:`trek_packages/ <trek_packages>` 資料夾下； 同時也寫入一筆腳本至依賴安裝描述檔 :examplelink:`packages.json <packages.json>`：
+
+.. literalinclude:: ../../../example/host.detect.redis/packages.json
+   :language: json
+   :linenos:
 
 .. note::
     可下載的腳本清單來自Pentium 提供的公眾腳本 :ref:`scripts_list`。
 
 Step 4. Edit workflow template
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-| 接著開啟專案下的 *src/graph.yml* ，開始編輯 workflow template 檔案，定義好整個工作流程。
+| 接著開啟專案下的 :examplelink:`src/graph.yml <src/graph.yml>`，開始編輯 workflow template 檔案，定義好整個工作流程：
+
+.. literalinclude:: ../../../example/host.detect.redis/src/graph.yml
+   :language: yaml
+   :linenos:
+
 | 編輯完成，若要使用進階功能查看 workflow 流程圖，參考  :doc:`指令說明<../../reference/cli/commands/graph>`。
 | 在 vscode  workflow template 的編輯區塊上按右鍵選擇「View Workflow Template Graph」，檢視 workflow 流程圖。
 

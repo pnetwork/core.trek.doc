@@ -32,7 +32,8 @@ The First Trek Project
 Step 1. Create project
 ^^^^^^^^^^^^^^^^^^^^^^^^
 | 開始建立一個 Trek 專案。
-| 執行 :doc:`../../reference/cli/commands/createproject` 指令建立 host.detect.redis 專案，同時它會問你是否要設定 marvin 相關專案層級的設置，若不需要專案層級的設置則可不輸入文字直接按下 enter：
+| 執行 :doc:`../../reference/cli/commands/createproject` 指令建立 Trek 專案「host.detect.redis」，接著會詢問是否要進行 ``config.json`` 的設置，每個 Trek 專案都有一份設定檔 ``config.json``，您可以決定要定義專案層級的設置、或是全局的設置，這裡問的是專案層級的設置，若不需要可以不輸入文字直接按下 enter：
+| 想進一步了解 config 欄位 :ref:`請參考 <config_trek>`。
 
 .. code-block:: shell
 
@@ -44,9 +45,8 @@ Step 1. Create project
     Marvin secret []:
     Done
 
-| 每個 Trek 專案都有一份設定檔 ``config.json``，您可以決定要定義專案層級的設置、或是全局的設置，config 詳細欄位介紹 :ref:`請參考 <config_trek>`。
-
 | 創建成功的 Trek 專案目錄結構會如下：
+| 若想了解每個檔案、資料夾的意義請參考 :doc:`../start/project_folder`。
 
 .. code-block:: shell
 
@@ -61,8 +61,6 @@ Step 1. Create project
     ├── packages.json
     └── src
         └── graph.yml
-
-| 若想了解每個檔案、資料夾的意義請參考 :doc:`../start/project_folder` 。
 
 
 Step 2. Create blcks
@@ -105,19 +103,35 @@ Step 2. Create blcks
         │       └── tox.ini
         └── graph.yml
 
-| 產生的腳本位置於 *host.detect.redis/src/blcks/*，接下來我們可以開始開發 blcks 腳本了。
-| 首先，先制定腳本參數檔 para schema 於 *detectredis/detectredis.para* ，定義輸入輸出欄位長相：
+| 產生的腳本位置於 :examplelink:`host.detect.redis/src/blcks/ <src/blcks/>`，接下來我們可以開始開發 blcks 腳本了。
+| 首先，先制定腳本參數檔 para schema 於 :examplelink:`detectredis/detectredis.para <src/blcks/detectredis/detectredis.para>`，定義輸入輸出欄位長相：
 
     - Inputs: 服務器標籤。撈取含此標籤的服務器做檢查，此範例標籤會是 ``<redis>``；
     - Outputs: 連線不到的服務器、和其數量。
 
-| 接著，要開發主要的程式 `detectredis/handler/handler.py`：
-| 撈取含 ``<redis>`` 的服務器，並檢查是否可連線，若連線失敗就把此台服務器加入 outputs 中。
+.. literalinclude:: ../../example/host.detect.redis/src/blcks/detectredis/detectredis.para
+   :language: yaml
+   :linenos:
 
-.. warning::
-    - 記得將主程式中使用的套件寫入 *handler/requirements.txt* 中。
-    - process function 的參數與 return 要跟 para schema 定義的一致。
-    - 在 ``handler.py`` 中可以使用 blcks sdk 提供的 service 來操作 Marvin 平台上的資產，請參考 :doc:`../../blcks/index` 。
+| 接著，要開發主要的程式 :examplelink:`detectredis/handler/handler.py <src/blcks/detectredis/handler/handler.py>`：
+| 撈取含 ``<redis>`` 的服務器，並檢查是否可連線，若連線失敗就把此台服務器加入 outputs，其中要注意：
+
+- 主要程式會放在 process( ) function：
+
+    - Function 參數 (tag_name) 與 para schema 的 inputs 欄位一致。
+    - Function return (fail_hosts_count, fail_hosts...) 要與 para schema 的 outputs 定義的欄位一致。
+
+- 在 ``handler.py`` 中可以使用 blcks sdk 提供的 service 來操作 Marvin 平台上的資產，請參考 :doc:`../../blcks/index` 。
+
+.. literalinclude:: ../../example/host.detect.redis/src/blcks/detectredis/handler/handler.py
+   :language: python
+   :linenos:
+
+接著，記得將主程式中使用的套件 ``redis`` 寫入 :examplelink:`handler/requirements.txt <src/blcks/detectredis/handler/requirements.txt>` 中：
+
+.. literalinclude:: ../../example/host.detect.redis/src/blcks/detectredis/handler/requirements.txt
+   :language: python
+   :linenos:
 
 Step 3. Install scripts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -149,23 +163,24 @@ Step 3. Install scripts
             ├── notification.para
             └── openfaas.yml
 
-| 安裝下載的腳本檔案放在 *trek_packages/* 資料夾下； 同時也寫入一筆腳本至依賴安裝描述檔 ``packages.json`` ：
+| 安裝下載的腳本檔案放在 :examplelink:`trek_packages/ <trek_packages>` 資料夾下；同時將下載腳本寫入至依賴安裝描述檔 :examplelink:`packages.json <packages.json>`：
 
-.. code-block:: json
-
-    {
-        "packages": {
-            "notification": "==0.5.0"
-        }
-    }
+.. literalinclude:: ../../example/host.detect.redis/packages.json
+   :language: json
+   :linenos:
 
 .. note::
-    可下載的腳本清單來自Pentium 提供的公眾腳本 :ref:`scripts_list`。
+    可下載的腳本清單來自 Pentium 提供的公眾腳本 :ref:`scripts_list`。
 
 Step 4. Edit workflow template
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-| 決定好腳本後，開啟專案下的 *src/graph.yml* 開始編輯 workflow template 檔案，定義好整個工作流程。
-| 編輯完成，若要使用進階功能查看workflow 流程圖，參考 :doc:`指令說明 <../../reference/cli/commands/graph>`：
+| 決定好腳本後，開啟專案下的 :examplelink:`src/graph.yml <src/graph.yml>` 開始編輯 workflow template 檔案，定義好整個工作流程：
+
+.. literalinclude:: ../../example/host.detect.redis/src/graph.yml
+   :language: yaml
+   :linenos:
+
+| 編輯完成，若要使用進階功能查看 workflow 流程圖，可以下指令 :doc:`graph <../../reference/cli/commands/graph>`：
 
 .. code-block:: shell
 
