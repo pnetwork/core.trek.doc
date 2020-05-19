@@ -274,6 +274,28 @@ all the functions need a prefix or postfix to distinguish the difference</p>
 
 <dl class="py method">
 <dt>
+<code class="sig-name descname">getWorkflowApprovers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">taskId</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Get workflow approver list</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>taskId</strong> (<em>str</em>) -- workflow task id</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dictionary contains all information of this workflow without subdomain</p>
+</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[]</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>AssertionError, ServiceError, AuthenticationError, ClientError</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
 <code class="sig-name descname">getWorkflows</code><span class="sig-paren">(</span><em class="sig-param">sort='created'</em>, <em class="sig-param">order=&lt;OrderBy.Desc: 'desc'&gt;</em>, <em class="sig-param">offset=0</em>, <em class="sig-param">limit=0</em>, <em class="sig-param">search=None</em><span class="sig-paren">)</span></dt>
 <dd><p>Get all workflows</p>
 <dl class="field-list simple">

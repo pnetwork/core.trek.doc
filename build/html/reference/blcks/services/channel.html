@@ -261,7 +261,7 @@ all the functions need a prefix or postfix to distinguish the difference</p>
 
 <dl class="py method">
 <dt>
-<code class="sig-name descname">sendNotifications</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">chatbot_id</span></em>, <em class="sig-param"><span class="n">channel_id</span></em>, <em class="sig-param"><span class="n">content</span></em><span class="sig-paren">)</span></dt>
+<code class="sig-name descname">sendNotifications</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">chatbot_id</span></em>, <em class="sig-param"><span class="n">channel_id</span></em>, <em class="sig-param"><span class="n">content</span></em>, <em class="sig-param"><span class="n">blocks</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span></dt>
 <dd><p>do sending message to specified channel</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -269,10 +269,39 @@ all the functions need a prefix or postfix to distinguish the difference</p>
 <li><p><strong>chatbot_id</strong> (<em>string</em>) -- </p></li>
 <li><p><strong>channel_id</strong> (<em>string</em>) -- </p></li>
 <li><p><strong>content</strong> (<em>list</em>) -- </p></li>
+<li><p><strong>content</strong> -- list of send messages</p></li>
+<li><p><strong>blocks</strong> -- list of list of Block objects to describe buttons display on IM.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Return the updated IM channel with details</p>
+</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;messages received. sending to IM services.&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">showConfirmWindow</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">chatbot_id</span></em>, <em class="sig-param"><span class="n">channel_id</span></em>, <em class="sig-param"><span class="n">content</span></em>, <em class="sig-param"><span class="n">ok_button_text</span><span class="o">=</span><span class="default_value">'Ok'</span></em>, <em class="sig-param"><span class="n">cancel_button_text</span><span class="o">=</span><span class="default_value">'Cancel'</span></em><span class="sig-paren">)</span></dt>
+<dd><p>show confirm window specified channel</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>chatbot_id</strong> (<em>string</em>) -- </p></li>
+<li><p><strong>channel_id</strong> (<em>string</em>) -- </p></li>
+<li><p><strong>content</strong> (<em>string</em>) -- content to display</p></li>
+<li><p><strong>ok_button_text</strong> (<em>string</em>) -- text on ok button</p></li>
+<li><p><strong>cancel_button_text</strong> (<em>string</em>) -- text on cancel button</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>request result</p>
 </dd>
 </dl>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>

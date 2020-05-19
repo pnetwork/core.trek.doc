@@ -436,15 +436,14 @@ all the functions need a prefix or postfix to distinguish the difference</p>
 
 <dl class="py method">
 <dt>
-<code class="sig-name descname">getCloudCDNs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">providerId</span></em>, <em class="sig-param"><span class="n">keyId</span></em>, <em class="sig-param"><span class="n">offset</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">limit</span><span class="o">=</span><span class="default_value">30</span></em><span class="sig-paren">)</span></dt>
+<code class="sig-name descname">getCloudCDNs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">providerId</span></em>, <em class="sig-param"><span class="n">keyId</span></em>, <em class="sig-param"><span class="n">fqdn</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span></dt>
 <dd><p>Get specific cdn info from cloud provider</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>providerId</strong> (<em>str</em>) -- The unique ID of cloud service provider</p></li>
 <li><p><strong>keyId</strong> (<em>str</em>) -- The unique ID of credential key</p></li>
-<li><p><strong>offset</strong> (<em>int</em>) -- The offset for returned data</p></li>
-<li><p><strong>limit</strong> (<em>int</em>) -- The number of data to present</p></li>
+<li><p><strong>fqdn</strong> (<em>str</em>) -- The fqdn is used to associates with CDN</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
