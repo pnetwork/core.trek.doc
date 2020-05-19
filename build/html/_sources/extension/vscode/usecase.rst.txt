@@ -93,7 +93,6 @@ Step 4. Edit workflow template
    :language: yaml
    :linenos:
 
-| 編輯完成，若要使用進階功能查看 workflow 流程圖，參考  :doc:`指令說明<../../reference/cli/commands/graph>`。
 | 在 vscode  workflow template 的編輯區塊上按右鍵選擇「View Workflow Template Graph」，檢視 workflow 流程圖。
 
 .. image:: ../../_static/images/view_graph.gif

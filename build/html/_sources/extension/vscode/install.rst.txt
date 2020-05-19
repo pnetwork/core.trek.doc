@@ -1,3 +1,10 @@
+Before You Begin
+------------------------
+
+#. 請先安裝 Trek CLI tool，如何安裝 :ref:`可參考 <install_trek>`。
+#. 以下會經常用到快捷鍵 Ctrl+Shit+P ( or ⌘+⇧+P ) 呼叫出 Command Palette 並執行 Trek vscode extension 指令，Trek 相關指令都以「Trek: XXX」方式命名。
+#. 本機必需要有啟動中的 docker。
+
 Installing Trek VSCode Extension
 -------------------------------------
 請先準備好 Pentium Trek vscode extension 的 vsix 安裝檔。
@@ -18,6 +25,17 @@ Installing Trek VSCode Extension
 
 .. image:: ../../_static/images/install_suc.png
 
-叫出 Command Palette，輸入 ``trek`` 顯示多項 Trek 指令，即表示安裝完成。
+| 在使用 Trek vscode extension 之前，請先指定 ``Trek CLI Path``，若是安裝於 global (非虛擬環境)，可不用特別設定。
+| 開啟 vscode 設定檔，尋找 Extensions 下的 Pentium Trek，並設定 Trek CLI 位置，如: */User/pentium/trek/env_trek/bin/trek*。
+
+.. image:: ../../_static/images/config_trek_path.gif
+
+
+叫出 Command Palette，輸入 ``trek`` 顯示多項 Trek 指令。
 
 .. image:: ../../_static/images/show_cmds.png
+
+接著執行「 :doc:`../../reference/extension/commands/version` 」指令，顯示 Trek 版號於 Terminal 即表示安裝完成：
+
+.. image:: ../../_static/images/show_version.png
+

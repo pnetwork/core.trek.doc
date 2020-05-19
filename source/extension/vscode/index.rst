@@ -4,6 +4,6 @@ Trek vscode extension 讓您在 vscode 上輕鬆的開發 Marvin 自動化腳本
 
 .. toctree::
 
-    config
+    install
     commands
     usecase
