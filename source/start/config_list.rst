@@ -3,6 +3,8 @@
 
 Trek config.json 提供以下設定：
 
+.. _marvin_url:
+
 marvin_url :red:`*` 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 | Marvin 平台 url。
