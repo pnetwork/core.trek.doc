@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Workflow Schema &mdash; Pentium</title>
+  <title>Developer Workflow &mdash; Pentium</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/css/table.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Developer Trek" href="../cli/index.html" />
-    <link rel="prev" title="Introduction" href="../start/index.html" /> 
+    <link rel="next" title="Workflow Template Schema" href="schema.html" />
+    <link rel="prev" title="Quickstart" href="../start/quick_start.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -92,24 +92,26 @@
 <li class="toctree-l1"><a class="reference internal" href="../start/index.html#installation-trek-cli">Installation Trek CLI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../start/index.html#config-development-environment">Config Development Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../start/index.html#the-project-directory-structure">The Project Directory Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../start/quick_start.html">Quickstart</a></li>
 </ul>
 <p class="caption"><span class="caption-text">USER GUIDE</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Workflow Schema</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#workflow-information">Workflow information</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#nodes">Nodes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#edges-of-nodes">Edges of nodes</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Developer Workflow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="schema.html">Workflow Template Schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schema.html#workflow-metadata">Workflow Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schema.html#workflow-nodes">Workflow Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schema.html#workflow-edges-of-nodes">Workflow Edges of Nodes</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../blcks/index.html">Developer Blcks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cli/index.html">Developer Trek</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../extension/vscode/index.html">Working with Extension</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extension/vscode/index.html">Working with VSCode Extension</a></li>
 </ul>
 <p class="caption"><span class="caption-text">REFERENCE</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../cli/commands.html">CLI Command Reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../extension/vscode/commands.html">Extension Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extension/vscode/commands.html">VSCode Extension Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../library/index.html">Library List</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../blcks/index.html">Blcks SDK Guide</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ABOUT</span></p>
 <ul>
@@ -161,7 +163,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Workflow Schema</li>
+      <li>Developer Workflow</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -178,190 +180,15 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="workflow-schema">
-<h1>Workflow Schema<a class="headerlink" href="#workflow-schema" title="Permalink to this headline">¶</a></h1>
-<div class="line-block">
-<div class="line">Workflow schema 為 <code class="docutils literal notranslate"><span class="pre">yaml</span></code> 格式，用來定義 workflow template 的流程長相。</div>
-<div class="line">在 Trek 專案中，workflow template 的位置預設在 <code class="docutils literal notranslate"><span class="pre">{your_trek_project}/src/graph.yml</span></code>。</div>
-<div class="line">Workflow template 描述檔主要分為三大區塊：</div>
-</div>
-<ol class="arabic simple">
-<li><p>Workflow information：id, name, author...</p></li>
-<li><p>Nodes：要做的任務 tasks、起點、終點或條件式。</p></li>
-<li><p>Edges of nodes：描述任務之間的上下游關係、條件式內容、和傳遞 inputs/outputs 欄位值。</p></li>
-</ol>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">$schema</span><span class="p">:</span> <span class="s">&#39;http://json-schema.pentium.network/marvin-workflows/0.1/schema&#39;</span>
-<span class="nt">graph</span><span class="p">:</span>
-<span class="nt">metadata</span><span class="p">:</span>
-    <span class="p p-Indicator">{</span> <span class="nv">Workflow information...</span> <span class="p p-Indicator">}</span>
-<span class="nt">nodes</span><span class="p">:</span>
-    <span class="p p-Indicator">{</span> <span class="nv">Nodes...</span> <span class="p p-Indicator">}</span>
-<span class="nt">edges</span><span class="p">:</span>
-    <span class="p p-Indicator">{</span> <span class="nv">Edges of nodes...</span> <span class="p p-Indicator">}</span>
-</pre></div>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="section" id="workflow-information">
-<h2>Workflow information<a class="headerlink" href="#workflow-information" title="Permalink to this headline">¶</a></h2>
-<p>定義 workflow template 的基本資料，可定義的欄位如下：</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">$schema</span><span class="p">:</span> <span class="s">&#39;http://json-schema.pentium.network/marvin-workflows/0.1/schema&#39;</span>
-<span class="nt">graph</span><span class="p">:</span>
-<span class="nt">metadata</span><span class="p">:</span>
-    <span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.1.0</span>                  <span class="c1"># Workflow template version</span>
-    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Redis monitor</span>            <span class="c1"># Name</span>
-    <span class="nt">templateId</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">host.detect.redis</span>   <span class="c1"># Template id</span>
-    <span class="nt">description</span><span class="p">:</span> <span class="s">&quot;Redis</span><span class="nv"> </span><span class="s">monitor&quot;</span>    <span class="c1"># Description</span>
-    <span class="nt">tags</span><span class="p">:</span>                           <span class="c1"># Tags，若無 tag 可以是 `tags: []`</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">redis</span>
-    <span class="nt">author</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mflow</span>                   <span class="c1"># Author</span>
-</pre></div>
-</div>
-<p>其中，<code class="docutils literal notranslate"><span class="pre">templateId</span></code> 需為唯一值，當有兩個 workflow template 的 templateId 和 version 相同時，需要進版才能允許覆蓋。</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-</div>
-<div class="section" id="nodes">
-<h2>Nodes<a class="headerlink" href="#nodes" title="Permalink to this headline">¶</a></h2>
-<div class="line-block">
-<div class="line">定義 workflow 每個任務要做的事情、trigger 方式、和條件式。</div>
-<div class="line">Node 類型有 4 種： <code class="docutils literal notranslate"><span class="pre">action</span></code> 、 <code class="docutils literal notranslate"><span class="pre">selector</span></code> 、 <code class="docutils literal notranslate"><span class="pre">terminator</span></code> 和 <code class="docutils literal notranslate"><span class="pre">trigger</span></code>，以下將詳細介紹各類型的不同：</div>
-</div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">nodes</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">metadata</span><span class="p">:</span>             <span class="c1"># 起點</span>
-      <span class="nt">sources</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
-      <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">trigger</span>
-      <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">trigger</span>
-      <span class="nt">description</span><span class="p">:</span> <span class="s">&#39;&#39;</span>
-    <span class="nt">id</span><span class="p">:</span> <span class="s">&#39;0&#39;</span>
-  <span class="p p-Indicator">-</span> <span class="nt">metadata</span><span class="p">:</span>             <span class="c1"># 終點</span>
-      <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">terminator</span>
-      <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">terminator</span>
-      <span class="nt">description</span><span class="p">:</span> <span class="s">&#39;&#39;</span>
-    <span class="nt">id</span><span class="p">:</span> <span class="s">&#39;1&#39;</span>
-  <span class="p p-Indicator">-</span> <span class="nt">metadata</span><span class="p">:</span>             <span class="c1"># 要做的任務</span>
-      <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">action</span>            <span class="c1"># Node type</span>
-      <span class="nt">title</span><span class="p">:</span> <span class="s">&#39;Notify&#39;</span>         <span class="c1"># Name</span>
-      <span class="nt">description</span><span class="p">:</span> <span class="s">&#39;&#39;</span>         <span class="c1"># Description</span>
-      <span class="nt">script</span><span class="p">:</span>
-          <span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">notification</span>    <span class="c1"># 任務要執行的 Script id</span>
-    <span class="nt">id</span><span class="p">:</span> <span class="s">&#39;5&#39;</span>                   <span class="c1"># Node id，必須為數字</span>
-  <span class="p p-Indicator">-</span> <span class="nt">metadata</span><span class="p">:</span>             <span class="c1"># 條件式</span>
-      <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">selector</span>
-      <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">selector</span>
-    <span class="nt">id</span><span class="p">:</span> <span class="s">&#39;4&#39;</span>
-</pre></div>
-</div>
-<ol class="arabic">
-<li><p><cite>type: action</cite> : 指定腳本來達到要做的任務。</p></li>
-<li><p><cite>type: selector</cite> : 條件式節點，條件成立時才能往下走。</p></li>
-<li><p><cite>type: terminator</cite> : 終點。</p></li>
-<li><p><cite>type: trigger</cite> : 起點，決定 workflow trigger 方式為 <code class="docutils literal notranslate"><span class="pre">定期</span></code> 、 <code class="docutils literal notranslate"><span class="pre">事件</span></code> 或 <code class="docutils literal notranslate"><span class="pre">手動</span></code>：</p>
-<ol class="arabic">
-<li><p>定期觸發： type 為 <cite>cron</cite>，data 填入 crontab 排程。</p>
-<blockquote>
-<div><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">metadata</span><span class="p">:</span>
-    <span class="nt">sources</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">cron</span>
-        <span class="l l-Scalar l-Scalar-Plain">data</span><span class="p p-Indicator">:</span> <span class="s">&#39;*/60</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*&#39;</span> <span class="c1"># 每 60 分鐘觸發一次</span>
-    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">trigger</span>
-    <span class="l l-Scalar l-Scalar-Plain">...</span>
-</pre></div>
-</div>
-</div></blockquote>
-</li>
-<li><p>事件觸發： 需填入事件 id，{ event_version } 為非必填。</p>
-<blockquote>
-<div><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">metadata</span><span class="p">:</span>
-    <span class="nt">sources</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">event</span>
-    <span class="nt">data</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">network.pentium.platform.logging::{ event_id }::{ event_version }</span>
-    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">trigger</span>
-    <span class="l l-Scalar l-Scalar-Plain">...</span>
-</pre></div>
-</div>
-</div></blockquote>
-</li>
-<li><p>手動觸發：</p>
-<blockquote>
-<div><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">metadata</span><span class="p">:</span>
-    <span class="nt">sources</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
-    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">trigger</span>
-    <span class="l l-Scalar l-Scalar-Plain">...</span>
-</pre></div>
-</div>
-</div></blockquote>
-</li>
-</ol>
-</li>
-</ol>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-</div>
-<div class="section" id="edges-of-nodes">
-<h2>Edges of nodes<a class="headerlink" href="#edges-of-nodes" title="Permalink to this headline">¶</a></h2>
-<div class="line-block">
-<div class="line">傳遞每個任務之間的 inputs/outputs value 或定義條件式的條件內容。</div>
-<div class="line">Edges 可以分成 3 種類型，<code class="docutils literal notranslate"><span class="pre">一般</span></code> 、 <code class="docutils literal notranslate"><span class="pre">無輸入/輸出值</span></code> 以及 <code class="docutils literal notranslate"><span class="pre">條件式</span></code>：</div>
-</div>
-<ol class="arabic">
-<li><p>一般： 設定目標 node 的 inputs 值。</p>
-<blockquote>
-<div><p>設定 <code class="docutils literal notranslate"><span class="pre">nodeId</span> <span class="pre">=</span> <span class="pre">2</span></code> 的 input property <code class="docutils literal notranslate"><span class="pre">tag_name</span></code> 為 <code class="docutils literal notranslate"><span class="pre">redis:unreachable</span></code>：</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">source</span><span class="p">:</span> <span class="s">&#39;0&#39;</span>                       <span class="c1"># 來源 nodeId</span>
-  <span class="nt">target</span><span class="p">:</span> <span class="s">&#39;2&#39;</span>                       <span class="c1"># 目標 nodeId</span>
-  <span class="nt">metadata</span><span class="p">:</span>
-      <span class="nt">binding</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="nt">property</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">tag_name</span>          <span class="c1"># 目標 nodeId 的 inputs 欄位名稱</span>
-        <span class="nt">value</span><span class="p">:</span> <span class="s">&#39;redis:unreachable&#39;</span>  <span class="c1"># 目標 nodeId 的 inputs 欄位值</span>
-        <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;string&#39;</span>              <span class="c1"># 目標 nodeId 的 inputs 欄位資料型態</span>
-        <span class="l l-Scalar l-Scalar-Plain">...</span>
-</pre></div>
-</div>
-</div></blockquote>
-</li>
-<li><p>無輸入/輸出值：無 inputs/outputs 值需要傳遞，像是目標 node 為終點時。</p>
-<blockquote>
-<div><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">source</span><span class="p">:</span> <span class="s">&#39;5&#39;</span> <span class="c1"># 來源 nodeId</span>
-  <span class="nt">target</span><span class="p">:</span> <span class="s">&#39;1&#39;</span> <span class="c1"># 終點 nodeId</span>
-</pre></div>
-</div>
-</div></blockquote>
-</li>
-<li><p>條件式： <cite>IF...THEN...</cite> 當 ( <cite>IF</cite> ) 條件成立時，要 ( <cite>THEN</cite> ) 處理什麼事情 。</p></li>
-</ol>
-<blockquote>
-<div><p>以下範例為：當 <code class="docutils literal notranslate"><span class="pre">nodeId=4</span></code> 的 outputs 欄位 <code class="docutils literal notranslate"><span class="pre">fail_hosts_count</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> 時，將訊息文字填入 <code class="docutils literal notranslate"><span class="pre">nodeId=5</span></code> 的 intputs 欄位 <code class="docutils literal notranslate"><span class="pre">str_message</span></code>；其他情況則直接結束。</p>
-<blockquote>
-<div><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">source</span><span class="p">:</span> <span class="s">&#39;4&#39;</span>                           <span class="c1"># 來源 nodeId ，為條件式 node</span>
-  <span class="nt">target</span><span class="p">:</span> <span class="s">&#39;5&#39;</span>                           <span class="c1"># 目標 nodeId</span>
-  <span class="nt">metadata</span><span class="p">:</span>
-      <span class="nt">filters</span><span class="p">:</span>                              <span class="c1"># IF nodes.4.fail_hosts_count &gt; 0</span>
-        <span class="nt">property</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nodes.4.fail_hosts_count</span>  <span class="c1"># 條件式比較欄位</span>
-        <span class="nt">operator</span><span class="p">:</span> <span class="s">&#39;&gt;&#39;</span>                       <span class="c1"># 條件式比較方式</span>
-        <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>                            <span class="c1"># 條件式比較目標</span>
-      <span class="nt">binding</span><span class="p">:</span>                              <span class="c1"># THEN 當 IF 條件成立時要設置的欄位</span>
-      <span class="p p-Indicator">-</span> <span class="nt">property</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">str_message</span>               <span class="c1"># nodeId=5 的 input str_message 欄位</span>
-        <span class="nt">value</span><span class="p">:</span> <span class="s">&#39;The</span><span class="nv"> </span><span class="s">following</span><span class="nv"> </span><span class="s">host</span><span class="nv"> </span><span class="s">redis</span><span class="nv"> </span><span class="s">connection</span><span class="nv"> </span><span class="s">fail:</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">2.fail_hosts</span><span class="nv"> </span><span class="s">}}&#39;</span>
-        <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;string&#39;</span>
-<span class="p p-Indicator">-</span> <span class="nt">source</span><span class="p">:</span> <span class="s">&#39;4&#39;</span>                           <span class="c1"># 來源 nodeId</span>
-  <span class="nt">target</span><span class="p">:</span> <span class="s">&#39;1&#39;</span>                           <span class="c1"># 目標 nodeId ，為終點 node</span>
-  <span class="nt">metadata</span><span class="p">:</span>
-      <span class="nt">filters</span><span class="p">:</span>                              <span class="c1"># IF nodes.4.fail_hosts_count &lt;= 0</span>
-        <span class="nt">property</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nodes.4.fail_hosts_count</span>  <span class="c1"># 條件式比較欄位</span>
-        <span class="nt">operator</span><span class="p">:</span> <span class="s">&#39;&lt;=&#39;</span>                      <span class="c1"># 條件式比較方式</span>
-        <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>                            <span class="c1"># 條件式比較目標</span>
-</pre></div>
-</div>
-</div></blockquote>
-</div></blockquote>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>完整的 workflow template 長相可以參考範例專案 <a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/host.detect.redis/src/graph.yml">workflow template</a>。</p>
-</div>
+  <div class="section" id="developer-workflow">
+<h1>Developer Workflow<a class="headerlink" href="#developer-workflow" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="schema.html">Workflow Template Schema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schema.html#workflow-metadata">Workflow Metadata</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schema.html#workflow-nodes">Workflow Nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schema.html#workflow-edges-of-nodes">Workflow Edges of Nodes</a></li>
+</ul>
 </div>
 </div>
 
@@ -373,10 +200,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../cli/index.html" class="btn btn-neutral float-right" title="Developer Trek" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="schema.html" class="btn btn-neutral float-right" title="Workflow Template Schema" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../start/index.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../start/quick_start.html" class="btn btn-neutral float-left" title="Quickstart" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

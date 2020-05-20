@@ -1,4 +1,4 @@
-Detect redis connnection project
+The First Trek Project
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 | 假設我們的開發範例：

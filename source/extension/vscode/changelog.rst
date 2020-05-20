@@ -1,5 +1,5 @@
-VSCode Extension Changelog
-============================
+Trek VSCode Extension Changelog
+=================================
 
 Version v1.0.1-beta
 ----------------------

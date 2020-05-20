@@ -8,5 +8,4 @@ Developer Trek
 .. toctree::
     :maxdepth: 1
 
-    example1
     example2
