@@ -9,6 +9,7 @@ Workflow Template Schema
 #. Edges of nodes：描述任務之間的上下游關係、條件式內容、和傳遞 inputs/outputs 欄位值。
 
 .. code-block:: yaml
+   :linenos:
 
     $schema: 'http://json-schema.pentium.network/marvin-workflows/0.1/schema'
     graph:
@@ -26,6 +27,7 @@ Workflow Metadata
 定義 workflow template 的基本資料，可定義的欄位如下：
 
 .. code-block:: yaml
+   :linenos:
 
     $schema: 'http://json-schema.pentium.network/marvin-workflows/0.1/schema'
     graph:
@@ -48,6 +50,7 @@ Workflow Nodes
 | Node 類型有 4 種： ``action`` 、 ``selector`` 、 ``terminator`` 和 ``trigger``，以下將詳細介紹各類型的不同：
 
 .. code-block:: yaml
+   :linenos:
 
       nodes:
         - metadata:             # 起點
@@ -81,6 +84,7 @@ Workflow Nodes
    #. 定期觸發： type 為 `cron`，data 填入 crontab 排程。
    
         .. code-block:: yaml
+           :linenos:
 
             - metadata:
                 sources:
@@ -92,6 +96,7 @@ Workflow Nodes
    #. 事件觸發： 需填入事件 id，{ event_version } 為非必填。
    
         .. code-block:: yaml
+           :linenos:
 
             - metadata:
                 sources:
@@ -103,6 +108,7 @@ Workflow Nodes
    #. 手動觸發：
    
         .. code-block:: yaml
+           :linenos:
 
             - metadata:
                 sources: []
@@ -121,6 +127,7 @@ Workflow Edges of Nodes
     設定 ``nodeId = 2`` 的 input property ``tag_name`` 為 ``redis:unreachable``：
 
     .. code-block:: yaml
+       :linenos:
 
         - source: '0'                       # 來源 nodeId
           target: '2'                       # 目標 nodeId
@@ -134,6 +141,7 @@ Workflow Edges of Nodes
 #. 無輸入/輸出值：無 inputs/outputs 值需要傳遞，像是目標 node 為終點時。
 
     .. code-block:: yaml
+       :linenos:
 
         - source: '5' # 來源 nodeId
           target: '1' # 終點 nodeId
@@ -143,6 +151,7 @@ Workflow Edges of Nodes
   以下範例為：當 ``nodeId=4`` 的 outputs 欄位 ``fail_hosts_count > 0`` 時，將訊息文字填入 ``nodeId=5`` 的 intputs 欄位 ``str_message``；其他情況則直接結束。
 
     .. code-block:: yaml
+       :linenos:
     
         - source: '4'                           # 來源 nodeId ，為條件式 node
           target: '5'                           # 目標 nodeId

@@ -82,6 +82,7 @@ local_inventory_file
 | 當有一個 ansible inventory 檔案為：
 
 .. code-block:: ini
+   :linenos:
 
    #FilePath: /Users/pentium/ansible/inventory.ini
    #FileName: Ansible inventory.ini 
@@ -91,6 +92,7 @@ local_inventory_file
 | 將 config.json 中的 ``local_inventory_file`` 設置為 */Users/pentium/ansible/inventory.ini*：
 
 .. code-block:: json
+   :linenos:
 
    {
        "local_inventory_file":"/Users/pentium/ansible/inventory.ini"
@@ -99,6 +101,7 @@ local_inventory_file
 | 在 workflow template file 的服務器資產指定為 ``_local_`` ：
 
 .. code-block:: yaml
+   :linenos:
 
    #FileName: Workflow template file
    ...
