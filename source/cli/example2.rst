@@ -1,4 +1,4 @@
-Redis connnection detect project
+Detect redis connnection project
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 | 假設我們的開發範例：

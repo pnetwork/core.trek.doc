@@ -1,7 +1,8 @@
 Workflow Schema
 ============================
 | Workflow schema 為 ``yaml`` 格式，用來定義 workflow template 的流程長相。
-| 定義框架主要分為三大區塊：
+| 在 Trek 專案中，workflow template 的位置預設在 ``{your_trek_project}/src/graph.yml``。
+| Workflow template 描述檔主要分為三大區塊：
 
 #. Workflow information：id, name, author...
 #. Nodes：要做的任務 tasks、起點、終點或條件式。

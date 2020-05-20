@@ -10,7 +10,8 @@ Marvin Automation Development Guide
 .. toctree::
    :maxdepth: 2
    :caption: USER GUIDE
-
+   
+   workflow/index
    cli/index
    extension/vscode/index
 
@@ -18,7 +19,8 @@ Marvin Automation Development Guide
    :maxdepth: 2
    :caption: REFERENCE
 
-   workflow/index
+   cli/commands
+   extension/vscode/commands
    library/index
    blcks/index
 

@@ -1,23 +1,12 @@
-CLI Supported Commands
+Developer Trek
 =========================
-Trek CLI 指令工具將輔助您輕易的開發 Marvin 自動化腳本、工作流程，只需要幾個指令即可在本機測試、以及把完成的腳本/工作流程打包佈署至您的 Marvin 平台。
 
-.. note:: Trek CLI 工具安裝方法 :ref:`請參考 <install_trek>`。
+在開始開發 Trek project 之前，請先確認環境已安裝好 :ref:`Trek CLI <install_trek>`，:ref:`config.json <config_trek>` 已設置參數，並且先了解 :doc:`../workflow/index`。 
 
-Command list
-------------------------
+參考以下 use cases 建立您的第一個 Trek project:
 
 .. toctree::
-   :maxdepth: 1
-   :glob:
+    :maxdepth: 1
 
-   ../reference/cli/commands/*
-
-Your First Trek Project
-------------------------
-
-.. toctree::
-   :maxdepth: 1
-
-   example1
-   example2
+    example1
+    example2

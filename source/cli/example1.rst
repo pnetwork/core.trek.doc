@@ -1,4 +1,4 @@
-Sample project
+Create a sample project
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 | 建立範本專案：
@@ -10,7 +10,7 @@ Sample project
 
 Step 1. Create a sample project
 """"""""""""""""""""""""""""""""""""""""""""""""
-| 執行 :doc:`../../reference/cli/commands/createproject` 指令建立 Trek 專案「host.detect.redis」，接著會詢問是否要進行 ``config.json`` 的設置，每個 Trek 專案都有一份設定檔 ``config.json``，您可以決定要定義專案層級的設置、或是全局的設置，這裡問的是專案層級的設置，若不需要可以不輸入文字直接按下 enter：
+| 執行 :doc:`../../reference/cli/commands/createproject` 指令建立 Trek 專案「sample.project」，接著會詢問是否要進行 ``config.json`` 的設置，每個 Trek 專案都有一份設定檔 ``config.json``，您可以決定要定義專案層級的設置、或是全局的設置，這裡問的是專案層級的設置，若不需要可以不輸入文字直接按下 enter：
 | 想進一步了解 config 欄位 :ref:`請參考 <config_trek>`。
 
 .. code-block:: shell
@@ -63,7 +63,7 @@ Step 2. Install scripts
 
 .. code-block:: shell
 
-    $ trek installtrek install
+    $ trek install
     available versions: ['0.5.0', '0.4.0', '0.3.0', '0.2', '0.0.8888', '0.0.0']
     install script notification:0.5.0
     download script from: https://hub.pentium.network/scripts/notification/0.5.0/dist/script.zip
@@ -204,8 +204,7 @@ Step 5. Run
     [FINISH] id: 1, type: terminator, scriptId: , scriptType: not_script
     Done. [sample.project]
 
-
-| 執行完成後可以查看剛剛設定在 workflow template 的 chatbot，若 redis 連線異常會有告警訊息!
+| 執行完成後可以到 chatbot 中查看已發出的訊息!
 |
 | 如果想要手動停止執行環境，可以使用 :doc:`../../reference/cli/commands/shutdownenv` 指令：
 

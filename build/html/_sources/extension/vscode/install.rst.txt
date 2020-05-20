@@ -1,4 +1,4 @@
-Before You Begin
+Before you begin
 ------------------------
 
 #. 請先安裝 Trek CLI tool，如何安裝 :ref:`可參考 <install_trek>`。

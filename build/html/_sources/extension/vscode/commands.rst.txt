@@ -1,4 +1,4 @@
-Command List
+Extension Commands
 ------------------------
 
 .. toctree::

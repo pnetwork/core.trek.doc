@@ -94,12 +94,14 @@
 </ul>
 <p class="caption"><span class="caption-text">USER GUIDE</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="cli/index.html">CLI Supported Commands</a></li>
-<li class="toctree-l1"><a class="reference internal" href="extension/vscode/index.html">Working with Extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow/index.html">Workflow Schema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli/index.html">Developer Trek</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extension/vscode/index.html">Working with Extension</a></li>
 </ul>
 <p class="caption"><span class="caption-text">REFERENCE</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="workflow/index.html">Workflow Schema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli/commands.html">CLI Command Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extension/vscode/commands.html">Extension Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="library/index.html">Library List</a></li>
 <li class="toctree-l1"><a class="reference internal" href="blcks/index.html">Blcks SDK Guide</a></li>
 </ul>
@@ -185,16 +187,22 @@
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">USER GUIDE</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="cli/index.html">CLI Supported Commands</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="cli/index.html#command-list">Command list</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cli/index.html#your-first-trek-project">Your First Trek Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow/index.html">Workflow Schema</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="workflow/index.html#workflow-information">Workflow information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workflow/index.html#nodes">Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workflow/index.html#edges-of-nodes">Edges of nodes</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="extension/vscode/index.html">Working with Extensions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="extension/vscode/install.html">Before You Begin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli/index.html">Developer Trek</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cli/example1.html">Create a sample project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli/example2.html">Detect redis connnection project</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="extension/vscode/index.html">Working with Extension</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="extension/vscode/install.html">Before you begin</a></li>
 <li class="toctree-l2"><a class="reference internal" href="extension/vscode/install.html#installing-trek-vscode-extension">Installing Trek VSCode Extension</a></li>
-<li class="toctree-l2"><a class="reference internal" href="extension/vscode/commands.html">Command List</a></li>
-<li class="toctree-l2"><a class="reference internal" href="extension/vscode/usecase.html">The First Trek Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extension/vscode/example1.html">Create a sample project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extension/vscode/example2.html">Detect redis connnection project</a></li>
 </ul>
 </li>
 </ul>
@@ -202,10 +210,57 @@
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">REFERENCE</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="workflow/index.html">Workflow Schema</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="workflow/index.html#workflow-information">Workflow information</a></li>
-<li class="toctree-l2"><a class="reference internal" href="workflow/index.html#nodes">Nodes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="workflow/index.html#edges-of-nodes">Edges of nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli/commands.html">CLI Command Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/build.html">build</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/buildblcks.html">buildblcks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/config.html">config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/createansible.html">createansible</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/createblcks.html">createblcks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/createproject.html">createproject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/createshell.html">createshell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/deploy.html">deploy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/deployansible.html">deployansible</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/deployblcks.html">deployblcks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/deployshell.html">deployshell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/graph.html">graph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/init.html">init</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/initenv.html">initenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/install.html">install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/listscripts.html">listscripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/login.html">login</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/logs.html">logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/pack.html">pack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/packansible.html">packansible</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/packblcks.html">packblcks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/packshell.html">packshell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/push.html">push</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/pushblcks.html">pushblcks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/run.html">run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/shutdownenv.html">shutdownenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/uninstall.html">uninstall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/version.html">version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/webserver.html">webserver</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="extension/vscode/commands.html">Extension Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/build_and_push.html">Trek: Build and Push</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/create_ansible.html">Trek: Create Ansible</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/create_blcks.html">Trek: Create Blcks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/create_project.html">Trek: Create Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/create_shell.html">Trek: Create Shell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/deploy_packed_packages_to_marvin.html">Trek: Deploy Packed Packages to Marvin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/deploy_to_marvin.html">Trek: Deploy to Marvin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/init_env.html">Trek: Init Env</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/install_script.html">Trek: Install Script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/list_installed_scripts.html">Trek: List Installed Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/list_remote_scripts.html">Trek: List Remote Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/login_to_marvin.html">Trek: Login to Marvin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/logs.html">Trek: Logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/pack.html">Trek: Pack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/run.html">Trek: Run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/shutdown_env.html">Trek: Shutdown Env</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/uninstall_script.html">Trek: Uninstall Script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/version.html">Trek: Version</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="library/index.html">Library List</a><ul>
