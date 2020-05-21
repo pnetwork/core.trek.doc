@@ -89,7 +89,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#system-requirements">System Requirements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#installation-trek-cli">Installation Trek CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#installing-trek-cli">Installing Trek CLI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#config-development-environment">Config Development Environment</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#marvin-url">marvin_url <span class="red">*</span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#marvin-jwt">marvin_JWT <span class="red">*</span></a></li>
@@ -125,7 +125,7 @@
 <p class="caption"><span class="caption-text">ABOUT</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../cli/changelog.html">Trek CLI Changelog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../extension/vscode/changelog.html">VSCode Extension Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extension/vscode/changelog.html">Trek VSCode Extension Changelog</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/issues/">Issues Report</a></li>
 </ul>
 
@@ -204,8 +204,8 @@
 <li><p>graphviz 2.42.2+ : 使用指令 <a class="reference internal" href="../reference/cli/commands/graph.html"><span class="doc">graph</span></a> 時用到。 ( <a href="https://www.graphviz.org/download/" target="_blank">Download here</a> )</p></li>
 </ul>
 </div>
-<div class="section" id="installation-trek-cli">
-<span id="install-trek"></span><h1>Installation Trek CLI<a class="headerlink" href="#installation-trek-cli" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="installing-trek-cli">
+<span id="install-trek"></span><h1>Installing Trek CLI<a class="headerlink" href="#installing-trek-cli" title="Permalink to this headline">¶</a></h1>
 <p>首先我們要安裝 Trek CLI 工具，請使用以下指令安裝 trek：</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ pip install trek -i https://package.pentium.network/repository/pypi-group/simple --trusted-host<span class="o">=</span>package.pentium.network
 </pre></div>
@@ -343,24 +343,37 @@ Trek config 提供專案、Global兩種層級的設置，專案設置可以覆�
 <div class="line">Ansible inventory 環境設置檔。本地端開發執行 ansible 腳本時，服務器資產不一定要在 marvin 平台內。</div>
 <div class="line">當有一個 ansible inventory 檔案為：</div>
 </div>
-<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="c1">#FilePath: /Users/pentium/ansible/inventory.ini</span>
+<div class="highlight-ini notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">#FilePath: /Users/pentium/ansible/inventory.ini</span>
 <span class="c1">#FileName: Ansible inventory.ini</span>
 <span class="k">[hosts]</span>
 <span class="na">192.168.101.231 ansible_user</span><span class="o">=</span><span class="s">pentium ansible_password=pentium_password ansible_port=22</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 <div class="line-block">
 <div class="line">將 config.json 中的 <code class="docutils literal notranslate"><span class="pre">local_inventory_file</span></code> 設置為 <em>/Users/pentium/ansible/inventory.ini</em>：</div>
 </div>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-json notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;local_inventory_file&quot;</span><span class="p">:</span><span class="s2">&quot;/Users/pentium/ansible/inventory.ini&quot;</span>
 <span class="p">}</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 <div class="line-block">
 <div class="line">在 workflow template file 的服務器資產指定為 <code class="docutils literal notranslate"><span class="pre">_local_</span></code> ：</div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1">#FileName: Workflow template file</span>
+<div class="highlight-yaml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">#FileName: Workflow template file</span>
 <span class="nn">...</span>
 <span class="p p-Indicator">-</span> <span class="nt">source</span><span class="p">:</span> <span class="s">&#39;2&#39;</span>
   <span class="nt">target</span><span class="p">:</span> <span class="s">&#39;3&#39;</span>
@@ -370,7 +383,7 @@ Trek config 提供專案、Global兩種層級的設置，專案設置可以覆�
         <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">_local_</span> <span class="c1"># 當 value 為 _local_ 時，服務器位置及登入資訊為 config.json 中的 local_inventory_file 設置</span>
         <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>

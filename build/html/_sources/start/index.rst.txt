@@ -28,7 +28,7 @@ System Requirements
 
 .. _install_trek:
 
-Installation Trek CLI
+Installing Trek CLI
 ==================================
 首先我們要安裝 Trek CLI 工具，請使用以下指令安裝 trek：
 

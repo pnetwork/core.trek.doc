@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../_static/css/table.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Workflow Template Schema" href="schema.html" />
+    <link rel="next" title="Workflow Schema" href="schema.html" />
     <link rel="prev" title="Quickstart" href="../start/quick_start.html" /> 
 </head>
 
@@ -89,7 +89,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../start/index.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../start/index.html#system-requirements">System Requirements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../start/index.html#installation-trek-cli">Installation Trek CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../start/index.html#installing-trek-cli">Installing Trek CLI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../start/index.html#config-development-environment">Config Development Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../start/index.html#the-project-directory-structure">The Project Directory Structure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../start/quick_start.html">Quickstart</a></li>
@@ -97,10 +97,8 @@
 <p class="caption"><span class="caption-text">USER GUIDE</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Developer Workflow</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="schema.html">Workflow Template Schema</a></li>
-<li class="toctree-l2"><a class="reference internal" href="schema.html#workflow-metadata">Workflow Metadata</a></li>
-<li class="toctree-l2"><a class="reference internal" href="schema.html#workflow-nodes">Workflow Nodes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="schema.html#workflow-edges-of-nodes">Workflow Edges of Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schema.html">Workflow Schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conditional.html">Workflow Operators</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../blcks/index.html">Developer Blcks</a></li>
@@ -116,7 +114,7 @@
 <p class="caption"><span class="caption-text">ABOUT</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../cli/changelog.html">Trek CLI Changelog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../extension/vscode/changelog.html">VSCode Extension Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extension/vscode/changelog.html">Trek VSCode Extension Changelog</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/issues/">Issues Report</a></li>
 </ul>
 
@@ -182,12 +180,48 @@
             
   <div class="section" id="developer-workflow">
 <h1>Developer Workflow<a class="headerlink" href="#developer-workflow" title="Permalink to this headline">¶</a></h1>
+<div class="line-block">
+<div class="line">Marvin Workflows is a workflow-based serverless function composition framework built on top of the OpenFaaS platform.</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Pentium 提供的 workflow 清單請見 <a class="reference internal" href="../library/index.html#wf-list"><span class="std std-ref">Workflows list</span></a>。</p>
+</div>
+<p>條件式
+unit
+版號</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="schema.html">Workflow Template Schema</a></li>
-<li class="toctree-l1"><a class="reference internal" href="schema.html#workflow-metadata">Workflow Metadata</a></li>
-<li class="toctree-l1"><a class="reference internal" href="schema.html#workflow-nodes">Workflow Nodes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="schema.html#workflow-edges-of-nodes">Workflow Edges of Nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schema.html">Workflow Schema</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="schema.html#workflow-metadata">1. Workflow Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schema.html#workflow-nodes">2. Workflow Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schema.html#workflow-edges-of-nodes">3. Workflow Edges of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="conditional.html">Workflow Operators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="conditional.html#id1">==</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conditional.html#id2">!=</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conditional.html#id3">&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conditional.html#id4">&gt;=</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conditional.html#id5">&lt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conditional.html#id6">&lt;=</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conditional.html#sizeequals">sizeEquals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conditional.html#sizenotequals">sizeNotEquals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conditional.html#sizelessthan">sizeLessThan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conditional.html#sizelessthanequals">sizeLessThanEquals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conditional.html#sizegreaterthan">sizeGreaterThan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conditional.html#sizegreaterthanequals">sizeGreaterThanEquals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conditional.html#lengthequals">lengthEquals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conditional.html#lengthnotequals">lengthNotEquals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conditional.html#lengthlessthan">lengthLessThan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conditional.html#lengthlessthanequals">lengthLessThanEquals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conditional.html#lengthgreaterthan">lengthGreaterThan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conditional.html#lengthgreaterthanequals">lengthGreaterThanEquals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conditional.html#have">have</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conditional.html#nothave">notHave</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conditional.html#regex">regEx</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -200,7 +234,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="schema.html" class="btn btn-neutral float-right" title="Workflow Template Schema" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="schema.html" class="btn btn-neutral float-right" title="Workflow Schema" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../start/quick_start.html" class="btn btn-neutral float-left" title="Quickstart" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

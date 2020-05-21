@@ -1,12 +1,13 @@
-Workflow Template Schema
+Workflow Schema
 --------------------------
-| Workflow schema 為 ``yaml`` 格式，用來定義 workflow template 的流程長相。
+| Workflow schema 為 ``yaml`` 格式，用來定義 workflow template 的流程長相、要使用哪些腳本、決定要定期觸發或是事件觸發，以及是否要發送訊息通知。
 | 在 Trek 專案中，workflow template 的位置預設在 ``{your_trek_project}/src/graph.yml``。
-| Workflow template 描述檔主要分為三大區塊：
+| 
+| Workflow template 描述檔可以區分為三大區塊，我們會一一做介紹：
 
-#. Workflow information：id, name, author...
-#. Nodes：要做的任務 tasks、起點、終點或條件式。
-#. Edges of nodes：描述任務之間的上下游關係、條件式內容、和傳遞 inputs/outputs 欄位值。
+  | :ref:`wf_metadata`：Id, name, author...
+  | :ref:`wf_nodes`：Workflow 觸發方式、要做的任務 tasks、起點、終點或條件式。
+  | :ref:`wf_edges`：描述任務之間的上下游關係、條件式內容、和傳遞 inputs/outputs 欄位值。
 
 .. code-block:: yaml
    :linenos:
@@ -22,8 +23,10 @@ Workflow Template Schema
 
 | 
 
-Workflow Metadata
------------------------
+.. _wf_metadata:
+
+1. Workflow Metadata
+^^^^^^^^^^^^^^^^^^^^^^^
 定義 workflow template 的基本資料，可定義的欄位如下：
 
 .. code-block:: yaml
@@ -44,8 +47,10 @@ Workflow Metadata
 
 | 
 
-Workflow Nodes
------------------------
+.. _wf_nodes:
+
+2. Workflow Nodes
+^^^^^^^^^^^^^^^^^^^^
 | 定義 workflow 每個任務要做的事情、trigger 方式、和條件式。
 | Node 類型有 4 種： ``action`` 、 ``selector`` 、 ``terminator`` 和 ``trigger``，以下將詳細介紹各類型的不同：
 
@@ -117,8 +122,10 @@ Workflow Nodes
 
 | 
 
-Workflow Edges of Nodes
---------------------------
+.. _wf_edges:
+
+3. Workflow Edges of Nodes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 | 傳遞每個任務之間的 inputs/outputs value 或定義條件式的條件內容。
 | Edges 可以分成 3 種類型，``一般`` 、 ``無輸入/輸出值`` 以及 ``條件式``：
 
@@ -146,7 +153,7 @@ Workflow Edges of Nodes
         - source: '5' # 來源 nodeId
           target: '1' # 終點 nodeId
 
-#. 條件式： `IF...THEN...` 當 ( `IF` ) 條件成立時，要 ( `THEN` ) 處理什麼事情 。
+#. 條件式： `IF...THEN...` 當 ( `IF` ) 條件成立時，要 ( `THEN` ) 處理什麼事情。
 
   以下範例為：當 ``nodeId=4`` 的 outputs 欄位 ``fail_hosts_count > 0`` 時，將訊息文字填入 ``nodeId=5`` 的 intputs 欄位 ``str_message``；其他情況則直接結束。
 
@@ -176,4 +183,5 @@ Workflow Edges of Nodes
 
 .. note::
 
-    完整的 workflow template 長相可以參考範例專案 :examplelink:`workflow template <src/graph.yml>`。
+    #. 條件式詳細介紹請看 :doc:`conditional`。
+    #. 完整的 workflow template 長相可以參考範例專案 :examplelink:`workflow template <src/graph.yml>`。
