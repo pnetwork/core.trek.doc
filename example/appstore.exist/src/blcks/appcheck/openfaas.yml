@@ -1,0 +1,11 @@
+provider:
+  name: faas
+  gateway: http://127.0.0.1:31112
+functions:
+  appcheck:
+    lang: python3_blcks_flask
+    handler: appcheck/handler
+    image: dockerhub.pentium.network/dev/appcheck:0.1.0
+    secrets:
+    - pn-faas-secret
+    - pn-faas-secret-blcks

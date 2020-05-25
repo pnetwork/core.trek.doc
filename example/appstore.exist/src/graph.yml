@@ -1,0 +1,67 @@
+$schema: 'http://json-schema.pentium.network/marvin-workflows/0.1/schema'
+graph:
+  metadata:
+    version: 0.1.0
+    title: AppStore Exist Checking
+    templateId: appstore.exist
+    description: >-
+      Input with format "<app name>, <app ID>, <note>" , it will check the list and send message to IM if not exist.
+    tags: []
+    author: pentium
+  nodes:
+    - metadata:
+        sources:
+          - type: cron
+            data: '*/60 * * * *::Atlantic/Reykjavik'
+        type: trigger
+        title: trigger
+        description: ''
+      id: '0'
+    - metadata:
+        type: terminator
+        title: terminator
+        description: ''
+      id: '1'
+    - metadata:
+        type: action
+        title: Check Apps
+        description: ''
+        script:
+          id: appcheck
+      id: '2'
+    - metadata:
+        type: selector
+        title: selector
+      id: '3'
+    - metadata:
+        type: action
+        title: Notify
+        description: ''
+        script:
+          id: notification
+      id: '4'
+  edges:
+    - source: '0'
+      target: '2'
+    - source: '2'
+      target: '3'
+    - source: '3'
+      target: '4'
+      metadata:
+        binding:
+          - property: str_message
+            value: '{{ 2.notfounds }}'
+            type: string
+        filters:
+          property: nodes.2.notfounds_count
+          operator: '>'
+          value: 0
+    - source: '3'
+      target: '1'
+      metadata:
+        filters:
+          property: nodes.2.notfounds_count
+          operator: <=
+          value: 0
+    - source: '4'
+      target: '1'
