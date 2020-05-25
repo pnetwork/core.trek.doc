@@ -8,7 +8,6 @@ Developer Workflow
 | 一個 workflow 包含了數個腳本，腳未的開發說明請參考 Blcks 腳本如何開發 ( :doc:`../blcks/index` )，以下將了解 workflow 提供的功能。 
 
 .. toctree::
-   :maxdepth: 1
 
    schema
    conditional
