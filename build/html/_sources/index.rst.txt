@@ -14,16 +14,17 @@ Marvin Automation Development Guide
    
    workflow/index
    blcks/index
-   cli/index
    extension/vscode/index
 
 .. toctree::
    :maxdepth: 2
    :caption: REFERENCE
-
+   
    cli/commands
    extension/vscode/commands
    library/index
+   Samples <https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/>
+
 
 .. toctree::
    :caption: ABOUT

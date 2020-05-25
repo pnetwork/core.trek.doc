@@ -1,4 +1,4 @@
-The First Trek Project
+The First Workflow Project
 ------------------------------------
 | 假設我們的開發範例：
 | 監控 redis 的連線，若連線不到標註 ``<redis:unreachable>`` 標籤，並發送 chatbot 通知。
