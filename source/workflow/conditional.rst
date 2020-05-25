@@ -305,6 +305,70 @@ regEx
 
 
 
+Workflow Logical Operators
+-----------------------------------
+| 條件式彼此間可以使用 and, or 來 join 條件。
+
+and 
+###########################
+| 同時符合多組條件式的描述。
+| 假設 |a_len| 為 array 的長度，下面例子 if |a_len| > 0 and |a_len| < 5 ：
+
+.. code-block:: yaml
+
+    # True
+    filters: 
+      and:
+        - property: nodes.4.fail_hosts_count  # 1
+          operator: ">"
+          value: 0
+        - property: nodes.4.fail_hosts_count  # 1
+          operator: "<"
+          value: 5
+
+
+or 
+###########################
+| 同時符合任一組條件式的描述。
+| 假設 |a_len| 為 array 的長度，下面例子 if |a_len| == 0 or |a_len| == 5 ：
+
+.. code-block:: yaml
+
+    # True
+    filters: 
+      or:
+        - property: nodes.4.fail_hosts_count  # 1
+          operator: ==
+          value: 0
+        - property: nodes.4.fail_hosts_count  # 1
+          operator: <=
+          value: 5
+
+and/or [ and/or... ]
+###########################
+| and/or 可以包含彼此，其中 and 可以包含多組 or，or 也能包含多組 and。
+| 假設 |a_len| 為 array 的長度，|a_str| 為 string，下面例子 
+| if |a_len| > 0 and ( |a_str| == |b_str| or |a_str| == "Good morning") ：
+
+.. code-block:: yaml
+
+    filters: 
+      and:
+        - property: nodes.4.fail_hosts_count    # 1
+          operator: ">"
+          value: 0
+        
+        - or:
+          - property: nodes.2.result            # "Good"
+            operator: "=="
+            value: "Good"
+          - property: nodes.2.result            # "Good"
+            operator: "=="
+            value: "Good morning"
+
+
+
+
 .. |a_len| replace:: nodes.4.fail_hosts_count
 .. |a| replace:: nodes.4.fail_hosts
 .. |a_str| replace:: nodes.2.result
