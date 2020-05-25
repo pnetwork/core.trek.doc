@@ -1,19 +1,51 @@
+Config Development Environment
+=====================================
+.. _config_trek:
+
+成功安裝 Trek CLI 工具後，我們需要設置 Trek config。
+Trek config 提供專案、Global兩種層級的設置，專案設置可以覆蓋 Global 設置。舉例來說，若 Global 和專案皆設置了 ``router_port`` 欄位，trek 將優先以專案設置的為主。
+
+專案設定檔位於專案內 *{your_trek_project_path}/.trek/config.json*，Global 位於 *~/.trek/config.json*。
+
+::
+
+    $ vim ~/.trek/config.json
+    {
+        "marvin_url": "https://marvin.pentium.network/",
+        "marvin_JWT": "{your_marvin_jwt_token}",
+        "router_port": 5000,
+        "action_timeout": 30,
+        "blcks_code_base": "",
+        "ansible_code_base": "",
+        "shell_script_base": "",
+        "script_repository": "https://hub.pentium.network/scripts/",
+        "input_data_path": "",
+        "input_event_path": "",
+        "envs": {
+            "BLCKS_DEBUG_LOG_MODE": "table",
+            "BLCKS_DEBUG_LOG_TABLE_WIDTH": 100,
+            "BLCKS_DEBUG_LOG_FIELDS": "data",
+            "BLCKS_DEBUG_LOG_FORMAT": "{message} => inputParams: {data[inputParamsStr]}"
+        },
+        "flow_home": "",
+        "local_inventory_file": ""
+    }
 
 .. role:: red
 
 Trek config.json 提供以下設定：
 
-.. _marvin_url:
-
 marvin_url :red:`*` 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _marvin_url:
+
 | Marvin 平台 url。
 | 若需使用 Marvin 平台資產、或佈署時必需填入，若不使用則可以不需要填。
 
 marvin_JWT :red:`*` 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 | Marvin 平台 jwt tocken 設置，屬於 ``marvin_url`` 的 jwt token。
-| 若僅知道 marvin 帳號密碼，可以使用 :doc:`../reference/cli/commands/login` 指令進行平台登入，系統即自動填入專案層級的 ``marvin_JWT`` 欄位。
+| 若僅知道 marvin 帳號密碼，在 trek 專案下執行指令 :doc:`../reference/cli/commands/login` 來登入平台，系統即自動填入專案層級的 ``marvin_JWT`` 欄位。
 
 .. note:: 若 ``marvin_url`` 有設置需求時，``marvin_JWT`` 也必需設置。
 
@@ -28,7 +60,7 @@ action_timeout
 blcks_code_base
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 | Blcks 腳本於本地端的資料夾位置。
-| 假設資料夾 */User/pentium/trek/blcks/* 下有多個 blcks 腳本(如下)，則 ``blcks_code_base`` 可設置為 */User/pentium/trek/blcks*。
+| 假設資料夾 */User/pentium/trek/blcks/* 下有多個 Blcks 腳本(如下)，則 ``blcks_code_base`` 可設置為 */User/pentium/trek/blcks*。
 
 ::
 

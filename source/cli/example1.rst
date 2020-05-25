@@ -5,7 +5,7 @@ Create a sample project
 | 取得所屬權限下項目，並將其結果發送 chatbot 通知。
 | Workflow 會需要安裝兩個公眾腳本：
 
-1. 使用 callservice (呼叫 blcks SDK 服務) 腳本取得所屬權限下項目。
+1. 使用 callservice (呼叫 Blcks SDK 服務) 腳本取得所屬權限下項目。
 2. 使用 notification (傳送通知至指定頻道)腳本來發送訊息。
 
 Step 1. Create a sample project
@@ -57,7 +57,7 @@ Step 2. Install scripts
 我們可以直接執行指令 :doc:`../../reference/cli/commands/install` 從 script repository 下載安裝腳本：
 
 - 傳送訊息至指定頻道(notification)
-- 呼叫 blcks SDK 服務(callservice)
+- 呼叫 Blcks SDK 服務(callservice)
 
 | 安裝下載的腳本檔案放在 *sample.project/trek_packages/* 資料夾下。
 

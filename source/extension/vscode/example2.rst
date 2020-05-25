@@ -12,7 +12,7 @@ The First Trek Project
 
 .. note::
     
-    以下專案程式請參考 :examplelink:`範例專案 < >`。
+    以下專案程式請參考 :exlink:`範例專案 < >`。
 
 Step 1. Create project
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -25,15 +25,15 @@ Step 1. Create project
 #. 輸入「N」不產生範本專案。
 #. 右下角顯示建立專案成功訊息，並以 workspace 方式開啟專案
 
-Step 2. Create blcks
+Step 2. Create Blcks
 ^^^^^^^^^^^^^^^^^^^^^^^^^
-| 建立一個 blcks 腳本，用來檢查 redis 連線。
-| 使用「 :doc:`../../reference/extension/commands/create_blcks` 」指令建立 blcks 腳本：
+| 建立一個 Blcks 腳本，用來檢查 redis 連線。
+| 使用「 :doc:`../../reference/extension/commands/create_blcks` 」指令建立 Blcks 腳本：
 
 .. image:: ../../_static/images/create_blcks.gif
 
-#. 輸入 blcks 腳本名稱為「detectredis」，產生的腳本位置於 :examplelink:`host.detect.redis/src/blcks/ <src/blcks/>` 下。
-#. 定義腳本輸入輸出欄位於檔案 :examplelink:`detectredis/detectredis.para <src/blcks/detectredis/detectredis.para>`：
+#. 輸入 Blcks 腳本名稱為「detectredis」，產生的腳本位置於 :exlink:`host.detect.redis/src/blcks/ <src/blcks/>` 下。
+#. 定義腳本輸入輸出欄位於檔案 :exblckslink:`detectredis/detectredis.para <detectredis.para>`：
 
     - Inputs: 服務器標籤。撈取含此標籤的服務器做檢查，此範例標籤會是 ``<redis>``；
     - Outputs: 連線不到的服務器、和其數量。
@@ -44,7 +44,7 @@ Step 2. Create blcks
 
 #. 撰寫腳本主程式：
 
-    | 主程式檔案位於  :examplelink:`detectredis/handler/handler.py <src/blcks/detectredis/handler/handler.py>`；
+    | 主程式檔案位於  :exblckslink:`detectredis/handler/handler.py <handler/handler.py>`；
     | 撈取含 ``<redis>`` 的服務器，並檢查是否可連線，若連線失敗就把此台服務器加入 outputs 中。
 
     - 主要程式會放在 process( ) function：
@@ -52,13 +52,13 @@ Step 2. Create blcks
         - Function 參數 (tag_name) 與 para schema 的 inputs 欄位一致。
         - Function return (fail_hosts_count, fail_hosts...) 要與 para schema 的 outputs 定義的欄位一致。
 
-    - 在 ``handler.py`` 中可以使用 blcks sdk 提供的 service 來操作 Marvin 平台上的資產，請參考 :doc:`../../blcks/index` 。
+    - 在 ``handler.py`` 中可以使用 Blcks sdk 提供的 service 來操作 Marvin 平台上的資產，請參考 :doc:`../../blcks/index` 。
 
     .. literalinclude:: ../../../example/host.detect.redis/src/blcks/detectredis/handler/handler.py
         :language: python
         :linenos:
     
-    接著，記得將主程式中使用的套件 ``redis`` 寫入 :examplelink:`handler/requirements.txt <src/blcks/detectredis/handler/requirements.txt>` 中：
+    接著，記得將主程式中使用的套件 ``redis`` 寫入 :exblckslink:`handler/requirements.txt <handler/requirements.txt>` 中：
 
     .. literalinclude:: ../../../example/host.detect.redis/src/blcks/detectredis/handler/requirements.txt
         :language: python
@@ -76,7 +76,7 @@ Step 3. Install scripts
 
 .. image:: ../../_static/images/install_script.gif
 
-| 安裝下載的腳本檔案放在 :examplelink:`trek_packages/ <trek_packages>` 資料夾下； 同時也寫入一筆腳本至依賴安裝描述檔 :examplelink:`packages.json <packages.json>`：
+| 安裝下載的腳本檔案放在 :exlink:`trek_packages/ <trek_packages>` 資料夾下； 同時也寫入一筆腳本至依賴安裝描述檔 :exlink:`packages.json <packages.json>`：
 
 .. literalinclude:: ../../../example/host.detect.redis/packages.json
    :language: json
@@ -87,13 +87,13 @@ Step 3. Install scripts
 
 Step 4. Edit workflow template
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-| 接著開啟專案下的 :examplelink:`src/graph.yml <src/graph.yml>`，開始編輯 workflow template 檔案，定義好整個工作流程：
+| 接著開啟專案下的 :exlink:`src/graph.yml <src/graph.yml>`，開始編輯 workflow template 檔案，定義好整個工作流程：
 
 .. literalinclude:: ../../../example/host.detect.redis/src/graph.yml
    :language: yaml
    :linenos:
 
-| 在 workflow template :examplelink:`src/graph.yml <src/graph.yml>` 的編輯區塊上按右鍵選擇「View Workflow Template Graph」，檢視 workflow 流程圖。
+| 在 workflow template :exlink:`src/graph.yml <src/graph.yml>` 的編輯區塊上按右鍵選擇「View Workflow Template Graph」，檢視 workflow 流程圖。
 
 .. image:: ../../_static/images/view_graph.gif
 

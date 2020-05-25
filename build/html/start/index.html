@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../_static/css/table.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Quickstart" href="quick_start.html" />
+    <link rel="next" title="Quick Start" href="quick_start.html" />
     <link rel="prev" title="Marvin Automation Development Guide" href="../index.html" /> 
 </head>
 
@@ -107,7 +107,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="#the-project-directory-structure">The Project Directory Structure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quick Start</a></li>
 </ul>
 <p class="caption"><span class="caption-text">USER GUIDE</span></p>
 <ul>
@@ -217,8 +217,8 @@
 <p>恭喜，您已成功安裝 Trek !</p>
 </div>
 <div class="section" id="config-development-environment">
-<span id="config-trek"></span><h1>Config Development Environment<a class="headerlink" href="#config-development-environment" title="Permalink to this headline">¶</a></h1>
-<p>成功安裝 Trek CLI 工具後，我們需要設置 Trek config。
+<h1>Config Development Environment<a class="headerlink" href="#config-development-environment" title="Permalink to this headline">¶</a></h1>
+<p id="config-trek">成功安裝 Trek CLI 工具後，我們需要設置 Trek config。
 Trek config 提供專案、Global兩種層級的設置，專案設置可以覆蓋 Global 設置。舉例來說，若 Global 和專案皆設置了 <code class="docutils literal notranslate"><span class="pre">router_port</span></code> 欄位，trek 將優先以專案設置的為主。</p>
 <p>專案設定檔位於專案內 <em>{your_trek_project_path}/.trek/config.json</em>，Global 位於 <em>~/.trek/config.json</em>。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ vim ~/.trek/config.json
@@ -246,8 +246,8 @@ Trek config 提供專案、Global兩種層級的設置，專案設置可以覆�
 </div>
 <p>Trek config.json 提供以下設定：</p>
 <div class="section" id="marvin-url">
-<span id="id1"></span><h2>marvin_url <span class="red">*</span><a class="headerlink" href="#marvin-url" title="Permalink to this headline">¶</a></h2>
-<div class="line-block">
+<h2>marvin_url <span class="red">*</span><a class="headerlink" href="#marvin-url" title="Permalink to this headline">¶</a></h2>
+<div class="line-block" id="id1">
 <div class="line">Marvin 平台 url。</div>
 <div class="line">若需使用 Marvin 平台資產、或佈署時必需填入，若不使用則可以不需要填。</div>
 </div>
@@ -256,7 +256,7 @@ Trek config 提供專案、Global兩種層級的設置，專案設置可以覆�
 <h2>marvin_JWT <span class="red">*</span><a class="headerlink" href="#marvin-jwt" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line">Marvin 平台 jwt tocken 設置，屬於 <code class="docutils literal notranslate"><span class="pre">marvin_url</span></code> 的 jwt token。</div>
-<div class="line">若僅知道 marvin 帳號密碼，可以使用 <a class="reference internal" href="../reference/cli/commands/login.html"><span class="doc">login</span></a> 指令進行平台登入，系統即自動填入專案層級的 <code class="docutils literal notranslate"><span class="pre">marvin_JWT</span></code> 欄位。</div>
+<div class="line">若僅知道 marvin 帳號密碼，在 trek 專案下執行指令 <a class="reference internal" href="../reference/cli/commands/login.html"><span class="doc">login</span></a> 來登入平台，系統即自動填入專案層級的 <code class="docutils literal notranslate"><span class="pre">marvin_JWT</span></code> 欄位。</div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -279,7 +279,7 @@ Trek config 提供專案、Global兩種層級的設置，專案設置可以覆�
 <h2>blcks_code_base<a class="headerlink" href="#blcks-code-base" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line">Blcks 腳本於本地端的資料夾位置。</div>
-<div class="line">假設資料夾 <em>/User/pentium/trek/blcks/</em> 下有多個 blcks 腳本(如下)，則 <code class="docutils literal notranslate"><span class="pre">blcks_code_base</span></code> 可設置為 <em>/User/pentium/trek/blcks</em>。</div>
+<div class="line">假設資料夾 <em>/User/pentium/trek/blcks/</em> 下有多個 Blcks 腳本(如下)，則 <code class="docutils literal notranslate"><span class="pre">blcks_code_base</span></code> 可設置為 <em>/User/pentium/trek/blcks</em>。</div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ tree /User/pentium/trek/blcks
 /User/pentium/trek/blcks
@@ -407,7 +407,7 @@ hello_trek_project/
 ├── packages.json       <span class="c1"># 制定專案所需的 dependencies 安裝包(類似 python requirements.txt)</span>
 └── src                 <span class="c1"># 存放主要程式碼</span>
     ├── ansible/        <span class="c1"># 存放 ansible 腳本程式的目錄</span>
-    ├── blcks/          <span class="c1"># 存放 blcks 腳本程式的目錄</span>
+    ├── blcks/          <span class="c1"># 存放 Blcks 腳本程式的目錄</span>
     ├── shell/          <span class="c1"># 存放 shell script 腳本程式的目錄</span>
     └── graph.yml       <span class="c1"># 預設產生的 workflow template 檔案，定義工作流程長相的主要檔案</span>
 </pre></div>
@@ -429,7 +429,7 @@ hello_trek_project/
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="quick_start.html" class="btn btn-neutral float-right" title="Quickstart" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="quick_start.html" class="btn btn-neutral float-right" title="Quick Start" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../index.html" class="btn btn-neutral float-left" title="Marvin Automation Development Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
