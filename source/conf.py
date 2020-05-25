@@ -79,6 +79,7 @@ smartquotes=False
 
 extlinks = {
     "gitlink": ("https://github.com/pnetwork/core.trek.doc/%s", "github "),
-    "examplelink": ("https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/host.detect.redis/%s", "example project "),
+    "exlink": ("https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/host.detect.redis/%s", "example project "),
+    "exblckslink": ("https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/host.detect.redis/src/blcks/detectredis/%s", "example Blcks "),
 }
 

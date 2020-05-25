@@ -5,7 +5,7 @@ Create a sample project
 | 取得所屬權限下項目，並將其結果發送 chatbot 通知。
 | Workflow 會需要安裝兩個公眾腳本：
 
-1. 使用 callservice (呼叫 blcks SDK 服務) 腳本取得所屬權限下項目。
+1. 使用 callservice (呼叫 Blcks SDK 服務) 腳本取得所屬權限下項目。
 2. 使用 notification (傳送通知至指定頻道)腳本來發送訊息。
 
 Step 1. Create a sample project
@@ -24,7 +24,7 @@ Step 2. Install scripts
 *sample.project/packages.json* 是依賴安裝描述檔，如同 python 的 requiremenets.txt；範例專案已填寫好要下載安裝的腳本有哪些：
 
 - 傳送訊息至指定頻道(notification)
-- 呼叫 blcks SDK 服務(callservice)
+- 呼叫 Blcks SDK 服務(callservice)
 
 .. code-block:: json
    :linenos:

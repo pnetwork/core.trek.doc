@@ -184,4 +184,5 @@ Workflow Schema
 .. note::
 
     #. 條件式詳細介紹請看 :doc:`conditional`。
-    #. 完整的 workflow template 長相可以參考範例專案 :examplelink:`workflow template <src/graph.yml>`。
+    #. 完整的 workflow template 長相可以參考範例專案 :exlink:`workflow template <src/graph.yml>`。
+    

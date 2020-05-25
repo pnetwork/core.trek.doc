@@ -301,7 +301,7 @@ regEx
     filters:
         property: nodes.2.result  # "Good"
         operator: 'regEx'                       
-        value: '[A-Za-z]'
+        value: '[A-Za-z]+'
 
 
 
