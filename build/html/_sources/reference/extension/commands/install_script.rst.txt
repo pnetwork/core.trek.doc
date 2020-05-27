@@ -1,31 +1,59 @@
 
 *****************************************************************
-Trek: Install Script
+Trek Blcks: Create Blcks
 *****************************************************************
 
 Purpose:
 
-  | 從遠端下載腳本並安裝至 Trek 專案中。  
-  | 可下載指定腳本、或將 *packages.json* 檔案中定義的腳本全部下載。  
-  | 遠端機器位置於 *config.json* 中 ``script_repository`` 欄位設定
+  | 建立一個 blcks 專案。  
+  | 當在 workflow 專案下執行時，建置位址會在 ``{your_trek_project_path}/src/ansible/{your_blcks_project}``，若非 workflow 專案則會要選取腳本建立位置。
 
 
 Usage:
 
-- :Please enter script id:
-    | 填入 pattern 為 ``*`` 或 ``{scriptid}=={version}``。
-    | 請輸入腳本 id 及版號，以安裝 notification 腳本為例：
-    
-    - ``*`` : 依 Trek project 的 *./packages.json* 檔案中所描述的腳本進行下載。
-      
-        .. code-block:: shell
+若在 workflow 專案下執行命令時：
 
-            # {your_trek_project_path}/packages.json
-            {
-                "packages": {
-                    "blckssettags": "==0.5.0"
-                }
-            }
+  Step 1. 決定 Blcks 專案名稱：
 
-    - ``notification`` : 沒有指定版號代表下載最新版號的腳本。
-    - ``notification==0.5.0`` : 下載指定版號 ``0.5.0`` 的腳本。
+      - :Please enter script name: Blcks project name。命名規則需為英數字。
+
+  Step 2. 是否在新視窗開啟 Blcks 專案 ?：
+
+      - :Open blcks project in new window: 填入 Y or N，大小寫不拘。若為 Y 表示要以此腳本為 workspce 開啟新視窗，N 則反之。
+
+若在非 workflow 專案下執行命令時如下說明，執行完全直接以此腳本為 workspce 開啟：
+  
+  Step 1. 選取 Blcks 專案存放位置：
+
+      - :Select project location: 點選本機資料夾決定位置。
+
+  Step 2. 決定 Blcks 專案名稱：
+
+      - :Please enter script name: Blcks project name。命名規則需為英數字。
+
+
+建立的專案目錄結構如下：
+
+.. code-block:: shell
+
+    $ tree myblcksproject
+    myblcksproject/
+    ├── .gitignore
+    ├── .trek
+    │   └── config.json
+    ├── Makefile
+    ├── flake8.jenkins
+    ├── handler
+    │   ├── __init__.py
+    │   ├── handler.py
+    │   └── requirements.txt
+    ├── inputs
+    │   └── event.yml
+    ├── openfaas.yml
+    ├── requirements-test.txt
+    ├── skaffold.yaml
+    ├── tests
+    │   ├── conftest.py
+    │   └── test_blcks.py
+    ├── tox.ini
+    └── myblcksproject.para

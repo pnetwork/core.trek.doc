@@ -1,20 +1,46 @@
 
 *****************************************************************
-Trek: Build and Push
+Trek Ansible: Create Ansible
 *****************************************************************
 
 Purpose:
 
-  | 建置 Trek 專案 image 檔，依 openfaas.yaml 描述產生對應 docker image，並將其 push 至 docker hub。
+  | 建立一個 ansible 專案。  
+  | 當在 workflow 專案下執行時，建置位址會在 `{your_trek_project_path}/src/ansible/{your_ansible_project}``，若非 workflow 專案則會要選取腳本建立位置。
 
 
 Usage:
 
-  Step 1. 選取 build and push 的目標為：
+若在 workflow 專案下執行命令時：
 
-      - :The Trek Project: Build and push 包含 workflow template 和使用到的腳本 (除了安裝的腳本以外)。
-      - :Only Script: 只要 build and push 腳本。
+  Step 1. 決定 Ansible 專案名稱：
 
-  Step 2. 若上一步選擇為 ``Only Script`` 需選取腳本，其他則略過此步驟：
+      - :Please enter script name: Ansible project name。命名規則需為英數字。
 
-    顯示 workflow template 使用到的腳本 (除了安裝的腳本以外)。
+  Step 2. 是否在新視窗開啟 Ansible 專案 ?：
+
+      - :Open blcks project in new window: 填入 Y or N，大小寫不拘。若為 Y 表示要以此腳本為 workspce 開啟新視窗，N 則反之。
+
+若在非 workflow 專案下執行命令時如下說明，執行完全直接以此腳本為 workspce 開啟：
+  
+  Step 1. 選取 Ansible 專案存放位置：
+
+      - :Select project location: 點選本機資料夾決定位置。
+
+  Step 2. 決定 Ansible 專案名稱：
+
+      - :Please enter script name: Ansible project name。命名規則需為英數字。
+
+
+建立的專案目錄結構如下：
+
+.. code-block:: shell
+
+    $ tree myansibleproject
+    myansibleproject/
+    ├── .trek
+    │   └── config.json
+    ├── myansibleproject.para
+    ├── myansibleproject.yml
+    └── inputs
+        └── event.yml

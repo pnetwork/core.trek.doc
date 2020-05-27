@@ -1,39 +1,15 @@
 
 *****************************************************************
-Trek: Create Project
+Trek Ansible: Deploy Packed Packages to Marvin
 *****************************************************************
 
 Purpose:
 
-  | 建立一個全新的 Trek 專案。
+  | 發佈已 packed 的 Ansible 專案至 Marvin 平台。
 
 
 Usage:
 
-  Step 1. 選取 Trek 專案存放位置：
+  Step 1. 當 Marvin 平台上已有同名的腳本、工作流程存在時，是否要覆蓋：
 
-      - :Select project location: 點選本機資料夾決定位置。
-
-  Step 2. 決定 Trek 專案名稱：
-
-      - :Please enter project name: Trek project name。
-
-  Step 3. 是否建立 Trek 提供的範本專案：
-
-      - :Create a sample project: 填入 Y or N，大小寫不拘。若為 Y 表示要建立 Trek 提供的範本專案，N 則反之。
-
-建立的專案目錄結構如下：
-
-.. code-block:: shell
-
-    $ tree my.trek.project
-    my.trek.project/
-    ├── .trek
-    │   └── config.json
-    ├──inputs
-    │   ├── data.yml
-    │   └── event.yml
-    ├── manifest.json
-    ├── packages.json
-    └── src
-        └── graph.yml
+      - :Overwrite existing scripts on Marvin: 填入 Y or N，大小寫不拘。若為 Y 表示要覆蓋 Marvin 平台同名腳本、工作流程。

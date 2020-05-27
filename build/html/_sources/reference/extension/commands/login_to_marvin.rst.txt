@@ -1,24 +1,10 @@
 
 *****************************************************************
-Trek: Login to Marvin
+Trek Blcks: Pack
 *****************************************************************
 
 Purpose:
 
-  | 登入 Marvin 平台。
-
-
-Usage:
-
-  Step 1. 輸入 Marvin 平台帳號：
-
-      - :Please enter user name: Marvin 平台帳號。
-
-  Step 2. 輸入 Marvin 平台密碼：
-
-      - :Please enter password: Marvin 平台密碼。
-
-  Step 3. Marin 平台網址：
-
-      - :Please enter a marvin url: Marin 平台網址，如 *https://marvin.pentium.network*。若 *config.json* 中 ``marvin_url`` 欄位有設定時預設會帶入。
+  | 打包 Blcks 專案。  
+  | 打包 Blcks 專案下的 .para 和 openfaas.yml 一起打包成 zip 並放置於 *{your_blcks_path}/bin** 資料夾中。
 

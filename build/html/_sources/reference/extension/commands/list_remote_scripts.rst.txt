@@ -1,17 +1,15 @@
 
 *****************************************************************
-Trek: List Remote Scripts
+Trek Blcks: Deploy to Marvin
 *****************************************************************
 
 Purpose:
 
-  | 列出遠端機器上的腳本及版號。  
-  | 遠端機器位置於 *config.json* 中 ``script_repository`` 欄位設定。
+  | Build, push, pack 和 deploy Blcks 專案至 Marvin 平台。
 
 
 Usage:
 
-- :Please enter script id: 請輸入想查看的腳本 id 或 ``*``，如：
-    
-    - ``*`` : 列出遠端機器上的所有可用腳本與版號。
-    - ``notification`` : 列出遠端機器上 notification 腳本可用的版號。
+  Step 1. 當 Marvin 平台上已有同名的腳本、工作流程存在時，是否要覆蓋：
+
+      - :Overwrite existing scripts on Marvin: 填入 Y or N，大小寫不拘。若為 Y 表示要覆蓋 Marvin 平台同名腳本、工作流程。
