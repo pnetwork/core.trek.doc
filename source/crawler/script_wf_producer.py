@@ -64,7 +64,7 @@ def get_wf_list():
 <table class="ref">
     <tr>
         <th>Name</th>
-        <th>Script id</th>
+        <th>Template id</th>
         <th>Description</th>
     </tr>
 """
@@ -124,8 +124,9 @@ def get_script_list():
 <table class="ref">
     <tr>
         <th>Name</th>
-        <th>Template id</th>
+        <th>Script id</th>
         <th>Description</th>
+        <th>Para schema file</th>
     </tr>
 """
     for i in script_urls:
@@ -146,12 +147,19 @@ def get_script_list():
         script_name = script.get("name")
         script_desc = script.get("description")
         script_id = script.get("id")
+        
+        stream = yaml.dump(script, sort_keys=False, allow_unicode=True)
+
+        with open(os.path.join(dirname, os.pardir, "library", "scripts", script_id + ".rst"), "w") as f:
+            f.writelines([script_id, "\n**********************************\n| ", script_name, "\n| ", script_desc,"\n\n.. code-block:: yaml\n", "\n    "])
+            f.write(stream.replace("\n", "\n    "))
 
         result += f"""
     <tr>
         <td>{script_name}</td>
         <td>{script_id}</td>
         <td>{script_desc}</td>
+        <td><a class="reference internal" href="scripts/{script_id}.html">view schema</a></td>
     </tr>"""
     return result + """</table>
 <br/>
@@ -166,6 +174,6 @@ if __name__ == "__main__":
 
     script_result = get_script_list()
     with open(SCRIPT_SAVE_PATH, "w") as f:
-        f.write(wf_result)
+        f.write(script_result)
     
     
