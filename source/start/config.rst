@@ -90,13 +90,26 @@ input_data_path
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 | 工作流程參數檔案位置，預設為 *{your_trek_project_path}/inputs/data.yml*，支援 yaml, json 兩種格式。
 | 當 workflow template 不想設定可供選擇的值時 (如: chatbot)，可透過工作流程參數檔案設定欄位值，通常於本機執行測試時使用。
+| 填寫的方式請參考：
+
+.. code-block:: yaml
+
+    4-5:                # Node id: from - to 
+        bot_infos.0:        # Property name: bot_infos is an array of string, so bot_infos.0 means bot_infos[0]
+            type: string        # Property data type
+            value: CH-bka2bbkpl # Property value
 
 .. _config_input_event_path:
 
 input_event_path
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 | 工作流程事件參數檔案位置，預設為 *{your_trek_project_path}/inputs/event.yml*，支援 yaml, json 兩種格式。
-| 當工作流程為事件觸發時，此參數將指定事件內容檔案位置。
+| 當工作流程為事件觸發時，此參數將指定事件內容檔案位置；當執行 Blcks 時 input_event_path 表示輸入參數。
+| 如下：
+
+.. code-block:: yaml
+
+    tag_name: "redis"   # Property name: value
 
 env
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

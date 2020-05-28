@@ -81,9 +81,6 @@ graph:
         - property: str_message
           value: 'The following host redis connection fail: {{ 2.fail_hosts }}'
           type: 'string'
-        - property: bot_infos.0
-          value: '{input your chatbot id}' # 此欄位為 chatbot id，請依 marvin 平台設置
-          type: 'string'
     - source: '4'
       target: '1'
       metadata:

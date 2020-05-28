@@ -1,59 +1,39 @@
 
 *****************************************************************
-Trek Blcks: Create Blcks
+Trek: Create Project
 *****************************************************************
 
 Purpose:
 
-  | 建立一個 blcks 專案。  
-  | 當在 workflow 專案下執行時，建置位址會在 ``{your_trek_project_path}/src/ansible/{your_blcks_project}``，若非 workflow 專案則會要選取腳本建立位置。
+  | 建立一個全新的 Trek 專案。
 
 
 Usage:
 
-若在 workflow 專案下執行命令時：
-
-  Step 1. 決定 Blcks 專案名稱：
-
-      - :Please enter script name: Blcks project name。命名規則需為英數字。
-
-  Step 2. 是否在新視窗開啟 Blcks 專案 ?：
-
-      - :Open blcks project in new window: 填入 Y or N，大小寫不拘。若為 Y 表示要以此腳本為 workspce 開啟新視窗，N 則反之。
-
-若在非 workflow 專案下執行命令時如下說明，執行完全直接以此腳本為 workspce 開啟：
-  
-  Step 1. 選取 Blcks 專案存放位置：
+  Step 1. 選取 Trek 專案存放位置：
 
       - :Select project location: 點選本機資料夾決定位置。
 
-  Step 2. 決定 Blcks 專案名稱：
+  Step 2. 決定 Trek 專案名稱：
 
-      - :Please enter script name: Blcks project name。命名規則需為英數字。
+      - :Please enter project name: Trek project name。
 
+  Step 3. 是否建立 Trek 提供的範本專案：
+
+      - :Create a sample project: 填入 Y or N，大小寫不拘。若為 Y 表示要建立 Trek 提供的範本專案，N 則反之。
 
 建立的專案目錄結構如下：
 
 .. code-block:: shell
 
-    $ tree myblcksproject
-    myblcksproject/
-    ├── .gitignore
+    $ tree my.trek.project
+    my.trek.project/
     ├── .trek
     │   └── config.json
-    ├── Makefile
-    ├── flake8.jenkins
-    ├── handler
-    │   ├── __init__.py
-    │   ├── handler.py
-    │   └── requirements.txt
-    ├── inputs
+    ├──inputs
+    │   ├── data.yml
     │   └── event.yml
-    ├── openfaas.yml
-    ├── requirements-test.txt
-    ├── skaffold.yaml
-    ├── tests
-    │   ├── conftest.py
-    │   └── test_blcks.py
-    ├── tox.ini
-    └── myblcksproject.para
+    ├── manifest.json
+    ├── packages.json
+    └── src
+        └── graph.yml

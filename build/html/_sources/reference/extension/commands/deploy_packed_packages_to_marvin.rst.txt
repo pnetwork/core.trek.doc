@@ -1,11 +1,11 @@
 
 *****************************************************************
-Trek Ansible: Deploy to Marvin
+Trek Shell: Deploy to Marvin
 *****************************************************************
 
 Purpose:
 
-  | Build, push, pack 和 deploy Ansible 專案至 Marvin 平台。
+  | Build, push, pack 和 deploy Shell 專案至 Marvin 平台。
 
 
 Usage:

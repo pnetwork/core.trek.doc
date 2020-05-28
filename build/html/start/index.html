@@ -314,13 +314,24 @@ Trek config 提供專案、Global兩種層級的設置，專案設置可以覆�
 <div class="line-block">
 <div class="line">工作流程參數檔案位置，預設為 <em>{your_trek_project_path}/inputs/data.yml</em>，支援 yaml, json 兩種格式。</div>
 <div class="line">當 workflow template 不想設定可供選擇的值時 (如: chatbot)，可透過工作流程參數檔案設定欄位值，通常於本機執行測試時使用。</div>
+<div class="line">填寫的方式請參考：</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">4-5</span><span class="p">:</span>                <span class="c1"># Node id: from - to</span>
+    <span class="nt">bot_infos.0</span><span class="p">:</span>        <span class="c1"># Property name: bot_infos is an array of string, so bot_infos.0 means bot_infos[0]</span>
+        <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>        <span class="c1"># Property data type</span>
+        <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">CH-bka2bbkpl</span> <span class="c1"># Property value</span>
+</pre></div>
 </div>
 </div>
 <div class="section" id="input-event-path">
 <span id="config-input-event-path"></span><h2>input_event_path<a class="headerlink" href="#input-event-path" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line">工作流程事件參數檔案位置，預設為 <em>{your_trek_project_path}/inputs/event.yml</em>，支援 yaml, json 兩種格式。</div>
-<div class="line">當工作流程為事件觸發時，此參數將指定事件內容檔案位置。</div>
+<div class="line">當工作流程為事件觸發時，此參數將指定事件內容檔案位置；當執行 Blcks 時 input_event_path 表示輸入參數。</div>
+<div class="line">如下：</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">tag_name</span><span class="p">:</span> <span class="s">&quot;redis&quot;</span>   <span class="c1"># Property name: value</span>
+</pre></div>
 </div>
 </div>
 <div class="section" id="env">

@@ -1,10 +1,9 @@
 
 *****************************************************************
-Trek Blcks: Pack
+Trek: Init Env
 *****************************************************************
 
 Purpose:
 
-  | 打包 Blcks 專案。  
-  | 打包 Blcks 專案下的 .para 和 openfaas.yml 一起打包成 zip 並放置於 *{your_blcks_path}/bin** 資料夾中。
+  | 啟動執行環境，找尋 workflow template 所使用到的腳本，分別以 docker containers 方式啟動。
 

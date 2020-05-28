@@ -127,6 +127,9 @@ Step 3. View workflow template
 Step 4. Edit test data
 """"""""""""""""""""""""""""""""""""""""""""""""
 | 範本專案已定義好整個 workflow 流程的長相，在 run 之前，我們需要設置傳送至哪個 chatbot。
+
+.. _find_chatbot_id:
+
 | 首先，我們要取得 chatbot ID。請至 marvin 平台，也就是 Trek config.json 定義的 :ref:`marvin_url <marvin_url>`，到左側目錄中「資產管理」-> 「通訊帳號」點取要的 chatbot，從下方詳情視窗中找到 ID 欄位並把它複製起來：
 
 .. image:: ../_static/images/marvin_chatbot.png

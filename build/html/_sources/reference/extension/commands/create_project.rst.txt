@@ -1,11 +1,11 @@
 
 *****************************************************************
-Trek Ansible: Deploy Packed Packages to Marvin
+Trek Shell: Deploy Packed Packages to Marvin
 *****************************************************************
 
 Purpose:
 
-  | 發佈已 packed 的 Ansible 專案至 Marvin 平台。
+  | 發佈已 packed 的 Shell 專案至 Marvin 平台。
 
 
 Usage:

@@ -28,7 +28,7 @@ Step 1. Create project
 Step 2. Create Blcks
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 | 建立一個 Blcks 腳本，用來檢查 redis 連線。
-| 使用「 :doc:`../../reference/extension/commands/create_blcks` 」指令建立 Blcks 腳本：
+| 使用「 :doc:`../../reference/extension/commands/blcks-create_blcks` 」指令建立 Blcks 腳本：
 
 .. image:: ../../_static/images/create_blcks.gif
 
@@ -90,6 +90,15 @@ Step 4. Edit workflow template
 | 接著開啟專案下的 :exlink:`src/graph.yml <src/graph.yml>`，開始編輯 workflow template 檔案，定義好整個工作流程：
 
 .. literalinclude:: ../../../example/host.detect.redis/src/graph.yml
+   :language: yaml
+   :linenos:
+
+| 我們在製作的是 workflow template，想讓使用者在安裝 workflow instance 至項目時自己決定要傳送的的 chatbot，因此把 chatbot id 在 workflow template 寫死要傳送的頻道是不合適的。
+| 
+| 我們可以使用工作流程參數檔 :exlink:`inputs/data.yaml <inputs/data.yaml>`；工作流程參數檔僅在本機執行時會使用到，之後的打包佈署動作並不會包含這個檔案，請填入以下：
+| Chatbot id 的取得 :ref:`請參考這裡<find_chatbot_id>`。
+
+.. literalinclude:: ../../../example/host.detect.redis/inputs/data.yml
    :language: yaml
    :linenos:
 
