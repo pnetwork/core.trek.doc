@@ -14,6 +14,8 @@ Scripts list
 
 
 
+.. _wf_list:
+
 Workflows list
 ------------------------
 

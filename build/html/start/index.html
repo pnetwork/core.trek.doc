@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../_static/css/table.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="CLI Supported Commands" href="../cli/index.html" />
+    <link rel="next" title="Quick Start" href="quick_start.html" />
     <link rel="prev" title="Marvin Automation Development Guide" href="../index.html" /> 
 </head>
 
@@ -89,7 +89,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#system-requirements">System Requirements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#installation-trek-cli">Installation Trek CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#installing-trek-cli">Installing Trek CLI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#config-development-environment">Config Development Environment</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#marvin-url">marvin_url <span class="red">*</span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#marvin-jwt">marvin_JWT <span class="red">*</span></a></li>
@@ -107,22 +107,25 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="#the-project-directory-structure">The Project Directory Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quick Start</a></li>
 </ul>
 <p class="caption"><span class="caption-text">USER GUIDE</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../cli/index.html">CLI Supported Commands</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../extension/vscode/index.html">Extension Supported Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow/index.html">Developer Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blcks/index.html">Developer Blcks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extension/vscode/index.html">Working with VSCode Extension</a></li>
 </ul>
 <p class="caption"><span class="caption-text">REFERENCE</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../workflow/index.html">Workflow Schema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cli/commands.html">CLI Command Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extension/vscode/commands.html">VSCode Extension Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../library/index.html">Library List</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../blcks/index.html">Blcks SDK Guide</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/">Samples</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ABOUT</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../cli/changelog.html">Trek CLI Changelog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../extension/vscode/changelog.html">VSCode Extension Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extension/vscode/changelog.html">Trek VSCode Extension Changelog</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/issues/">Issues Report</a></li>
 </ul>
 
@@ -201,8 +204,8 @@
 <li><p>graphviz 2.42.2+ : 使用指令 <a class="reference internal" href="../reference/cli/commands/graph.html"><span class="doc">graph</span></a> 時用到。 ( <a href="https://www.graphviz.org/download/" target="_blank">Download here</a> )</p></li>
 </ul>
 </div>
-<div class="section" id="installation-trek-cli">
-<span id="install-trek"></span><h1>Installation Trek CLI<a class="headerlink" href="#installation-trek-cli" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="installing-trek-cli">
+<span id="install-trek"></span><h1>Installing Trek CLI<a class="headerlink" href="#installing-trek-cli" title="Permalink to this headline">¶</a></h1>
 <p>首先我們要安裝 Trek CLI 工具，請使用以下指令安裝 trek：</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ pip install trek -i https://package.pentium.network/repository/pypi-group/simple --trusted-host<span class="o">=</span>package.pentium.network
 </pre></div>
@@ -214,8 +217,8 @@
 <p>恭喜，您已成功安裝 Trek !</p>
 </div>
 <div class="section" id="config-development-environment">
-<span id="config-trek"></span><h1>Config Development Environment<a class="headerlink" href="#config-development-environment" title="Permalink to this headline">¶</a></h1>
-<p>成功安裝 Trek CLI 工具後，我們需要設置 Trek config。
+<h1>Config Development Environment<a class="headerlink" href="#config-development-environment" title="Permalink to this headline">¶</a></h1>
+<p id="config-trek">成功安裝 Trek CLI 工具後，我們需要設置 Trek config。
 Trek config 提供專案、Global兩種層級的設置，專案設置可以覆蓋 Global 設置。舉例來說，若 Global 和專案皆設置了 <code class="docutils literal notranslate"><span class="pre">router_port</span></code> 欄位，trek 將優先以專案設置的為主。</p>
 <p>專案設定檔位於專案內 <em>{your_trek_project_path}/.trek/config.json</em>，Global 位於 <em>~/.trek/config.json</em>。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ vim ~/.trek/config.json
@@ -244,7 +247,7 @@ Trek config 提供專案、Global兩種層級的設置，專案設置可以覆�
 <p>Trek config.json 提供以下設定：</p>
 <div class="section" id="marvin-url">
 <h2>marvin_url <span class="red">*</span><a class="headerlink" href="#marvin-url" title="Permalink to this headline">¶</a></h2>
-<div class="line-block">
+<div class="line-block" id="id1">
 <div class="line">Marvin 平台 url。</div>
 <div class="line">若需使用 Marvin 平台資產、或佈署時必需填入，若不使用則可以不需要填。</div>
 </div>
@@ -253,7 +256,7 @@ Trek config 提供專案、Global兩種層級的設置，專案設置可以覆�
 <h2>marvin_JWT <span class="red">*</span><a class="headerlink" href="#marvin-jwt" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line">Marvin 平台 jwt tocken 設置，屬於 <code class="docutils literal notranslate"><span class="pre">marvin_url</span></code> 的 jwt token。</div>
-<div class="line">若僅知道 marvin 帳號密碼，可以使用 <a class="reference internal" href="../reference/cli/commands/login.html"><span class="doc">login</span></a> 指令進行平台登入，系統即自動填入專案層級的 <code class="docutils literal notranslate"><span class="pre">marvin_JWT</span></code> 欄位。</div>
+<div class="line">若僅知道 marvin 帳號密碼，在 trek 專案下執行指令 <a class="reference internal" href="../reference/cli/commands/login.html"><span class="doc">login</span></a> 來登入平台，系統即自動填入專案層級的 <code class="docutils literal notranslate"><span class="pre">marvin_JWT</span></code> 欄位。</div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -276,7 +279,7 @@ Trek config 提供專案、Global兩種層級的設置，專案設置可以覆�
 <h2>blcks_code_base<a class="headerlink" href="#blcks-code-base" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line">Blcks 腳本於本地端的資料夾位置。</div>
-<div class="line">假設資料夾 <em>/User/pentium/trek/blcks/</em> 下有多個 blcks 腳本(如下)，則 <code class="docutils literal notranslate"><span class="pre">blcks_code_base</span></code> 可設置為 <em>/User/pentium/trek/blcks</em>。</div>
+<div class="line">假設資料夾 <em>/User/pentium/trek/blcks/</em> 下有多個 Blcks 腳本(如下)，則 <code class="docutils literal notranslate"><span class="pre">blcks_code_base</span></code> 可設置為 <em>/User/pentium/trek/blcks</em>。</div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ tree /User/pentium/trek/blcks
 /User/pentium/trek/blcks
@@ -311,13 +314,24 @@ Trek config 提供專案、Global兩種層級的設置，專案設置可以覆�
 <div class="line-block">
 <div class="line">工作流程參數檔案位置，預設為 <em>{your_trek_project_path}/inputs/data.yml</em>，支援 yaml, json 兩種格式。</div>
 <div class="line">當 workflow template 不想設定可供選擇的值時 (如: chatbot)，可透過工作流程參數檔案設定欄位值，通常於本機執行測試時使用。</div>
+<div class="line">填寫的方式請參考：</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">4-5</span><span class="p">:</span>                <span class="c1"># Node id: from - to</span>
+    <span class="nt">bot_infos.0</span><span class="p">:</span>        <span class="c1"># Property name: bot_infos is an array of string, so bot_infos.0 means bot_infos[0]</span>
+        <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>        <span class="c1"># Property data type</span>
+        <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">CH-bka2bbkpl</span> <span class="c1"># Property value</span>
+</pre></div>
 </div>
 </div>
 <div class="section" id="input-event-path">
 <span id="config-input-event-path"></span><h2>input_event_path<a class="headerlink" href="#input-event-path" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line">工作流程事件參數檔案位置，預設為 <em>{your_trek_project_path}/inputs/event.yml</em>，支援 yaml, json 兩種格式。</div>
-<div class="line">當工作流程為事件觸發時，此參數將指定事件內容檔案位置。</div>
+<div class="line">當工作流程為事件觸發時，此參數將指定事件內容檔案位置；當執行 Blcks 時 input_event_path 表示輸入參數。</div>
+<div class="line">如下：</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">tag_name</span><span class="p">:</span> <span class="s">&quot;redis&quot;</span>   <span class="c1"># Property name: value</span>
+</pre></div>
 </div>
 </div>
 <div class="section" id="env">
@@ -340,24 +354,37 @@ Trek config 提供專案、Global兩種層級的設置，專案設置可以覆�
 <div class="line">Ansible inventory 環境設置檔。本地端開發執行 ansible 腳本時，服務器資產不一定要在 marvin 平台內。</div>
 <div class="line">當有一個 ansible inventory 檔案為：</div>
 </div>
-<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="c1">#FilePath: /Users/pentium/ansible/inventory.ini</span>
+<div class="highlight-ini notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">#FilePath: /Users/pentium/ansible/inventory.ini</span>
 <span class="c1">#FileName: Ansible inventory.ini</span>
 <span class="k">[hosts]</span>
 <span class="na">192.168.101.231 ansible_user</span><span class="o">=</span><span class="s">pentium ansible_password=pentium_password ansible_port=22</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 <div class="line-block">
 <div class="line">將 config.json 中的 <code class="docutils literal notranslate"><span class="pre">local_inventory_file</span></code> 設置為 <em>/Users/pentium/ansible/inventory.ini</em>：</div>
 </div>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-json notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;local_inventory_file&quot;</span><span class="p">:</span><span class="s2">&quot;/Users/pentium/ansible/inventory.ini&quot;</span>
 <span class="p">}</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 <div class="line-block">
 <div class="line">在 workflow template file 的服務器資產指定為 <code class="docutils literal notranslate"><span class="pre">_local_</span></code> ：</div>
 </div>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1">#FileName: Workflow template file</span>
+<div class="highlight-yaml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">#FileName: Workflow template file</span>
 <span class="nn">...</span>
 <span class="p p-Indicator">-</span> <span class="nt">source</span><span class="p">:</span> <span class="s">&#39;2&#39;</span>
   <span class="nt">target</span><span class="p">:</span> <span class="s">&#39;3&#39;</span>
@@ -367,7 +394,7 @@ Trek config 提供專案、Global兩種層級的設置，專案設置可以覆�
         <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">_local_</span> <span class="c1"># 當 value 為 _local_ 時，服務器位置及登入資訊為 config.json 中的 local_inventory_file 設置</span>
         <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -391,7 +418,7 @@ hello_trek_project/
 ├── packages.json       <span class="c1"># 制定專案所需的 dependencies 安裝包(類似 python requirements.txt)</span>
 └── src                 <span class="c1"># 存放主要程式碼</span>
     ├── ansible/        <span class="c1"># 存放 ansible 腳本程式的目錄</span>
-    ├── blcks/          <span class="c1"># 存放 blcks 腳本程式的目錄</span>
+    ├── blcks/          <span class="c1"># 存放 Blcks 腳本程式的目錄</span>
     ├── shell/          <span class="c1"># 存放 shell script 腳本程式的目錄</span>
     └── graph.yml       <span class="c1"># 預設產生的 workflow template 檔案，定義工作流程長相的主要檔案</span>
 </pre></div>
@@ -413,7 +440,7 @@ hello_trek_project/
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../cli/index.html" class="btn btn-neutral float-right" title="CLI Supported Commands" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="quick_start.html" class="btn btn-neutral float-right" title="Quick Start" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../index.html" class="btn btn-neutral float-left" title="Marvin Automation Development Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

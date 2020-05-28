@@ -37,7 +37,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="CertificateManager" href="certificate.html" />
-    <link rel="prev" title="Blcks SDK Guide" href="../../../blcks/index.html" /> 
+    <link rel="prev" title="Services" href="../../../blcks/services.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -89,25 +89,35 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../start/index.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../start/index.html#system-requirements">System Requirements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../start/index.html#installation-trek-cli">Installation Trek CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../start/index.html#installing-trek-cli">Installing Trek CLI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../start/index.html#config-development-environment">Config Development Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../start/index.html#the-project-directory-structure">The Project Directory Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../start/quick_start.html">Quick Start</a></li>
 </ul>
 <p class="caption"><span class="caption-text">USER GUIDE</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../cli/index.html">CLI Supported Commands</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../extension/vscode/index.html">Extension Supported Commands</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../workflow/index.html">Developer Workflow</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../blcks/index.html">Developer Blcks</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration.html">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../blcks/schema.html">Blcks Para Schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html">Quick Start</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../blcks/services.html">Services</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../extension/vscode/index.html">Working with VSCode Extension</a></li>
 </ul>
 <p class="caption"><span class="caption-text">REFERENCE</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../workflow/index.html">Workflow Schema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cli/commands.html">CLI Command Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../extension/vscode/commands.html">VSCode Extension Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../library/index.html">Library List</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../blcks/index.html">Blcks SDK Guide</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/">Samples</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ABOUT</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../cli/changelog.html">Trek CLI Changelog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../extension/vscode/changelog.html">VSCode Extension Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../extension/vscode/changelog.html">Trek VSCode Extension Changelog</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/issues/">Issues Report</a></li>
 </ul>
 
@@ -154,7 +164,9 @@
     
       <li><a href="../../../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="../../../blcks/index.html">Blcks SDK Guide</a> &raquo;</li>
+          <li><a href="../../../blcks/index.html">Developer Blcks</a> &raquo;</li>
+        
+          <li><a href="../../../blcks/services.html">Services</a> &raquo;</li>
         
       <li>CDN</li>
     
@@ -436,15 +448,14 @@ all the functions need a prefix or postfix to distinguish the difference</p>
 
 <dl class="py method">
 <dt>
-<code class="sig-name descname">getCloudCDNs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">providerId</span></em>, <em class="sig-param"><span class="n">keyId</span></em>, <em class="sig-param"><span class="n">offset</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">limit</span><span class="o">=</span><span class="default_value">30</span></em><span class="sig-paren">)</span></dt>
+<code class="sig-name descname">getCloudCDNs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">providerId</span></em>, <em class="sig-param"><span class="n">keyId</span></em>, <em class="sig-param"><span class="n">fqdn</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span></dt>
 <dd><p>Get specific cdn info from cloud provider</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>providerId</strong> (<em>str</em>) -- The unique ID of cloud service provider</p></li>
 <li><p><strong>keyId</strong> (<em>str</em>) -- The unique ID of credential key</p></li>
-<li><p><strong>offset</strong> (<em>int</em>) -- The offset for returned data</p></li>
-<li><p><strong>limit</strong> (<em>int</em>) -- The number of data to present</p></li>
+<li><p><strong>fqdn</strong> (<em>str</em>) -- The fqdn is used to associates with CDN</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -587,7 +598,7 @@ return origin cdn object if cdn exists, or create a new one</p>
         <a href="certificate.html" class="btn btn-neutral float-right" title="CertificateManager" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../../../blcks/index.html" class="btn btn-neutral float-left" title="Blcks SDK Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../../../blcks/services.html" class="btn btn-neutral float-left" title="Services" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
