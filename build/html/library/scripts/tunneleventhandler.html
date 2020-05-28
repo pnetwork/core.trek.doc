@@ -1,0 +1,561 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>tunneleventhandler &mdash; Pentium</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/table.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Marvin Development Guide
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">GETTING STARTED</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../start/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../start/index.html#system-requirements">System Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../start/index.html#installing-trek-cli">Installing Trek CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../start/index.html#config-development-environment">Config Development Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../start/index.html#the-project-directory-structure">The Project Directory Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../start/quick_start.html">Quick Start</a></li>
+</ul>
+<p class="caption"><span class="caption-text">USER GUIDE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../workflow/index.html">Developer Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../blcks/index.html">Developer Blcks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/vscode/index.html">Working with VSCode Extension</a></li>
+</ul>
+<p class="caption"><span class="caption-text">REFERENCE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cli/commands.html">CLI Command Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/vscode/commands.html">VSCode Extension Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Library List</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/">Samples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ABOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cli/changelog.html">Trek CLI Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/vscode/changelog.html">Trek VSCode Extension Changelog</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/issues/">Issues Report</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Marvin Development Guide</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>tunneleventhandler</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tunneleventhandler">
+<h1>tunneleventhandler<a class="headerlink" href="#tunneleventhandler" title="Permalink to this headline">¶</a></h1>
+<div class="line-block">
+<div class="line">链路事件处理</div>
+<div class="line">链路事件处理</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">tunneleventhandler</span>
+<span class="nt">schemaVersion</span><span class="p">:</span> <span class="s">&#39;0.2&#39;</span>
+<span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.10.0</span>
+<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路事件处理</span>
+<span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路事件处理</span>
+<span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路事件处理</span>
+<span class="nt">namespace</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">network.pentium</span>
+<span class="nt">assets</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">SCRIPT</span>
+<span class="nt">inputs</span><span class="p">:</span>
+  <span class="nt">mode</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">执行模式</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">执行模式</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">执行模式</span>
+    <span class="nt">examples</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">create</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">update</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">delete</span>
+  <span class="nt">new_tunnel_data</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">新链路资讯</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">新链路资讯</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">object</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">新链路资讯</span>
+    <span class="nt">properties</span><span class="p">:</span>
+      <span class="nt">enableToConnect</span><span class="p">:</span>
+        <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">是否可以连线</span>
+        <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">是否可以连线</span>
+        <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">boolean</span>
+        <span class="nt">examples</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+        <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">是否可以连线</span>
+      <span class="nt">nodes</span><span class="p">:</span>
+        <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路节点资讯</span>
+        <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路节点资讯</span>
+        <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">array</span>
+        <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路节点资讯</span>
+        <span class="nt">items</span><span class="p">:</span>
+          <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">object</span>
+          <span class="nt">properties</span><span class="p">:</span>
+            <span class="nt">sequence</span><span class="p">:</span>
+              <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">节点编号</span>
+              <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">节点编号</span>
+              <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">integer</span>
+              <span class="nt">examples</span><span class="p">:</span>
+              <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+              <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">节点编号</span>
+            <span class="nt">outgoing</span><span class="p">:</span>
+              <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">chisel-out 内容</span>
+              <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">chisel-out 内容</span>
+              <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">object</span>
+              <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">chisel-out 内容</span>
+              <span class="nt">properties</span><span class="p">:</span>
+                <span class="nt">id</span><span class="p">:</span>
+                  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">hostId</span>
+                  <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">hostId</span>
+                  <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                  <span class="nt">examples</span><span class="p">:</span>
+                  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">S-djtjewohs</span>
+                  <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">host ID</span>
+                <span class="nt">ip</span><span class="p">:</span>
+                  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">chisel-out IP</span>
+                  <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">chisel-out IP</span>
+                  <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                  <span class="nt">examples</span><span class="p">:</span>
+                  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">1.4.5.6</span>
+                  <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">chisel-out IP</span>
+                <span class="nt">port</span><span class="p">:</span>
+                  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">chisel-out Port</span>
+                  <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">chisel-out Port</span>
+                  <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                  <span class="nt">examples</span><span class="p">:</span>
+                  <span class="p p-Indicator">-</span> <span class="s">&#39;10003&#39;</span>
+                  <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">chisel-out Port</span>
+                <span class="nt">serviceInstalled</span><span class="p">:</span>
+                  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">是否已安装</span>
+                  <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">是否已安装</span>
+                  <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">boolean</span>
+                  <span class="nt">examples</span><span class="p">:</span>
+                  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+                  <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">服务是否已安装</span>
+            <span class="nt">incoming</span><span class="p">:</span>
+              <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">chisel-in 内容</span>
+              <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">chisel-in 内容</span>
+              <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">object</span>
+              <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">chisel-in 内容</span>
+              <span class="nt">properties</span><span class="p">:</span>
+                <span class="nt">id</span><span class="p">:</span>
+                  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">hostId</span>
+                  <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">hostId</span>
+                  <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                  <span class="nt">examples</span><span class="p">:</span>
+                  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">S-djtjewohs</span>
+                  <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">host ID</span>
+                <span class="nt">ip</span><span class="p">:</span>
+                  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">chisel-in IP</span>
+                  <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">chisel-in IP</span>
+                  <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                  <span class="nt">examples</span><span class="p">:</span>
+                  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">1.4.5.6</span>
+                  <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">chisel-in IP</span>
+                <span class="nt">port</span><span class="p">:</span>
+                  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">chisel-in Port</span>
+                  <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">chisel-in Port</span>
+                  <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                  <span class="nt">examples</span><span class="p">:</span>
+                  <span class="p p-Indicator">-</span> <span class="s">&#39;10002&#39;</span>
+                  <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">chisel-in Port</span>
+                <span class="nt">serviceInstalled</span><span class="p">:</span>
+                  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">是否已安装</span>
+                  <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">是否已安装</span>
+                  <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">boolean</span>
+                  <span class="nt">examples</span><span class="p">:</span>
+                  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+                  <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">服务是否已安装</span>
+            <span class="nt">id</span><span class="p">:</span>
+              <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+              <span class="nt">examples</span><span class="p">:</span>
+              <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">TS-cjwah7zw3</span>
+              <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">tunnel node ID</span>
+      <span class="nt">enable</span><span class="p">:</span>
+        <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路是否启用</span>
+        <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路是否启用</span>
+        <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">boolean</span>
+        <span class="nt">examples</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+        <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路是否启用</span>
+      <span class="nt">name</span><span class="p">:</span>
+        <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路名称</span>
+        <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路名称</span>
+        <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+        <span class="nt">examples</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">路径 2</span>
+        <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路名称</span>
+      <span class="nt">id</span><span class="p">:</span>
+        <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路 ID</span>
+        <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路 ID</span>
+        <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+        <span class="nt">examples</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">TN-cjwah7zvt</span>
+        <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路 ID</span>
+  <span class="nt">old_tunnel_data</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">旧链路资讯</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">旧链路资讯</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">array</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">旧链路资讯</span>
+    <span class="nt">items</span><span class="p">:</span>
+      <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">object</span>
+      <span class="nt">properties</span><span class="p">:</span>
+        <span class="nt">enableToConnect</span><span class="p">:</span>
+          <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">是否可以连线</span>
+          <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">是否可以连线</span>
+          <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">boolean</span>
+          <span class="nt">examples</span><span class="p">:</span>
+          <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+          <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">是否可以连线</span>
+        <span class="nt">nodes</span><span class="p">:</span>
+          <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路节点资讯</span>
+          <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路节点资讯</span>
+          <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">array</span>
+          <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路节点资讯</span>
+          <span class="nt">items</span><span class="p">:</span>
+            <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">object</span>
+            <span class="nt">properties</span><span class="p">:</span>
+              <span class="nt">sequence</span><span class="p">:</span>
+                <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">节点编号</span>
+                <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">节点编号</span>
+                <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">integer</span>
+                <span class="nt">examples</span><span class="p">:</span>
+                <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+                <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">节点编号</span>
+              <span class="nt">outgoing</span><span class="p">:</span>
+                <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">chisel-out 内容</span>
+                <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">chisel-out 内容</span>
+                <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">object</span>
+                <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">chisel-out 内容</span>
+                <span class="nt">properties</span><span class="p">:</span>
+                  <span class="nt">id</span><span class="p">:</span>
+                    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">hostId</span>
+                    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">hostId</span>
+                    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                    <span class="nt">examples</span><span class="p">:</span>
+                    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">S-djtjewohs</span>
+                    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">host ID</span>
+                  <span class="nt">ip</span><span class="p">:</span>
+                    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">chisel-out IP</span>
+                    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">chisel-out IP</span>
+                    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                    <span class="nt">examples</span><span class="p">:</span>
+                    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">1.4.5.6</span>
+                    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">chisel-out IP</span>
+                  <span class="nt">port</span><span class="p">:</span>
+                    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">chisel-out Port</span>
+                    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">chisel-out Port</span>
+                    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                    <span class="nt">examples</span><span class="p">:</span>
+                    <span class="p p-Indicator">-</span> <span class="s">&#39;10003&#39;</span>
+                    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">chisel-out Port</span>
+                  <span class="nt">serviceInstalled</span><span class="p">:</span>
+                    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">是否已安装</span>
+                    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">是否已安装</span>
+                    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">boolean</span>
+                    <span class="nt">examples</span><span class="p">:</span>
+                    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+                    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">服务是否已安装</span>
+              <span class="nt">incoming</span><span class="p">:</span>
+                <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">chisel-in 内容</span>
+                <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">chisel-in 内容</span>
+                <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">object</span>
+                <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">chisel-in 内容</span>
+                <span class="nt">properties</span><span class="p">:</span>
+                  <span class="nt">id</span><span class="p">:</span>
+                    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">hostId</span>
+                    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">hostId</span>
+                    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                    <span class="nt">examples</span><span class="p">:</span>
+                    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">S-djtjewohs</span>
+                    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">host ID</span>
+                  <span class="nt">ip</span><span class="p">:</span>
+                    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">chisel-in IP</span>
+                    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">chisel-in IP</span>
+                    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                    <span class="nt">examples</span><span class="p">:</span>
+                    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">1.4.5.6</span>
+                    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">chisel-in IP</span>
+                  <span class="nt">port</span><span class="p">:</span>
+                    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">chisel-in Port</span>
+                    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">chisel-in Port</span>
+                    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                    <span class="nt">examples</span><span class="p">:</span>
+                    <span class="p p-Indicator">-</span> <span class="s">&#39;10002&#39;</span>
+                    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">chisel-in Port</span>
+                  <span class="nt">serviceInstalled</span><span class="p">:</span>
+                    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">是否已安装</span>
+                    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">是否已安装</span>
+                    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">boolean</span>
+                    <span class="nt">examples</span><span class="p">:</span>
+                    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+                    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">服务是否已安装</span>
+              <span class="nt">id</span><span class="p">:</span>
+                <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+                <span class="nt">examples</span><span class="p">:</span>
+                <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">TS-cjwah7zw3</span>
+                <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">tunnel node ID</span>
+        <span class="nt">enable</span><span class="p">:</span>
+          <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路是否启用</span>
+          <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路是否启用</span>
+          <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">boolean</span>
+          <span class="nt">examples</span><span class="p">:</span>
+          <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+          <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路是否启用</span>
+        <span class="nt">name</span><span class="p">:</span>
+          <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路名称</span>
+          <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路名称</span>
+          <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+          <span class="nt">examples</span><span class="p">:</span>
+          <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">路径 2</span>
+          <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路名称</span>
+        <span class="nt">id</span><span class="p">:</span>
+          <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路 ID</span>
+          <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路 ID</span>
+          <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+          <span class="nt">examples</span><span class="p">:</span>
+          <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">TN-cjwah7zvt</span>
+          <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路 ID</span>
+  <span class="nt">marvin_ips</span><span class="p">:</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">array</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Marvin 平台 IP 列表</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Marvin 平台 IP 列表</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Marvin 平台的内外网 IP，将会添加至链路起点的 Iptables 规则内</span>
+    <span class="nt">items</span><span class="p">:</span>
+      <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+  <span class="nt">default_port_begin</span><span class="p">:</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">integer</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路port号预设起点</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路port号预设起点</span>
+  <span class="nt">default_port_end</span><span class="p">:</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">integer</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路port号预设终点</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路port号预设终点</span>
+<span class="nt">outputs</span><span class="p">:</span>
+  <span class="nt">hostIds</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路上的所有hostID</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路上的所有hostID</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">array</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路上的所有hostID</span>
+    <span class="nt">items</span><span class="p">:</span>
+      <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+  <span class="nt">mode</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路脚本执行模式 start/stop</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路脚本执行模式 start/stop</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路脚本执行模式 start/stop</span>
+  <span class="nt">tunnel_account</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路连线帐号</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路连线帐号</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路连线帐号</span>
+  <span class="nt">tunnel_password</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路连线密码</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路连线密码</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路连线密码</span>
+  <span class="nt">server_vars</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路 server 需求参数</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路 server 需求参数</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">object</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路 server 需求参数</span>
+  <span class="nt">client_vars</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路 client 需求参数</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路 client 需求参数</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">object</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">链路 client 需求参数</span>
+  <span class="nt">testing_vars</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">连线测试参数</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">连线测试参数</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">array</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">连线测试参数</span>
+    <span class="nt">items</span><span class="p">:</span>
+      <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">object</span>
+      <span class="nt">properties</span><span class="p">:</span>
+        <span class="nt">hostId</span><span class="p">:</span>
+          <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">hostId</span>
+          <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">hostId</span>
+          <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+          <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">hostId</span>
+        <span class="nt">remoteIP</span><span class="p">:</span>
+          <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">测试连线IP</span>
+          <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">测试连线IP</span>
+          <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+          <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">测试连线IP</span>
+        <span class="nt">remotePort</span><span class="p">:</span>
+          <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">测试连线 Port</span>
+          <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">测试连线 Port</span>
+          <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">integer</span>
+          <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">测试连线 Port</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Pentium Network Technology Ltd. All rights reserved.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
