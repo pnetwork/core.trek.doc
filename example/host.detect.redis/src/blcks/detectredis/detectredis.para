@@ -4,16 +4,19 @@ schemaVersion: '0.2'
 name: Redis connection monitor
 title: Redis connection monitor
 version: "0.1.0"
-description: ""
+description: "Detect host redis connection."
 namespace: network.pentium
 assets:
-  - SCRIPT
+  - HOST
 
 inputs:
   tag_name:
     name: Tag name
     title: Tag name
     type: string
+
+required:
+  - tag_name
 
 outputs:
   fail_hosts_count:

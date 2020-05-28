@@ -6,21 +6,25 @@ Marvin Automation Development Guide
    :caption: GETTING STARTED
 
    start/index
+   start/quick_start
 
 .. toctree::
    :maxdepth: 2
    :caption: USER GUIDE
-
-   cli/index
+   
+   workflow/index
+   blcks/index
    extension/vscode/index
 
 .. toctree::
    :maxdepth: 2
    :caption: REFERENCE
-
-   workflow/index
+   
+   cli/commands
+   extension/vscode/commands
    library/index
-   blcks/index
+   Samples <https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/>
+
 
 .. toctree::
    :caption: ABOUT

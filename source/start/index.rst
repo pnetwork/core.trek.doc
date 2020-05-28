@@ -28,7 +28,7 @@ System Requirements
 
 .. _install_trek:
 
-Installation Trek CLI
+Installing Trek CLI
 ==================================
 首先我們要安裝 Trek CLI 工具，請使用以下指令安裝 trek：
 
@@ -44,41 +44,11 @@ Installation Trek CLI
 
 恭喜，您已成功安裝 Trek !
 
-.. _config_trek:
 
-Config Development Environment
-=====================================
-成功安裝 Trek CLI 工具後，我們需要設置 Trek config。
-Trek config 提供專案、Global兩種層級的設置，專案設置可以覆蓋 Global 設置。舉例來說，若 Global 和專案皆設置了 ``router_port`` 欄位，trek 將優先以專案設置的為主。
-
-專案設定檔位於專案內 *{your_trek_project_path}/.trek/config.json*，Global 位於 *~/.trek/config.json*。
-
-::
-
-    $ vim ~/.trek/config.json
-    {
-        "marvin_url": "https://marvin.pentium.network/",
-        "marvin_JWT": "{your_marvin_jwt_token}",
-        "router_port": 5000,
-        "action_timeout": 30,
-        "blcks_code_base": "",
-        "ansible_code_base": "",
-        "shell_script_base": "",
-        "script_repository": "https://hub.pentium.network/scripts/",
-        "input_data_path": "",
-        "input_event_path": "",
-        "envs": {
-            "BLCKS_DEBUG_LOG_MODE": "table",
-            "BLCKS_DEBUG_LOG_TABLE_WIDTH": 100,
-            "BLCKS_DEBUG_LOG_FIELDS": "data",
-            "BLCKS_DEBUG_LOG_FORMAT": "{message} => inputParams: {data[inputParamsStr]}"
-        },
-        "flow_home": "",
-        "local_inventory_file": ""
-    }
-
-.. include:: config_list.rst
+.. include:: config.rst
 
 |
 
 .. include:: project_folder.rst
+
+

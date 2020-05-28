@@ -5,416 +5,515 @@
         <th>Name</th>
         <th>Script id</th>
         <th>Description</th>
+        <th>Para schema file</th>
     </tr>
+
     <tr>
         <td>创建阿里云 (AliCloud) 云服务器</td>
         <td>alicloud-instance</td>
         <td>透过 terraform 创建阿里云 (AliCloud) 云服务器。</td>
+        <td><a class="reference internal" href="scripts/alicloud-instance.html">view schema</a></td>
     </tr>
     <tr>
         <td>AppStore 上架状态检测器</td>
         <td>appstorecheck</td>
         <td>AppStore 上架状态检测器</td>
+        <td><a class="reference internal" href="scripts/appstorecheck.html">view schema</a></td>
     </tr>
     <tr>
         <td>列表讯息转换器</td>
         <td>arraytransformer</td>
         <td>将列表讯息转换为字串</td>
+        <td><a class="reference internal" href="scripts/arraytransformer.html">view schema</a></td>
     </tr>
     <tr>
         <td>创建亚马逊 (AWS) 云服务器</td>
         <td>aws-instance</td>
         <td>透过 terraform 创建亚马逊 (AWS) 云服务器。</td>
+        <td><a class="reference internal" href="scripts/aws-instance.html">view schema</a></td>
     </tr>
     <tr>
         <td>帐户余额告警</td>
         <td>balances</td>
         <td>定期检测帐户余额并发出告警</td>
+        <td><a class="reference internal" href="scripts/balances.html">view schema</a></td>
     </tr>
     <tr>
         <td>域名绑定解析商</td>
         <td>bindresolverkey</td>
         <td>尝试替系统内未绑定resolver key的domain，绑定一个可以解析该域名的key</td>
+        <td><a class="reference internal" href="scripts/bindresolverkey.html">view schema</a></td>
     </tr>
     <tr>
         <td>绑定子域名</td>
         <td>bindsubdomain</td>
         <td>将指定CDN与指定子域名配对绑定</td>
+        <td><a class="reference internal" href="scripts/bindsubdomain.html">view schema</a></td>
     </tr>
     <tr>
         <td>角色绑定</td>
         <td>blcksbindingrole</td>
         <td>角色绑定</td>
+        <td><a class="reference internal" href="scripts/blcksbindingrole.html">view schema</a></td>
     </tr>
     <tr>
         <td>证书过期检测</td>
         <td>blckscheckexpiredssl</td>
         <td>检测证书是否到期</td>
+        <td><a class="reference internal" href="scripts/blckscheckexpiredssl.html">view schema</a></td>
+    </tr>
+    <tr>
+        <td>服务器连线测试</td>
+        <td>blckscheckhostconnection</td>
+        <td>对服务器连线测试，检测帐密及网路状态</td>
+        <td><a class="reference internal" href="scripts/blckscheckhostconnection.html">view schema</a></td>
     </tr>
     <tr>
         <td>删除回收站资产</td>
         <td>blcksclearrecycled</td>
         <td>设定回收资产的清除时间，清除已到期资产</td>
+        <td><a class="reference internal" href="scripts/blcksclearrecycled.html">view schema</a></td>
     </tr>
     <tr>
         <td>建立证书</td>
         <td>blckscreatecert</td>
         <td>创建证书并配发至云端</td>
+        <td><a class="reference internal" href="scripts/blckscreatecert.html">view schema</a></td>
     </tr>
     <tr>
         <td>更新应用 AppStore 下架报警的App清单</td>
         <td>blckspatchappstore</td>
         <td>更新应用 AppStore 下架报警的App清单</td>
+        <td><a class="reference internal" href="scripts/blckspatchappstore.html">view schema</a></td>
     </tr>
     <tr>
         <td>域名注册与解析资讯查询</td>
         <td>blckspatchdomains</td>
         <td>域名注册与解析资讯查询</td>
+        <td><a class="reference internal" href="scripts/blckspatchdomains.html">view schema</a></td>
     </tr>
     <tr>
         <td>批量添加备案失效/域名封禁/微信封禁标签</td>
         <td>blckssetdomainstags</td>
         <td>输入顶级域名，批量添加备案失效/域名封禁/微信封禁标签</td>
+        <td><a class="reference internal" href="scripts/blckssetdomainstags.html">view schema</a></td>
     </tr>
     <tr>
         <td>资产设定标签</td>
         <td>blckssettags</td>
         <td>输入 标签名、 新增/移除, 资产类别, 资产 id， 将选定资产新增或移除指定标签。</td>
+        <td><a class="reference internal" href="scripts/blckssettags.html">view schema</a></td>
     </tr>
     <tr>
         <td>同步子域名</td>
         <td>blckssyncfqdns</td>
         <td>同步子域名</td>
+        <td><a class="reference internal" href="scripts/blckssyncfqdns.html">view schema</a></td>
     </tr>
     <tr>
         <td>鏈路工作流程例外處理</td>
         <td>blckstunnelexception</td>
         <td>链路工作流程例外处理</td>
+        <td><a class="reference internal" href="scripts/blckstunnelexception.html">view schema</a></td>
     </tr>
     <tr>
         <td>建立全站域名关联表</td>
         <td>buildresolverrelation</td>
         <td>利用所有使用者汇入系统内的解析商密钥，建立每一把r解析商密钥可解析的域名列表的对照表</td>
+        <td><a class="reference internal" href="scripts/buildresolverrelation.html">view schema</a></td>
     </tr>
     <tr>
         <td>复制DNS 记录至另一解析商</td>
         <td>bulkmigration</td>
         <td>将使用者所选取域名及subdomains，添加至选定的解析商密钥内</td>
+        <td><a class="reference internal" href="scripts/bulkmigration.html">view schema</a></td>
     </tr>
     <tr>
         <td>批量修改源站设置</td>
         <td>bulkorigins</td>
         <td>批量修改 CDN 的 origins</td>
+        <td><a class="reference internal" href="scripts/bulkorigins.html">view schema</a></td>
     </tr>
     <tr>
         <td>批量刷新</td>
         <td>bulkpurge</td>
-        <td>输入需要刷新对象的 URL（需要 http:// 或 https://）或资料夹，一行一笔。 例如： http://www.abc.com/test.html http://www.abc.com/
-        </td>
+        <td>输入需要刷新对象的 URL（需要 http:// 或 https://）或资料夹，一行一笔。
+例如：
+http://www.abc.com/test.html
+http://www.abc.com/
+</td>
+        <td><a class="reference internal" href="scripts/bulkpurge.html">view schema</a></td>
     </tr>
     <tr>
         <td>批量修改 HTTP 头</td>
         <td>bulkreqheaders</td>
         <td>批量修改cdn的http request headers</td>
+        <td><a class="reference internal" href="scripts/bulkreqheaders.html">view schema</a></td>
     </tr>
     <tr>
         <td>批量修改域名解析商</td>
         <td>bulkresolver</td>
         <td>仅支持域名注册商为 GoDaddy 及阿里云，域名注册商为 GoDaddy 支持切换任意域名解析商，域名注册商为阿里云仅支持切换回阿里云！</td>
+        <td><a class="reference internal" href="scripts/bulkresolver.html">view schema</a></td>
     </tr>
     <tr>
         <td>链路标籤</td>
         <td>bulktunneltag</td>
         <td>链路标籤处理与链路安装日誌</td>
+        <td><a class="reference internal" href="scripts/bulktunneltag.html">view schema</a></td>
     </tr>
     <tr>
         <td>链路对外连线测试</td>
         <td>bulktunneltest</td>
         <td>测试链路是否畅通，是否可对外连线</td>
+        <td><a class="reference internal" href="scripts/bulktunneltest.html">view schema</a></td>
     </tr>
     <tr>
         <td>批量下线域名</td>
         <td>bulkupdatenameservers</td>
         <td>批量下线域名与切换 name servers</td>
+        <td><a class="reference internal" href="scripts/bulkupdatenameservers.html">view schema</a></td>
     </tr>
     <tr>
         <td>批量预热</td>
         <td>bulkwarmup</td>
-        <td>输入需要预热对象的 URL（需要 http:// 或 https://），一行一笔。 例如： http://www.abc.com/test.html http://www.abc.com/test2.html
-        </td>
+        <td>输入需要预热对象的 URL（需要 http:// 或 https://），一行一笔。
+例如：
+http://www.abc.com/test.html
+http://www.abc.com/test2.html
+</td>
+        <td><a class="reference internal" href="scripts/bulkwarmup.html">view schema</a></td>
     </tr>
     <tr>
         <td>链路 修改项目白名单</td>
         <td>bulkwhitelist</td>
         <td>链路 修改项目白名单</td>
+        <td><a class="reference internal" href="scripts/bulkwhitelist.html">view schema</a></td>
     </tr>
     <tr>
         <td>链路服务升级与重启脚本</td>
         <td>byos-chisel-restart</td>
         <td>奔腾预设脚本，对服务器升级与重启链路服务。</td>
+        <td><a class="reference internal" href="scripts/byos-chisel-restart.html">view schema</a></td>
     </tr>
     <tr>
         <td>安装链路元件脚本</td>
         <td>byos-tunnel-install</td>
         <td>奔腾预设脚本，对服务器安装链路元件脚本。</td>
+        <td><a class="reference internal" href="scripts/byos-tunnel-install.html">view schema</a></td>
     </tr>
     <tr>
         <td>设定链路脚本</td>
         <td>byos-tunnel-setup</td>
-        <td>奔腾预设脚本，对服务器设定链路脚本。</td>
+        <td>奔腾预设脚本，对服务器设定链路脚本，支持 Ansible2.9。</td>
+        <td><a class="reference internal" href="scripts/byos-tunnel-setup.html">view schema</a></td>
     </tr>
     <tr>
         <td>链路连线测试脚本</td>
         <td>byos-tunnel-test</td>
         <td>奔腾预设脚本，对链路连线测试脚本。</td>
+        <td><a class="reference internal" href="scripts/byos-tunnel-test.html">view schema</a></td>
     </tr>
     <tr>
         <td>呼叫 blcks SDK 服务</td>
         <td>callservice</td>
         <td>呼叫 blcks SDK 服务</td>
+        <td><a class="reference internal" href="scripts/callservice.html">view schema</a></td>
     </tr>
     <tr>
         <td>修改SSH密码脚本</td>
         <td>change-password</td>
         <td>奔腾预设脚本，对服务器修改SSH连线密码。</td>
+        <td><a class="reference internal" href="scripts/change-password.html">view schema</a></td>
     </tr>
     <tr>
         <td>修改SSH金钥脚本</td>
         <td>change-ssh-key</td>
         <td>奔腾预设脚本，对服务器修改SSH金钥。</td>
+        <td><a class="reference internal" href="scripts/change-ssh-key.html">view schema</a></td>
     </tr>
     <tr>
         <td>服务器过期检测</td>
         <td>checkexpiredhosts</td>
         <td>检测服务器是否到期</td>
+        <td><a class="reference internal" href="scripts/checkexpiredhosts.html">view schema</a></td>
     </tr>
     <tr>
         <td>服务器过期检测讯息转换器</td>
         <td>checkexpiredhostsadapter</td>
         <td>重组服务器过期检测讯息</td>
+        <td><a class="reference internal" href="scripts/checkexpiredhostsadapter.html">view schema</a></td>
     </tr>
     <tr>
         <td>域名过期检测</td>
         <td>checkexpiredtime</td>
         <td>检测域名是否到期</td>
+        <td><a class="reference internal" href="scripts/checkexpiredtime.html">view schema</a></td>
     </tr>
     <tr>
         <td>域名过期检测讯息转换器</td>
         <td>checkexpiredtimeadapter</td>
         <td>重组域名过期检测讯息</td>
+        <td><a class="reference internal" href="scripts/checkexpiredtimeadapter.html">view schema</a></td>
     </tr>
     <tr>
         <td>SSH登录白名单检测</td>
         <td>checkwhitelist</td>
         <td>检测非白名单SSH登录目标机時发出告警</td>
+        <td><a class="reference internal" href="scripts/checkwhitelist.html">view schema</a></td>
     </tr>
     <tr>
         <td>移除过期24小时的下载档案</td>
         <td>expiredfile</td>
         <td>移除过期24小时的下载档案</td>
+        <td><a class="reference internal" href="scripts/expiredfile.html">view schema</a></td>
     </tr>
     <tr>
         <td>文件上传</td>
         <td>fileupload</td>
         <td>将档案上传至指定服务器</td>
+        <td><a class="reference internal" href="scripts/fileupload.html">view schema</a></td>
     </tr>
     <tr>
         <td>创建 Google Cloud 云服务器</td>
         <td>gcp-instance</td>
         <td>透过 terraform 创建 Google Cloud 云服务器。</td>
+        <td><a class="reference internal" href="scripts/gcp-instance.html">view schema</a></td>
     </tr>
     <tr>
         <td>取得所属权限的失效 CDN</td>
         <td>getcdns</td>
         <td>取得所属权限的失效 CDN</td>
+        <td><a class="reference internal" href="scripts/getcdns.html">view schema</a></td>
     </tr>
     <tr>
         <td>取得云帐号</td>
         <td>getcloudaccounts</td>
         <td>取得云帐号</td>
+        <td><a class="reference internal" href="scripts/getcloudaccounts.html">view schema</a></td>
     </tr>
     <tr>
         <td>取得JWT所属权限的域名</td>
         <td>getdomains</td>
         <td>取得JWT所属权限的域名</td>
+        <td><a class="reference internal" href="scripts/getdomains.html">view schema</a></td>
     </tr>
     <tr>
         <td>批量检查域名是否被 GFW 封禁</td>
         <td>gfwcheck</td>
         <td>输入顶级域名，批量检查域名是否被 GFW 封禁</td>
+        <td><a class="reference internal" href="scripts/gfwcheck.html">view schema</a></td>
     </tr>
     <tr>
         <td>服务器资讯抓取脚本</td>
         <td>heartbeat-gethostsinfo</td>
         <td>奔腾预设脚本，对服务器抓取资讯脚本。</td>
+        <td><a class="reference internal" href="scripts/heartbeat-gethostsinfo.html">view schema</a></td>
     </tr>
     <tr>
         <td>部署奔腾 bootstrap 脚本</td>
         <td>host-bootstrap-install</td>
         <td>奔腾预设脚本，对服务器部署SSH纪录监控服务、服务器资讯监控服务、档案下载服务脚本。想了解安装详情，请参考用户手册。</td>
+        <td><a class="reference internal" href="scripts/host-bootstrap-install.html">view schema</a></td>
     </tr>
     <tr>
         <td>移除奔腾 bootstrap 脚本</td>
         <td>host-bootstrap-uninstall</td>
         <td>奔腾预设脚本，移除 bootstrap 脚本部署在服务器上的各项服务。</td>
+        <td><a class="reference internal" href="scripts/host-bootstrap-uninstall.html">view schema</a></td>
     </tr>
     <tr>
         <td>重启监控服务脚本</td>
         <td>host-monitor-restart</td>
         <td>奔腾预设脚本，对服务器重启监控服务脚本。</td>
+        <td><a class="reference internal" href="scripts/host-monitor-restart.html">view schema</a></td>
     </tr>
     <tr>
         <td>重启服务器脚本</td>
         <td>host-reboot</td>
         <td>奔腾预设脚本，重启服务器脚本。</td>
+        <td><a class="reference internal" href="scripts/host-reboot.html">view schema</a></td>
     </tr>
     <tr>
         <td>设定 net.core.somaxconn 至最大值</td>
         <td>host-somaxconn-max</td>
         <td>奔腾预设脚本，针对 CentOS 7 设定 net.core.somaxconn 至最大值。</td>
+        <td><a class="reference internal" href="scripts/host-somaxconn-max.html">view schema</a></td>
     </tr>
     <tr>
         <td>安装 CDN 自动刷新/预热脚本</td>
         <td>host.filewatch.install</td>
         <td>奔腾预设脚本，监控服务器上 web 服务的静态档案资料夹，如果有档案更新则自动驱动 CDN 预热刷新。</td>
+        <td><a class="reference internal" href="scripts/host.filewatch.install.html">view schema</a></td>
     </tr>
     <tr>
         <td>移除 CDN 自动刷新/预热脚本</td>
         <td>host.filewatch.remove</td>
         <td>奔腾预设脚本，对服务器部署移除静态资料夹监控脚本。</td>
+        <td><a class="reference internal" href="scripts/host.filewatch.remove.html">view schema</a></td>
     </tr>
     <tr>
         <td>批量检查域名是否未备案</td>
         <td>icpcheck</td>
         <td>输入顶级域名，批量检查域名是否未备案</td>
+        <td><a class="reference internal" href="scripts/icpcheck.html">view schema</a></td>
+    </tr>
+    <tr>
+        <td>工作流程执行确认</td>
+        <td>messageconfirm</td>
+        <td>透过通讯软体，等待审核者审查回应</td>
+        <td><a class="reference internal" href="scripts/messageconfirm.html">view schema</a></td>
     </tr>
     <tr>
         <td>下载远端档案脚本</td>
         <td>mget-fetch-script</td>
         <td>奔腾预设脚本，下载远端档案脚本。</td>
+        <td><a class="reference internal" href="scripts/mget-fetch-script.html">view schema</a></td>
     </tr>
     <tr>
         <td>清除远端档案</td>
         <td>mget-fetch-script-remove</td>
         <td>奔腾预设脚本，清除远端档案。</td>
+        <td><a class="reference internal" href="scripts/mget-fetch-script-remove.html">view schema</a></td>
     </tr>
     <tr>
         <td>解析下载档案资讯</td>
         <td>mgetadapter</td>
         <td>解析来源服务器资讯和档案位置</td>
+        <td><a class="reference internal" href="scripts/mgetadapter.html">view schema</a></td>
     </tr>
     <tr>
         <td>行动介面处理</td>
         <td>mobileadapter</td>
         <td>请输入标题及描述</td>
+        <td><a class="reference internal" href="scripts/mobileadapter.html">view schema</a></td>
     </tr>
     <tr>
         <td>传送讯息至指定频道</td>
         <td>notification</td>
         <td>選擇 bot 配對，傳送訊息至指定頻道</td>
+        <td><a class="reference internal" href="scripts/notification.html">view schema</a></td>
     </tr>
     <tr>
         <td>产生下载档案存取路径</td>
         <td>objecturl</td>
         <td>从脚本执行日志输出解析档案存取路径，并且发送出 Marvin 事件，通知用户。</td>
+        <td><a class="reference internal" href="scripts/objecturl.html">view schema</a></td>
     </tr>
     <tr>
         <td>奔腾预设脚本 ls</td>
         <td>pentium-demo-ls</td>
         <td>奔腾预设脚本，ls。</td>
+        <td><a class="reference internal" href="scripts/pentium-demo-ls.html">view schema</a></td>
     </tr>
     <tr>
         <td>Pentium Execute Commnad</td>
         <td>pentium-execute-command</td>
         <td>奔腾预设脚本，Execute Commnad.</td>
+        <td><a class="reference internal" href="scripts/pentium-execute-command.html">view schema</a></td>
     </tr>
     <tr>
         <td>Pentium Execute Shell Script</td>
         <td>pentium-shell-script-trigger</td>
         <td>奔腾预设脚本，Execute Shell Script.</td>
+        <td><a class="reference internal" href="scripts/pentium-shell-script-trigger.html">view schema</a></td>
     </tr>
     <tr>
         <td>部署金钥</td>
         <td>pentium-upload-public-key</td>
         <td>奔腾预设脚本，部署金钥脚本.</td>
+        <td><a class="reference internal" href="scripts/pentium-upload-public-key.html">view schema</a></td>
     </tr>
     <tr>
         <td>准备 CDN</td>
         <td>preparecdn</td>
         <td>创建 CDN 并导入至平台</td>
+        <td><a class="reference internal" href="scripts/preparecdn.html">view schema</a></td>
     </tr>
     <tr>
         <td>安装脚本所需程式库</td>
         <td>python-lib-install</td>
         <td>奔腾预设脚本，对服务器安装脚本所需程式库。</td>
+        <td><a class="reference internal" href="scripts/python-lib-install.html">view schema</a></td>
     </tr>
     <tr>
         <td>服务器批量修改SSH端口</td>
         <td>sethostsport</td>
         <td>服务器批量修改SSH端口</td>
+        <td><a class="reference internal" href="scripts/sethostsport.html">view schema</a></td>
     </tr>
     <tr>
         <td>服务器批量添加标签</td>
         <td>sethoststags</td>
         <td>服务器批量添加标签</td>
+        <td><a class="reference internal" href="scripts/sethoststags.html">view schema</a></td>
     </tr>
     <tr>
         <td>SSH 日志处理</td>
         <td>sshlogadapter</td>
         <td>SSH 日志处理</td>
+        <td><a class="reference internal" href="scripts/sshlogadapter.html">view schema</a></td>
     </tr>
     <tr>
         <td>同步云帐号的资产</td>
         <td>syncassets</td>
         <td>同步云帐号的资产</td>
+        <td><a class="reference internal" href="scripts/syncassets.html">view schema</a></td>
     </tr>
     <tr>
         <td>全站云主机同步</td>
         <td>syncinstances</td>
         <td>批量同步平台所有云金钥的主机资讯</td>
+        <td><a class="reference internal" href="scripts/syncinstances.html">view schema</a></td>
     </tr>
     <tr>
         <td>讯息转换器</td>
         <td>templateengine</td>
         <td>讯息转换器</td>
+        <td><a class="reference internal" href="scripts/templateengine.html">view schema</a></td>
     </tr>
     <tr>
         <td>创建腾讯云云服务器</td>
         <td>tencentcloud-instance</td>
         <td>透过 terraform 创建腾讯云 (TencentCloud) 云服务器。</td>
+        <td><a class="reference internal" href="scripts/tencentcloud-instance.html">view schema</a></td>
     </tr>
     <tr>
         <td>链路事件处理</td>
         <td>tunneleventhandler</td>
         <td>链路事件处理</td>
+        <td><a class="reference internal" href="scripts/tunneleventhandler.html">view schema</a></td>
     </tr>
     <tr>
         <td>更新CDN</td>
         <td>updatecdn</td>
         <td>更新CDN</td>
+        <td><a class="reference internal" href="scripts/updatecdn.html">view schema</a></td>
     </tr>
     <tr>
         <td>批量修改服务器 SSH 帐密</td>
         <td>updatepassword</td>
         <td>批量修改服务器 SSH 帐密</td>
+        <td><a class="reference internal" href="scripts/updatepassword.html">view schema</a></td>
     </tr>
     <tr>
         <td>同步数据库资讯至 Yearning</td>
         <td>updateyearning</td>
         <td>同步新增、修改、删除的数据库资讯至 Yearning</td>
+        <td><a class="reference internal" href="scripts/updateyearning.html">view schema</a></td>
     </tr>
     <tr>
         <td>域名微信封禁检测</td>
         <td>weixincheck</td>
-        <td>输入顶级域名，批量检查域名是否被微信封禁</td>
+        <td>输入域名，批量检查域名是否被微信封禁</td>
+        <td><a class="reference internal" href="scripts/weixincheck.html">view schema</a></td>
     </tr>
     <tr>
         <td>工作流程异常讯息</td>
         <td>wfexception</td>
         <td>收到工作流程异常结束讯息，产生系统日志</td>
-    </tr>
-</table>
+        <td><a class="reference internal" href="scripts/wfexception.html">view schema</a></td>
+    </tr></table>
 <br/>
 <br/>
-
 </html>

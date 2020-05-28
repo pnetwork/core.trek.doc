@@ -1,0 +1,105 @@
+---
+id: appcheck
+schemaVersion: '0.2'
+name: AppStore Checking
+title: AppStore Checking
+version: "0.1.0"
+description: AppStore Checking
+namespace: network.pentium
+assets:
+  - SCRIPT
+
+inputs:
+  check_list:
+    name: checking list
+    title: checking list
+    $ref: pn_sp_textarea_array
+    description: <app name>, <id>, <note>
+    example:
+    - WhatsApp Messenger, 310633997, my-note
+
+required:
+- check_list
+
+outputs:
+  code:
+    name: result code
+    title: result code
+    type: integer
+    description: result code
+  msg:
+    name: result message
+    title: result message
+    type: string
+    description: result message
+
+  exists_count:
+    name: existing count
+    title: existing count
+    type: integer
+  exists:
+    name: existing list
+    title: existing list
+    type: array
+    items:
+      type: object
+      properties:
+        name:
+          name: app name
+          title: app name
+          type: string
+        id:
+          name: app id
+          title: app id
+          type: string
+        note:
+          name: note
+          title: note
+          type: string
+  notfounds_count:
+    name: not found count
+    title: not found count
+    type: integer
+  notfounds:
+    name: not found list
+    title: not found list
+    type: array
+    items:
+      type: object
+      properties:
+        name:
+          name: app name
+          title: app name
+          type: string
+        id:
+          name: app id
+          title: app id
+          type: string
+        note:
+          name: note
+          title: note
+          type: string      
+  failures_count:
+    name: failure count
+    title: failure count
+    type: integer
+  failures:
+    name: failure list
+    title: failure list
+    type: array
+    items:
+      type: object
+      properties:
+        name:
+          name: app name
+          title: app name
+          type: string
+        id:
+          name: app id
+          title: app id
+          type: string
+        note:
+          name: note
+          title: note
+          type: string
+        

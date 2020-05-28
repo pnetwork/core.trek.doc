@@ -1,12 +1,17 @@
 
 *****************************************************************
-Trek: Run
+Trek: List Remote Scripts
 *****************************************************************
 
 Purpose:
 
-  | 執行工作流程。  
-  | 當環境尚未啟動時，會先啟動環境，再依 workflow template 描述流程執行。
+  | 列出遠端機器上的腳本及版號。  
+  | 遠端機器位置於 *config.json* 中 ``script_repository`` 欄位設定。
 
-  .. note:: 啟動環境說明請參考 :doc:`./init_env`。
 
+Usage:
+
+- :Please enter script id: 請輸入想查看的腳本 id 或 ``*``，如：
+    
+    - ``*`` : 列出遠端機器上的所有可用腳本與版號。
+    - ``notification`` : 列出遠端機器上 notification 腳本可用的版號。
