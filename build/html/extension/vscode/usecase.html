@@ -35,9 +35,7 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/table.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Workflow Schema" href="../../workflow/index.html" />
-    <link rel="prev" title="Trek: Version" href="../../reference/extension/commands/version.html" /> 
+    <link rel="search" title="Search" href="../../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -89,32 +87,28 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../start/index.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../start/index.html#system-requirements">System Requirements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../start/index.html#installation-trek-cli">Installation Trek CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../start/index.html#installing-trek-cli">Installing Trek CLI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../start/index.html#config-development-environment">Config Development Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../start/index.html#the-project-directory-structure">The Project Directory Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../start/quick_start.html">Quick Start</a></li>
 </ul>
 <p class="caption"><span class="caption-text">USER GUIDE</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../cli/index.html">CLI Supported Commands</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Extension Supported Commands</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="config.html">Before You Begin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="config.html#installing-trek-vscode-extension">Installing Trek VSCode Extension</a></li>
-<li class="toctree-l2"><a class="reference internal" href="config.html#configuring-trek-vscode-extension">Configuring Trek VSCode Extension</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html">Command List</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">The First Trek Project</a></li>
-</ul>
-</li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../workflow/index.html">Developer Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../blcks/index.html">Developer Blcks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Working with VSCode Extension</a></li>
 </ul>
 <p class="caption"><span class="caption-text">REFERENCE</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../workflow/index.html">Workflow Schema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cli/commands.html">CLI Command Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commands.html">VSCode Extension Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../library/index.html">Library List</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../blcks/index.html">Blcks SDK Guide</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/">Samples</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ABOUT</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../cli/changelog.html">Trek CLI Changelog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="changelog.html">VSCode Extension Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Trek VSCode Extension Changelog</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/issues/">Issues Report</a></li>
 </ul>
 
@@ -161,8 +155,6 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="index.html">Extension Supported Commands</a> &raquo;</li>
-        
       <li>The First Trek Project</li>
     
     
@@ -195,11 +187,11 @@
 <p>其中 1 為此次新增腳本，2, 3 則為既有腳本可直接安裝</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>以下專案程式請參考 <a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/host.detect.redis/ ">範例專案</a>。</p>
+<p>以下專案程式請參考 <a href="#id1"><span class="problematic" id="id2">:examplelink:`範例專案 &lt; &gt;`</span></a>。</p>
 </div>
 <div class="section" id="step-1-create-project">
 <h2>Step 1. Create project<a class="headerlink" href="#step-1-create-project" title="Permalink to this headline">¶</a></h2>
-<p>使用 Command Palette 叫出「 <a class="reference internal" href="../../reference/extension/commands/create_project.html"><span class="doc">Trek: Create Project</span></a> 」指令，並填入以下資訊：</p>
+<p>使用 Command Palette 叫出「 <a class="reference internal" href="../../reference/extension/commands/create_project.html"><span class="doc">Trek Shell: Deploy Packed Packages to Marvin</span></a> 」指令，並填入以下資訊：</p>
 <img alt="../../_images/create_project.gif" src="../../_images/create_project.gif" />
 <ol class="arabic simple">
 <li><p>選擇專案存放位置。</p></li>
@@ -212,7 +204,7 @@
 <h2>Step 2. Create blcks<a class="headerlink" href="#step-2-create-blcks" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line">建立一個 blcks 腳本，用來檢查 redis 連線。</div>
-<div class="line">使用「 <a class="reference internal" href="../../reference/extension/commands/create_blcks.html"><span class="doc">Trek: Create Blcks</span></a> 」指令建立 blcks 腳本：</div>
+<div class="line">使用「 <span class="xref std std-doc">../../reference/extension/commands/create_blcks</span> 」指令建立 blcks 腳本：</div>
 </div>
 <img alt="../../_images/create_blcks.gif" src="../../_images/create_blcks.gif" />
 <ol class="arabic">
@@ -236,7 +228,7 @@
 <ul class="simple">
 <li><p>記得將主程式中使用的套件寫入 <em>handler/requirements.txt</em> 中。</p></li>
 <li><p>process function 的參數與 return 要跟 para schema 定義的一致。</p></li>
-<li><p>在 <code class="docutils literal notranslate"><span class="pre">handler.py</span></code> 中可以使用 blcks sdk 提供的 service 來操作 Marvin 平台上的資產，請參考 <a class="reference internal" href="../../blcks/index.html"><span class="doc">Blcks SDK Guide</span></a> 。</p></li>
+<li><p>在 <code class="docutils literal notranslate"><span class="pre">handler.py</span></code> 中可以使用 blcks sdk 提供的 service 來操作 Marvin 平台上的資產，請參考 <a class="reference internal" href="../../blcks/index.html"><span class="doc">Developer Blcks</span></a> 。</p></li>
 </ul>
 </div>
 </div></blockquote>
@@ -278,7 +270,7 @@
 <h2>Step 5. Run<a class="headerlink" href="#step-5-run" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line">在 vscode extension 執行工作流程很簡單，先打開 workflow template 檔案，此時編輯視窗右上方會出現按鈕 <img alt="run_icon" src="../../_images/run_icon.png" />，按下即可執行：</div>
-<div class="line">等同於執行「 <a class="reference internal" href="../../reference/extension/commands/run.html"><span class="doc">Trek: Run</span></a> 」指令。</div>
+<div class="line">等同於執行「 <a class="reference internal" href="../../reference/extension/commands/run.html"><span class="doc">Trek: List Remote Scripts</span></a> 」指令。</div>
 </div>
 <img alt="../../_images/run.png" src="../../_images/run.png" />
 <div class="line-block">
@@ -291,7 +283,7 @@
 <h2>Step 6. Deploy<a class="headerlink" href="#step-6-deploy" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line">在本機執行正確後，即可佈署至 Marvin 平台。</div>
-<div class="line">執行「 <a class="reference internal" href="../../reference/extension/commands/deploy_to_marvin.html"><span class="doc">Trek: Deploy to Marvin</span></a> 」指令，將會進行建置、push to dockerhub、打包和佈署。</div>
+<div class="line">執行「 <a class="reference internal" href="../../reference/extension/commands/deploy_to_marvin.html"><span class="doc">Trek Shell: Pack</span></a> 」指令，將會進行建置、push to dockerhub、打包和佈署。</div>
 </div>
 <img alt="../../_images/deploy.gif" src="../../_images/deploy.gif" />
 <ol class="arabic simple">
@@ -308,15 +300,6 @@
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../../workflow/index.html" class="btn btn-neutral float-right" title="Workflow Schema" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="../../reference/extension/commands/version.html" class="btn btn-neutral float-left" title="Trek: Version" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>

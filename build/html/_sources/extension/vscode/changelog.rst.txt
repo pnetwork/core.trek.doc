@@ -3,10 +3,10 @@ Trek VSCode Extension Changelog
 
 Version v1.0.2-beta
 ----------------------
-:Date: May 27, 2020
+:Date: May 28, 2020
 
-- [add] run blcks command
-- [add] create blcks with multi step
+- [add] blcks/ansible/shell run, build and push, pack, deploy command
+- [add] create blcks with multi step and open new windows
 
 
 Version v1.0.1-beta
