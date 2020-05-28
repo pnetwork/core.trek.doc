@@ -1,0 +1,13 @@
+# Created by trek CLI
+0-2:
+  check_list.0:
+    type: string
+    value: WhatsApp Messenger, 3106339970, my-note
+  check_list.1:
+    type: string
+    value: test app, 12345, test note
+
+3-4:
+  bot_infos.0:
+    type: string
+    value: '{input your chatbot id}'

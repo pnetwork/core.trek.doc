@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../../../_static/css/table.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Trek CLI Changelog" href="../../../cli/changelog.html" />
+    <link rel="next" title="Working with VSCode Extension" href="../../../extension/vscode/index.html" />
     <link rel="prev" title="TunnelManager" href="tunnel.html" /> 
 </head>
 
@@ -89,25 +89,35 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../start/index.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../start/index.html#system-requirements">System Requirements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../start/index.html#installation-trek-cli">Installation Trek CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../start/index.html#installing-trek-cli">Installing Trek CLI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../start/index.html#config-development-environment">Config Development Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../start/index.html#the-project-directory-structure">The Project Directory Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../start/quick_start.html">Quick Start</a></li>
 </ul>
 <p class="caption"><span class="caption-text">USER GUIDE</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../cli/index.html">CLI Supported Commands</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../extension/vscode/index.html">Extension Supported Commands</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../workflow/index.html">Developer Workflow</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../blcks/index.html">Developer Blcks</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration.html">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../blcks/schema.html">Blcks Para Schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html">Quick Start</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../blcks/services.html">Services</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../extension/vscode/index.html">Working with VSCode Extension</a></li>
 </ul>
 <p class="caption"><span class="caption-text">REFERENCE</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../workflow/index.html">Workflow Schema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cli/commands.html">CLI Command Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../extension/vscode/commands.html">VSCode Extension Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../library/index.html">Library List</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../blcks/index.html">Blcks SDK Guide</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/">Samples</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ABOUT</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../cli/changelog.html">Trek CLI Changelog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../extension/vscode/changelog.html">VSCode Extension Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../extension/vscode/changelog.html">Trek VSCode Extension Changelog</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/issues/">Issues Report</a></li>
 </ul>
 
@@ -154,7 +164,9 @@
     
       <li><a href="../../../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="../../../blcks/index.html">Blcks SDK Guide</a> &raquo;</li>
+          <li><a href="../../../blcks/index.html">Developer Blcks</a> &raquo;</li>
+        
+          <li><a href="../../../blcks/services.html">Services</a> &raquo;</li>
         
       <li>WorkflowManager</li>
     
@@ -263,6 +275,28 @@ all the functions need a prefix or postfix to distinguish the difference</p>
         <span class="p">}</span>
     <span class="p">]</span>
 <span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>AssertionError, ServiceError, AuthenticationError, ClientError</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">getWorkflowApprovers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">taskId</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Get workflow approver list</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>taskId</strong> (<em>str</em>) -- workflow task id</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dictionary contains all information of this workflow without subdomain</p>
+</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[]</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -435,7 +469,7 @@ all the functions need a prefix or postfix to distinguish the difference</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../../cli/changelog.html" class="btn btn-neutral float-right" title="Trek CLI Changelog" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../../../extension/vscode/index.html" class="btn btn-neutral float-right" title="Working with VSCode Extension" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="tunnel.html" class="btn btn-neutral float-left" title="TunnelManager" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

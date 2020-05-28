@@ -9,6 +9,7 @@ Usage:  [OPTIONS] NAME
 
 Options:
   -f, --force    force creating ansible project
+  -y, --yes      Automatic yes to prompts
   -v, --verbose  verbose log
   --help         Show this message and exit.
 

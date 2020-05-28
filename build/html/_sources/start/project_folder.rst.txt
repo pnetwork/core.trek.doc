@@ -18,7 +18,7 @@ The Project Directory Structure
     ├── packages.json       # 制定專案所需的 dependencies 安裝包(類似 python requirements.txt)
     └── src                 # 存放主要程式碼
         ├── ansible/        # 存放 ansible 腳本程式的目錄
-        ├── blcks/          # 存放 blcks 腳本程式的目錄 
+        ├── blcks/          # 存放 Blcks 腳本程式的目錄 
         ├── shell/          # 存放 shell script 腳本程式的目錄
         └── graph.yml       # 預設產生的 workflow template 檔案，定義工作流程長相的主要檔案
 

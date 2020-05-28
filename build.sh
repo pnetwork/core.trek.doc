@@ -61,8 +61,10 @@ if [ "$BUILD_BLCKS" == "1" ]; then
     make html
     cd ../../$DIR
     # cp -r ../$BLKCS_SDK_DIR/docs/reference/clients ./source/reference/blcks
+    cp -r ../$BLKCS_SDK_DIR/docs/_static/images ./source/_static/
     cp -r ../$BLKCS_SDK_DIR/docs/reference/services ./source/reference/blcks
     cp ../$BLKCS_SDK_DIR/docs/guide/installation.rst ./source/reference/blcks/installation.rst
+    cp ../$BLKCS_SDK_DIR/docs/guide/configuration.rst ./source/reference/blcks/configuration.rst
     cp ../$BLKCS_SDK_DIR/docs/guide/quickstart.rst ./source/reference/blcks/quickstart.rst
 fi
 
