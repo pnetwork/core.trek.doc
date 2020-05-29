@@ -2,6 +2,7 @@ bulkpurge
 **********************************
 | 批量刷新
 | 输入需要刷新对象的 URL（需要 http:// 或 https://）或资料夹，一行一笔。
+
 例如：
 http://www.abc.com/test.html
 http://www.abc.com/

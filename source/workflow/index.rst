@@ -10,5 +10,5 @@ Developer Workflow
 .. toctree::
 
    schema
+   example
    conditional
-   example.rst

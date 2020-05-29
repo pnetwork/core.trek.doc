@@ -7,6 +7,7 @@ Marvin Automation Development Guide
 
    start/index
    start/quick_start
+   start/project_folder
 
 .. toctree::
    :maxdepth: 2
@@ -18,8 +19,9 @@ Marvin Automation Development Guide
 
 .. toctree::
    :maxdepth: 2
-   :caption: REFERENCE
+   :caption: REFERENCES
    
+   library/config_list
    cli/commands
    extension/vscode/commands
    library/index
