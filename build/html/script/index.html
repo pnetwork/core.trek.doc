@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Services &mdash; Pentium</title>
+  <title>Developer Script &mdash; Pentium</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/css/table.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="CDN" href="../reference/blcks/services/cdn.html" />
-    <link rel="prev" title="Quick Start" href="../reference/blcks/quickstart.html" /> 
+    <link rel="next" title="Para Schema" href="schema.html" />
+    <link rel="prev" title="Workflow Operators" href="../workflow/conditional.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -90,24 +90,21 @@
 <li class="toctree-l1"><a class="reference internal" href="../start/index.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../start/index.html#system-requirements">System Requirements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../start/index.html#installing-trek-cli">Installing Trek CLI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../start/index.html#config-development-environment">Config Development Environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../start/index.html#the-project-directory-structure">The Project Directory Structure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../start/quick_start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../start/project_folder.html">The Project Directory Structure</a></li>
 </ul>
 <p class="caption"><span class="caption-text">USER GUIDE</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../config/index.html">Configuring the Trek CLI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../workflow/index.html">Developer Workflow</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Developer Blcks</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../reference/blcks/installation.html">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/blcks/configuration.html">Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="schema.html">Blcks Para Schema</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/blcks/quickstart.html">Quick Start</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Services</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Developer Script</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="schema.html">Para Schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blcks/index.html">Developer Blcks</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../extension/vscode/index.html">Working with VSCode Extension</a></li>
 </ul>
-<p class="caption"><span class="caption-text">REFERENCE</span></p>
+<p class="caption"><span class="caption-text">REFERENCES</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../cli/commands.html">CLI Command Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../extension/vscode/commands.html">VSCode Extension Commands</a></li>
@@ -164,9 +161,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="index.html">Developer Blcks</a> &raquo;</li>
-        
-      <li>Services</li>
+      <li>Developer Script</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -183,22 +178,16 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="services">
-<h1>Services<a class="headerlink" href="#services" title="Permalink to this headline">¶</a></h1>
-<p>Here ara available services:</p>
+  <div class="section" id="developer-script">
+<h1>Developer Script<a class="headerlink" href="#developer-script" title="Permalink to this headline">¶</a></h1>
+<div class="line-block">
+<div class="line">Trek 支援三種 Script 專案： Blcks, Ansible 和 Shell。</div>
+<div class="line">開發腳本專案的第一步，通常是定義腳本的輸入輸出欄位，如何使用 Para schema 定義? 請參考 <a class="reference internal" href="schema.html"><span class="doc">Para Schema</span></a>。</div>
+</div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../reference/blcks/services/cdn.html">CDN</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/blcks/services/certificate.html">CertificateManager</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/blcks/services/channel.html">ChannelManager</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/blcks/services/cloud_account.html">CloudAccountManager</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/blcks/services/domain.html">DomainManager</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/blcks/services/hosts.html">HostsManager</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/blcks/services/misc.html">MiscManager</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/blcks/services/rbac.html">RBACManager</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/blcks/services/tags.html">TagManager</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/blcks/services/tunnel.html">TunnelManager</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/blcks/services/workflow.html">WorkflowManager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schema.html">Para Schema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blcks/index.html">Developer Blcks</a></li>
 </ul>
 </div>
 </div>
@@ -211,10 +200,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../reference/blcks/services/cdn.html" class="btn btn-neutral float-right" title="CDN" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="schema.html" class="btn btn-neutral float-right" title="Para Schema" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../reference/blcks/quickstart.html" class="btn btn-neutral float-left" title="Quick Start" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../workflow/conditional.html" class="btn btn-neutral float-left" title="Workflow Operators" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

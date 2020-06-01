@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Blcks Para Schema &mdash; Pentium</title>
+  <title>Para Schema &mdash; Pentium</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/css/table.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Quick Start" href="../reference/blcks/quickstart.html" />
-    <link rel="prev" title="Configuration" href="../reference/blcks/configuration.html" /> 
+    <link rel="next" title="Developer Blcks" href="blcks/index.html" />
+    <link rel="prev" title="Developer Script" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -90,24 +90,25 @@
 <li class="toctree-l1"><a class="reference internal" href="../start/index.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../start/index.html#system-requirements">System Requirements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../start/index.html#installing-trek-cli">Installing Trek CLI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../start/index.html#config-development-environment">Config Development Environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../start/index.html#the-project-directory-structure">The Project Directory Structure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../start/quick_start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../start/project_folder.html">The Project Directory Structure</a></li>
 </ul>
 <p class="caption"><span class="caption-text">USER GUIDE</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../config/index.html">Configuring the Trek CLI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../workflow/index.html">Developer Workflow</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Developer Blcks</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../reference/blcks/installation.html">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/blcks/configuration.html">Configuration</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Blcks Para Schema</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/blcks/quickstart.html">Quick Start</a></li>
-<li class="toctree-l2"><a class="reference internal" href="services.html">Services</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Developer Script</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Para Schema</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#where-is-para-file">Where is para file?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-defind-the-para-schema">How to defind the para schema?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="blcks/index.html">Developer Blcks</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../extension/vscode/index.html">Working with VSCode Extension</a></li>
 </ul>
-<p class="caption"><span class="caption-text">REFERENCE</span></p>
+<p class="caption"><span class="caption-text">REFERENCES</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../cli/commands.html">CLI Command Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../extension/vscode/commands.html">VSCode Extension Commands</a></li>
@@ -164,9 +165,9 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="index.html">Developer Blcks</a> &raquo;</li>
+          <li><a href="index.html">Developer Script</a> &raquo;</li>
         
-      <li>Blcks Para Schema</li>
+      <li>Para Schema</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -183,13 +184,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="blcks-para-schema">
-<h1>Blcks Para Schema<a class="headerlink" href="#blcks-para-schema" title="Permalink to this headline">¶</a></h1>
-<p>Blcks para schema 為 yaml 格式，用來定義 Blcks 腳本的輸入、輸出。
+  <div class="section" id="para-schema">
+<h1>Para Schema<a class="headerlink" href="#para-schema" title="Permalink to this headline">¶</a></h1>
+<p>Para schema 為 yaml 格式，用來定義腳本的輸入、輸出。
 在 Blcks 專案中，Blcks para file 通常以 Blcks function name 方式命名，para file 的位置預設在 <code class="docutils literal notranslate"><span class="pre">{your_Blcks_project}/{Blcks_function_name}.para</span></code>。</p>
 <div class="section" id="where-is-para-file">
 <h2>Where is para file?<a class="headerlink" href="#where-is-para-file" title="Permalink to this headline">¶</a></h2>
-<p>在使用 <a class="reference internal" href="../reference/cli/commands/createblcks.html"><span class="doc">trek createblcks</span></a> detectredis 指令建立 Blcks 專案時，會產生一個 <a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/host.detect.redis/src/blcks/">detectredis/</a> 資料夾，主程式檔案 <a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/host.detect.redis/src/blcks/detectredis/handler/handler.py#L14">handler/handler.py</a> 會以 <code class="docutils literal notranslate"><span class="pre">detectredis</span></code> 當作 openfaas function name，同時產生一個 <a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/host.detect.redis/src/blcks/detectredis/detectredis.para#L12">detectredis.para</a> 參數設定檔。</p>
+<p>以 Blcks 專案來說，使用 <a class="reference internal" href="../reference/cli/commands/createblcks.html"><span class="doc">trek createblcks</span></a> detectredis 指令建立 Blcks 專案時，會產生一個 <a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/host.detect.redis/src/blcks/">detectredis/</a> 資料夾，主程式檔案 <a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/host.detect.redis/src/blcks/detectredis/handler/handler.py#L14">handler/handler.py</a> 會以 <code class="docutils literal notranslate"><span class="pre">detectredis</span></code> 當作 openfaas function name，同時產生一個 <a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/host.detect.redis/src/blcks/detectredis/detectredis.para#L12">detectredis.para</a> 參數設定檔。</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ trek createblcks detectredis
 Blcks <span class="o">[</span>detectredis<span class="o">]</span> creating...
 Done
@@ -351,7 +352,7 @@ $ tree -a
 </div>
 <div class="section" id="how-to-defind-the-para-schema">
 <h2>How to defind the para schema?<a class="headerlink" href="#how-to-defind-the-para-schema" title="Permalink to this headline">¶</a></h2>
-<p>Blcks para schema 可以區分為三大區塊，我們會一一做介紹：</p>
+<p>Para schema 可以區分為三大區塊，我們會一一做介紹：</p>
 <blockquote>
 <div><div class="line-block">
 <div class="line"><a class="reference internal" href="#para-metadata"><span class="std std-ref">1. Para Metadata</span></a>：Id, name, assets...</div>
@@ -360,7 +361,9 @@ $ tree -a
 <div class="line"><a class="reference internal" href="#para-outputs"><span class="std std-ref">4. Para Outputs</span></a>：定義腳本的回傳欄位。</div>
 </div>
 </div></blockquote>
-<p>Para 的 inputs 和 outputs 欄位決定的是主程式 <a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/host.detect.redis/src/blcks/detectredis/handler/handler.py#L15">handler/handler.py process function</a> 的輸入輸出：</p>
+<div class="line-block">
+<div class="line">Para 的 inputs 和 outputs 欄位決定的是腳本主程式的輸入輸出，以 Blcks 來說，主程式就是 <a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/host.detect.redis/src/blcks/detectredis/handler/handler.py#L15">handler/handler.py process function</a>，下面以 Blcks 專案來說明：</div>
+</div>
 <ol class="arabic simple">
 <li><p>Function parameters 需和 <a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/host.detect.redis/src/blcks/detectredis/detectredis.para">detectredis.para</a> 的 inputs 欄位相同。</p></li>
 <li><p>Function 回傳的結果也需和 <a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/host.detect.redis/src/blcks/detectredis/detectredis.para">detectredis.para</a> 的 outputs 欄位相同。</p></li>
@@ -771,10 +774,10 @@ $ tree -a
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../reference/blcks/quickstart.html" class="btn btn-neutral float-right" title="Quick Start" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="blcks/index.html" class="btn btn-neutral float-right" title="Developer Blcks" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../reference/blcks/configuration.html" class="btn btn-neutral float-left" title="Configuration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Developer Script" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

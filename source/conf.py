@@ -61,7 +61,7 @@ def setup(app):
 # a list of builtin themes.
 #
 html_theme = "sphinx_rtd_theme"
-html_theme_options = {"navigation_depth": 2}
+html_theme_options = {"navigation_depth": 3}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -75,11 +75,20 @@ html_context = {
     "github_repo": "core.trek.doc",
     "github_version": "gh-pages/source/",
 }
-smartquotes=False
+smartquotes = False
 
 extlinks = {
     "gitlink": ("https://github.com/pnetwork/core.trek.doc/%s", "github "),
-    "exlink": ("https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/host.detect.redis/%s", "example project "),
-    "exblckslink": ("https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/host.detect.redis/src/blcks/detectredis/%s", "example Blcks "),
+    "exlink": (
+        "https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/host.detect.redis/%s",
+        "example project ",
+    ),
+    "exblckslink": (
+        "https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/host.detect.redis/src/blcks/detectredis/%s",
+        "example Blcks ",
+    ),
+    "trekdoclink": (
+        "https://pnetwork.github.io/core.trek.doc/build/html/%s",
+        "Trek doc ",
+    )
 }
-

@@ -12,6 +12,11 @@ The First Workflow Project
 
 其中 1 為此次新增腳本，2, 3 則為既有腳本可直接安裝
 
+| 在建立範本專案之前，請先確認 *config.json* 已設置了：
+
+    #. :ref:`script_repo`：安裝下載腳本時使用到。
+    #. :ref:`marvin_url` 和 :ref:`marvin_jwt`：拿取服務器資產時使用。若不知道如何設置可以在 Step 1. 建立完專案後，在專案位置下指令「:doc:`../reference/cli/commands/login`」即自動設置完成。
+
 .. note::
     
     以下專案程式請參考 :exlink:`範例專案 < >`。
@@ -108,7 +113,7 @@ Step 2. Create Blcks
     - Function 參數 (tag_name) 與 para schema 的 inputs 欄位一致。
     - Function return (fail_hosts_count, fail_hosts...) 要與 para schema 的 outputs 定義的欄位一致。
 
-- 在 ``handler.py`` 中可以使用 Blcks sdk 提供的 service 來操作 Marvin 平台上的資產，請參考 :doc:`../../blcks/index` 。
+- 在 ``handler.py`` 中可以使用 Blcks sdk 提供的 service 來操作 Marvin 平台上的資產，請參考 :doc:`../../script/blcks/index` 。
 
 .. literalinclude:: ../../example/host.detect.redis/src/blcks/detectredis/handler/handler.py
    :language: python

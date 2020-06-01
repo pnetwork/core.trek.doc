@@ -1,12 +1,12 @@
 ************************
-Blcks Para Schema
+Para Schema
 ************************
-Blcks para schema 為 yaml 格式，用來定義 Blcks 腳本的輸入、輸出。
+Para schema 為 yaml 格式，用來定義腳本的輸入、輸出。
 在 Blcks 專案中，Blcks para file 通常以 Blcks function name 方式命名，para file 的位置預設在 ``{your_Blcks_project}/{Blcks_function_name}.para``。
 
 Where is para file?
 ***********************************
-在使用 :doc:`trek createblcks <../../reference/cli/commands/createblcks>` detectredis 指令建立 Blcks 專案時，會產生一個 :exlink:`detectredis/ <src/blcks/>` 資料夾，主程式檔案 :exblckslink:`handler/handler.py <handler/handler.py#L14>` 會以 ``detectredis`` 當作 openfaas function name，同時產生一個 :exblckslink:`detectredis.para <detectredis.para#L12>` 參數設定檔。
+以 Blcks 專案來說，使用 :doc:`trek createblcks <../../reference/cli/commands/createblcks>` detectredis 指令建立 Blcks 專案時，會產生一個 :exlink:`detectredis/ <src/blcks/>` 資料夾，主程式檔案 :exblckslink:`handler/handler.py <handler/handler.py#L14>` 會以 ``detectredis`` 當作 openfaas function name，同時產生一個 :exblckslink:`detectredis.para <detectredis.para#L12>` 參數設定檔。
 
 .. code-block:: shell
     :emphasize-lines: 6, 11,15
@@ -111,14 +111,14 @@ Where is para file?
 
 How to defind the para schema?
 **********************************************
-Blcks para schema 可以區分為三大區塊，我們會一一做介紹：
+Para schema 可以區分為三大區塊，我們會一一做介紹：
 
     | :ref:`para_metadata`：Id, name, assets...
     | :ref:`para_inputs`：定義腳本的輸入欄位。
     | :ref:`para_require`：定義腳本的輸入欄位哪些是必填。
     | :ref:`para_outputs`：定義腳本的回傳欄位。
 
-Para 的 inputs 和 outputs 欄位決定的是主程式 :exblckslink:`handler/handler.py process function <handler/handler.py#L15>` 的輸入輸出：
+| Para 的 inputs 和 outputs 欄位決定的是腳本主程式的輸入輸出，以 Blcks 來說，主程式就是 :exblckslink:`handler/handler.py process function <handler/handler.py#L15>`，下面以 Blcks 專案來說明：
 
 #. Function parameters 需和 :exblckslink:`detectredis.para <detectredis.para>` 的 inputs 欄位相同。
 #. Function 回傳的結果也需和 :exblckslink:`detectredis.para <detectredis.para>` 的 outputs 欄位相同。

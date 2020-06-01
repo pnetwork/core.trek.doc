@@ -44,11 +44,6 @@ Installing Trek CLI
 
 恭喜，您已成功安裝 Trek !
 
-
-.. include:: config.rst
-
-|
-
-.. include:: project_folder.rst
+| 接著，參考 :doc:`quick_start` 試著建立第一個 Trek 專案吧!
 
 

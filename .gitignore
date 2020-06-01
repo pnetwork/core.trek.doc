@@ -3,6 +3,8 @@ source/_build
 .vscode
 *.vsix
 run.sh
+*.doctrees
+*.pickle
 
 source/reference/cli/*
 source/reference/extension/*

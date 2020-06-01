@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>The First Workflow Project &mdash; Pentium</title>
+  <title>Before you begin &mdash; Pentium</title>
   
 
   
@@ -37,7 +37,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="CLI Command Reference" href="../../cli/commands.html" />
-    <link rel="prev" title="Before you begin" href="install.html" /> 
+    <link rel="prev" title="System Requirements" href="install.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -90,22 +90,31 @@
 <li class="toctree-l1"><a class="reference internal" href="../../start/index.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../start/index.html#system-requirements">System Requirements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../start/index.html#installing-trek-cli">Installing Trek CLI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../start/index.html#config-development-environment">Config Development Environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../start/index.html#the-project-directory-structure">The Project Directory Structure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../start/quick_start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../start/project_folder.html">The Project Directory Structure</a></li>
 </ul>
 <p class="caption"><span class="caption-text">USER GUIDE</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../config/index.html">Configuring the Trek CLI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../workflow/index.html">Developer Workflow</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../blcks/index.html">Developer Blcks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../script/index.html">Developer Script</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Working with VSCode Extension</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="install.html">Before you begin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html">System Requirements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="install.html#installing-trek-vscode-extension">Installing Trek VSCode Extension</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">The First Workflow Project</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Before you begin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-first-workflow-project">The First Workflow Project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#step-1-create-project">Step 1. Create project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-2-create-blcks">Step 2. Create Blcks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-3-install-scripts">Step 3. Install scripts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-4-edit-workflow-template">Step 4. Edit workflow template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-5-run">Step 5. Run</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-6-deploy">Step 6. Deploy</a></li>
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">REFERENCE</span></p>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">REFERENCES</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../cli/commands.html">CLI Command Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="commands.html">VSCode Extension Commands</a></li>
@@ -164,7 +173,7 @@
         
           <li><a href="index.html">Working with VSCode Extension</a> &raquo;</li>
         
-      <li>The First Workflow Project</li>
+      <li>Before you begin</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -181,7 +190,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="the-first-workflow-project">
+  <div class="section" id="before-you-begin">
+<h1>Before you begin<a class="headerlink" href="#before-you-begin" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic simple">
+<li><p>以下會經常用到快捷鍵 Ctrl+Shit+P ( or ⌘+⇧+P ) 呼叫出 Command Palette 並執行 Trek vscode extension 指令，Trek 相關指令都以「Trek: XXX」方式命名。</p></li>
+<li><p>本機必需要有啟動中的 docker。</p></li>
+</ol>
+</div>
+<div class="section" id="the-first-workflow-project">
 <h1>The First Workflow Project<a class="headerlink" href="#the-first-workflow-project" title="Permalink to this headline">¶</a></h1>
 <div class="line-block">
 <div class="line">假設我們的開發範例：</div>
@@ -194,6 +210,15 @@
 <li><p>發送通知 (若有不正常的)</p></li>
 </ol>
 <p>其中 1 為此次新增腳本，2, 3 則為既有腳本可直接安裝</p>
+<div class="line-block">
+<div class="line">在建立範本專案之前，請先確認 <em>config.json</em> 已設置了：</div>
+</div>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><a class="reference internal" href="../../config/index.html#script-repo"><span class="std std-ref">script_repository</span></a>：安裝下載腳本時使用到。</p></li>
+<li><p><a class="reference internal" href="../../config/index.html#marvin-url"><span class="std std-ref">marvin_url *</span></a> 和 <a class="reference internal" href="../../config/index.html#marvin-jwt"><span class="std std-ref">marvin_JWT *</span></a>：拿取服務器資產時使用。若不知道如何設置可以在 Step 1. 建立完專案後，在專案位置下指令「<a class="reference internal" href="../../reference/cli/commands/login.html"><span class="doc">login</span></a>」即自動設置完成。</p></li>
+</ol>
+</div></blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>以下專案程式請參考 <a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/host.detect.redis/ ">範例專案</a>。</p>
@@ -352,7 +377,7 @@
 </ul>
 </div></blockquote>
 </li>
-<li><p>在 <code class="docutils literal notranslate"><span class="pre">handler.py</span></code> 中可以使用 Blcks sdk 提供的 service 來操作 Marvin 平台上的資產，請參考 <a class="reference internal" href="../../blcks/index.html"><span class="doc">Developer Blcks</span></a> 。</p></li>
+<li><p>在 <code class="docutils literal notranslate"><span class="pre">handler.py</span></code> 中可以使用 Blcks sdk 提供的 service 來操作 Marvin 平台上的資產，請參考 <a class="reference internal" href="../../script/blcks/index.html"><span class="doc">Developer Blcks</span></a> 。</p></li>
 </ul>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -736,7 +761,7 @@
         <a href="../../cli/commands.html" class="btn btn-neutral float-right" title="CLI Command Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="install.html" class="btn btn-neutral float-left" title="Before you begin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="install.html" class="btn btn-neutral float-left" title="System Requirements" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

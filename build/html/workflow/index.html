@@ -37,7 +37,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Workflow Schema" href="schema.html" />
-    <link rel="prev" title="Quick Start" href="../start/quick_start.html" /> 
+    <link rel="prev" title="Environment Variables for Debugging" href="../config/config_env.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -90,23 +90,23 @@
 <li class="toctree-l1"><a class="reference internal" href="../start/index.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../start/index.html#system-requirements">System Requirements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../start/index.html#installing-trek-cli">Installing Trek CLI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../start/index.html#config-development-environment">Config Development Environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../start/index.html#the-project-directory-structure">The Project Directory Structure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../start/quick_start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../start/project_folder.html">The Project Directory Structure</a></li>
 </ul>
 <p class="caption"><span class="caption-text">USER GUIDE</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../config/index.html">Configuring the Trek CLI</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Developer Workflow</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="schema.html">Workflow Schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example.html">The First Workflow Project</a></li>
 <li class="toctree-l2"><a class="reference internal" href="conditional.html">Workflow Operators</a></li>
 <li class="toctree-l2"><a class="reference internal" href="conditional.html#workflow-logical-operators">Workflow Logical Operators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="example.html">The First Workflow Project</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../blcks/index.html">Developer Blcks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../script/index.html">Developer Script</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../extension/vscode/index.html">Working with VSCode Extension</a></li>
 </ul>
-<p class="caption"><span class="caption-text">REFERENCE</span></p>
+<p class="caption"><span class="caption-text">REFERENCES</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../cli/commands.html">CLI Command Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../extension/vscode/commands.html">VSCode Extension Commands</a></li>
@@ -190,7 +190,7 @@
 <p>Pentium 提供的 workflow 清單請見 <a class="reference internal" href="../library/index.html#wf-list"><span class="std std-ref">Workflows list</span></a>。</p>
 </div>
 <div class="line-block">
-<div class="line">一個 workflow 包含了數個腳本，腳未的開發說明請參考 Blcks 腳本如何開發 ( <a class="reference internal" href="../blcks/index.html"><span class="doc">Developer Blcks</span></a> )，以下將了解 workflow 提供的功能。</div>
+<div class="line">一個 workflow 包含了數個腳本，腳未的開發說明請參考 Blcks 腳本如何開發 ( <a class="reference internal" href="../script/blcks/index.html"><span class="doc">Developer Blcks</span></a> )，以下將了解 workflow 提供的功能。</div>
 </div>
 <div class="toctree-wrapper compound">
 <ul>
@@ -198,6 +198,23 @@
 <li class="toctree-l2"><a class="reference internal" href="schema.html#workflow-metadata">1. Workflow Metadata</a></li>
 <li class="toctree-l2"><a class="reference internal" href="schema.html#workflow-nodes">2. Workflow Nodes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="schema.html#workflow-edges-of-nodes">3. Workflow Edges of Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="example.html">The First Workflow Project</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="example.html#step-1-create-project">Step 1. Create project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example.html#step-2-create-blcks">Step 2. Create Blcks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example.html#step-3-install-scripts">Step 3. Install scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example.html#step-4-edit-workflow-template">Step 4. Edit workflow template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example.html#step-5-run">Step 5. Run</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="example.html#auto-run">方法 1. 自動執行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="example.html#manual-run">方法 2. 手動執行</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="example.html#step-6-deploy">Step 6. Deploy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="example.html#auto-deploy">方法 1. 自動佈署</a></li>
+<li class="toctree-l3"><a class="reference internal" href="example.html#manual-deploy">方法 2. 手動佈署</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="conditional.html">Workflow Operators</a><ul>
@@ -230,23 +247,6 @@
 <li class="toctree-l2"><a class="reference internal" href="conditional.html#and-or-and-or">and/or [ and/or... ]</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="example.html">The First Workflow Project</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="example.html#step-1-create-project">Step 1. Create project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="example.html#step-2-create-blcks">Step 2. Create Blcks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="example.html#step-3-install-scripts">Step 3. Install scripts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="example.html#step-4-edit-workflow-template">Step 4. Edit workflow template</a></li>
-<li class="toctree-l2"><a class="reference internal" href="example.html#step-5-run">Step 5. Run</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="example.html#auto-run">方法 1. 自動執行</a></li>
-<li class="toctree-l3"><a class="reference internal" href="example.html#manual-run">方法 2. 手動執行</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="example.html#step-6-deploy">Step 6. Deploy</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="example.html#auto-deploy">方法 1. 自動佈署</a></li>
-<li class="toctree-l3"><a class="reference internal" href="example.html#manual-deploy">方法 2. 手動佈署</a></li>
-</ul>
-</li>
-</ul>
-</li>
 </ul>
 </div>
 </div>
@@ -262,7 +262,7 @@
         <a href="schema.html" class="btn btn-neutral float-right" title="Workflow Schema" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../start/quick_start.html" class="btn btn-neutral float-left" title="Quick Start" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../config/config_env.html" class="btn btn-neutral float-left" title="Environment Variables for Debugging" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

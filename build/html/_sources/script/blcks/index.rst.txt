@@ -4,9 +4,9 @@ Developer Blcks
 
 .. toctree::
 
-    ../reference/blcks/installation
-    ../reference/blcks/configuration
+    ../../reference/blcks/installation
+    ../../reference/blcks/configuration
     schema 
-    ../reference/blcks/quickstart
+    ../../reference/blcks/quickstart
     services
 

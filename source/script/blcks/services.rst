@@ -8,4 +8,4 @@ Here ara available services:
   :maxdepth: 3
   :glob:
 
-  ../reference/blcks/services/*
+  ../../reference/blcks/services/*
