@@ -13,6 +13,11 @@ Create a Sample Project
     1. 使用 callservice (呼叫 Blcks SDK 服務) 腳本取得所屬權限下項目。
     2. 使用 notification (傳送通知至指定頻道)腳本來發送訊息。
 
+| 在建立範本專案之前，請先確認 *config.json* 已設置了：
+
+    #. :ref:`script_repo`：安裝下載腳本時使用到。
+    #. :ref:`marvin_url` 和 :ref:`marvin_jwt`：拿取 marvin 資產時使用。若不知道如何設置可以在 Step 1. 建立完專案後，在專案位置下指令「:doc:`../reference/cli/commands/login`」即自動設置完成。
+
 Step 1. Create a sample project
 """"""""""""""""""""""""""""""""""""""""""""""""
 | 執行 :doc:`../../reference/cli/commands/createproject` 指令建立 Trek 專案「sample.project」，接著會詢問是否要進行專案層級的 ``config.json`` 設置，若不需要可以不輸入文字直接按下 enter：

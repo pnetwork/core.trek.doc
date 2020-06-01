@@ -1,9 +1,20 @@
-Before you begin
+System Requirements
 ------------------------
 
-#. 請先安裝 Trek CLI tool，如何安裝 :ref:`可參考 <install_trek>`。
-#. 以下會經常用到快捷鍵 Ctrl+Shit+P ( or ⌘+⇧+P ) 呼叫出 Command Palette 並執行 Trek vscode extension 指令，Trek 相關指令都以「Trek: XXX」方式命名。
-#. 本機必需要有啟動中的 docker。
+在安裝前請確認系統是否符合需求：
+
+* VSCode 1.41.0+ ( |vscode_link| )
+* Trek CLI 1.0.0-beta3+ ( :ref:`Reference here<install_trek>` )
+* Trek VSCode Extension 1.0.3-beta+ ( |vsext_link| )
+
+.. |vscode_link| raw:: html
+
+   <a href="https://code.visualstudio.com/" target="_blank">Download here</a>
+
+.. |vsext_link| raw:: html
+
+   <a href="https://github.com/pnetwork/core.vscode.extension.mflow/raw/master/release/trek-extension-1.0.3-beta.vsix" target="_blank">Download here</a>
+
 
 Installing Trek VSCode Extension
 -------------------------------------

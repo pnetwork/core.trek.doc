@@ -88,17 +88,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../start/index.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../start/index.html#system-requirements">System Requirements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../start/index.html#installing-trek-cli">Installing Trek CLI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../start/index.html#config-development-environment">Config Development Environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../start/index.html#the-project-directory-structure">The Project Directory Structure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../start/quick_start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../start/project_folder.html">The Project Directory Structure</a></li>
 </ul>
 <p class="caption"><span class="caption-text">USER GUIDE</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../config/index.html">Configuring the Trek CLI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../workflow/index.html">Developer Workflow</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../blcks/index.html">Developer Blcks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../script/index.html">Developer Script</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../extension/vscode/index.html">Working with VSCode Extension</a></li>
 </ul>
-<p class="caption"><span class="caption-text">REFERENCE</span></p>
+<p class="caption"><span class="caption-text">REFERENCES</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="commands.html">CLI Command Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../extension/vscode/commands.html">VSCode Extension Commands</a></li>
@@ -254,7 +254,7 @@ Done
 </pre></div>
 </div>
 <div class="line-block">
-<div class="line">每個 Trek 專案都有一份設定檔 <code class="docutils literal notranslate"><span class="pre">config.json</span></code>，您可以決定要定義專案層級的設置、或是全局的設置，config 詳細欄位介紹 <a class="reference internal" href="../start/index.html#config-trek"><span class="std std-ref">請參考</span></a>。</div>
+<div class="line">每個 Trek 專案都有一份設定檔 <code class="docutils literal notranslate"><span class="pre">config.json</span></code>，您可以決定要定義專案層級的設置、或是全局的設置，config 詳細欄位介紹 <a class="reference internal" href="../config/index.html#config-trek"><span class="std std-ref">請參考</span></a>。</div>
 </div>
 <div class="line-block">
 <div class="line">創建成功的 Trek 專案目錄結構會如下：</div>
@@ -335,7 +335,7 @@ $ tree -a
 <ul class="simple">
 <li><p>記得將主程式中使用的套件寫入 <em>handler/requirements.txt</em> 中。</p></li>
 <li><p>process function 的參數與 return 要跟 para schema 定義的一致。</p></li>
-<li><p>在 <code class="docutils literal notranslate"><span class="pre">handler.py</span></code> 中可以使用 blcks sdk 提供的 service 來操作 Marvin 平台上的資產，請參考 <a class="reference internal" href="../blcks/index.html"><span class="doc">Developer Blcks</span></a> 。</p></li>
+<li><p>在 <code class="docutils literal notranslate"><span class="pre">handler.py</span></code> 中可以使用 blcks sdk 提供的 service 來操作 Marvin 平台上的資產，請參考 <a class="reference internal" href="../script/blcks/index.html"><span class="doc">Developer Blcks</span></a> 。</p></li>
 </ul>
 </div>
 </div>
