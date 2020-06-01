@@ -90,9 +90,5 @@ extlinks = {
     "trekdoclink": (
         "https://pnetwork.github.io/core.trek.doc/build/html/%s",
         "Trek doc ",
-    ),
-    "trek-vscode-ext-link": (
-        "https://github.com/pnetwork/core.vscode.extension.mflow/raw/master/release/trek-extension-%s.vsix",
-        "Trek vscode extension"
     )
 }
