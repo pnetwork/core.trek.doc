@@ -1,6 +1,12 @@
 Trek CLI Changelog
 =========================
 
+Version v1.0.0-beta4
+----------------------
+:Date: Jun 1, 2020
+
+- [fix] fix incorrect default config
+
 Version v1.0.0-beta3
 ----------------------
 :Date: May 26, 2020

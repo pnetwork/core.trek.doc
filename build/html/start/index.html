@@ -90,19 +90,18 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#system-requirements">System Requirements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#installing-trek-cli">Installing Trek CLI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#configuring-the-trek-cli">Configuring the Trek CLI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quick Start</a></li>
 <li class="toctree-l1"><a class="reference internal" href="project_folder.html">The Project Directory Structure</a></li>
 </ul>
 <p class="caption"><span class="caption-text">USER GUIDE</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../config/index.html">Configuring the Trek CLI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../workflow/index.html">Developer Workflow</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../blcks/index.html">Developer Blcks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../script/index.html">Developer Script</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../extension/vscode/index.html">Working with VSCode Extension</a></li>
 </ul>
 <p class="caption"><span class="caption-text">REFERENCES</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../library/config_list.html">Configuring Properties</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cli/commands.html">CLI Command Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../extension/vscode/commands.html">VSCode Extension Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../library/index.html">Library List</a></li>
@@ -201,44 +200,6 @@
 </pre></div>
 </div>
 <p>恭喜，您已成功安裝 Trek !</p>
-</div>
-<div class="section" id="configuring-the-trek-cli">
-<h1>Configuring the Trek CLI<a class="headerlink" href="#configuring-the-trek-cli" title="Permalink to this headline">¶</a></h1>
-<p id="config-trek">成功安裝 Trek CLI 工具後，我們需要設置 Trek config。
-Trek config 提供專案、Global兩種層級的設置，專案設置可以覆蓋 Global 設置。</p>
-<p>產生 config 方式：</p>
-<blockquote>
-<div><ol class="arabic simple">
-<li><p>Global <em>config.json</em>：在安裝 Trek CLI 時會自動生成在 <em>~/.trek/config.json</em>。</p></li>
-<li><p>專案 <em>config.json</em>：產生 workflow 專案時會自動生成在 <em>{your_project_path}/.trek/config.json</em>。</p></li>
-</ol>
-</div></blockquote>
-<p><em>config.json</em> 優先順序：專案 &gt; Global</p>
-<p>下面是一 <em>config.json</em> 範例：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ vim ~/.trek/config.json
-{
-    &quot;marvin_url&quot;: &quot;https://marvin.pentium.network/&quot;,
-    &quot;marvin_JWT&quot;: &quot;{your_marvin_jwt_token}&quot;,
-    &quot;router_port&quot;: 5000,
-    &quot;action_timeout&quot;: 30,
-    &quot;blcks_code_base&quot;: &quot;&quot;,
-    &quot;ansible_code_base&quot;: &quot;&quot;,
-    &quot;shell_script_base&quot;: &quot;&quot;,
-    &quot;script_repository&quot;: &quot;https://hub.pentium.network/scripts/&quot;,
-    &quot;input_data_path&quot;: &quot;&quot;,
-    &quot;input_event_path&quot;: &quot;&quot;,
-    &quot;envs&quot;: {
-        &quot;BLCKS_DEBUG_LOG_MODE&quot;: &quot;table&quot;,
-        &quot;BLCKS_DEBUG_LOG_TABLE_WIDTH&quot;: 100,
-        &quot;BLCKS_DEBUG_LOG_FIELDS&quot;: &quot;data&quot;,
-        &quot;BLCKS_DEBUG_LOG_FORMAT&quot;: &quot;{message} =&gt; inputParams: {data[inputParamsStr]}&quot;
-    },
-    &quot;flow_home&quot;: &quot;&quot;,
-    &quot;local_inventory_file&quot;: &quot;&quot;
-}
-</pre></div>
-</div>
-<p>若想知道 <em>config.json</em> 的詳細介紹，請參考 <a class="reference internal" href="../library/config_list.html"><span class="doc">Configuring Properties</span></a></p>
 <div class="line-block">
 <div class="line">接著，參考 <a class="reference internal" href="quick_start.html"><span class="doc">Quick Start</span></a> 試著建立第一個 Trek 專案吧!</div>
 </div>

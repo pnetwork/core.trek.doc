@@ -90,22 +90,29 @@
 <li class="toctree-l1"><a class="reference internal" href="index.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="index.html#system-requirements">System Requirements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="index.html#installing-trek-cli">Installing Trek CLI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index.html#configuring-the-trek-cli">Configuring the Trek CLI</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Quick Start</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#create-a-sample-project">Create a Sample Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-a-sample-project">Create a Sample Project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#step-1-create-a-sample-project">Step 1. Create a sample project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-2-install-scripts">Step 2. Install scripts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-3-view-workflow-template">Step 3. View workflow template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-4-edit-test-data">Step 4. Edit test data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-5-run">Step 5. Run</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-6-deploy">Step 6. Deploy</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="project_folder.html">The Project Directory Structure</a></li>
 </ul>
 <p class="caption"><span class="caption-text">USER GUIDE</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../config/index.html">Configuring the Trek CLI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../workflow/index.html">Developer Workflow</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../blcks/index.html">Developer Blcks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../script/index.html">Developer Script</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../extension/vscode/index.html">Working with VSCode Extension</a></li>
 </ul>
 <p class="caption"><span class="caption-text">REFERENCES</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../library/config_list.html">Configuring Properties</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cli/commands.html">CLI Command Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../extension/vscode/commands.html">VSCode Extension Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../library/index.html">Library List</a></li>
@@ -199,8 +206,8 @@
 </div>
 <blockquote>
 <div><ol class="arabic simple">
-<li><p><a class="reference internal" href="../library/config_list.html#script-repo"><span class="std std-ref">script_repository</span></a>：安裝下載腳本時使用到。</p></li>
-<li><p><a class="reference internal" href="../library/config_list.html#marvin-url"><span class="std std-ref">marvin_url *</span></a> 和 <a class="reference internal" href="../library/config_list.html#marvin-jwt"><span class="std std-ref">marvin_JWT *</span></a>：拿取 marvin 資產時使用。若不知道如何設置可以在 Step 1. 建立完專案後，在專案位置下指令「 <a class="reference internal" href="../reference/cli/commands/login.html"><span class="doc">login</span></a>」即自動設置完成。</p></li>
+<li><p><a class="reference internal" href="../config/index.html#script-repo"><span class="std std-ref">script_repository</span></a>：安裝下載腳本時使用到。</p></li>
+<li><p><a class="reference internal" href="../config/index.html#marvin-url"><span class="std std-ref">marvin_url *</span></a> 和 <a class="reference internal" href="../config/index.html#marvin-jwt"><span class="std std-ref">marvin_JWT *</span></a>：拿取 marvin 資產時使用。若不知道如何設置可以在 Step 1. 建立完專案後，在專案位置下指令「<a class="reference internal" href="../reference/cli/commands/login.html"><span class="doc">login</span></a>」即自動設置完成。</p></li>
 </ol>
 </div></blockquote>
 <div class="section" id="step-1-create-a-sample-project">
@@ -218,7 +225,7 @@ Done
 </pre></div>
 </div>
 <div class="line-block">
-<div class="line">想進一步了解 config 欄位 <a class="reference internal" href="index.html#config-trek"><span class="std std-ref">請參考</span></a>。</div>
+<div class="line">想進一步了解 config 欄位 <a class="reference internal" href="../config/index.html#config-trek"><span class="std std-ref">請參考</span></a>。</div>
 <div class="line">創建成功的 Trek 專案目錄結構會如下：</div>
 </div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ tree -a sample.project
@@ -324,7 +331,7 @@ digraph <span class="s2">&quot;sample.project&quot;</span> <span class="o">{</sp
 <div class="line">範本專案已定義好整個 workflow 流程的長相，在 run 之前，我們需要設置傳送至哪個 chatbot。</div>
 </div>
 <div class="line-block" id="find-chatbot-id">
-<div class="line">首先，我們要取得 chatbot ID。請至 marvin 平台，也就是 Trek config.json 定義的 <a class="reference internal" href="../library/config_list.html#marvin-url"><span class="std std-ref">marvin_url</span></a>，到左側目錄中「資產管理」-&gt; 「通訊帳號」點取要的 chatbot，從下方詳情視窗中找到 ID 欄位並把它複製起來：</div>
+<div class="line">首先，我們要取得 chatbot ID。請至 marvin 平台，也就是 Trek config.json 定義的 <a class="reference internal" href="../config/index.html#marvin-url"><span class="std std-ref">marvin_url</span></a>，到左側目錄中「資產管理」-&gt; 「通訊帳號」點取要的 chatbot，從下方詳情視窗中找到 ID 欄位並把它複製起來：</div>
 </div>
 <img alt="../_images/marvin_chatbot.png" src="../_images/marvin_chatbot.png" />
 <div class="line-block">

@@ -117,7 +117,7 @@ Step 2. Create blcks
 .. warning::
     - 記得將主程式中使用的套件寫入 *handler/requirements.txt* 中。
     - process function 的參數與 return 要跟 para schema 定義的一致。
-    - 在 ``handler.py`` 中可以使用 blcks sdk 提供的 service 來操作 Marvin 平台上的資產，請參考 :doc:`../../blcks/index` 。
+    - 在 ``handler.py`` 中可以使用 blcks sdk 提供的 service 來操作 Marvin 平台上的資產，請參考 :doc:`../../script/blcks/index` 。
 
 Step 3. Install scripts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^

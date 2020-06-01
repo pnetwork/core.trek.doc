@@ -13,15 +13,15 @@ Marvin Automation Development Guide
    :maxdepth: 2
    :caption: USER GUIDE
    
+   config/index
    workflow/index
-   blcks/index
+   script/index
    extension/vscode/index
 
 .. toctree::
    :maxdepth: 2
    :caption: REFERENCES
    
-   library/config_list
    cli/commands
    extension/vscode/commands
    library/index

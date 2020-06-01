@@ -16,7 +16,7 @@ Create a Sample Project
 | 在建立範本專案之前，請先確認 *config.json* 已設置了：
 
     #. :ref:`script_repo`：安裝下載腳本時使用到。
-    #. :ref:`marvin_url` 和 :ref:`marvin_jwt`：拿取 marvin 資產時使用。若不知道如何設置可以在 Step 1. 建立完專案後，在專案位置下指令「 :doc:`../reference/cli/commands/login`」即自動設置完成。
+    #. :ref:`marvin_url` 和 :ref:`marvin_jwt`：拿取 marvin 資產時使用。若不知道如何設置可以在 Step 1. 建立完專案後，在專案位置下指令「:doc:`../reference/cli/commands/login`」即自動設置完成。
 
 Step 1. Create a sample project
 """"""""""""""""""""""""""""""""""""""""""""""""
