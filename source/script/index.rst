@@ -8,3 +8,4 @@ Developer Script
 
    schema
    Developer Blcks <blcks/index.rst>
+   ansible
