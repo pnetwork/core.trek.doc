@@ -19,22 +19,22 @@ Where is para file?
     └── detectredis
         ├── .gitignore
         ├── .trek
-        │   └── config.json
+        │   └── config.json
         ├── Makefile
         ├── detectredis.para
         ├── flake8.jenkins
         ├── handler
-        │   ├── __init__.py
-        │   ├── handler.py
-        │   └── requirements.txt
+        │   ├── __init__.py
+        │   ├── handler.py
+        │   └── requirements.txt
         ├── inputs
-        │   └── event.yml
+        │   └── event.yml
         ├── openfaas.yml
         ├── requirements-test.txt
         ├── skaffold.yaml
         ├── tests
-        │   ├── conftest.py
-        │   └── test_blcks.py
+        │   ├── conftest.py
+        │   └── test_blcks.py
         └── tox.ini
 
 .. list-table:: 
@@ -256,9 +256,9 @@ Para schema 可以區分為三大區塊，我們會一一做介紹：
      - .. code-block:: yaml
 
             certificate:
-                title: SSL证书
+                title: SSL證書
                 type: object
-                description: SSL证书
+                description: SSL證書
                 examples: "{'source': 'NEW', 'name': 'cert_name', 'certificate': 'xxx'}"
    * - array
      - .. code-block:: yaml
@@ -273,24 +273,24 @@ Para schema 可以區分為三大區塊，我們會一一做介紹：
             
             # array of object
             expired_hosts:
-                name: 到期服务器列表
-                title: 到期服务器列表
+                name: 到期服務器列表
+                title: 到期服務器列表
                 type: array
-                description: 到期服务器列表
+                description: 到期服務器列表
                 items:
                 type: object
                 properties:
                     id:
-                        name: 服务器ID
-                        title: 服务器ID
+                        name: 服務器ID
+                        title: 服務器ID
                         type: string
-                        description: 服务器ID
+                        description: 服務器ID
                         examples:
                         - S-ajvw371v9
                     name:
-                        name: 服务器名称
-                        title: 服务器名称
-                        description: 服务器名称
+                        name: 服務器名稱
+                        title: 服務器名稱
+                        description: 服務器名稱
                         type: string
                         examples:
                         - OS-Ubuntu18.04
@@ -304,14 +304,26 @@ Para schema 可以區分為三大區塊，我們會一一做介紹：
 Pentium 提供特別的欄位資料型態，可以在 marvin 上顯示選取資產多選欄、textarea... 的特殊顯示欄位：
 
 .. list-table:: 
-   :widths: 10 20 70
+   :widths: 10 20 35 35
    :header-rows: 1
 
    * - Inputs Data Type
      - Description
-     - Example
+     - Schema
+     - Example 
+
    * - pn_ids_host
      - 顯示服務器資產清單列表的多選選單
+     - .. code-block:: yaml
+
+            ---
+            name: 帶入資產
+            title: 帶入資產
+            description: 請選擇相對應服務器
+            type: array
+            items:
+            type: string
+
      - .. code-block:: yaml
 
             resourceIds:
@@ -320,48 +332,130 @@ Pentium 提供特別的欄位資料型態，可以在 marvin 上顯示選取資�
      - 顯示域名資產清單列表的多選選單
      - .. code-block:: yaml
 
+            ---
+            name: 帶入資產
+            title: 帶入資產
+            description: 請選擇相對應域名
+            type: array
+            items:
+            type: string 
+     - .. code-block:: yaml
+
             resourceIds:
                 $ref: pn_ids_domain
+     
    * - pn_ids_cdn
      - 顯示 CDN 資產清單列表的多選選單
      - .. code-block:: yaml
 
+            ---
+            name: 帶入資產
+            title: 帶入資產
+            description: 請選擇相對應CDN
+            type: array
+            items:
+            type: string
+
+     - .. code-block:: yaml
+
             resourceIds:
                 $ref: pn_ids_cdn
+     
+
    * - pn_ids_script
      - 顯示腳本清單列表的多選選單
      - .. code-block:: yaml
 
+            ---
+            name: 帶入資產
+            title: 帶入資產
+            description: 請選擇相對應腳本
+            type: array
+            items:
+            type: string     
+     - .. code-block:: yaml
+
             resourceIds:
                 $ref: pn_ids_script
+
    * - pn_ids_chatpair
      - 顯示通訊帳號資產清單列表的多選選單
      - .. code-block:: yaml
 
+            ---
+            name: 帶入資產
+            title: 帶入資產
+            description: 請選擇相對應通訊帳號
+            type: array
+            items:
+            type: string
+     - .. code-block:: yaml
+
             bot_infos:
                 $ref: pn_ids_chatpair
+
    * - pn_id_keypair
      - 顯示密鑰資產清單列表的多選選單
+     - .. code-block:: yaml
+
+            ---
+            name: 帶入資產
+            title: 帶入資產
+            description: 請選擇相對應密鑰
+            type: string     
      - .. code-block:: yaml
 
             key_id:
                 $ref: pn_id_keypair
 
+
    * - pn_sp_password
      - 輸入文字有密碼遮罩的 input text
      - .. code-block:: yaml
 
+            ---
+            name: 密碼
+            description: 密碼
+            type: string     
+
+     - .. code-block:: yaml
+
             password:
                 $ref: pn_sp_password
+
    * - pn_sp_change_password
      - | 修改密碼用，含 [舊密碼] 和 [新密碼] 的 input text，
        | 輸入文字皆有密碼遮罩
      - .. code-block:: yaml
 
+            ---
+            name: 修改密碼
+            description: 修改密碼
+            type: object
+            properties:
+            old_password:
+                type: string
+                description: 請輸入舊密碼
+                title: 舊密碼
+            new_password:
+                type: string
+                description: 請輸入新密碼
+                title: 新密碼
+
+     - .. code-block:: yaml
+
             password:
                 $ref: pn_sp_change_password
+
    * - pn_sp_textarea_str
      - 支援多行的文字輸入欄位
+     - .. code-block:: yaml
+
+            ---
+            name: Text inputs
+            description: Text inputs
+            type: string
+
      - .. code-block:: yaml
 
             str_message:
@@ -373,27 +467,109 @@ Pentium 提供特別的欄位資料型態，可以在 marvin 上顯示選取資�
      - 支援多行的文字輸入欄位，傳至腳本後為 array of string。
      - .. code-block:: yaml
 
+            ---
+            name: Text inputs
+            description: Text inputs
+            type: array
+            items:
+            type: string     
+     - .. code-block:: yaml
+
             str_message:
                 name: Message context.
                 title: Message context.
                 description: The message used to send to the specified channel.
                 $ref: pn_sp_textarea_str
+ 
    * - pn_id_cloudcredential
      - | 雲帳號資產用，含 [提供商]、[帳號] 以及 [密鑰]
        | 的下拉式選單
      - .. code-block:: yaml
 
+            ---
+            name: 帶入資產
+            title: 帶入資產
+            description: 請選擇相對應雲帳號
+            type: object
+            properties:
+            provider_id:
+                type: string
+            cloud_account_id:
+                type: string
+            cloud_credential:
+                type: string
+     - .. code-block:: yaml
+
             resolverKey:
                 $ref: pn_id_cloudcredential
+
    * - pn_sp_nsrecord
-     - | 域名注册商資訊用，包含 [域名解析商]、[帳號]、[密鑰] 
+     - | 域名註冊商資訊用，包含 [域名解析商]、[帳號]、[密鑰] 
        | 的下拉式選單，和 [NS] 的 input text
+     - .. code-block:: yaml  
+
+            ---
+            name: 域名註冊商
+            description: 域名註冊商資訊
+            type: object
+            properties:
+            resolverId:
+                type: string
+                description: "the resolver id"
+            resolverAccount:
+                type: string
+                description: "the account id of resolver account"
+            resolverKeyId:
+                type: string
+                description: "the ID of cloud credential"
+            nameServers:
+                type: array
+                description: "the list of name servers"
+                minItems: 2
+                maxItems: 2
+                items:
+                type: string
      - .. code-block:: yaml
 
             resolver:
                 $ref: pn_sp_nsrecord
+
    * - pn_sp_origins
      - CDN origins，包含 [源站協議]、[源站類型]、[源站地址]
+     - .. code-block:: yaml
+
+            name: 批量修改源站設置
+            description: 批量修改 CDN 的 origins
+            type: array
+            items:
+            type: object
+            properties:
+                resourceId:
+                type: string
+                description: the unique id of cdn
+                title: the unique id of cdn
+                originProtocol:
+                type: string
+                description: 'the supported protocols'
+                enum:
+                    - http
+                    - https
+                originType:
+                type: string
+                description: 'the type of origin'
+                enum:
+                    - ip
+                    - cname
+                    - cos
+                    - ipaddr
+                    - domain
+                    - oss
+                    - hostname
+                originAddresses:
+                type: array
+                description: list of all origins
+                items:
+                    type: string
      - .. code-block:: yaml
 
             data:

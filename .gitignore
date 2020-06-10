@@ -5,7 +5,7 @@ source/_build
 run.sh
 *.doctrees
 *.pickle
-
+.DS_Store
 source/reference/cli/*
 source/reference/extension/*
 source/reference/blcks/*

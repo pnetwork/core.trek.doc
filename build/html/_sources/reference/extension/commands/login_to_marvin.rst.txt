@@ -1,9 +1,10 @@
 
 *****************************************************************
-Trek: Init Env
+Trek Terraform: Pack
 *****************************************************************
 
 Purpose:
 
-  | 啟動執行環境，找尋 workflow template 所使用到的腳本，分別以 docker containers 方式啟動。
+  | 打包 Terraform 專案。  
+  | 打包 Terraform 專案下的 .para 和 .tf 一起打包成 zip 並放置於 *{your_terraformpath}/bin** 資料夾中。
 

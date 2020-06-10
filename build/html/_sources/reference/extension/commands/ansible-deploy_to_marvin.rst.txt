@@ -5,7 +5,7 @@ Trek Ansible: Deploy to Marvin
 
 Purpose:
 
-  | Build, push, pack 和 deploy Ansible 專案至 Marvin 平台。
+  | Pack 和 deploy Ansible 專案至 Marvin 平台。
 
 
 Usage:
