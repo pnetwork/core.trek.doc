@@ -7,6 +7,12 @@ Trek VSCode extension release package |vscode_link|
 
    <a href="https://github.com/pnetwork/core.vscode.extension.mflow/raw/master/release/" target="_blank">Reference here</a>
 
+Version v1.0.3-beta2
+----------------------------
+:Date: Jun 11, 2020  
+
+- [add] Add terraform commands.
+
 Version v1.0.3-beta1
 ----------------------------
 :Date: Jun 10, 2020  

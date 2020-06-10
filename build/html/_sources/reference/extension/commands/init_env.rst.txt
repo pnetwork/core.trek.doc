@@ -1,22 +1,10 @@
 
 *****************************************************************
-Trek: Build and Push
+Trek Shell: Run
 *****************************************************************
 
 Purpose:
 
-  | 建置 Trek 專案 image 檔，依 openfaas.yaml 描述產生對應 docker image，並將其 push 至 docker hub。
+  | 執行 Shell 腳本。  
+  | 依照腳本內的設定檔 *{your_shell_path}/.trek/config.json* 執行，且根據設定檔中的輸入參數檔 input_event_path 帶入 inputs 欄位
 
-
-Usage:
-
-只有 Blcks 腳本需要 build and push。
-
-  Step 1. 選取 build and push 的目標為：
-
-      - :The Trek Project: Build and push 包含 workflow template 和使用到的腳本 (除了安裝的腳本以外)。
-      - :Only Script: 只要 build and push 腳本。
-
-  Step 2. 若上一步選擇為 ``Only Script`` 需選取腳本，其他則略過此步驟：
-
-    顯示 workflow template 使用到的腳本 (除了安裝的腳本以外)。

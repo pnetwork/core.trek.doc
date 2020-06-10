@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                1.0.0
+                1.0.1
               </div>
             
           
@@ -192,111 +192,6 @@
             
   <div class="section" id="miscmanager">
 <h1>MiscManager<a class="headerlink" href="#miscmanager" title="Permalink to this headline">¶</a></h1>
-<p>Pentium misc service class</p>
-<dl class="py class">
-<dt>
-<em class="property">class </em><code class="sig-prename descclassname">blcks.services.misc.</code><code class="sig-name descname">MiscManager</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cred</span></em>, <em class="sig-param"><span class="n">event</span></em>, <em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span></dt>
-<dd><p>Misc management base class</p>
-<dl class="py method">
-<dt>
-<code class="sig-name descname">getDynamicUri</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">page_type</span></em>, <em class="sig-param"><span class="n">content</span></em><span class="sig-paren">)</span></dt>
-<dd><p>Get Dynamic Uri with customer defined web content</p>
-<dl class="field-list simple">
-<dt class="field-odd">Page_type type</dt>
-<dd class="field-odd"><p>str</p>
-</dd>
-<dt class="field-even">Parameters</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>page_type</strong> -- The type of custom dynamic web page</p></li>
-<li><p><strong>content</strong> (<em>dict</em>) -- The content of custom dynamic web page</p></li>
-</ul>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>dictionary contains all information of Tunnels</p>
-</dd>
-</dl>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-            <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;requestBody&quot;</span><span class="p">:</span> <span class="p">{}</span>
-        <span class="p">}</span>
-    <span class="p">],</span>
-    <span class="nt">&quot;pn-task-id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="nt">&quot;createdBy&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
-            <span class="p">},</span>
-            <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-            <span class="nt">&quot;updatedBy&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
-            <span class="p">},</span>
-            <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;customMessage&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;content&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Server Loading Diagram&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Server Loading Diagram&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;customMessage&quot;</span><span class="p">:</span> <span class="p">[</span>
-                    <span class="p">{</span>
-                        <span class="nt">&quot;messageText&quot;</span><span class="p">:</span> <span class="s2">&quot;Server Loading Diagram&quot;</span>
-                    <span class="p">},</span>
-                    <span class="p">{</span>
-                        <span class="nt">&quot;messageUrl&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.com/ckaec82kesc&quot;</span>
-                    <span class="p">}</span>
-                <span class="p">]</span>
-            <span class="p">},</span>
-            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;uri&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
-        <span class="p">}</span>
-    <span class="p">]</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p>AssertionError, ServiceError, AuthenticationError, ClientError</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt>
-<code class="sig-name descname">recyclings</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dataJson</span></em><span class="sig-paren">)</span></dt>
-<dd><p>Assets to be recycled or deleted</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>dataJson</strong> (<em>Array</em>) -- Array contains all information to be recycled or deleted</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>a list of assets</p>
-</dd>
-</dl>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;S-123&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Server&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;directDelete&quot;</span><span class="p">:</span> <span class="kc">false</span>
-        <span class="p">}</span>
-    <span class="p">],</span>
-    <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-            <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
-        <span class="p">}</span>
-    <span class="p">],</span>
-    <span class="nt">&quot;pn-task-id&quot;</span><span class="p">:</span> <span class="s2">&quot;aaa-bbb-ccc&quot;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</dd></dl>
-
-</dd></dl>
-
 </div>
 
 
