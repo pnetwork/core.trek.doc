@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Developer Script &mdash; Pentium</title>
+  <title>Quick Start &mdash; Pentium</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/css/table.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Para Schema" href="schema.html" />
-    <link rel="prev" title="Workflow Operators" href="../workflow/conditional.html" /> 
+    <link rel="next" title="Working with VSCode Extension" href="../extension/vscode/index.html" />
+    <link rel="prev" title="WorkflowManager" href="../reference/blcks/services/workflow.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -97,10 +97,14 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../config/index.html">Configuring the Trek CLI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../workflow/index.html">Developer Workflow</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Developer Script</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Developer Script</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="schema.html">Para Schema</a></li>
 <li class="toctree-l2"><a class="reference internal" href="blcks/index.html">Developer Blcks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ansible.html">Quick Start</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Quick Start</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#working-with-trek-cli">Working with Trek CLI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#built-in-variables-in-ansible-runner">Built-in Variables in Ansible Runner</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../extension/vscode/index.html">Working with VSCode Extension</a></li>
@@ -162,7 +166,9 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Developer Script</li>
+          <li><a href="index.html">Developer Script</a> &raquo;</li>
+        
+      <li>Quick Start</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -179,17 +185,71 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="developer-script">
-<h1>Developer Script<a class="headerlink" href="#developer-script" title="Permalink to this headline">¶</a></h1>
-<div class="line-block">
-<div class="line">Trek 支援三種 Script 專案： Blcks, Ansible 和 Shell。</div>
-<div class="line">開發腳本專案的第一步，通常是定義腳本的輸入輸出欄位，如何使用 Para schema 定義? 請參考 <a class="reference internal" href="schema.html"><span class="doc">Para Schema</span></a>。</div>
+  <div class="section" id="quick-start">
+<h1>Quick Start<a class="headerlink" href="#quick-start" title="Permalink to this headline">¶</a></h1>
+<p>You can use <code class="docutils literal notranslate"><span class="pre">Trek</span></code> CLI to create an Ansible project.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> trek createansible myansible
+<span class="go">Ansible [myansible] creating...</span>
+<span class="go">Done</span>
+</pre></div>
 </div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="schema.html">Para Schema</a></li>
-<li class="toctree-l1"><a class="reference internal" href="blcks/index.html">Developer Blcks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ansible.html">Quick Start</a></li>
+<p>And then, you got a new Ansible project named myansible.
+You can write some codes in <code class="docutils literal notranslate"><span class="pre">myansible.yml</span></code></p>
+<div class="highlight-ansible notranslate"><div class="highlight"><pre><span></span>---
+- name: myansible
+    become: yes
+    gather_facts: no
+    hosts: hosts
+    tasks:
+    - command: &quot;echo {{message}}&quot;
+    - command: &quot;ls&quot;
+    - debug:
+        msg: &quot;trek CLI ansible example&quot;
+</pre></div>
+</div>
+<div class="section" id="working-with-trek-cli">
+<h2>Working with Trek CLI<a class="headerlink" href="#working-with-trek-cli" title="Permalink to this headline">¶</a></h2>
+<p>Trek can let you develop and test Ansible project in local machine.</p>
+<ol class="arabic simple">
+<li><p>create project</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> trek createansible myansible
+<span class="go">Blcks [myansible] creating...</span>
+<span class="go">This utility will walk you through creating a config.json file.</span>
+<span class="go">Marvin url []: https://your-marvin-url.com</span>
+<span class="go">Marvin JWT []: marvinJTW</span>
+<span class="go">Marvin secret []: marvinSecret</span>
+<span class="go">Done</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>write your own code</p></li>
+<li><p>execute Ansible in local machine</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> myansible
+<span class="gp">$</span> trek runansible
+<span class="go">starting ansible myansible...</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>pack and deploy to Marvin</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> trek deployansible --autobuildpush -y
+<span class="go">Deploy Ansible script...</span>
+<span class="go">Packing ansible: /Users/ansible_trek/myansible</span>
+<span class="go">Success packing, output: /Users/ansible_trek/myansible/bin/ansible.myansible-0.1.0.zip</span>
+<span class="go">Deploying: /Users/ansible_trek/myansible/bin/ansible.myansible-0.1.0.zip</span>
+<span class="go">Done</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="built-in-variables-in-ansible-runner">
+<h2>Built-in Variables in Ansible Runner<a class="headerlink" href="#built-in-variables-in-ansible-runner" title="Permalink to this headline">¶</a></h2>
+<p>There are some built-in variables that can be used in marvin ansible:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">authorization</span></code>: JWT token for caller</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">baseUrlWebhook</span></code>: Marvin URL</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pn_task_id</span></code>: Task ID for log tracking</p></li>
 </ul>
 </div>
 </div>
@@ -202,10 +262,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="schema.html" class="btn btn-neutral float-right" title="Para Schema" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../extension/vscode/index.html" class="btn btn-neutral float-right" title="Working with VSCode Extension" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../workflow/conditional.html" class="btn btn-neutral float-left" title="Workflow Operators" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../reference/blcks/services/workflow.html" class="btn btn-neutral float-left" title="WorkflowManager" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
