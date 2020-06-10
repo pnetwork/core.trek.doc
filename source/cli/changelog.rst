@@ -1,6 +1,13 @@
 Trek CLI Changelog
 =========================
 
+Version v1.0.0-beta5
+----------------------
+:Date: Jun 4, 2020
+
+- [fix] adjust extra_vars to ansible
+- [fix] fix operator bugs of have and notHave
+
 Version v1.0.0-beta4
 ----------------------
 :Date: Jun 1, 2020

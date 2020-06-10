@@ -7,6 +7,13 @@ Trek VSCode extension release package |vscode_link|
 
    <a href="https://github.com/pnetwork/core.vscode.extension.mflow/raw/master/release/" target="_blank">Reference here</a>
 
+Version v1.0.3-beta1
+----------------------------
+:Date: Jun 10, 2020  
+
+- [fix] Fix runblcks command.
+- [fix] Fix reload config and workflow yml.
+
 Version v1.0.3-beta 
 ----------------------------
 :Date: Jun 1, 2020  
