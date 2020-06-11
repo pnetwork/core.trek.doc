@@ -31,7 +31,11 @@ You can write some codes in ``myansible.yml``
 Configuration
 *************
 
+<<<<<<< HEAD
 | 當使用 Trek CLI 建立 Ansible 專案會產生以下的 *{your_ansible_project_path}/.trek/config.json*。
+=======
+| 當使用 Trek CLI 建立 Ansible, Ansible 專案會產生以下的 *{your_ansible_project_path}/.trek/config.json*。
+>>>>>>> e4fc96157148b21a4b8e5958e7cd989c40af6183
 
 .. code:: json
 
