@@ -45,7 +45,7 @@ Configuration
     }
 
 | config.json 提供了專案、Global 兩種層級的設置，優先順序為專案 > Global。
-| 若 Ansible 專案是處於 Trek 專案下 (即在其 `src/blcks/` 下) 則讀取的優先順序為 ``Ansible 專案設置 > Trek 專案設置 > Global 設置``。
+| 若 Ansible 專案是處於 Trek 專案下 (即在其 `src/ansible/` 下) 則讀取的優先順序為 ``Ansible 專案設置 > Trek 專案設置 > Global 設置``。
 
 設置中的 ``envs`` 是 Ansible 執行時讀取的環境變數。
 
@@ -65,7 +65,7 @@ Trek can let you develop and test Ansible project in local machine.
 .. code:: console
 
     $ trek createansible myansible
-    Blcks [myansible] creating...
+    Ansible [myansible] creating...
     This utility will walk you through creating a config.json file.
     Marvin url []: https://your-marvin-url.com
     Marvin JWT []: marvinJTW
