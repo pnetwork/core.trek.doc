@@ -5,7 +5,7 @@ packansible
 
 Usage:  [OPTIONS]
 
-  Pack ansible project
+  Pack Ansible project
 
 Options:
   -p, --path TEXT    Marvin workflow project path
