@@ -4,8 +4,8 @@ System Requirements
 在安裝前請確認系統是否符合需求：
 
 * VSCode 1.41.0+ ( |vscode_link| )
-* Trek CLI 1.0.0-beta3+ ( :ref:`Reference here<install_trek>` )
-* Trek VSCode Extension 1.0.3-beta+ ( |vsext_link| )
+* Trek CLI 請下戴最新版 ( :ref:`Reference here<install_trek>` )
+* Trek VSCode Extension 請下戴最新版 .vsix ( |vsext_link| )
 
 .. |vscode_link| raw:: html
 
@@ -13,7 +13,7 @@ System Requirements
 
 .. |vsext_link| raw:: html
 
-   <a href="https://github.com/pnetwork/core.vscode.extension.mflow/raw/master/release/trek-extension-1.0.3-beta.vsix" target="_blank">Download here</a>
+   <a href="https://github.com/pnetwork/core.vscode.extension.mflow/raw/gh-pages/release/" target="_blank">Reference here</a>
 
 
 Installing Trek VSCode Extension

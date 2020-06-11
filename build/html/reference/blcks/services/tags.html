@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                1.0.0
+                1.0.1
               </div>
             
           
@@ -106,6 +106,7 @@
 <li class="toctree-l3 current"><a class="reference internal" href="../../../script/blcks/services.html">Services</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../../../script/ansible.html">Quick Start</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../extension/vscode/index.html">Working with VSCode Extension</a></li>
@@ -192,100 +193,6 @@
             
   <div class="section" id="tagmanager">
 <h1>TagManager<a class="headerlink" href="#tagmanager" title="Permalink to this headline">¶</a></h1>
-<p>Pentium Tag service class</p>
-<dl class="py class">
-<dt>
-<em class="property">class </em><code class="sig-prename descclassname">blcks.services.tags.</code><code class="sig-name descname">TagManager</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cred</span></em>, <em class="sig-param"><span class="n">event</span></em>, <em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span></dt>
-<dd><p>Tag management base class</p>
-<p>since class might inheritant from multiple base classes,
-all the functions need a prefix or postfix to distinguish the difference</p>
-<dl class="py method">
-<dt>
-<code class="sig-name descname">getAssetsByTag</code><span class="sig-paren">(</span><em class="sig-param">tag</em>, <em class="sig-param">sort='taggedAt'</em>, <em class="sig-param">order=&lt;OrderBy.Desc: 'desc'&gt;</em>, <em class="sig-param">offset=0</em>, <em class="sig-param">limit=0</em>, <em class="sig-param">search=None</em>, <em class="sig-param">simple=True</em><span class="sig-paren">)</span></dt>
-<dd><p>Get assets with specific tag</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>tag</strong> (<em>String</em>) -- specific tag</p></li>
-<li><p><strong>sort</strong> (<em>str</em>) -- which elements you want to sort</p></li>
-<li><p><strong>order</strong> (<em>OrderBy</em>) -- sorting order, now support OrderBy.Desc and OrderBy.Asc</p></li>
-<li><p><strong>offset</strong> (<em>int</em>) -- the offset of the object array index,             default is 0 if this parameter is not presented</p></li>
-<li><p><strong>limit</strong> (<em>int</em>) -- the amount of object will be returned from the specified offset,             default is 10 if its’ not presented</p></li>
-<li><p><strong>search</strong> (<em>str</em>) -- the search tags user input</p></li>
-<li><p><strong>simple</strong> (<em>bool</em>) -- True or False</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Return all assets with specific tag</p>
-</dd>
-</dl>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;limit&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="nt">&quot;offset&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="nt">&quot;order&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;search&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;sort&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;taggedAt&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-            <span class="nt">&quot;permission&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;READ&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-                <span class="nt">&quot;UPDATE&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-                <span class="nt">&quot;DEPLOY&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-                <span class="nt">&quot;DELETE&quot;</span><span class="p">:</span> <span class="kc">true</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-    <span class="p">],</span>
-    <span class="nt">&quot;pn-task-id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt>
-<code class="sig-name descname">updateTags</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dataJson</span></em><span class="sig-paren">)</span></dt>
-<dd><p>update tag</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>dataJson</strong> (<em>Array</em>) -- Array contains all information to update tags</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Update tag/untagged for specified asset.</p>
-</dd>
-</dl>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;tagged&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-            <span class="nt">&quot;assets&quot;</span><span class="p">:</span> <span class="p">[</span>
-                <span class="p">{</span>
-                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
-                <span class="p">}</span>
-            <span class="p">]</span>
-        <span class="p">}</span>
-    <span class="p">],</span>
-    <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-            <span class="nt">&quot;requestBody&quot;</span><span class="p">:</span> <span class="p">{},</span>
-            <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
-        <span class="p">}</span>
-    <span class="p">],</span>
-    <span class="nt">&quot;pn-task-id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</dd></dl>
-
-</dd></dl>
-
 </div>
 
 

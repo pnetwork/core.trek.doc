@@ -1,23 +1,9 @@
 
 *****************************************************************
-Trek: Pack
+Trek: Init Env
 *****************************************************************
 
 Purpose:
 
-  | 打包 Trek 專案。  
-  | 將產生 workflow template 任務節點位置，與 inline script 一起打包成 zip 並放置於 *{your_trek_project_path}/bin* 資料夾中。
-
-
-Usage:
-
-  Step 1. 選取要打包的目標為：
-
-      - :The Trek Project: 打包包含 workflow template 和使用到的腳本 (除了安裝的腳本以外)。
-      - :Only Script: 只要打包腳本。
-      - :Only Workflow: 只要打包 workflow template。
-
-  Step 2. 若上一步選擇為 ``Only Script`` 需選取腳本，其他則略過此步驟：
-
-    顯示 workflow template 使用到的腳本 (除了安裝的腳本以外)。
+  | 啟動執行環境，找尋 workflow template 所使用到的腳本，分別以 docker containers 方式啟動。
 
