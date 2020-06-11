@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Quick Start &mdash; Pentium</title>
+  <title>Developer Ansible &mdash; Pentium</title>
   
 
   
@@ -100,7 +100,8 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Developer Script</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="schema.html">Para Schema</a></li>
 <li class="toctree-l2"><a class="reference internal" href="blcks/index.html">Developer Blcks</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Quick Start</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Developer Ansible</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#configuration">Configuration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#working-with-trek-cli">Working with Trek CLI</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#built-in-variables-in-ansible-runner">Built-in Variables in Ansible Runner</a></li>
 </ul>
@@ -168,7 +169,7 @@
         
           <li><a href="index.html">Developer Script</a> &raquo;</li>
         
-      <li>Quick Start</li>
+      <li>Developer Ansible</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -185,8 +186,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="quick-start">
-<h1>Quick Start<a class="headerlink" href="#quick-start" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="developer-ansible">
+<h1>Developer Ansible<a class="headerlink" href="#developer-ansible" title="Permalink to this headline">¶</a></h1>
 <p>You can use <code class="docutils literal notranslate"><span class="pre">Trek</span></code> CLI to create an Ansible project.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> trek createansible myansible
 <span class="go">Ansible [myansible] creating...</span>
@@ -207,6 +208,33 @@ You can write some codes in <code class="docutils literal notranslate"><span cla
         msg: &quot;trek CLI ansible example&quot;
 </pre></div>
 </div>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+| 當使用 Trek CLI 建立 Ansible 專案會產生以下的 <em>{your_ansible_project_path}/.trek/config.json</em>。
+=======
+| 當使用 Trek CLI 建立 Ansible, Ansible 專案會產生以下的 <em>{your_ansible_project_path}/.trek/config.json</em>。
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; e4fc96157148b21a4b8e5958e7cd989c40af6183</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;marvin_url&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;marvin_JWT&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;marvin_secret&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;local_inventory_file&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;input_event_path&quot;</span><span class="p">:</span> <span class="s2">&quot;inputs/event.yml&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;envs&quot;</span><span class="p">:</span> <span class="p">{}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">config.json 提供了專案、Global 兩種層級的設置，優先順序為專案 &gt; Global。</div>
+<div class="line">若 Ansible 專案是處於 Trek 專案下 (即在其 <cite>src/ansible/</cite> 下) 則讀取的優先順序為 <code class="docutils literal notranslate"><span class="pre">Ansible</span> <span class="pre">專案設置</span> <span class="pre">&gt;</span> <span class="pre">Trek</span> <span class="pre">專案設置</span> <span class="pre">&gt;</span> <span class="pre">Global</span> <span class="pre">設置</span></code>。</div>
+</div>
+<p>設置中的 <code class="docutils literal notranslate"><span class="pre">envs</span></code> 是 Ansible 執行時讀取的環境變數。</p>
+<div class="line-block">
+<div class="line"><a class="reference internal" href="../config/index.html#config-local-inventory-file"><span class="std std-ref">local_inventory_file</span></a> 為 Ansible inventory 環境設置檔；<a class="reference internal" href="../config/index.html#config-input-event-path"><span class="std std-ref">input_event_path</span></a> 為本機執行時指定的腳本輸入參數。</div>
+<div class="line">若想知道 <em>config.json</em> 的詳細介紹，請參考 <a class="reference external" href="https://pnetwork.github.io/core.trek.doc/build/html/config/config_list.html">Configuring Properties</a></div>
+</div>
+</div>
 <div class="section" id="working-with-trek-cli">
 <h2>Working with Trek CLI<a class="headerlink" href="#working-with-trek-cli" title="Permalink to this headline">¶</a></h2>
 <p>Trek can let you develop and test Ansible project in local machine.</p>
@@ -214,7 +242,7 @@ You can write some codes in <code class="docutils literal notranslate"><span cla
 <li><p>create project</p></li>
 </ol>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> trek createansible myansible
-<span class="go">Blcks [myansible] creating...</span>
+<span class="go">Ansible [myansible] creating...</span>
 <span class="go">This utility will walk you through creating a config.json file.</span>
 <span class="go">Marvin url []: https://your-marvin-url.com</span>
 <span class="go">Marvin JWT []: marvinJTW</span>
