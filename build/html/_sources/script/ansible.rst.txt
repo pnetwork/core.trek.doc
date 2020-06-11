@@ -1,7 +1,7 @@
 
-***********
-Quick Start
-***********
+*********************
+ Developer Ansible
+*********************
 
 You can use ``Trek`` CLI to create an Ansible project.
 
@@ -28,6 +28,36 @@ You can write some codes in ``myansible.yml``
         - debug: 
             msg: "trek CLI ansible example"
 
+Configuration
+*************
+
+<<<<<<< HEAD
+| 當使用 Trek CLI 建立 Ansible 專案會產生以下的 *{your_ansible_project_path}/.trek/config.json*。
+=======
+| 當使用 Trek CLI 建立 Ansible, Ansible 專案會產生以下的 *{your_ansible_project_path}/.trek/config.json*。
+>>>>>>> e4fc96157148b21a4b8e5958e7cd989c40af6183
+
+.. code:: json
+
+    {
+        "marvin_url": "",
+        "marvin_JWT": "",
+        "marvin_secret": "",
+        "local_inventory_file": "",
+        "input_event_path": "inputs/event.yml",
+        "envs": {}
+    }
+
+| config.json 提供了專案、Global 兩種層級的設置，優先順序為專案 > Global。
+| 若 Ansible 專案是處於 Trek 專案下 (即在其 `src/ansible/` 下) 則讀取的優先順序為 ``Ansible 專案設置 > Trek 專案設置 > Global 設置``。
+
+設置中的 ``envs`` 是 Ansible 執行時讀取的環境變數。
+
+| :ref:`local_inventory_file<config_local_inventory_file>` 為 Ansible inventory 環境設置檔；:ref:`input_event_path<config_input_event_path>` 為本機執行時指定的腳本輸入參數。
+| 若想知道 *config.json* 的詳細介紹，請參考 :trekdoclink:`Configuring Properties<config/config_list.html>`
+
+
+
 
 Working with Trek CLI
 *********************
@@ -39,7 +69,7 @@ Trek can let you develop and test Ansible project in local machine.
 .. code:: console
 
     $ trek createansible myansible
-    Blcks [myansible] creating...
+    Ansible [myansible] creating...
     This utility will walk you through creating a config.json file.
     Marvin url []: https://your-marvin-url.com
     Marvin JWT []: marvinJTW
