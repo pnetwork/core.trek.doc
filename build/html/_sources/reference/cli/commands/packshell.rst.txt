@@ -5,7 +5,7 @@ packshell
 
 Usage:  [OPTIONS]
 
-  Pack shell project
+  Pack Shell project
 
 Options:
   -p, --path TEXT    Marvin workflow project path

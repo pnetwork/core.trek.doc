@@ -5,7 +5,7 @@ deployblcks
 
 Usage:  [OPTIONS]
 
-  Deploy blcks project
+  Deploy Blcks project
 
 Options:
   -p, --path TEXT  Blcks project path

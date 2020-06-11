@@ -5,7 +5,7 @@ runblcks
 
 Usage:  [OPTIONS]
 
-  Run blcks project
+  Run Blcks project
 
 Options:
   -p, --path TEXT  Blcks project path
