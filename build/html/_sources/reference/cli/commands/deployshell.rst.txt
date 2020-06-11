@@ -5,7 +5,7 @@ deployshell
 
 Usage:  [OPTIONS]
 
-  Deploy shell project
+  Deploy Shell project
 
 Options:
   -p, --path TEXT  Shell project path

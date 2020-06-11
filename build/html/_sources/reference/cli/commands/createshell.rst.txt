@@ -8,7 +8,7 @@ Usage:  [OPTIONS] NAME
   Create a Shell script project
 
 Options:
-  -f, --force    force creating shell script
+  -f, --force    force creating Shell script
   -y, --yes      Automatic yes to prompts.
   -v, --verbose  verbose log
   --help         Show this message and exit.
