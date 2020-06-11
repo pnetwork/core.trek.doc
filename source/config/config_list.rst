@@ -76,7 +76,7 @@ input_data_path
 input_event_path
 #######################
 | 工作流程事件參數檔案位置，預設為 *{your_trek_project_path}/inputs/event.yml*，支援 yaml, json 兩種格式。
-| 當工作流程為事件觸發時，此參數將指定事件內容檔案位置；當執行 Blcks 時 input_event_path 表示輸入參數。
+| 當工作流程為事件觸發時，此參數將指定事件內容檔案位置；當執行 Blcks/Ansible/Shell/Terraform... 時 input_event_path 表示輸入參數。
 | 如下：
 
 .. code-block:: yaml
@@ -96,6 +96,8 @@ flow_home
 #######################
 | 執行管理介面指令 :doc:`../reference/cli/commands/webserver` 時可以指定要監控的 Trek 專案放置路徑。
 | 假設有一個 Trek 專案位置為 */User/Pentium/trek/hello_trek_project*，則設置 ``flow_home="/User/Pentium/trek/"``。
+
+.. _config_local_inventory_file:
 
 local_inventory_file
 #######################
