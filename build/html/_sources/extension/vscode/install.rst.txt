@@ -13,7 +13,7 @@ System Requirements
 
 .. |vsext_link| raw:: html
 
-   <a href="https://github.com/pnetwork/core.vscode.extension.mflow/raw/gh-pages/release/" target="_blank">Reference here</a>
+   <a href="https://github.com/pnetwork/core.vscode.extension.mflow/raw/master/release/" target="_blank">Reference here</a>
 
 
 Installing Trek VSCode Extension
