@@ -255,7 +255,7 @@
 <span id="config-input-event-path"></span><h1>input_event_path<a class="headerlink" href="#input-event-path" title="Permalink to this headline">¶</a></h1>
 <div class="line-block">
 <div class="line">工作流程事件參數檔案位置，預設為 <em>{your_trek_project_path}/inputs/event.yml</em>，支援 yaml, json 兩種格式。</div>
-<div class="line">當工作流程為事件觸發時，此參數將指定事件內容檔案位置；當執行 Blcks 時 input_event_path 表示輸入參數。</div>
+<div class="line">當工作流程為事件觸發時，此參數將指定事件內容檔案位置；當執行 Blcks/Ansible/Shell/Terraform... 時 input_event_path 表示輸入參數。</div>
 <div class="line">如下：</div>
 </div>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">tag_name</span><span class="p">:</span> <span class="s">&quot;redis&quot;</span>   <span class="c1"># Property name: value</span>
@@ -289,7 +289,7 @@
 </div>
 </div>
 <div class="section" id="local-inventory-file">
-<h1>local_inventory_file<a class="headerlink" href="#local-inventory-file" title="Permalink to this headline">¶</a></h1>
+<span id="config-local-inventory-file"></span><h1>local_inventory_file<a class="headerlink" href="#local-inventory-file" title="Permalink to this headline">¶</a></h1>
 <div class="line-block">
 <div class="line">Ansible inventory 環境設置檔。本地端開發執行 ansible 腳本時，服務器資產不一定要在 marvin 平台內。</div>
 <div class="line">當有一個 ansible inventory 檔案為：</div>
