@@ -1,6 +1,6 @@
 
 ***********
-Quick Start
+Ansible
 ***********
 
 You can use ``Trek`` CLI to create an Ansible project.
