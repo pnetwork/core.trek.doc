@@ -3,7 +3,7 @@ Trek CLI Changelog
 
 Version v1.0.0-beta6
 ----------------------
-:Date: Jun 11, 2020
+:Date: Jun 18, 2020
 
 - [add] add terraform support.
 

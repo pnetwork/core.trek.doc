@@ -7,7 +7,7 @@ blckscheckhostconnection
 
     id: blckscheckhostconnection
     schemaVersion: '0.2'
-    version: 0.3.0
+    version: 0.3.1
     name: 服务器连线测试
     title: 服务器连线测试
     description: 对服务器连线测试，检测帐密及网路状态
