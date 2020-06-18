@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>deployshell &mdash; Pentium</title>
+  <title>Trek CLI Changelog &mdash; Pentium</title>
   
 
   
@@ -35,7 +35,9 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/table.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Trek VSCode Extension Changelog" href="../../extension/vscode/changelog.html" />
+    <link rel="prev" title="Library List" href="../../library/index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -106,8 +108,17 @@
 <li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/">Samples</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ABOUT</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../cli/changelog.html">Trek CLI Changelog</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Trek CLI Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#beta6">1.0.0-beta6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#beta5">1.0.0-beta5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#beta4">1.0.0-beta4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#beta3">1.0.0-beta3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#beta2">1.0.0-beta2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#beta1">1.0.0-beta1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#beta">1.0.0-beta</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../extension/vscode/changelog.html">Trek VSCode Extension Changelog</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/issues/">Issues Report</a></li>
 </ul>
@@ -155,7 +166,7 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-      <li>deployshell</li>
+      <li>Trek CLI Changelog</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -172,35 +183,68 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="deployshell">
-<h1>deployshell<a class="headerlink" href="#deployshell" title="Permalink to this headline">¶</a></h1>
-<p>Usage:  [OPTIONS]</p>
-<blockquote>
-<div><p>Deploy shell project</p>
-</div></blockquote>
-<dl>
-<dt>Options:</dt><dd><dl class="option-list">
-<dt><kbd><span class="option">-p</span>, <span class="option">--path <var>TEXT</var></span></kbd></dt>
-<dd><p>Shell project path</p>
-</dd>
-<dt><kbd><span class="option">--projects <var>TEXT</var></span></kbd></dt>
-<dd><p>Assign projects</p>
-</dd>
-<dt><kbd><span class="option">--autopack</span></kbd></dt>
-<dd><p>Automatic pack all.</p>
-</dd>
-<dt><kbd><span class="option">-y</span>, <span class="option">--yes</span></kbd></dt>
-<dd><p>Automatic yes to prompts.</p>
-</dd>
-<dt><kbd><span class="option">-v</span>, <span class="option">--verbose</span></kbd></dt>
-<dd><p>verbose log</p>
-</dd>
-<dt><kbd><span class="option">--help</span></kbd></dt>
-<dd><p>Show this message and exit.</p>
-</dd>
-</dl>
-</dd>
-</dl>
+  <div class="section" id="trek-cli-changelog">
+<h1>Trek CLI Changelog<a class="headerlink" href="#trek-cli-changelog" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="beta6">
+<h2>1.0.0-beta6<a class="headerlink" href="#beta6" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>[add] support terraform project</p>
+<ul>
+<li><p>createterraform / initterraform / runterraform / runterraform / deployterraform</p></li>
+</ul>
+</li>
+<li><p>[add] workflow with terraform script</p></li>
+<li><p>[add] new rule operators (<code class="docutils literal notranslate"><span class="pre">ipAddress</span></code>, <code class="docutils literal notranslate"><span class="pre">notIpAddress</span></code>, <code class="docutils literal notranslate"><span class="pre">containObjectAll</span></code>)</p></li>
+<li><p>[add] support loop in workflow</p></li>
+<li><p>[fix] connection failed when using <code class="docutils literal notranslate"><span class="pre">runblcks</span></code></p></li>
+<li><p>[fix] bugs fix</p></li>
+</ul>
+</div>
+<div class="section" id="beta5">
+<h2>1.0.0-beta5<a class="headerlink" href="#beta5" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>[fix] adjust extra_vars to ansible</p></li>
+<li><p>[fix] fix operator bugs of have and notHave</p></li>
+</ul>
+</div>
+<div class="section" id="beta4">
+<h2>1.0.0-beta4<a class="headerlink" href="#beta4" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>[fix] fix incorrect default config</p></li>
+</ul>
+</div>
+<div class="section" id="beta3">
+<h2>1.0.0-beta3<a class="headerlink" href="#beta3" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>[add] script project has it's own config (.trek/config.json)</p></li>
+<li><p>[add] new commands for script project</p></li>
+<li><p>init (initblcks, initansible, initshell)</p></li>
+<li><p>run (runblcks, runansible, runshell)</p></li>
+<li><p>[fix] fix some bugs about packing and deploying</p></li>
+<li><p>[fix] refactoring</p></li>
+</ul>
+</div>
+<div class="section" id="beta2">
+<h2>1.0.0-beta2<a class="headerlink" href="#beta2" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>[fix] path issue when using script commands</p></li>
+<li><p>[fix] zip name from script id, not folder name</p></li>
+</ul>
+</div>
+<div class="section" id="beta1">
+<h2>1.0.0-beta1<a class="headerlink" href="#beta1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>[fix] load incorrect config when deploy script</p></li>
+<li><p>[fix] fix output path when pack scripts</p></li>
+<li><p>[add] support new operators of Marvin workflow: have, notHave</p></li>
+</ul>
+</div>
+<div class="section" id="beta">
+<h2>1.0.0-beta<a class="headerlink" href="#beta" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>First release.</p></li>
+</ul>
+</div>
 </div>
 
 
@@ -208,6 +252,15 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../extension/vscode/changelog.html" class="btn btn-neutral float-right" title="Trek VSCode Extension Changelog" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../../library/index.html" class="btn btn-neutral float-left" title="Library List" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
