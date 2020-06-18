@@ -48,6 +48,7 @@ if [ "$BUILD_TREK" == "1" ]; then
     make html
     cd ../../$DIR
     cp -r ../$TREK_DIR/docs/reference/commands ./source/reference/cli/
+    cp ../$TREK_DIR/CHANGELOG.md ./source/reference/cli/CHANGELOG.md
 fi
 
 # copy references from blcks sdk repo
