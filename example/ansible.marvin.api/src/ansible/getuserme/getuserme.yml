@@ -1,0 +1,28 @@
+# Created by trek CLI
+
+---
+  - name: getuserme
+    become: no
+    gather_facts: no
+    hosts: hosts
+    tasks:
+    - debug: 
+        msg: "trek CLI ansible example"
+
+    - name: "Get User information"
+      local_action:
+        module: uri 
+        url: "{{baseUrlWebhook}}/users/me" 
+        method: GET
+        force_basic_auth: yes
+        headers:
+          Authorization: "{{ authorization }}"
+          # x-pn-task-id: "{{ pn_task_id }}"
+        validate_certs: False
+        status_code: 200
+        timeout: 10
+        # body_format: json
+      register: api_result
+
+    - debug:
+        var: api_result

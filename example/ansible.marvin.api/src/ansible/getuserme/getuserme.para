@@ -1,0 +1,43 @@
+---
+schemaVersion: '0.2'
+id: getuserme
+version: '0.1.0'
+title: getuserme
+name: getuserme
+assets:
+  - HOST
+  - SCRIPT
+description: ''
+
+inputs:
+  resourceIds:
+    $ref: pn_ids_host
+
+required:
+  - resourceIds
+
+outputs:
+  stdout:
+    description: Standard output
+    type: string
+    examples: |
+      ---
+      PLAY [Deployment Key]
+      TASK [Deployment Key]
+      ok: [x0BKW7]
+      PLAY RECAP
+      x0BKW7 : ok=2 changed=0 unreachable=0 failed=0
+  stderr:
+    description: Standard error
+    type: string
+    examples: |
+      ---
+      PLAY [Deployment Key]
+      TASK [Deployment Key]
+      ok: [x0BKW7]
+      PLAY RECAP
+      x0BKW7 : ok=0 changed=0 unreachable=1 failed=0
+  vars:
+    description: script variables (json format)
+    type: string
+    examples: {"ansible_user":"root","ansible_verbosity":0}
