@@ -1,0 +1,16 @@
+# Created by trek CLI
+
+0-2:
+  resourceIds.0:
+    type: string
+    value: '_local_'
+
+3-4:
+  bot_infos.0:
+    type: string
+    value: 'CH-cka291kvu'
+
+3-5:
+  bot_infos.0:
+    type: string
+    value: 'CH-cka291kvu'

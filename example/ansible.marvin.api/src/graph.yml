@@ -1,0 +1,77 @@
+$schema: 'http://json-schema.pentium.network/marvin-workflows/0.1/schema'
+graph:
+  metadata:
+    version: 0.0.0
+    title: ansible.marvin.api
+    templateId: ansible.marvin.api
+    description: "my workflow"
+    tags: []
+    author: trek
+  nodes:
+    - metadata:
+        sources: []
+        type: trigger
+        title: trigger
+        description: ''
+      id: '0'
+    - metadata:
+        type: action
+        title: Get User Information
+        description: 'Get User Information'
+        script:
+          id: getuserme
+      id: '2'
+    - metadata:
+        type: selector
+        title: selector
+      id: '3'
+    - metadata:
+        type: action
+        title: Notification if super user
+        description: 'Send message to IM'
+        script:
+          id: notification
+      id: '4'
+    - metadata:
+        type: action
+        title: Notification if not super user
+        description: 'Send message to IM'
+        script:
+          id: notification
+      id: '5'
+    - metadata:
+        type: terminator
+        title: terminator
+        description: ''
+      id: '1'
+  edges:
+    - source: '0'
+      target: '2'
+    - source: '2'
+      target: '3'
+    - source: '3'
+      target: '4'
+      metadata:
+        filters:
+          property: nodes.2.stdout
+          operator: 'regEx'
+          value: 'ADMIN_FULL_ACCESS'
+        binding:
+          - property: str_message
+            value: 'You are a superuser.'
+            type: string
+    - source: '3'
+      target: '5'
+      metadata:
+        filters:
+          property: nodes.2.stdout
+          operator: 'regEx'
+          value: '(?!ADMIN_FULL_ACCESS)'
+        binding:
+          - property: str_message
+            value: 'You are not a superuser.'
+            type: string
+    - source: '4'
+      target: '1'
+    - source: '5'
+      target: '1'
