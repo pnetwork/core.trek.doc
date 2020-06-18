@@ -120,7 +120,7 @@
 </ul>
 <p class="caption"><span class="caption-text">ABOUT</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../cli/changelog.html">Trek CLI Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cli/CHANGELOG.html">Trek CLI Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../extension/vscode/changelog.html">Trek VSCode Extension Changelog</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/issues/">Issues Report</a></li>
 </ul>
@@ -552,6 +552,54 @@ default is 10 if its’ not presented</p></li>
 
 <dl class="py method">
 <dt>
+<code class="sig-name descname">patchCertificates</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cert_id</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">privateKey</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">chain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">projectIds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">remark</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span></dt>
+<dd><p>patch certificate</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>certificate</strong> -- certificate unique id</p></li>
+<li><p><strong>name</strong> (<em>str</em>) -- certificate name</p></li>
+<li><p><strong>privateKey</strong> (<em>str</em>) -- private key content</p></li>
+<li><p><strong>chain</strong> (<em>str</em>) -- certificate chain</p></li>
+<li><p><strong>projectIds</strong> (<em>list</em>) -- project ids list</p></li>
+<li><p><strong>remark</strong> (<em>str</em>) -- remark</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Asynchronous call. Return a message.</p>
+</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;projectIds&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;string&quot;</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>AssertionError, ServiceError, AuthenticationError, ClientError</p>
+</dd>
+<dt class="field-even">Example</dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">patchCertificates</span><span class="p">(</span>
+<span class="go">    &quot;CC-CertificateID&quot;,</span>
+<span class="go">    name:&#39;Certificat Name&#39;,</span>
+<span class="go">    remark=&#39;&#39;,</span>
+<span class="go">    privateKeys=&#39;-----BEGIN CERTIFICATE-----...&#39;</span>
+<span class="go">    chains=&#39;&#39;</span>
+<span class="go">    projectIds=[&#39;P-1&#39;,&#39;P-2&#39;])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt>
 <code class="sig-name descname">syncCertificates</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">keyId</span></em>, <em class="sig-param"><span class="n">providerId</span></em>, <em class="sig-param"><span class="n">projectIds</span></em><span class="sig-paren">)</span></dt>
 <dd><p>import or sync cloud certificates</p>
 <dl class="field-list simple">
@@ -683,7 +731,6 @@ default is 10 if its’ not presented</p></li>
 <dt>
 <code class="sig-name descname">uploadCertificates</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">certificates</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">privateKeys</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">chains</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">projects</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span></dt>
 <dd><p>create certificate with contents</p>
-<p>this function implements api of marvin to add certificates files</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -693,8 +740,20 @@ default is 10 if its’ not presented</p></li>
 <li><p><strong>projects</strong> (<em>list</em>) -- project ids list</p></li>
 </ul>
 </dd>
-<dt class="field-even">Example</dt>
-<dd class="field-even"><p></p></dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>return a list of certificates</p>
+</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+    <span class="p">[</span>
+        <span class="s2">&quot;string&quot;</span>
+    <span class="p">]</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
 </dl>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">uploadCertificates</span><span class="p">(</span>
 <span class="go">    certificates=[&#39;-----BEGIN CERTIFICATE-----...&#39;,</span>
