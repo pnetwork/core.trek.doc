@@ -15,7 +15,7 @@ You can use ``Trek`` CLI to create an Ansible project.
 And then, you got a new Ansible project named myansible.
 You can write some codes in ``myansible.yml``
 
-.. code:: ansible
+.. code:: yaml
 
     ---
     - name: myansible
