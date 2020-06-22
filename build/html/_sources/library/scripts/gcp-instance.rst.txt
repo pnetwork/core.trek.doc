@@ -7,7 +7,7 @@ gcp-instance
 
     id: gcp-instance
     schemaVersion: '0.2'
-    version: 0.1.4
+    version: 0.2.0
     name: 创建 Google Cloud 云服务器
     title: 创建 Google Cloud 云服务器
     description: 透过 terraform 创建 Google Cloud 云服务器。
@@ -15,11 +15,16 @@ gcp-instance
     assets:
     - SCRIPT
     inputs:
-      cloudcredentials:
+      cloudaccount:
         name: 云帐号
         title: 云帐号
         desctiption: 云帐号
         $ref: pn_sp_cloudhostcredential
+      secret_key:
+        name: 云帐号 secret_key
+        title: 云帐号 secret_key
+        desctiption: 云帐号 secret_key
+        type: string
       region:
         name: 地域
         title: 地域
@@ -70,7 +75,6 @@ gcp-instance
           '
         default: default
     required:
-    - cloudaccount
     - region
     - project_id
     - instance_name

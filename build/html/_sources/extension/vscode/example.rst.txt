@@ -28,7 +28,7 @@ The First Workflow Project
 
 Step 1. Create project
 ^^^^^^^^^^^^^^^^^^^^^^^^
-使用 Command Palette 叫出「 :doc:`../../reference/extension/commands/create_project` 」指令，並填入以下資訊：
+使用 Command Palette 叫出「 :doc:`../../reference/extension/commands/trek_create_project` 」指令，並填入以下資訊：
 
 .. image:: ../../_static/images/create_project.gif
 
@@ -40,7 +40,7 @@ Step 1. Create project
 Step 2. Create Blcks
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 | 建立一個 Blcks 腳本，用來檢查 redis 連線。
-| 使用「 :doc:`../../reference/extension/commands/blcks-create_blcks` 」指令建立 Blcks 腳本：
+| 使用「 :doc:`../../reference/extension/commands/trek_blcks_create` 」指令建立 Blcks 腳本：
 
 .. image:: ../../_static/images/create_blcks.gif
 
@@ -79,7 +79,7 @@ Step 2. Create Blcks
 Step 3. Install scripts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 | 從 script repository 安裝腳本。  
-| 執行「 :doc:`../../reference/extension/commands/install_script` 」指令，安裝腳本：
+| 執行「 :doc:`../../reference/extension/commands/trek_install_script` 」指令，安裝腳本：
 
 - 資產設定標籤(blckssettags)
 - 傳送訊息至指定頻道(notification)
@@ -121,7 +121,7 @@ Step 4. Edit workflow template
 Step 5. Run
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 | 在 vscode extension 執行工作流程很簡單，先打開 workflow template 檔案，此時編輯視窗右上方會出現按鈕 |run_icon|，按下即可執行：
-| 等同於執行「 :doc:`../../reference/extension/commands/run` 」指令。
+| 等同於執行「 :doc:`../../reference/extension/commands/trek_run` 」指令。
 
 .. |run_icon| image:: ../../_static/images/run_icon.png
 
@@ -131,14 +131,14 @@ Step 5. Run
 
 .. image:: ../../_static/images/run_result.png
 
-若需要停止執行的環境請使用 |stop_icon|，等同於執行「 :doc:`../../reference/extension/commands/shutdown_env` 」指令。
+若需要停止執行的環境請使用 |stop_icon|，等同於執行「 :doc:`../../reference/extension/commands/trek_down` 」指令。
 
 .. |stop_icon| image:: ../../_static/images/stop_icon.png
 
 Step 6. Deploy
 ^^^^^^^^^^^^^^^^^^^^^^^^
 | 在本機執行正確後，即可佈署至 Marvin 平台。
-| 執行「 :doc:`../../reference/extension/commands/deploy_to_marvin` 」指令，將會進行建置、push to dockerhub、打包和佈署。
+| 執行「 :doc:`../../reference/extension/commands/trek_deploy_auto` 」指令，將會進行建置、push to dockerhub、打包和佈署。
 
 .. image:: ../../_static/images/deploy.gif
 

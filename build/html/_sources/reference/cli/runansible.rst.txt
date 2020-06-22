@@ -1,0 +1,16 @@
+
+*****************
+runansible
+*****************
+
+Usage:  [OPTIONS]
+
+  Run ansible project
+
+Options:
+  -p, --path TEXT  Ansible project path
+  -v, --verbose    verbose log
+  --help           Show this message and exit.
+
+
+

@@ -78,6 +78,7 @@ if [ "$BUILD_EXT" == "1" ]; then
     make html
     cd ../../$DIR
     cp -r ../$VSCODE_EXTENSION_DIR/docs/reference/commands ./source/reference/extension/
+    cp ../$VSCODE_EXTENSION_DIR/CHANGELOG.md ./source/reference/extension/CHANGELOG.md
 fi
 
 # copy references from extension repo

@@ -2,7 +2,6 @@ bulkwarmup
 **********************************
 | 批量预热
 | 输入需要预热对象的 URL（需要 http:// 或 https://），一行一笔。
-
 例如：
 http://www.abc.com/test.html
 http://www.abc.com/test2.html

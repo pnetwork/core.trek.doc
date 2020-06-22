@@ -32,7 +32,7 @@ Marvin Automation Development Guide
    :caption: ABOUT
 
    reference/cli/CHANGELOG.md
-   extension/vscode/changelog
+   reference/extension/CHANGELOG.md
    Issues Report <https://github.com/pnetwork/core.trek.doc/issues/>
 
 Indices and tables

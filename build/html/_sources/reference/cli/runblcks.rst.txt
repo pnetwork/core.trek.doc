@@ -1,0 +1,16 @@
+
+*****************
+runblcks
+*****************
+
+Usage:  [OPTIONS]
+
+  Run blcks project
+
+Options:
+  -p, --path TEXT  Blcks project path
+  -v, --verbose    verbose log
+  --help           Show this message and exit.
+
+
+
