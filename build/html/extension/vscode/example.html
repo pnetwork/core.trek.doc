@@ -123,8 +123,8 @@
 </ul>
 <p class="caption"><span class="caption-text">ABOUT</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../cli/changelog.html">Trek CLI Changelog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="changelog.html">Trek VSCode Extension Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/cli/CHANGELOG.html">Trek CLI Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/extension/CHANGELOG.html">Trek VSCode Extension Changelog</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/issues/">Issues Report</a></li>
 </ul>
 
@@ -225,7 +225,7 @@
 </div>
 <div class="section" id="step-1-create-project">
 <h2>Step 1. Create project<a class="headerlink" href="#step-1-create-project" title="Permalink to this headline">¶</a></h2>
-<p>使用 Command Palette 叫出「 <a class="reference internal" href="../../reference/extension/commands/create_project.html"><span class="doc">Trek Shell: Deploy Packed Packages to Marvin</span></a> 」指令，並填入以下資訊：</p>
+<p>使用 Command Palette 叫出「 <a class="reference internal" href="../../reference/extension/commands/trek_create_project.html"><span class="doc">Trek: Create Project</span></a> 」指令，並填入以下資訊：</p>
 <img alt="../../_images/create_project.gif" src="../../_images/create_project.gif" />
 <ol class="arabic simple">
 <li><p>選擇專案存放位置。</p></li>
@@ -238,7 +238,7 @@
 <h2>Step 2. Create Blcks<a class="headerlink" href="#step-2-create-blcks" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line">建立一個 Blcks 腳本，用來檢查 redis 連線。</div>
-<div class="line">使用「 <a class="reference internal" href="../../reference/extension/commands/blcks-create_blcks.html"><span class="doc">Trek Blcks: Create Blcks</span></a> 」指令建立 Blcks 腳本：</div>
+<div class="line">使用「 <a class="reference internal" href="../../reference/extension/commands/trek_blcks_create.html"><span class="doc">Trek Blcks: Create Blcks</span></a> 」指令建立 Blcks 腳本：</div>
 </div>
 <img alt="../../_images/create_blcks.gif" src="../../_images/create_blcks.gif" />
 <ol class="arabic">
@@ -478,7 +478,7 @@
 <h2>Step 3. Install scripts<a class="headerlink" href="#step-3-install-scripts" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line">從 script repository 安裝腳本。</div>
-<div class="line">執行「 <a class="reference internal" href="../../reference/extension/commands/install_script.html"><span class="doc">Trek Terraform: Create Terraform</span></a> 」指令，安裝腳本：</div>
+<div class="line">執行「 <a class="reference internal" href="../../reference/extension/commands/trek_install_script.html"><span class="doc">Trek: Install Script</span></a> 」指令，安裝腳本：</div>
 </div>
 <ul class="simple">
 <li><p>資產設定標籤(blckssettags)</p></li>
@@ -725,20 +725,20 @@
 <h2>Step 5. Run<a class="headerlink" href="#step-5-run" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line">在 vscode extension 執行工作流程很簡單，先打開 workflow template 檔案，此時編輯視窗右上方會出現按鈕 <img alt="run_icon" src="../../_images/run_icon.png" />，按下即可執行：</div>
-<div class="line">等同於執行「 <a class="reference internal" href="../../reference/extension/commands/run.html"><span class="doc">Trek: Create Project</span></a> 」指令。</div>
+<div class="line">等同於執行「 <a class="reference internal" href="../../reference/extension/commands/trek_run.html"><span class="doc">Trek: Run</span></a> 」指令。</div>
 </div>
 <img alt="../../_images/run.png" src="../../_images/run.png" />
 <div class="line-block">
 <div class="line">VSCode Terminal 視窗將顯示執行進度和結果：</div>
 </div>
 <img alt="../../_images/run_result.png" src="../../_images/run_result.png" />
-<p>若需要停止執行的環境請使用 <img alt="stop_icon" src="../../_images/stop_icon.png" />，等同於執行「 <a class="reference internal" href="../../reference/extension/commands/shutdown_env.html"><span class="doc">Trek: List Remote Scripts</span></a> 」指令。</p>
+<p>若需要停止執行的環境請使用 <img alt="stop_icon" src="../../_images/stop_icon.png" />，等同於執行「 <a class="reference internal" href="../../reference/extension/commands/trek_down.html"><span class="doc">Trek: Shutdown Env</span></a> 」指令。</p>
 </div>
 <div class="section" id="step-6-deploy">
 <h2>Step 6. Deploy<a class="headerlink" href="#step-6-deploy" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line">在本機執行正確後，即可佈署至 Marvin 平台。</div>
-<div class="line">執行「 <a class="reference internal" href="../../reference/extension/commands/deploy_to_marvin.html"><span class="doc">Trek Shell: Pack</span></a> 」指令，將會進行建置、push to dockerhub、打包和佈署。</div>
+<div class="line">執行「 <a class="reference internal" href="../../reference/extension/commands/trek_deploy_auto.html"><span class="doc">Trek: Deploy to Marvin</span></a> 」指令，將會進行建置、push to dockerhub、打包和佈署。</div>
 </div>
 <img alt="../../_images/deploy.gif" src="../../_images/deploy.gif" />
 <ol class="arabic simple">

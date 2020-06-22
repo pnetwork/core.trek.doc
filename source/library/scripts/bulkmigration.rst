@@ -7,7 +7,7 @@ bulkmigration
 
     id: bulkmigration
     schemaVersion: '0.2'
-    version: 0.3.0
+    version: 0.3.1
     name: 复制DNS 记录至另一解析商
     title: 复制DNS 记录至另一解析商
     description: 将使用者所选取域名及subdomains，添加至选定的解析商密钥内
@@ -18,7 +18,7 @@ bulkmigration
       resourceIds:
         $ref: pn_ids_domain
       resolverKey:
-        $ref: pn_id_cloudcredential
+        $ref: pn_sp_bulkmigration_credential
       mode:
         name: 搬移模式
         title: 搬移模式

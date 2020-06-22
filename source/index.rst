@@ -31,8 +31,8 @@ Marvin Automation Development Guide
 .. toctree::
    :caption: ABOUT
 
-   cli/changelog
-   extension/vscode/changelog
+   reference/cli/CHANGELOG.md
+   reference/extension/CHANGELOG.md
    Issues Report <https://github.com/pnetwork/core.trek.doc/issues/>
 
 Indices and tables

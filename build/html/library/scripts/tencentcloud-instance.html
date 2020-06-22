@@ -107,8 +107,8 @@
 </ul>
 <p class="caption"><span class="caption-text">ABOUT</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../cli/changelog.html">Trek CLI Changelog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../extension/vscode/changelog.html">Trek VSCode Extension Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/cli/CHANGELOG.html">Trek CLI Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/extension/CHANGELOG.html">Trek VSCode Extension Changelog</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/issues/">Issues Report</a></li>
 </ul>
 
@@ -180,7 +180,7 @@
 </div>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">tencentcloud-instance</span>
 <span class="nt">schemaVersion</span><span class="p">:</span> <span class="s">&#39;0.2&#39;</span>
-<span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.1.4</span>
+<span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.2.0</span>
 <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">创建腾讯云云服务器</span>
 <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">创建腾讯云 (TencentCloud) 云服务器</span>
 <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">透过 terraform 创建腾讯云 (TencentCloud) 云服务器。</span>
@@ -188,11 +188,21 @@
 <span class="nt">assets</span><span class="p">:</span>
 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">SCRIPT</span>
 <span class="nt">inputs</span><span class="p">:</span>
-  <span class="nt">cloudcredentials</span><span class="p">:</span>
+  <span class="nt">cloudaccount</span><span class="p">:</span>
     <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">云帐号</span>
     <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">云帐号</span>
     <span class="nt">desctiption</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">云帐号</span>
     <span class="nt">$ref</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pn_sp_cloudhostcredential</span>
+  <span class="nt">secret_id</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">云帐号 secret_id</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">云帐号 secret_id</span>
+    <span class="nt">desctiption</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">云帐号 secret_id</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+  <span class="nt">secret_key</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">云帐号 secret_key</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">云帐号 secret_key</span>
+    <span class="nt">desctiption</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">云帐号 secret_key</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
   <span class="nt">region</span><span class="p">:</span>
     <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">地域</span>
     <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">地域</span>
@@ -252,7 +262,6 @@
       <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
     <span class="nt">default</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
 <span class="nt">required</span><span class="p">:</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">cloudaccount</span>
 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">region</span>
 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">availability_zone</span>
 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">image_id</span>

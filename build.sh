@@ -48,6 +48,7 @@ if [ "$BUILD_TREK" == "1" ]; then
     make html
     cd ../../$DIR
     cp -r ../$TREK_DIR/docs/reference/commands ./source/reference/cli/
+    cp ../$TREK_DIR/CHANGELOG.md ./source/reference/cli/CHANGELOG.md
 fi
 
 # copy references from blcks sdk repo
@@ -77,6 +78,7 @@ if [ "$BUILD_EXT" == "1" ]; then
     make html
     cd ../../$DIR
     cp -r ../$VSCODE_EXTENSION_DIR/docs/reference/commands ./source/reference/extension/
+    cp ../$VSCODE_EXTENSION_DIR/CHANGELOG.md ./source/reference/extension/CHANGELOG.md
 fi
 
 # copy references from extension repo

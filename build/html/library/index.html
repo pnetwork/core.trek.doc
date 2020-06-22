@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/css/table.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Trek CLI Changelog" href="../cli/changelog.html" />
-    <link rel="prev" title="Trek: Version" href="../reference/extension/commands/version.html" /> 
+    <link rel="next" title="Trek CLI Changelog" href="../reference/cli/CHANGELOG.html" />
+    <link rel="prev" title="Trek: Init Env" href="../reference/extension/commands/trek_up.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -113,8 +113,8 @@
 </ul>
 <p class="caption"><span class="caption-text">ABOUT</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../cli/changelog.html">Trek CLI Changelog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../extension/vscode/changelog.html">Trek VSCode Extension Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/cli/CHANGELOG.html">Trek CLI Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/extension/CHANGELOG.html">Trek VSCode Extension Changelog</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/issues/">Issues Report</a></li>
 </ul>
 
@@ -688,6 +688,12 @@ http://www.abc.com/test2.html
         <td><a class="reference internal" href="scripts/updateyearning.html">view schema</a></td>
     </tr>
     <tr>
+        <td>创建 VMware 服务器 (Linux 作业系统)</td>
+        <td>vsphere-clone-from-template</td>
+        <td>透过 terraform 创建 Linux 作业系统之 VMware 服务器。</td>
+        <td><a class="reference internal" href="scripts/vsphere-clone-from-template.html">view schema</a></td>
+    </tr>
+    <tr>
         <td>域名微信封禁检测</td>
         <td>weixincheck</td>
         <td>输入域名，批量检查域名是否被微信封禁</td>
@@ -790,9 +796,19 @@ http://www.abc.com/test2.html
         <td>预设每小时针对设定用户可看到的帐户权限同步狗爹云资产</td>
     </tr>
     <tr>
+        <td>定期同步 NS1 云资产</td>
+        <td>network.pentium.asset.syncns1</td>
+        <td>预设每小时针对设定用户可看到的帐户权限同步 NS1 云资产</td>
+    </tr>
+    <tr>
         <td>定期同步腾讯云云资产</td>
         <td>network.pentium.asset.synctencent</td>
         <td>预设每小时针对设定用户可看到的帐户权限同步腾讯云云资产</td>
+    </tr>
+    <tr>
+        <td>定期同步 VMware 云资产</td>
+        <td>network.pentium.asset.syncvmware</td>
+        <td>预设每小时针对设定用户可看到的帐户权限同步 VMware 云资产</td>
     </tr>
     <tr>
         <td>阿里云 CDN 域名失效告警</td>
@@ -945,6 +961,11 @@ http://www.abc.com/test2.html
         <td>在创建项目管理员时,自动绑定全站工作流程权限</td>
     </tr>
     <tr>
+        <td>删除暂存脚本</td>
+        <td>network.pentium.script.expiredfile.schedule</td>
+        <td>工作流程支援 Terraform 時，既有執行 Terraform 端點 (/scripts/terraform/deployments)，產生的暫存腳本檔案，透過此工作流程自動清除暫存腳本。</td>
+    </tr>
+    <tr>
         <td>非白名单 SSH 登录告警</td>
         <td>network.pentium.ssh.checkwhitelist.chatbot</td>
         <td>侦测所有服务器的 SSH 登录，若不在白名单 IP 地址中则发送短信至指定聊天室</td>
@@ -982,7 +1003,7 @@ http://www.abc.com/test2.html
     <tr>
         <td>域名微信封禁检测告警</td>
         <td>network.pentium.weixin.monitoring.chatbot</td>
-        <td>针对输入的一串域名三小时做一次域名微信封禁检测，如果发现域名在微信被封则发送短信至指定聊天室</td>
+        <td>针对输入的一串域名六小时做一次域名微信封禁检测，如果发现域名在微信被封则发送短信至指定聊天室</td>
     </tr>
     <tr>
         <td>新增应用 AppStore 下架报警的App清单</td>
@@ -1028,10 +1049,10 @@ http://www.abc.com/test2.html
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../cli/changelog.html" class="btn btn-neutral float-right" title="Trek CLI Changelog" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../reference/cli/CHANGELOG.html" class="btn btn-neutral float-right" title="Trek CLI Changelog" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../reference/extension/commands/version.html" class="btn btn-neutral float-left" title="Trek: Version" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../reference/extension/commands/trek_up.html" class="btn btn-neutral float-left" title="Trek: Init Env" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
