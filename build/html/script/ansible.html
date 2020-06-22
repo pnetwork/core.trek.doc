@@ -119,8 +119,8 @@
 </ul>
 <p class="caption"><span class="caption-text">ABOUT</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../cli/changelog.html">Trek CLI Changelog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../extension/vscode/changelog.html">Trek VSCode Extension Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/cli/CHANGELOG.html">Trek CLI Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/extension/CHANGELOG.html">Trek VSCode Extension Changelog</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/issues/">Issues Report</a></li>
 </ul>
 
@@ -196,16 +196,16 @@
 </div>
 <p>And then, you got a new Ansible project named myansible.
 You can write some codes in <code class="docutils literal notranslate"><span class="pre">myansible.yml</span></code></p>
-<div class="highlight-ansible notranslate"><div class="highlight"><pre><span></span>---
-- name: myansible
-    become: yes
-    gather_facts: no
-    hosts: hosts
-    tasks:
-    - command: &quot;echo {{message}}&quot;
-    - command: &quot;ls&quot;
-    - debug:
-        msg: &quot;trek CLI ansible example&quot;
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">myansible</span>
+    <span class="l l-Scalar l-Scalar-Plain">become</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">yes</span>
+    <span class="l l-Scalar l-Scalar-Plain">gather_facts</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">no</span>
+    <span class="l l-Scalar l-Scalar-Plain">hosts</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">hosts</span>
+    <span class="l l-Scalar l-Scalar-Plain">tasks</span><span class="p p-Indicator">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">command</span><span class="p">:</span> <span class="s">&quot;echo</span><span class="nv"> </span><span class="s">{{message}}&quot;</span>
+    <span class="p p-Indicator">-</span> <span class="nt">command</span><span class="p">:</span> <span class="s">&quot;ls&quot;</span>
+    <span class="p p-Indicator">-</span> <span class="nt">debug</span><span class="p">:</span>
+        <span class="nt">msg</span><span class="p">:</span> <span class="s">&quot;trek</span><span class="nv"> </span><span class="s">CLI</span><span class="nv"> </span><span class="s">ansible</span><span class="nv"> </span><span class="s">example&quot;</span>
 </pre></div>
 </div>
 <div class="section" id="configuration">

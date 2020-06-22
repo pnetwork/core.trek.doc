@@ -46,7 +46,7 @@ Installing Trek VSCode Extension
 
 .. image:: ../../_static/images/show_cmds.png
 
-接著執行「 :doc:`../../reference/extension/commands/version` 」指令，顯示 Trek 版號於 Terminal 即表示安裝成功：
+接著執行「 :doc:`../../reference/extension/commands/trek_show_version` 」指令，顯示 Trek 版號於 Terminal 即表示安裝成功：
 
 .. image:: ../../_static/images/show_version.png
 

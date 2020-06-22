@@ -32,7 +32,7 @@ version = release
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ["sphinx.ext.autodoc", "sphinx.ext.extlinks"]
+extensions = ["sphinx.ext.autodoc", "sphinx.ext.extlinks", "recommonmark"]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
@@ -80,15 +80,17 @@ smartquotes = False
 extlinks = {
     "gitlink": ("https://github.com/pnetwork/core.trek.doc/%s", "github "),
     "exlink": (
-        "https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/host.detect.redis/%s",
+        "https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/host.detect.redis/%s",  # noqa
         "example project ",
     ),
     "exblckslink": (
-        "https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/host.detect.redis/src/blcks/detectredis/%s",
+        "https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/host.detect.redis/src/blcks/detectredis/%s", # noqa
         "example Blcks ",
     ),
     "trekdoclink": (
         "https://pnetwork.github.io/core.trek.doc/build/html/%s",
         "Trek doc ",
-    )
+    ),
 }
+
+source_suffix = {".rst": "restructuredtext", ".txt": "markdown", ".md": "markdown"} # noqa

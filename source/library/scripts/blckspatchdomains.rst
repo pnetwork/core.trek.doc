@@ -7,7 +7,7 @@ blckspatchdomains
 
     id: blckspatchdomains
     schemaVersion: '0.2'
-    version: 0.6.5
+    version: 0.7.0
     name: 域名注册与解析资讯查询
     title: 域名注册与解析资讯查询
     description: 域名注册与解析资讯查询
