@@ -16,8 +16,8 @@ SCRIPT_BASE_URL = (
 )
 
 WF_ENTRY_FILE = "manifest.json"
-WF_SAVE_PATH = os.path.join(dirname, os.pardir, "library", "workflows_list.html")
-SCRIPT_SAVE_PATH = os.path.join(dirname, os.pardir, "library", "scripts_list.html")
+WF_SAVE_PATH = os.path.join(dirname, os.pardir, "library", "workflows_list.rst")
+SCRIPT_SAVE_PATH = os.path.join(dirname, os.pardir, "library", "scripts_list.rst")
 
 
 def to_tuple(version_str):
@@ -59,14 +59,14 @@ def get_wf_list():
     r = requests.get(WF_BASE_URL)
     soup = BeautifulSoup(r.content, "html.parser")
     wf_urls = soup.findAll("a", href=True)
-    result = """<!DOCTYPE html>
-<html>
-<table class="ref">
-    <tr>
-        <th>Name</th>
-        <th>Template id</th>
-        <th>Description</th>
-    </tr>
+    result = """.. list-table:: 
+   :widths: 20 50 30
+   :class: ref
+   :header-rows: 1
+
+   * - Name
+     - Template id
+     - Description
 """
     for i in wf_urls:
         href = i.get("href")
@@ -88,16 +88,11 @@ def get_wf_list():
         wf_id = wf.get("graph", {}).get("metadata", {}).get("templateId")
 
         result += f"""
-    <tr>
-        <td>{wf_name}</td>
-        <td>{wf_id}</td>
-        <td>{wf_desc}</td>
-    </tr>"""
-    return result + """</table>
-<br/>
-<br/>
-</html>
-"""
+
+   * - {wf_name}
+     - {wf_id}
+     - {wf_desc} """
+    return result
 
 
 def extract_script(download_url):
@@ -119,15 +114,16 @@ def get_script_list():
     r = requests.get(SCRIPT_BASE_URL)
     soup = BeautifulSoup(r.content, "html.parser")
     script_urls = soup.findAll("a", href=True)
-    result = """<!DOCTYPE html>
-<html>
-<table class="ref">
-    <tr>
-        <th>Name</th>
-        <th>Script id</th>
-        <th>Description</th>
-        <th>Para schema file</th>
-    </tr>
+
+    result = """.. list-table:: 
+   :widths: 20 30 30 20
+   :class: ref
+   :header-rows: 1
+
+   * - Name
+     - Script id
+     - Description
+     - Para schema file
 """
     for i in script_urls:
         href = i.get("href")
@@ -146,26 +142,37 @@ def get_script_list():
 
         script_name = script.get("name")
         script_desc = script.get("description")
+        if "\n" in script_desc:
+            script_desc = "| " + script_desc.replace("\n", "\n       | ")
         script_id = script.get("id")
-        
+
         stream = yaml.dump(script, sort_keys=False, allow_unicode=True)
 
-        with open(os.path.join(dirname, os.pardir, "library", "scripts", script_id + ".rst"), "w") as f:
-            f.writelines([script_id, "\n**********************************\n| ", script_name, "\n| ", script_desc,"\n\n.. code-block:: yaml\n", "\n    "])
+        with open(
+            os.path.join(dirname, os.pardir, "library", "scripts", script_id + ".rst"),
+            "w",
+        ) as f:
+            f.writelines(
+                [
+                    script_id,
+                    "\n**********************************\n| ",
+                    script_name,
+                    "\n| ",
+                    script_desc,
+                    "\n\n.. code-block:: yaml\n",
+                    "\n    ",
+                ]
+            )
             f.write(stream.replace("\n", "\n    "))
 
         result += f"""
-    <tr>
-        <td>{script_name}</td>
-        <td>{script_id}</td>
-        <td>{script_desc}</td>
-        <td><a class="reference internal" href="scripts/{script_id}.html">view schema</a></td>
-    </tr>"""
-    return result + """</table>
-<br/>
-<br/>
-</html>
-"""
+
+   * - {script_name}
+     - {script_id}
+     - {script_desc}
+     - :doc:`view schema<scripts/{script_id}>`"""
+    return result
+
 
 if __name__ == "__main__":
     wf_result = get_wf_list()
@@ -175,5 +182,4 @@ if __name__ == "__main__":
     script_result = get_script_list()
     with open(SCRIPT_SAVE_PATH, "w") as f:
         f.write(script_result)
-    
-    
+

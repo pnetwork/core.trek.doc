@@ -7,7 +7,7 @@ blckscreatecert
 
     id: blckscreatecert
     schemaVersion: '0.2'
-    version: 0.1.2
+    version: 0.2.0
     name: 建立证书
     title: 建立证书
     description: 创建证书并配发至云端

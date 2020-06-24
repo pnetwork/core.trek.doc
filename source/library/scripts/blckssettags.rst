@@ -7,7 +7,7 @@ blckssettags
 
     id: blckssettags
     schemaVersion: '0.2'
-    version: 0.2.0
+    version: 0.3.0
     name: 资产设定标签
     title: 资产设定标签
     description: 输入 标签名、 新增/移除, 资产类别, 资产 id， 将选定资产新增或移除指定标签。
@@ -16,6 +16,7 @@ blckssettags
     - DOMAIN
     - CDN
     - HOST
+    - CERTIFICATE
     inputs:
       name:
         name: 标签名称
@@ -39,13 +40,15 @@ blckssettags
         description: 指定资产的类别
         type: string
         enum:
-        - server
-        - domain
-        - cdn
+        - SERVER
+        - DOMAIN
+        - CDN
+        - CERTIFICATE
         enumNames:
         - 服务器
         - 域名
         - CDN
+        - 凭证
       ids:
         name: id 列表
         description: 请输入欲添加标签之 id，一行一个 (i.e D-aa123)
