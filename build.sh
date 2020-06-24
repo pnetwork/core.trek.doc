@@ -41,44 +41,63 @@ make clean
 
 # copy references from trek repo
 if [ "$BUILD_TREK" == "1" ]; then
+    echo "git clone trek repo"
+    cd submodule
+    git submodule update --init --recursive $TREK_DIR
     echo "build document of trek"
-    cd ../$TREK_DIR
+    cd $TREK_DIR
     pip install -r requirements-docs.txt
     cd docs
+    rm -rf ./reference/commands/*
+    make clean
     make html
-    cd ../../$DIR
-    cp -r ../$TREK_DIR/docs/reference/commands ./source/reference/cli/
-    cp ../$TREK_DIR/CHANGELOG.md ./source/reference/cli/CHANGELOG.md
+    cd ../../../
+    rm -rf ./source/reference/cli/*
+    cp -r submodule/$TREK_DIR/docs/reference/commands ./source/reference/cli/
+    cp submodule/$TREK_DIR/CHANGELOG.md ./source/reference/cli/CHANGELOG.md
 fi
+
 
 # copy references from blcks sdk repo
 if [ "$BUILD_BLCKS" == "1" ]; then
+    echo "git clone blcks sdk repo"
+    cd submodule
+    git submodule update --init --recursive $BLKCS_SDK_DIR
     echo "build document of blcks sdk"
-    cd ../$BLKCS_SDK_DIR
+    cd $BLKCS_SDK_DIR
     pip install -r requirements-docs.txt
     python setup.py build
     python setup.py install
     cd docs
+    rm -rf ./reference/commands/*
+    make clean
     make html
-    cd ../../$DIR
+    cd ../../../
+    rm -rf ./source/reference/blcks/*
     # cp -r ../$BLKCS_SDK_DIR/docs/reference/clients ./source/reference/blcks
-    cp -r ../$BLKCS_SDK_DIR/docs/_static/images ./source/_static/
-    cp -r ../$BLKCS_SDK_DIR/docs/reference/services ./source/reference/blcks
-    cp ../$BLKCS_SDK_DIR/docs/guide/installation.rst ./source/reference/blcks/installation.rst
-    cp ../$BLKCS_SDK_DIR/docs/guide/configuration.rst ./source/reference/blcks/configuration.rst
-    cp ../$BLKCS_SDK_DIR/docs/guide/quickstart.rst ./source/reference/blcks/quickstart.rst
+    cp -r submodule/$BLKCS_SDK_DIR/docs/_static/images ./source/_static/
+    cp -r submodule/$BLKCS_SDK_DIR/docs/reference/services ./source/reference/blcks
+    cp submodule/$BLKCS_SDK_DIR/docs/guide/installation.rst ./source/reference/blcks/installation.rst
+    cp submodule/$BLKCS_SDK_DIR/docs/guide/configuration.rst ./source/reference/blcks/configuration.rst
+    cp submodule/$BLKCS_SDK_DIR/docs/guide/quickstart.rst ./source/reference/blcks/quickstart.rst
 fi
 
 # copy references from trek vscode extension repo
 if [ "$BUILD_EXT" == "1" ]; then
+    echo "git clone vscode extension repo"
+    cd submodule
+    git submodule update --init --recursive $VSCODE_EXTENSION_DIR
     echo "build document of trek vscode extension"
-    cd ../$VSCODE_EXTENSION_DIR
+    cd $VSCODE_EXTENSION_DIR
     pip install -r requirements-docs.txt
     cd docs
+    rm -rf ./reference/commands/*
+    make clean
     make html
-    cd ../../$DIR
-    cp -r ../$VSCODE_EXTENSION_DIR/docs/reference/commands ./source/reference/extension/
-    cp ../$VSCODE_EXTENSION_DIR/CHANGELOG.md ./source/reference/extension/CHANGELOG.md
+    cd ../../../
+    rm -rf ./source/reference/extension/*
+    cp -r submodule/$VSCODE_EXTENSION_DIR/docs/reference/commands ./source/reference/extension/
+    cp submodule/$VSCODE_EXTENSION_DIR/CHANGELOG.md ./source/reference/extension/CHANGELOG.md
 fi
 
 # copy references from extension repo
