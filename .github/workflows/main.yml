@@ -11,7 +11,7 @@ jobs:
         python-version: [3.7]
     env:
       MY_SECRET: ${{secrets.CHELSEA_SECRET}}
-      USER_NAME: ${{GITHUB_ACTOR}}
+      USER_NAME: chelsealo
       USER_EMAIL: chelsea.lo@pentium.network
     steps:
       - uses: actions/checkout@v2
@@ -30,11 +30,11 @@ jobs:
       - name: Set git config
         run: |
           git config user.email $USER_EMAIL
-          git config user.name $USER_NAME
+          git config user.name "$GITHUB_ACTOR"
       - name: Rebuild document files
         run: |
           git config user.email $USER_EMAIL
-          git config user.name $USER_NAME
+          git config user.name "$GITHUB_ACTOR"
           chmod +x ./build.sh
           sh ./build.sh --trek --vse --blcks
       - name: Commit and push built files
