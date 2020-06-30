@@ -32,7 +32,6 @@ jobs:
           chmod +x ./build.sh
           sh ./build.sh
       - name: deploy and publish
-        working-directory: ./public
         run: |
            pwd
            git status
