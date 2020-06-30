@@ -18,6 +18,10 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
+      - name: Set git config
+        run: |
+           git config user.email $USER_EMAIL
+           git config user.name $USER_NAME
       - name: Install dependencies
         run: |-
           python -m pip install --upgrade pip
@@ -28,10 +32,6 @@ jobs:
           sh ./build.sh --trek --vse --blcks
       - name: Commit and push built files
         run: |
-           pwd
-           git status
-           git config user.email $USER_EMAIL
-           git config user.name $USER_NAME
            git add . -A
            git commit -m "misc: Rebuild html"
            git push origin
