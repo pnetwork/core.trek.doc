@@ -44,7 +44,7 @@ make clean
 if [ "$BUILD_TREK" = "1" ]; then
     echo "git clone trek repo"
     cd submodule
-    git submodule update --init --recursive $TREK_DIR
+    # git submodule update --init --recursive $TREK_DIR
     echo "build document of trek"
     cd $TREK_DIR
     pip install -r requirements-docs.txt
@@ -63,7 +63,7 @@ fi
 if [ "$BUILD_BLCKS" = "1" ]; then
     echo "git clone blcks sdk repo"
     cd submodule
-    git submodule update --init --recursive $BLKCS_SDK_DIR
+    # git submodule update --init --recursive $BLKCS_SDK_DIR
     echo "build document of blcks sdk"
     cd $BLKCS_SDK_DIR
     pip install -r requirements-docs.txt
@@ -87,7 +87,7 @@ fi
 if [ "$BUILD_EXT" = "1" ]; then
     echo "git clone vscode extension repo"
     cd submodule
-    git submodule update --init --recursive $VSCODE_EXTENSION_DIR
+    # git submodule update --init --recursive $VSCODE_EXTENSION_DIR
     echo "build document of trek vscode extension"
     cd $VSCODE_EXTENSION_DIR
     pip install -r requirements-docs.txt

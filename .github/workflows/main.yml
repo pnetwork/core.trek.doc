@@ -10,11 +10,14 @@ jobs:
       matrix:
         python-version: [3.7]
     env:
-      MY_SECRET: ${{secrets.commit_secret}}
+      MY_SECRET: ${{secrets.CHELSEA_SECRET}}
       USER_NAME: chelsealopentinum
       USER_EMAIL: chelsea.lo@pentium.network
     steps:
       - uses: actions/checkout@v2
+        with:
+          token: ${{secrets.CHELSEA_SECRET}}
+          submodules: recursive
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
         with:
