@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           token: ${{secrets.CHELSEA_SECRET}}
-          submodules: recursive
+          submodules: true
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
         with:
