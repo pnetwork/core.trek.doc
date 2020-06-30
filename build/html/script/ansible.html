@@ -1,0 +1,340 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Developer Ansible &mdash; Pentium</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/table.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Working with VSCode Extension" href="../extension/vscode/index.html" />
+    <link rel="prev" title="Services" href="blcks/services.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Marvin Development Guide
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">GETTING STARTED</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../start/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../start/index.html#system-requirements">System Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../start/index.html#installing-trek-cli">Installing Trek CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../start/quick_start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../start/project_folder.html">The Project Directory Structure</a></li>
+</ul>
+<p class="caption"><span class="caption-text">USER GUIDE</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../config/index.html">Configuring the Trek CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow/index.html">Developer Workflow</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Developer Script</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="schema.html">Para Schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blcks/index.html">Developer Blcks</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Developer Ansible</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#configuration">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#working-with-trek-cli">Working with Trek CLI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#built-in-variables-in-ansible-runner">Built-in Variables in Ansible Runner</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../extension/vscode/index.html">Working with VSCode Extension</a></li>
+</ul>
+<p class="caption"><span class="caption-text">REFERENCES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cli/commands.html">CLI Command Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extension/vscode/commands.html">VSCode Extension Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../library/index.html">Library List</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/">Samples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ABOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/issues/">Issues Report</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Marvin Development Guide</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Developer Script</a> &raquo;</li>
+        
+      <li>Developer Ansible</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="developer-ansible">
+<h1>Developer Ansible<a class="headerlink" href="#developer-ansible" title="Permalink to this headline">¶</a></h1>
+<p>You can use <code class="docutils literal notranslate"><span class="pre">Trek</span></code> CLI to create an Ansible project.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> trek createansible myansible
+<span class="go">Ansible [myansible] creating...</span>
+<span class="go">Done</span>
+</pre></div>
+</div>
+<p>And then, you got a new Ansible project named myansible.
+You can write some codes in <code class="docutils literal notranslate"><span class="pre">myansible.yml</span></code></p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">myansible</span>
+    <span class="l l-Scalar l-Scalar-Plain">become</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">yes</span>
+    <span class="l l-Scalar l-Scalar-Plain">gather_facts</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">no</span>
+    <span class="l l-Scalar l-Scalar-Plain">hosts</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">hosts</span>
+    <span class="l l-Scalar l-Scalar-Plain">tasks</span><span class="p p-Indicator">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">command</span><span class="p">:</span> <span class="s">&quot;echo</span><span class="nv"> </span><span class="s">{{message}}&quot;</span>
+    <span class="p p-Indicator">-</span> <span class="nt">command</span><span class="p">:</span> <span class="s">&quot;ls&quot;</span>
+    <span class="p p-Indicator">-</span> <span class="nt">debug</span><span class="p">:</span>
+        <span class="nt">msg</span><span class="p">:</span> <span class="s">&quot;trek</span><span class="nv"> </span><span class="s">CLI</span><span class="nv"> </span><span class="s">ansible</span><span class="nv"> </span><span class="s">example&quot;</span>
+</pre></div>
+</div>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">當使用 Trek CLI 建立 Ansible 專案會產生以下的 <em>{your_ansible_project_path}/.trek/config.json</em>。</div>
+</div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;marvin_url&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;marvin_JWT&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;marvin_secret&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;local_inventory_file&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;input_event_path&quot;</span><span class="p">:</span> <span class="s2">&quot;inputs/event.yml&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;envs&quot;</span><span class="p">:</span> <span class="p">{}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">config.json 提供了專案、Global 兩種層級的設置，優先順序為專案 &gt; Global。</div>
+<div class="line">若 Ansible 專案是處於 Trek 專案下 (即在其 <cite>src/ansible/</cite> 下) 則讀取的優先順序為 <code class="docutils literal notranslate"><span class="pre">Ansible</span> <span class="pre">專案設置</span> <span class="pre">&gt;</span> <span class="pre">Trek</span> <span class="pre">專案設置</span> <span class="pre">&gt;</span> <span class="pre">Global</span> <span class="pre">設置</span></code>。</div>
+</div>
+<p>設置中的 <code class="docutils literal notranslate"><span class="pre">envs</span></code> 是 Ansible 執行時讀取的環境變數。</p>
+<div class="line-block">
+<div class="line"><a class="reference internal" href="../config/index.html#config-local-inventory-file"><span class="std std-ref">local_inventory_file</span></a> 為 Ansible inventory 環境設置檔；<a class="reference internal" href="../config/index.html#config-input-event-path"><span class="std std-ref">input_event_path</span></a> 為本機執行時指定的腳本輸入參數。</div>
+<div class="line">若想知道 <em>config.json</em> 的詳細介紹，請參考 <a class="reference external" href="https://pnetwork.github.io/core.trek.doc/build/html/config/config_list.html">Configuring Properties</a></div>
+</div>
+</div>
+<div class="section" id="working-with-trek-cli">
+<h2>Working with Trek CLI<a class="headerlink" href="#working-with-trek-cli" title="Permalink to this headline">¶</a></h2>
+<p>Trek can let you develop and test Ansible project in local machine.</p>
+<ol class="arabic simple">
+<li><p>create project</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> trek createansible myansible
+<span class="go">Ansible [myansible] creating...</span>
+<span class="go">This utility will walk you through creating a config.json file.</span>
+<span class="go">Marvin url []: https://your-marvin-url.com</span>
+<span class="go">Marvin JWT []: marvinJTW</span>
+<span class="go">Marvin secret []: marvinSecret</span>
+<span class="go">Done</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>write your own code</p></li>
+<li><p>execute Ansible in local machine</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> myansible
+<span class="gp">$</span> trek runansible
+<span class="go">starting ansible myansible...</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>pack and deploy to Marvin</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> trek deployansible --autobuildpush -y
+<span class="go">Deploy Ansible script...</span>
+<span class="go">Packing ansible: /Users/ansible_trek/myansible</span>
+<span class="go">Success packing, output: /Users/ansible_trek/myansible/bin/ansible.myansible-0.1.0.zip</span>
+<span class="go">Deploying: /Users/ansible_trek/myansible/bin/ansible.myansible-0.1.0.zip</span>
+<span class="go">Done</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="built-in-variables-in-ansible-runner">
+<h2>Built-in Variables in Ansible Runner<a class="headerlink" href="#built-in-variables-in-ansible-runner" title="Permalink to this headline">¶</a></h2>
+<p>There are some built-in variables that can be used in marvin ansible:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">authorization</span></code>: JWT token for caller</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">baseUrlWebhook</span></code>: Marvin URL</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pn_task_id</span></code>: Task ID for log tracking</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../extension/vscode/index.html" class="btn btn-neutral float-right" title="Working with VSCode Extension" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="blcks/services.html" class="btn btn-neutral float-left" title="Services" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Pentium Network Technology Ltd. All rights reserved.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

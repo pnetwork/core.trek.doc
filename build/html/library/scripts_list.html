@@ -1,0 +1,735 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>&lt;no title&gt; &mdash; Pentium</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/table.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Marvin Development Guide
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">GETTING STARTED</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../start/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../start/index.html#system-requirements">System Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../start/index.html#installing-trek-cli">Installing Trek CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../start/quick_start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../start/project_folder.html">The Project Directory Structure</a></li>
+</ul>
+<p class="caption"><span class="caption-text">USER GUIDE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../config/index.html">Configuring the Trek CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow/index.html">Developer Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../script/index.html">Developer Script</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extension/vscode/index.html">Working with VSCode Extension</a></li>
+</ul>
+<p class="caption"><span class="caption-text">REFERENCES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cli/commands.html">CLI Command Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extension/vscode/commands.html">VSCode Extension Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Library List</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/">Samples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ABOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/issues/">Issues Report</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Marvin Development Guide</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>&lt;no title&gt;</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <table class="colwidths-given ref docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 30%" />
+<col style="width: 30%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Script id</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Para schema file</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>创建阿里云 (AliCloud) 云服务器</p></td>
+<td><p>alicloud-instance</p></td>
+<td><p>透过 terraform 创建阿里云 (AliCloud) 云服务器。</p></td>
+<td><p><a class="reference internal" href="scripts/alicloud-instance.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>AppStore 上架状态检测器</p></td>
+<td><p>appstorecheck</p></td>
+<td><p>AppStore 上架状态检测器</p></td>
+<td><p><a class="reference internal" href="scripts/appstorecheck.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>列表讯息转换器</p></td>
+<td><p>arraytransformer</p></td>
+<td><p>将列表讯息转换为字串</p></td>
+<td><p><a class="reference internal" href="scripts/arraytransformer.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>创建亚马逊 (AWS) 云服务器</p></td>
+<td><p>aws-instance</p></td>
+<td><p>透过 terraform 创建亚马逊 (AWS) 云服务器。</p></td>
+<td><p><a class="reference internal" href="scripts/aws-instance.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>帐户余额告警</p></td>
+<td><p>balances</p></td>
+<td><p>定期检测帐户余额并发出告警</p></td>
+<td><p><a class="reference internal" href="scripts/balances.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>域名绑定解析商</p></td>
+<td><p>bindresolverkey</p></td>
+<td><p>尝试替系统内未绑定resolver key的domain，绑定一个可以解析该域名的key</p></td>
+<td><p><a class="reference internal" href="scripts/bindresolverkey.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>绑定子域名</p></td>
+<td><p>bindsubdomain</p></td>
+<td><p>将指定CDN与指定子域名配对绑定</p></td>
+<td><p><a class="reference internal" href="scripts/bindsubdomain.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>產生 let's encrypt 憑證</p></td>
+<td><p>blcksacmesh</p></td>
+<td><p>產生 let's encrypt 憑證</p></td>
+<td><p><a class="reference internal" href="scripts/blcksacmesh.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>過濾資產標籤</p></td>
+<td><p>blcksassettagfilter</p></td>
+<td><p>過濾資產標籤</p></td>
+<td><p><a class="reference internal" href="scripts/blcksassettagfilter.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>角色绑定</p></td>
+<td><p>blcksbindingrole</p></td>
+<td><p>角色绑定</p></td>
+<td><p><a class="reference internal" href="scripts/blcksbindingrole.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>配發憑證至雲金鑰</p></td>
+<td><p>blckscertdistribute</p></td>
+<td><p>配發憑證至雲金鑰</p></td>
+<td><p><a class="reference internal" href="scripts/blckscertdistribute.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>檢測域名是否有可用憑證</p></td>
+<td><p>blckscheckcertificate</p></td>
+<td><p>檢測域名是否有可用憑證</p></td>
+<td><p><a class="reference internal" href="scripts/blckscheckcertificate.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>证书过期检测</p></td>
+<td><p>blckscheckexpiredssl</p></td>
+<td><p>检测证书是否到期</p></td>
+<td><p><a class="reference internal" href="scripts/blckscheckexpiredssl.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>服务器连线测试</p></td>
+<td><p>blckscheckhostconnection</p></td>
+<td><p>对服务器连线测试，检测帐密及网路状态</p></td>
+<td><p><a class="reference internal" href="scripts/blckscheckhostconnection.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>删除回收站资产</p></td>
+<td><p>blcksclearrecycled</p></td>
+<td><p>设定回收资产的清除时间，清除已到期资产</p></td>
+<td><p><a class="reference internal" href="scripts/blcksclearrecycled.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>建立证书</p></td>
+<td><p>blckscreatecert</p></td>
+<td><p>创建证书并配发至云端</p></td>
+<td><p><a class="reference internal" href="scripts/blckscreatecert.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>添加子域名後同步 CDN</p></td>
+<td><p>blckscreatefqdnascdn</p></td>
+<td><p>添加子域名後，同步 CDN，若子域名已存在則直接執行同步 CDN。</p></td>
+<td><p><a class="reference internal" href="scripts/blckscreatefqdnascdn.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>取得 Marvin 資產內容</p></td>
+<td><p>blcksgetassets</p></td>
+<td><p>取得 Marvin 資產內容</p></td>
+<td><p><a class="reference internal" href="scripts/blcksgetassets.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>查找域名 ID</p></td>
+<td><p>blcksgetdomainids</p></td>
+<td><p>查找域名 ID</p></td>
+<td><p><a class="reference internal" href="scripts/blcksgetdomainids.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>查詢所有憑證相關的CDN</p></td>
+<td><p>blcksgetrelatedcdn</p></td>
+<td><p>查詢所有憑證相關的CDN</p></td>
+<td><p><a class="reference internal" href="scripts/blcksgetrelatedcdn.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Callback 憑證產生事件</p></td>
+<td><p>blcksmarvineventcallback</p></td>
+<td><p>Callback 憑證產生事件</p></td>
+<td><p><a class="reference internal" href="scripts/blcksmarvineventcallback.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>覆蓋域名解析紀錄</p></td>
+<td><p>blcksmigratefqdns</p></td>
+<td><p>先將所選擇的域名下的解析紀錄全部移除，再將原域名的解析紀錄覆蓋過去</p></td>
+<td><p><a class="reference internal" href="scripts/blcksmigratefqdns.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>更新应用 AppStore 下架报警的App清单</p></td>
+<td><p>blckspatchappstore</p></td>
+<td><p>更新应用 AppStore 下架报警的App清单</p></td>
+<td><p><a class="reference internal" href="scripts/blckspatchappstore.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>域名注册与解析资讯查询</p></td>
+<td><p>blckspatchdomains</p></td>
+<td><p>域名注册与解析资讯查询</p></td>
+<td><p><a class="reference internal" href="scripts/blckspatchdomains.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>批量添加备案失效/域名封禁/微信封禁标签</p></td>
+<td><p>blckssetdomainstags</p></td>
+<td><p>输入顶级域名，批量添加备案失效/域名封禁/微信封禁标签</p></td>
+<td><p><a class="reference internal" href="scripts/blckssetdomainstags.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>资产设定标签</p></td>
+<td><p>blckssettags</p></td>
+<td><p>输入 标签名、 新增/移除, 资产类别, 资产 id， 将选定资产新增或移除指定标签。</p></td>
+<td><p><a class="reference internal" href="scripts/blckssettags.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>同步子域名</p></td>
+<td><p>blckssyncfqdns</p></td>
+<td><p>同步子域名</p></td>
+<td><p><a class="reference internal" href="scripts/blckssyncfqdns.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>鏈路工作流程例外處理</p></td>
+<td><p>blckstunnelexception</p></td>
+<td><p>链路工作流程例外处理</p></td>
+<td><p><a class="reference internal" href="scripts/blckstunnelexception.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>更新 CDN 所使用的憑證</p></td>
+<td><p>blcksupdatecloudcertificate</p></td>
+<td><p>更新 CDN 所使用的憑證</p></td>
+<td><p><a class="reference internal" href="scripts/blcksupdatecloudcertificate.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>建立全站域名关联表</p></td>
+<td><p>buildresolverrelation</p></td>
+<td><p>利用所有使用者汇入系统内的解析商密钥，建立每一把r解析商密钥可解析的域名列表的对照表</p></td>
+<td><p><a class="reference internal" href="scripts/buildresolverrelation.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>复制DNS 记录至另一解析商</p></td>
+<td><p>bulkmigration</p></td>
+<td><p>将使用者所选取域名及subdomains，添加至选定的解析商密钥内</p></td>
+<td><p><a class="reference internal" href="scripts/bulkmigration.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>批量修改源站设置</p></td>
+<td><p>bulkorigins</p></td>
+<td><p>批量修改 CDN 的 origins</p></td>
+<td><p><a class="reference internal" href="scripts/bulkorigins.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>批量刷新</p></td>
+<td><p>bulkpurge</p></td>
+<td><div class="line-block">
+<div class="line">输入需要刷新对象的 URL（需要 <a class="reference external" href="http://">http://</a> 或 <a class="reference external" href="https://">https://</a>）或资料夹，一行一笔。</div>
+<div class="line">例如：</div>
+<div class="line"><a class="reference external" href="http://www.abc.com/test.html">http://www.abc.com/test.html</a></div>
+<div class="line"><a class="reference external" href="http://www.abc.com/">http://www.abc.com/</a></div>
+<div class="line"><br /></div>
+</div>
+</td>
+<td><p><a class="reference internal" href="scripts/bulkpurge.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>批量修改 HTTP 头</p></td>
+<td><p>bulkreqheaders</p></td>
+<td><p>批量修改cdn的http request headers</p></td>
+<td><p><a class="reference internal" href="scripts/bulkreqheaders.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>批量修改域名解析商</p></td>
+<td><p>bulkresolver</p></td>
+<td><p>仅支持域名注册商为 GoDaddy 及阿里云，域名注册商为 GoDaddy 支持切换任意域名解析商，域名注册商为阿里云仅支持切换回阿里云！</p></td>
+<td><p><a class="reference internal" href="scripts/bulkresolver.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>链路标籤</p></td>
+<td><p>bulktunneltag</p></td>
+<td><p>链路标籤处理与链路安装日誌</p></td>
+<td><p><a class="reference internal" href="scripts/bulktunneltag.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>链路对外连线测试</p></td>
+<td><p>bulktunneltest</p></td>
+<td><p>测试链路是否畅通，是否可对外连线</p></td>
+<td><p><a class="reference internal" href="scripts/bulktunneltest.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>批量下线域名</p></td>
+<td><p>bulkupdatenameservers</p></td>
+<td><p>批量下线域名与切换 name servers</p></td>
+<td><p><a class="reference internal" href="scripts/bulkupdatenameservers.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>批量预热</p></td>
+<td><p>bulkwarmup</p></td>
+<td><div class="line-block">
+<div class="line">输入需要预热对象的 URL（需要 <a class="reference external" href="http://">http://</a> 或 <a class="reference external" href="https://">https://</a>），一行一笔。</div>
+<div class="line">例如：</div>
+<div class="line"><a class="reference external" href="http://www.abc.com/test.html">http://www.abc.com/test.html</a></div>
+<div class="line"><a class="reference external" href="http://www.abc.com/test2.html">http://www.abc.com/test2.html</a></div>
+<div class="line"><br /></div>
+</div>
+</td>
+<td><p><a class="reference internal" href="scripts/bulkwarmup.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>链路 修改项目白名单</p></td>
+<td><p>bulkwhitelist</p></td>
+<td><p>链路 修改项目白名单</p></td>
+<td><p><a class="reference internal" href="scripts/bulkwhitelist.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>链路服务升级与重启脚本</p></td>
+<td><p>byos-chisel-restart</p></td>
+<td><p>奔腾预设脚本，对服务器升级与重启链路服务。</p></td>
+<td><p><a class="reference internal" href="scripts/byos-chisel-restart.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>安装链路元件脚本</p></td>
+<td><p>byos-tunnel-install</p></td>
+<td><p>奔腾预设脚本，对服务器安装链路元件脚本。</p></td>
+<td><p><a class="reference internal" href="scripts/byos-tunnel-install.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>设定链路脚本</p></td>
+<td><p>byos-tunnel-setup</p></td>
+<td><p>奔腾预设脚本，对服务器设定链路脚本，支持 Ansible2.9。</p></td>
+<td><p><a class="reference internal" href="scripts/byos-tunnel-setup.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>链路连线测试脚本</p></td>
+<td><p>byos-tunnel-test</p></td>
+<td><p>奔腾预设脚本，对链路连线测试脚本。</p></td>
+<td><p><a class="reference internal" href="scripts/byos-tunnel-test.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>呼叫 blcks SDK 服务</p></td>
+<td><p>callservice</p></td>
+<td><p>呼叫 blcks SDK 服务</p></td>
+<td><p><a class="reference internal" href="scripts/callservice.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>修改SSH密码脚本</p></td>
+<td><p>change-password</p></td>
+<td><p>奔腾预设脚本，对服务器修改SSH连线密码。</p></td>
+<td><p><a class="reference internal" href="scripts/change-password.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>修改SSH金钥脚本</p></td>
+<td><p>change-ssh-key</p></td>
+<td><p>奔腾预设脚本，对服务器修改SSH金钥。</p></td>
+<td><p><a class="reference internal" href="scripts/change-ssh-key.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>服务器过期检测</p></td>
+<td><p>checkexpiredhosts</p></td>
+<td><p>检测服务器是否到期</p></td>
+<td><p><a class="reference internal" href="scripts/checkexpiredhosts.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>服务器过期检测讯息转换器</p></td>
+<td><p>checkexpiredhostsadapter</p></td>
+<td><p>重组服务器过期检测讯息</p></td>
+<td><p><a class="reference internal" href="scripts/checkexpiredhostsadapter.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>域名过期检测</p></td>
+<td><p>checkexpiredtime</p></td>
+<td><p>检测域名是否到期</p></td>
+<td><p><a class="reference internal" href="scripts/checkexpiredtime.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>域名过期检测讯息转换器</p></td>
+<td><p>checkexpiredtimeadapter</p></td>
+<td><p>重组域名过期检测讯息</p></td>
+<td><p><a class="reference internal" href="scripts/checkexpiredtimeadapter.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>SSH登录白名单检测</p></td>
+<td><p>checkwhitelist</p></td>
+<td><p>检测非白名单SSH登录目标机時发出告警</p></td>
+<td><p><a class="reference internal" href="scripts/checkwhitelist.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>移除过期24小时的下载档案</p></td>
+<td><p>expiredfile</p></td>
+<td><p>移除过期24小时的下载档案</p></td>
+<td><p><a class="reference internal" href="scripts/expiredfile.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>文件上传</p></td>
+<td><p>fileupload</p></td>
+<td><p>将档案上传至指定服务器</p></td>
+<td><p><a class="reference internal" href="scripts/fileupload.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>创建 Google Cloud 云服务器</p></td>
+<td><p>gcp-instance</p></td>
+<td><p>透过 terraform 创建 Google Cloud 云服务器。</p></td>
+<td><p><a class="reference internal" href="scripts/gcp-instance.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>取得所属权限的失效 CDN</p></td>
+<td><p>getcdns</p></td>
+<td><p>取得所属权限的失效 CDN</p></td>
+<td><p><a class="reference internal" href="scripts/getcdns.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>取得云帐号</p></td>
+<td><p>getcloudaccounts</p></td>
+<td><p>取得云帐号</p></td>
+<td><p><a class="reference internal" href="scripts/getcloudaccounts.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>取得JWT所属权限的域名</p></td>
+<td><p>getdomains</p></td>
+<td><p>取得JWT所属权限的域名</p></td>
+<td><p><a class="reference internal" href="scripts/getdomains.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>批量检查域名是否被 GFW 封禁</p></td>
+<td><p>gfwcheck</p></td>
+<td><p>输入顶级域名，批量检查域名是否被 GFW 封禁</p></td>
+<td><p><a class="reference internal" href="scripts/gfwcheck.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>服务器资讯抓取脚本</p></td>
+<td><p>heartbeat-gethostsinfo</p></td>
+<td><p>奔腾预设脚本，对服务器抓取资讯脚本。</p></td>
+<td><p><a class="reference internal" href="scripts/heartbeat-gethostsinfo.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>部署奔腾 bootstrap 脚本</p></td>
+<td><p>host-bootstrap-install</p></td>
+<td><p>奔腾预设脚本，对服务器部署SSH纪录监控服务、服务器资讯监控服务、档案下载服务脚本。想了解安装详情，请参考用户手册。</p></td>
+<td><p><a class="reference internal" href="scripts/host-bootstrap-install.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>移除奔腾 bootstrap 脚本</p></td>
+<td><p>host-bootstrap-uninstall</p></td>
+<td><p>奔腾预设脚本，移除 bootstrap 脚本部署在服务器上的各项服务。</p></td>
+<td><p><a class="reference internal" href="scripts/host-bootstrap-uninstall.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>重启监控服务脚本</p></td>
+<td><p>host-monitor-restart</p></td>
+<td><p>奔腾预设脚本，对服务器重启监控服务脚本。</p></td>
+<td><p><a class="reference internal" href="scripts/host-monitor-restart.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>重启服务器脚本</p></td>
+<td><p>host-reboot</p></td>
+<td><p>奔腾预设脚本，重启服务器脚本。</p></td>
+<td><p><a class="reference internal" href="scripts/host-reboot.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>设定 net.core.somaxconn 至最大值</p></td>
+<td><p>host-somaxconn-max</p></td>
+<td><p>奔腾预设脚本，针对 CentOS 7 设定 net.core.somaxconn 至最大值。</p></td>
+<td><p><a class="reference internal" href="scripts/host-somaxconn-max.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>安装 CDN 自动刷新/预热脚本</p></td>
+<td><p>host.filewatch.install</p></td>
+<td><p>奔腾预设脚本，监控服务器上 web 服务的静态档案资料夹，如果有档案更新则自动驱动 CDN 预热刷新。</p></td>
+<td><p><a class="reference internal" href="scripts/host.filewatch.install.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>移除 CDN 自动刷新/预热脚本</p></td>
+<td><p>host.filewatch.remove</p></td>
+<td><p>奔腾预设脚本，对服务器部署移除静态资料夹监控脚本。</p></td>
+<td><p><a class="reference internal" href="scripts/host.filewatch.remove.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>批量检查域名是否未备案</p></td>
+<td><p>icpcheck</p></td>
+<td><p>输入顶级域名，批量检查域名是否未备案</p></td>
+<td><p><a class="reference internal" href="scripts/icpcheck.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>工作流程执行确认</p></td>
+<td><p>messageconfirm</p></td>
+<td><p>透过通讯软体，等待审核者审查回应</p></td>
+<td><p><a class="reference internal" href="scripts/messageconfirm.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>下载远端档案脚本</p></td>
+<td><p>mget-fetch-script</p></td>
+<td><p>奔腾预设脚本，下载远端档案脚本。</p></td>
+<td><p><a class="reference internal" href="scripts/mget-fetch-script.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>清除远端档案</p></td>
+<td><p>mget-fetch-script-remove</p></td>
+<td><p>奔腾预设脚本，清除远端档案。</p></td>
+<td><p><a class="reference internal" href="scripts/mget-fetch-script-remove.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>解析下载档案资讯</p></td>
+<td><p>mgetadapter</p></td>
+<td><p>解析来源服务器资讯和档案位置</p></td>
+<td><p><a class="reference internal" href="scripts/mgetadapter.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>行动介面处理</p></td>
+<td><p>mobileadapter</p></td>
+<td><p>请输入标题及描述</p></td>
+<td><p><a class="reference internal" href="scripts/mobileadapter.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>传送讯息至指定频道</p></td>
+<td><p>notification</p></td>
+<td><p>選擇 bot 配對，傳送訊息至指定頻道</p></td>
+<td><p><a class="reference internal" href="scripts/notification.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>产生下载档案存取路径</p></td>
+<td><p>objecturl</p></td>
+<td><p>从脚本执行日志输出解析档案存取路径，并且发送出 Marvin 事件，通知用户。</p></td>
+<td><p><a class="reference internal" href="scripts/objecturl.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>奔腾预设脚本 ls</p></td>
+<td><p>pentium-demo-ls</p></td>
+<td><p>奔腾预设脚本，ls。</p></td>
+<td><p><a class="reference internal" href="scripts/pentium-demo-ls.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Pentium Execute Commnad</p></td>
+<td><p>pentium-execute-command</p></td>
+<td><p>奔腾预设脚本，Execute Commnad.</p></td>
+<td><p><a class="reference internal" href="scripts/pentium-execute-command.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Pentium Execute Shell Script</p></td>
+<td><p>pentium-shell-script-trigger</p></td>
+<td><p>奔腾预设脚本，Execute Shell Script.</p></td>
+<td><p><a class="reference internal" href="scripts/pentium-shell-script-trigger.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>部署金钥</p></td>
+<td><p>pentium-upload-public-key</p></td>
+<td><p>奔腾预设脚本，部署金钥脚本.</p></td>
+<td><p><a class="reference internal" href="scripts/pentium-upload-public-key.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>准备 CDN</p></td>
+<td><p>preparecdn</p></td>
+<td><p>创建 CDN 并导入至平台</p></td>
+<td><p><a class="reference internal" href="scripts/preparecdn.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>安装脚本所需程式库</p></td>
+<td><p>python-lib-install</p></td>
+<td><p>奔腾预设脚本，对服务器安装脚本所需程式库。</p></td>
+<td><p><a class="reference internal" href="scripts/python-lib-install.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>服务器批量修改SSH端口</p></td>
+<td><p>sethostsport</p></td>
+<td><p>服务器批量修改SSH端口</p></td>
+<td><p><a class="reference internal" href="scripts/sethostsport.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>服务器批量添加标签</p></td>
+<td><p>sethoststags</p></td>
+<td><p>服务器批量添加标签</p></td>
+<td><p><a class="reference internal" href="scripts/sethoststags.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>SSH 日志处理</p></td>
+<td><p>sshlogadapter</p></td>
+<td><p>SSH 日志处理</p></td>
+<td><p><a class="reference internal" href="scripts/sshlogadapter.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>同步云帐号的资产</p></td>
+<td><p>syncassets</p></td>
+<td><p>同步云帐号的资产</p></td>
+<td><p><a class="reference internal" href="scripts/syncassets.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>全站云主机同步</p></td>
+<td><p>syncinstances</p></td>
+<td><p>批量同步平台所有云金钥的主机资讯</p></td>
+<td><p><a class="reference internal" href="scripts/syncinstances.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>讯息转换器</p></td>
+<td><p>templateengine</p></td>
+<td><p>讯息转换器</p></td>
+<td><p><a class="reference internal" href="scripts/templateengine.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>訊息轉換器(python3)</p></td>
+<td><p>templatepython3</p></td>
+<td><p>訊息轉換器(python3)</p></td>
+<td><p><a class="reference internal" href="scripts/templatepython3.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>创建腾讯云云服务器</p></td>
+<td><p>tencentcloud-instance</p></td>
+<td><p>透过 terraform 创建腾讯云 (TencentCloud) 云服务器。</p></td>
+<td><p><a class="reference internal" href="scripts/tencentcloud-instance.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>链路事件处理</p></td>
+<td><p>tunneleventhandler</p></td>
+<td><p>链路事件处理</p></td>
+<td><p><a class="reference internal" href="scripts/tunneleventhandler.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>更新CDN</p></td>
+<td><p>updatecdn</p></td>
+<td><p>更新CDN</p></td>
+<td><p><a class="reference internal" href="scripts/updatecdn.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>批量修改服务器 SSH 帐密</p></td>
+<td><p>updatepassword</p></td>
+<td><p>批量修改服务器 SSH 帐密</p></td>
+<td><p><a class="reference internal" href="scripts/updatepassword.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>同步数据库资讯至 Yearning</p></td>
+<td><p>updateyearning</p></td>
+<td><p>同步新增、修改、删除的数据库资讯至 Yearning</p></td>
+<td><p><a class="reference internal" href="scripts/updateyearning.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>创建 VMware 服务器 (Linux 作业系统)</p></td>
+<td><p>vsphere-clone-from-template</p></td>
+<td><p>透过 terraform 创建 Linux 作业系统之 VMware 服务器。</p></td>
+<td><p><a class="reference internal" href="scripts/vsphere-clone-from-template.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>域名微信封禁检测</p></td>
+<td><p>weixincheck</p></td>
+<td><p>输入域名，批量检查域名是否被微信封禁</p></td>
+<td><p><a class="reference internal" href="scripts/weixincheck.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>工作流程异常讯息</p></td>
+<td><p>wfexception</p></td>
+<td><p>收到工作流程异常结束讯息，产生系统日志</p></td>
+<td><p><a class="reference internal" href="scripts/wfexception.html"><span class="doc">view schema</span></a></p></td>
+</tr>
+</tbody>
+</table>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Pentium Network Technology Ltd. All rights reserved.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

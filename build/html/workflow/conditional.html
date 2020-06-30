@@ -1,0 +1,668 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Workflow Operators &mdash; Pentium</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/table.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Developer Script" href="../script/index.html" />
+    <link rel="prev" title="The First Workflow Project" href="example.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Marvin Development Guide
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">GETTING STARTED</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../start/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../start/index.html#system-requirements">System Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../start/index.html#installing-trek-cli">Installing Trek CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../start/quick_start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../start/project_folder.html">The Project Directory Structure</a></li>
+</ul>
+<p class="caption"><span class="caption-text">USER GUIDE</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../config/index.html">Configuring the Trek CLI</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Developer Workflow</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="schema.html">Workflow Schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example.html">The First Workflow Project</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Workflow Operators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">==</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">!=</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">&gt;=</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">&lt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">&lt;=</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sizeequals">sizeEquals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sizenotequals">sizeNotEquals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sizelessthan">sizeLessThan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sizelessthanequals">sizeLessThanEquals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sizegreaterthan">sizeGreaterThan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sizegreaterthanequals">sizeGreaterThanEquals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lengthequals">lengthEquals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lengthnotequals">lengthNotEquals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lengthlessthan">lengthLessThan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lengthlessthanequals">lengthLessThanEquals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lengthgreaterthan">lengthGreaterThan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lengthgreaterthanequals">lengthGreaterThanEquals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#have">have</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nothave">notHave</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#regex">regEx</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#workflow-logical-operators">Workflow Logical Operators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#and">and</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#or">or</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#and-or-and-or">and/or [ and/or... ]</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../script/index.html">Developer Script</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extension/vscode/index.html">Working with VSCode Extension</a></li>
+</ul>
+<p class="caption"><span class="caption-text">REFERENCES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cli/commands.html">CLI Command Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extension/vscode/commands.html">VSCode Extension Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../library/index.html">Library List</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/">Samples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ABOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/issues/">Issues Report</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Marvin Development Guide</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Developer Workflow</a> &raquo;</li>
+        
+      <li>Workflow Operators</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="workflow-operators">
+<h1>Workflow Operators<a class="headerlink" href="#workflow-operators" title="Permalink to this headline">¶</a></h1>
+<p>當一個 node 為條件式時 <code class="docutils literal notranslate"><span class="pre">type:</span> <span class="pre">selector</span></code>：</p>
+<div class="highlight-yaml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span>  <span class="p p-Indicator">-</span> <span class="nt">metadata</span><span class="p">:</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">selector</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">selector</span>
+    <span class="nt">id</span><span class="p">:</span> <span class="s">&#39;4&#39;</span>
+</pre></div>
+</td></tr></table></div>
+<p>條件式的條件會在 edge 上，若符合條件繼續往下執行，一個條件式的長相如下：</p>
+<div class="highlight-yaml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span>  <span class="p p-Indicator">-</span> <span class="nt">source</span><span class="p">:</span> <span class="s">&#39;4&#39;</span> <span class="c1"># 條件式 node id</span>
+    <span class="nt">target</span><span class="p">:</span> <span class="s">&#39;5&#39;</span> <span class="c1"># 條件式吻合時的下個 node id</span>
+    <span class="nt">metadata</span><span class="p">:</span>
+        <span class="nt">filters</span><span class="p">:</span>
+            <span class="nt">property</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nodes.4.fail_hosts_count</span>  <span class="c1"># 條件式比較欄位</span>
+            <span class="nt">operator</span><span class="p">:</span> <span class="s">&#39;&gt;&#39;</span>                       <span class="c1"># 條件式運算方式</span>
+            <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>                            <span class="c1"># 條件式比較目標</span>
+        <span class="nt">binding</span><span class="p">:</span>
+        <span class="c1"># 當符合條件式時，要傳給下個 node 的 inputs 欄位</span>
+        <span class="p p-Indicator">-</span> <span class="nt">property</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">str_message</span>
+          <span class="l l-Scalar l-Scalar-Plain">...</span>
+</pre></div>
+</td></tr></table></div>
+<p>下面會一一介紹 workflow 所支援的條件式運算子。</p>
+<div class="section" id="id1">
+<h2>==<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">比較兩值是否相等。</div>
+<div class="line">假設 nodes.4.fail_hosts_count 為 array 的長度，下面例子 if nodes.4.fail_hosts_count == 0：</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># False</span>
+<span class="nt">filters</span><span class="p">:</span>
+    <span class="nt">property</span><span class="p">:</span>  <span class="l l-Scalar l-Scalar-Plain">nodes.4.fail_hosts_count</span> <span class="c1"># 1</span>
+    <span class="nt">operator</span><span class="p">:</span> <span class="s">&#39;==&#39;</span>
+    <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>!=<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">比較兩值是否不相等。</div>
+<div class="line">假設 nodes.4.fail_hosts_count 為 array 的長度，下面例子 if nodes.4.fail_hosts_count != 0：</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># True</span>
+<span class="nt">filters</span><span class="p">:</span>
+    <span class="nt">property</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nodes.4.fail_hosts_count</span> <span class="c1"># 1</span>
+    <span class="nt">operator</span><span class="p">:</span> <span class="s">&#39;!=&#39;</span>
+    <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>&gt;<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">比較值是否大於指定數值。</div>
+<div class="line">假設 nodes.4.fail_hosts_count 為 array 的長度，下面例子 if nodes.4.fail_hosts_count &gt; 0：</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># True</span>
+<span class="nt">filters</span><span class="p">:</span>
+    <span class="nt">property</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nodes.4.fail_hosts_count</span> <span class="c1"># 1</span>
+    <span class="nt">operator</span><span class="p">:</span> <span class="s">&#39;&gt;&#39;</span>
+    <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>&gt;=<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">比較值是否大於等於指定數值。</div>
+<div class="line">假設 nodes.4.fail_hosts_count 為 array 的長度，下面例子 if nodes.4.fail_hosts_count &gt;= 0：</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># True</span>
+<span class="nt">filters</span><span class="p">:</span>
+    <span class="nt">property</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nodes.4.fail_hosts_count</span> <span class="c1"># 1</span>
+    <span class="nt">operator</span><span class="p">:</span> <span class="s">&#39;&gt;=&#39;</span>
+    <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>&lt;<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">比較值是否小於指定數值。</div>
+<div class="line">假設 nodes.4.fail_hosts_count 為 array 的長度，下面例子 if nodes.4.fail_hosts_count &lt; 0：</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># False</span>
+<span class="nt">filters</span><span class="p">:</span>
+    <span class="nt">property</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nodes.4.fail_hosts_count</span> <span class="c1"># 1</span>
+    <span class="nt">operator</span><span class="p">:</span> <span class="s">&#39;&lt;&#39;</span>
+    <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>&lt;=<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">比較值是否小於等於指定數值。</div>
+<div class="line">假設 nodes.4.fail_hosts_count 為 array 的長度，下面例子 if nodes.4.fail_hosts_count &lt;= 0：</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># False</span>
+<span class="nt">filters</span><span class="p">:</span>
+    <span class="nt">property</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nodes.4.fail_hosts_count</span> <span class="c1"># 1</span>
+    <span class="nt">operator</span><span class="p">:</span> <span class="s">&#39;&lt;=&#39;</span>
+    <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sizeequals">
+<h2>sizeEquals<a class="headerlink" href="#sizeequals" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">比較 array or string 的長度是否等於指定的數字。</div>
+<div class="line">假設 nodes.4.fail_hosts 為 list of objects，下面例子 if len( nodes.4.fail_hosts ) == 1：</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># True</span>
+<span class="nt">filters</span><span class="p">:</span>
+    <span class="nt">property</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nodes.4.fail_hosts</span>  <span class="c1"># [{&quot;id: &quot;H-123&quot;, &quot;name&quot;: &quot;I&#39;m host&quot;}]</span>
+    <span class="nt">operator</span><span class="p">:</span> <span class="s">&#39;sizeEquals&#39;</span>
+    <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sizenotequals">
+<h2>sizeNotEquals<a class="headerlink" href="#sizenotequals" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">比較 array or string 的長度是否不等於指定的數字。</div>
+<div class="line">假設 nodes.4.fail_hosts 為 list of objects，下面例子 if len( nodes.4.fail_hosts ) != 1：</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># False</span>
+<span class="nt">filters</span><span class="p">:</span>
+    <span class="nt">property</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nodes.4.fail_hosts</span>  <span class="c1"># [{&quot;id: &quot;H-123&quot;, &quot;name&quot;: &quot;I&#39;m host&quot;}]</span>
+    <span class="nt">operator</span><span class="p">:</span> <span class="s">&#39;sizeNotEquals&#39;</span>
+    <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sizelessthan">
+<h2>sizeLessThan<a class="headerlink" href="#sizelessthan" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">比較 array or string 的長度是否小於指定的數字。</div>
+<div class="line">假設 nodes.4.fail_hosts 為 list of objects，下面例子 if len( nodes.4.fail_hosts ) &lt; 5 。</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># True</span>
+<span class="nt">filters</span><span class="p">:</span>
+    <span class="nt">property</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nodes.4.fail_hosts</span>  <span class="c1"># [{&quot;id: &quot;H-123&quot;, &quot;name&quot;: &quot;I&#39;m host&quot;}]</span>
+    <span class="nt">operator</span><span class="p">:</span> <span class="s">&#39;sizeLessThan&#39;</span>
+    <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sizelessthanequals">
+<h2>sizeLessThanEquals<a class="headerlink" href="#sizelessthanequals" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">比較 array or string 的長度是否小於等於指定的數字。</div>
+<div class="line">假設 nodes.4.fail_hosts 為 list of objects，下面例子 if len( nodes.4.fail_hosts ) &lt;= 1 。</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># True</span>
+<span class="nt">filters</span><span class="p">:</span>
+    <span class="nt">property</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nodes.4.fail_hosts</span>  <span class="c1"># [{&quot;id: &quot;H-123&quot;, &quot;name&quot;: &quot;I&#39;m host&quot;}]</span>
+    <span class="nt">operator</span><span class="p">:</span> <span class="s">&#39;sizeLessThanEquals&#39;</span>
+    <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sizegreaterthan">
+<h2>sizeGreaterThan<a class="headerlink" href="#sizegreaterthan" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">比較 array or string 的長度是否大於指定的數字。</div>
+<div class="line">假設 nodes.4.fail_hosts 為 list of objects，下面例子 if len( nodes.4.fail_hosts ) &gt; 5：</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># False</span>
+<span class="nt">filters</span><span class="p">:</span>
+    <span class="nt">property</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nodes.4.fail_hosts</span>  <span class="c1"># [{&quot;id: &quot;H-123&quot;, &quot;name&quot;: &quot;I&#39;m host&quot;}]</span>
+    <span class="nt">operator</span><span class="p">:</span> <span class="s">&#39;sizeGreaterThan&#39;</span>
+    <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sizegreaterthanequals">
+<h2>sizeGreaterThanEquals<a class="headerlink" href="#sizegreaterthanequals" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">比較 array or string 的長度是否大於等於指定的數字。</div>
+<div class="line">假設 nodes.4.fail_hosts 為 list of objects，下面例子 if len( nodes.4.fail_hosts ) &gt;= 5：</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># False</span>
+<span class="nt">filters</span><span class="p">:</span>
+    <span class="nt">property</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nodes.4.fail_hosts</span>  <span class="c1"># [{&quot;id: &quot;H-123&quot;, &quot;name&quot;: &quot;I&#39;m host&quot;}]</span>
+    <span class="nt">operator</span><span class="p">:</span> <span class="s">&#39;sizeGreaterThanEquals&#39;</span>
+    <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="lengthequals">
+<h2>lengthEquals<a class="headerlink" href="#lengthequals" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">比較 string 的長度是否相同。</div>
+<div class="line">假設 nodes.2.result 為 string，下面例子 if len( nodes.2.result ) == len( &quot;Good&quot; )：</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># False</span>
+<span class="nt">filters</span><span class="p">:</span>
+    <span class="nt">property</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nodes.2.result</span>  <span class="c1"># &quot;Good&quot;</span>
+    <span class="nt">operator</span><span class="p">:</span> <span class="s">&#39;lengthEquals&#39;</span>
+    <span class="nt">value</span><span class="p">:</span> <span class="s">&#39;Good</span><span class="nv"> </span><span class="s">morning&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="lengthnotequals">
+<h2>lengthNotEquals<a class="headerlink" href="#lengthnotequals" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">比較 string 的長度是否不相同。</div>
+<div class="line">假設 nodes.2.result 為 string，下面例子 if len( nodes.2.result ) != len( &quot;Good&quot; )：</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># True</span>
+<span class="nt">filters</span><span class="p">:</span>
+    <span class="nt">property</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nodes.2.result</span>  <span class="c1"># &quot;Good&quot;</span>
+    <span class="nt">operator</span><span class="p">:</span> <span class="s">&#39;lengthNotEquals&#39;</span>
+    <span class="nt">value</span><span class="p">:</span> <span class="s">&#39;Good</span><span class="nv"> </span><span class="s">morning&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="lengthlessthan">
+<h2>lengthLessThan<a class="headerlink" href="#lengthlessthan" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">比較 string 的長度是否小於被比較的 string。</div>
+<div class="line">假設 nodes.2.result 為 string，下面例子 if len( nodes.2.result ) &lt; len( &quot;Good&quot; )：</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># True</span>
+<span class="nt">filters</span><span class="p">:</span>
+    <span class="nt">property</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nodes.2.result</span>  <span class="c1"># &quot;Good&quot;</span>
+    <span class="nt">operator</span><span class="p">:</span> <span class="s">&#39;lengthLessThan&#39;</span>
+    <span class="nt">value</span><span class="p">:</span> <span class="s">&#39;Good</span><span class="nv"> </span><span class="s">morning&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="lengthlessthanequals">
+<h2>lengthLessThanEquals<a class="headerlink" href="#lengthlessthanequals" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">比較 string 的長度是否小於等於被比較的 string。</div>
+<div class="line">假設 nodes.2.result 為 string，下面例子 if len( nodes.2.result ) &lt;= len( &quot;Good&quot; )：</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># True</span>
+<span class="nt">filters</span><span class="p">:</span>
+    <span class="nt">property</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nodes.2.result</span>  <span class="c1"># &quot;Good&quot;</span>
+    <span class="nt">operator</span><span class="p">:</span> <span class="s">&#39;lengthLessThanEquals&#39;</span>
+    <span class="nt">value</span><span class="p">:</span> <span class="s">&#39;Good</span><span class="nv"> </span><span class="s">morning&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="lengthgreaterthan">
+<h2>lengthGreaterThan<a class="headerlink" href="#lengthgreaterthan" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">比較 string 的長度是否大於被比較的 string。</div>
+<div class="line">假設 nodes.2.result 為 string，下面例子 if len( nodes.2.result ) &gt; len( &quot;Good&quot; )：</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># False</span>
+<span class="nt">filters</span><span class="p">:</span>
+    <span class="nt">property</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nodes.2.result</span>  <span class="c1"># &quot;Good&quot;</span>
+    <span class="nt">operator</span><span class="p">:</span> <span class="s">&#39;lengthGreaterThan&#39;</span>
+    <span class="nt">value</span><span class="p">:</span> <span class="s">&#39;Good</span><span class="nv"> </span><span class="s">morning&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="lengthgreaterthanequals">
+<h2>lengthGreaterThanEquals<a class="headerlink" href="#lengthgreaterthanequals" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">比較 string 的長度是否大於等於被比較的 string。</div>
+<div class="line">假設 nodes.2.result 為 string，下面例子 if len( nodes.2.result ) &gt;= len( &quot;Good&quot; )：</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># False</span>
+<span class="nt">filters</span><span class="p">:</span>
+    <span class="nt">property</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nodes.2.result</span>  <span class="c1"># &quot;Good&quot;</span>
+    <span class="nt">operator</span><span class="p">:</span> <span class="s">&#39;lengthGreaterThanEquals&#39;</span>
+    <span class="nt">value</span><span class="p">:</span> <span class="s">&#39;Good</span><span class="nv"> </span><span class="s">morning&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="have">
+<h2>have<a class="headerlink" href="#have" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">判斷指定值是否存在於 string or array 中。</div>
+<div class="line">假設 nodes.2.result 為 string，下面例子 if nodes.2.result in &quot;Good&quot; ：</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># True</span>
+<span class="nt">filters</span><span class="p">:</span>
+    <span class="nt">property</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nodes.2.result</span>  <span class="c1"># &quot;Good&quot;</span>
+    <span class="nt">operator</span><span class="p">:</span> <span class="s">&#39;have&#39;</span>
+    <span class="nt">value</span><span class="p">:</span> <span class="s">&#39;Good</span><span class="nv"> </span><span class="s">morning&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="nothave">
+<h2>notHave<a class="headerlink" href="#nothave" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">判斷指定值是否不存在於 string or array 中。</div>
+<div class="line">假設 nodes.2.result 為 string，下面例子 if nodes.2.result not in &quot;Good&quot; ：</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># False</span>
+<span class="nt">filters</span><span class="p">:</span>
+    <span class="nt">property</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nodes.2.result</span>  <span class="c1"># &quot;Good&quot;</span>
+    <span class="nt">operator</span><span class="p">:</span> <span class="s">&#39;notHave&#39;</span>
+    <span class="nt">value</span><span class="p">:</span> <span class="s">&#39;Good</span><span class="nv"> </span><span class="s">morning&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="regex">
+<h2>regEx<a class="headerlink" href="#regex" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">Regular expression。</div>
+<div class="line">假設 nodes.2.result 為 string，下面例子 if nodes.2.result not in &quot;Good&quot; ：</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># True</span>
+<span class="nt">filters</span><span class="p">:</span>
+    <span class="nt">property</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nodes.2.result</span>  <span class="c1"># &quot;Good&quot;</span>
+    <span class="nt">operator</span><span class="p">:</span> <span class="s">&#39;regEx&#39;</span>
+    <span class="nt">value</span><span class="p">:</span> <span class="s">&#39;[A-Za-z]+&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="workflow-logical-operators">
+<h1>Workflow Logical Operators<a class="headerlink" href="#workflow-logical-operators" title="Permalink to this headline">¶</a></h1>
+<div class="line-block">
+<div class="line">條件式彼此間可以使用 and, or 來 join 條件。</div>
+</div>
+<div class="section" id="and">
+<h2>and<a class="headerlink" href="#and" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">同時符合多組條件式的描述。</div>
+<div class="line">假設 nodes.4.fail_hosts_count 為 array 的長度，下面例子 if nodes.4.fail_hosts_count &gt; 0 and nodes.4.fail_hosts_count &lt; 5 ：</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># True</span>
+<span class="nt">filters</span><span class="p">:</span>
+  <span class="nt">and</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">property</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nodes.4.fail_hosts_count</span>  <span class="c1"># 1</span>
+      <span class="nt">operator</span><span class="p">:</span> <span class="s">&quot;&gt;&quot;</span>
+      <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+    <span class="p p-Indicator">-</span> <span class="nt">property</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nodes.4.fail_hosts_count</span>  <span class="c1"># 1</span>
+      <span class="nt">operator</span><span class="p">:</span> <span class="s">&quot;&lt;&quot;</span>
+      <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="or">
+<h2>or<a class="headerlink" href="#or" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">同時符合任一組條件式的描述。</div>
+<div class="line">假設 nodes.4.fail_hosts_count 為 array 的長度，下面例子 if nodes.4.fail_hosts_count == 0 or nodes.4.fail_hosts_count == 5 ：</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># True</span>
+<span class="nt">filters</span><span class="p">:</span>
+  <span class="nt">or</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">property</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nodes.4.fail_hosts_count</span>  <span class="c1"># 1</span>
+      <span class="nt">operator</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">==</span>
+      <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+    <span class="p p-Indicator">-</span> <span class="nt">property</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nodes.4.fail_hosts_count</span>  <span class="c1"># 1</span>
+      <span class="nt">operator</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;=</span>
+      <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="and-or-and-or">
+<h2>and/or [ and/or... ]<a class="headerlink" href="#and-or-and-or" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">and/or 可以包含彼此，其中 and 可以包含多組 or，or 也能包含多組 and。</div>
+<div class="line">假設 nodes.4.fail_hosts_count 為 array 的長度，nodes.2.result 為 string，下面例子</div>
+<div class="line">if nodes.4.fail_hosts_count &gt; 0 and ( nodes.2.result == &quot;Good&quot; or nodes.2.result == &quot;Good morning&quot;) ：</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">filters</span><span class="p">:</span>
+  <span class="nt">and</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">property</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nodes.4.fail_hosts_count</span>    <span class="c1"># 1</span>
+      <span class="nt">operator</span><span class="p">:</span> <span class="s">&quot;&gt;&quot;</span>
+      <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+
+    <span class="p p-Indicator">-</span> <span class="nt">or</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">property</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nodes.2.result</span>            <span class="c1"># &quot;Good&quot;</span>
+        <span class="nt">operator</span><span class="p">:</span> <span class="s">&quot;==&quot;</span>
+        <span class="nt">value</span><span class="p">:</span> <span class="s">&quot;Good&quot;</span>
+      <span class="p p-Indicator">-</span> <span class="nt">property</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nodes.2.result</span>            <span class="c1"># &quot;Good&quot;</span>
+        <span class="nt">operator</span><span class="p">:</span> <span class="s">&quot;==&quot;</span>
+        <span class="nt">value</span><span class="p">:</span> <span class="s">&quot;Good</span><span class="nv"> </span><span class="s">morning&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../script/index.html" class="btn btn-neutral float-right" title="Developer Script" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="example.html" class="btn btn-neutral float-left" title="The First Workflow Project" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Pentium Network Technology Ltd. All rights reserved.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
