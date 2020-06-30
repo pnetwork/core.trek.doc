@@ -1,5 +1,6 @@
 build/doctrees/
 source/_build
+build/
 .vscode
 *.vsix
 run.sh

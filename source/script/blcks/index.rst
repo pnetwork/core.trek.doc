@@ -6,7 +6,6 @@ Developer Blcks
 
     ../../reference/blcks/installation
     ../../reference/blcks/configuration
-    schema 
     ../../reference/blcks/quickstart
     services
 
