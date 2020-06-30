@@ -1,7 +1,6 @@
 name: Chelsea test
 
-on:
-  push
+on: push
 
 jobs:
   build:
@@ -9,18 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
+        node-version: [10.x]
         python-version: [3.7]
     steps:
-      - uses: actions/checkout@v2
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          python-version: ${{ matrix.python-version }}
-      - name: Install dependencies
-        run: |-
-          python -m pip install --upgrade pip
-          pip install -r requirements-docs.txt
-      - name: Build html
-        run: |
-          chmod +x ./build.sh
-          sh ./build.sh
+          github_token: ${{ secrets.CHELSEA_SECRET }}
+          publish_dir: ./public
