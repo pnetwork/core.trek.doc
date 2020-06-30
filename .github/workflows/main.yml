@@ -14,14 +14,11 @@ jobs:
       USER_NAME: chelsealopentinum
       USER_EMAIL: chelsea.lo@pentium.network
     steps:
-      - name: Fix submodules
-        run: echo -e '[url "https://github.com/"]\n  insteadOf = "git@github.com:"' >> ~/.gitconfig
-      - name: Checkout
-        uses: actions/checkout@v1
+      - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-          submodules: true
           token: ${{secrets.CHELSEA_SECRET}}
+          submodules: true
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
         with:
@@ -46,4 +43,4 @@ jobs:
           git config user.name $USER_NAME
           git add . -A
           git commit -m "misc: Rebuild html"
-          git push origin
+          git push
