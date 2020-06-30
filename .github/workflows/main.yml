@@ -34,6 +34,8 @@ jobs:
       - name: deploy and publish
         working-directory: ./public
         run: |
+           pwd
+           git status
            git config --local user.email "chelsea.lo@pentium.network"
            git config --local user.name "chelsealopentinum"
            git add . -A
