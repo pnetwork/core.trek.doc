@@ -4,39 +4,34 @@ on: push
 
 jobs:
   build:
-    name: Set up environments
+    name: Rebuild gh-pages document
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [10.x]
         python-version: [3.7]
+    env:
+      USER_NAME   : ${{github.actor}}
+      USER_EMAIL  : ${{github.actor}}@users.noreply.github.com
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
       - name: Install dependencies
         run: |-
           python -m pip install --upgrade pip
           pip install -r requirements-docs.txt
-      - name: npm install
-        run: |
-          npm install
-      - name: Build html
+      - name: Rebuild document files
         run: |
           chmod +x ./build.sh
-          sh ./build.sh
-      - name: deploy and publish
+          sh ./build.sh --trek --vse --blcks
+      - name: Commit and push built files
         run: |
            pwd
            git status
-           git config --local user.email "chelsea.lo@pentium.network"
-           git config --local user.name "chelsealopentinum"
+           git config user.email $USER_EMAIL
+           git config user.name $USER_NAME
            git add . -A
            git commit -m "misc: Rebuild html"
            git push origin
