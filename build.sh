@@ -8,6 +8,8 @@ BUILD_TREK="0"
 BUILD_EXT="0"
 BUILD_BLCKS="0"
 
+pwd
+
 while test $# -gt 0; do
   case "$1" in
     -h|--help)

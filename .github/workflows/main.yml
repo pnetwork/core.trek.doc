@@ -33,7 +33,7 @@ jobs:
       - name: Rebuild document files
         run: |
           chmod +x ./build.sh
-          sh ./build.sh --trek --vse --blcks
+          sh ./build.sh --trek
       - name: Commit and push built files
         run: |
           git add . -A
