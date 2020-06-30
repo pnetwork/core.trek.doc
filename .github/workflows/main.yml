@@ -10,14 +10,13 @@ jobs:
       matrix:
         python-version: [3.7]
     env:
-      MY_SECRET: ${{secrets.CHELSEA_SECRET}}
       USER_NAME: chelsealo
       USER_EMAIL: chelsea.lo@pentium.network
     steps:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-          token: "$MY_SECRET"
+          token: ${{secrets.CHELSEA_SECRET}}
           submodules: true
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
@@ -29,18 +28,14 @@ jobs:
           pip install -r requirements-docs.txt
       - name: Set git config
         run: |
-          git config user.email $USER_EMAIL
-          git config user.name "$GITHUB_ACTOR"
+          git config --local user.email "$USER_EMAIL"
+          git config --local user.name "$USER_NAME"
       - name: Rebuild document files
         run: |
-          git config user.email $USER_EMAIL
-          git config user.name "$GITHUB_ACTOR"
           chmod +x ./build.sh
           sh ./build.sh --trek --vse --blcks
       - name: Commit and push built files
         run: |
-          git config user.email $USER_EMAIL
-          git config user.name $USER_NAME
           git add . -A
           git commit -m "misc: Rebuild html"
           git push
