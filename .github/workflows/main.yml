@@ -11,7 +11,7 @@ jobs:
         python-version: [3.7]
     env:
       MY_SECRET: ${{secrets.CHELSEA_SECRET}}
-      USER_NAME: ${{github.actor}}
+      USER_NAME: ${{GITHUB_ACTOR}}
       USER_EMAIL: chelsea.lo@pentium.network
     steps:
       - uses: actions/checkout@v2
