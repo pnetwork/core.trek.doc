@@ -89,7 +89,8 @@ fi
 if [ "$BUILD_EXT" = "1" ]; then
     echo "git clone vscode extension repo"
     cd submodule
-    git submodule update --init --remote $VSCODE_EXTENSION_DIR
+    git submodule sync $VSCODE_EXTENSION_DIR
+    git submodule update --init --recursive --remote $VSCODE_EXTENSION_DIR
     cd $VSCODE_EXTENSION_DIR
     git pull
     echo "build document of trek vscode extension"
