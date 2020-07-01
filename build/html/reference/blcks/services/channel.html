@@ -1,0 +1,395 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ChannelManager &mdash; Pentium</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/table.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="CloudAccountManager" href="cloud_account.html" />
+    <link rel="prev" title="CertificateManager" href="certificate.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home" alt="Documentation Home"> Marvin Development Guide
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">GETTING STARTED</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../start/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../start/index.html#system-requirements">System Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../start/index.html#installing-trek-cli">Installing Trek CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../start/quick_start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../start/project_folder.html">The Project Directory Structure</a></li>
+</ul>
+<p class="caption"><span class="caption-text">USER GUIDE</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../config/index.html">Configuring the Trek CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../workflow/index.html">Developer Workflow</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../script/index.html">Developer Script</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../script/schema.html">Para Schema</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../script/blcks/index.html">Developer Blcks</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quickstart.html">Quick Start</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../../script/blcks/services.html">Services</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../script/ansible.html">Developer Ansible</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../extension/vscode/index.html">Working with VSCode Extension</a></li>
+</ul>
+<p class="caption"><span class="caption-text">REFERENCES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../cli/commands.html">CLI Command Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../extension/vscode/commands.html">VSCode Extension Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../library/index.html">Library List</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/">Samples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ABOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/issues/">Issues Report</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Marvin Development Guide</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../../script/index.html">Developer Script</a> &raquo;</li>
+        
+          <li><a href="../../../script/blcks/index.html">Developer Blcks</a> &raquo;</li>
+        
+          <li><a href="../../../script/blcks/services.html">Services</a> &raquo;</li>
+        
+      <li>ChannelManager</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="channelmanager">
+<h1>ChannelManager<a class="headerlink" href="#channelmanager" title="Permalink to this headline">¶</a></h1>
+<p>Pentium Channel service class</p>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">blcks.services.channel.</code><code class="sig-name descname">ChannelManager</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cred</span></em>, <em class="sig-param"><span class="n">event</span></em>, <em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span></dt>
+<dd><p>ChannelManager: Channel management base class</p>
+<p>since class might inheritant from multiple base classes,
+all the functions need a prefix or postfix to distinguish the difference</p>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">getChatbotChannels</code><span class="sig-paren">(</span><em class="sig-param">sort='created'</em>, <em class="sig-param">order=&lt;OrderBy.Desc: 'desc'&gt;</em>, <em class="sig-param">offset=0</em>, <em class="sig-param">limit=0</em>, <em class="sig-param">search=None</em><span class="sig-paren">)</span></dt>
+<dd><p>do get message to specified channel</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sort</strong> (<em>str</em>) -- which elements you want to sort</p></li>
+<li><p><strong>order</strong> (<em>OrderBy</em>) -- sorting order, now support OrderBy.Desc and OrderBy.Asc</p></li>
+<li><p><strong>offset</strong> (<em>int</em>) -- the offset of the object array index,             default is 0 if this parameter is not presented</p></li>
+<li><p><strong>limit</strong> (<em>int</em>) -- the amount of object will be returned from the specified offset,             default is 0 which means get all if its’ not presented</p></li>
+<li><p><strong>search</strong> (<em>str</em>) -- the search tags user input</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Return a list of bot channels along with detail information</p>
+</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;CH-000000001&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;botId&quot;</span><span class="p">:</span> <span class="s2">&quot;BOT-000000001&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;imBotId&quot;</span><span class="p">:</span> <span class="s2">&quot;UXE01JHAS&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;imBotName&quot;</span><span class="p">:</span> <span class="s2">&quot;MyChatbot&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;imBotToken&quot;</span><span class="p">:</span> <span class="s2">&quot;123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;webhook&quot;</span><span class="p">:</span> <span class="s2">&quot;https://canary.pentium.network/api/chatbots/{UUID}&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;imChannelId&quot;</span><span class="p">:</span> <span class="s2">&quot;-35584231&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;imChannelName&quot;</span><span class="p">:</span> <span class="s2">&quot;#dinner&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;imChannelType&quot;</span><span class="p">:</span> <span class="s2">&quot;GROUP&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;This is my bot channel.&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;provider&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;IMP-000000001&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;telegram&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;TG&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;projects&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;PJ-000000002&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Your awesome project&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;projectType&quot;</span><span class="p">:</span> <span class="s2">&quot;INVENTORY&quot;</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;permission&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;DELETE&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+                <span class="nt">&quot;DEPLOY&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nt">&quot;READ&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nt">&quot;REFRESH_PURGE&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nt">&quot;SYNC&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nt">&quot;UPDATE&quot;</span><span class="p">:</span> <span class="kc">false</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The bot seldom talks.&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="mi">1234567890</span><span class="p">,</span>
+            <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="mi">1234567890</span><span class="p">,</span>
+            <span class="nt">&quot;createdBy&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;account&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;updatedBy&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;account&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;search&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;offset&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;limit&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;sort&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;order&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">sendNotifications</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">chatbot_id</span></em>, <em class="sig-param"><span class="n">channel_id</span></em>, <em class="sig-param"><span class="n">content</span></em>, <em class="sig-param"><span class="n">blocks</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span></dt>
+<dd><p>do sending message to specified channel</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>chatbot_id</strong> (<em>string</em>) -- </p></li>
+<li><p><strong>channel_id</strong> (<em>string</em>) -- </p></li>
+<li><p><strong>content</strong> (<em>list</em>) -- </p></li>
+<li><p><strong>content</strong> -- list of send messages</p></li>
+<li><p><strong>blocks</strong> -- list of list of Block objects to describe buttons display on IM.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Return the updated IM channel with details</p>
+</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;messages received. sending to IM services.&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">showConfirmWindow</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">chatbot_id</span></em>, <em class="sig-param"><span class="n">channel_id</span></em>, <em class="sig-param"><span class="n">content</span></em>, <em class="sig-param"><span class="n">ok_button_text</span><span class="o">=</span><span class="default_value">'Ok'</span></em>, <em class="sig-param"><span class="n">cancel_button_text</span><span class="o">=</span><span class="default_value">'Cancel'</span></em><span class="sig-paren">)</span></dt>
+<dd><p>show confirm window specified channel</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>chatbot_id</strong> (<em>string</em>) -- </p></li>
+<li><p><strong>channel_id</strong> (<em>string</em>) -- </p></li>
+<li><p><strong>content</strong> (<em>string</em>) -- content to display</p></li>
+<li><p><strong>ok_button_text</strong> (<em>string</em>) -- text on ok button</p></li>
+<li><p><strong>cancel_button_text</strong> (<em>string</em>) -- text on cancel button</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>request result</p>
+</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;messages received. sending to IM services.&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cloud_account.html" class="btn btn-neutral float-right" title="CloudAccountManager" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="certificate.html" class="btn btn-neutral float-left" title="CertificateManager" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Pentium Network Technology Ltd. All rights reserved.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
