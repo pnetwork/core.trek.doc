@@ -89,11 +89,14 @@ fi
 if [ "$BUILD_EXT" = "1" ]; then
     echo "git clone vscode extension repo"
     cd submodule
+    git submodule sync $VSCODE_EXTENSION_DIR
     git submodule update --init --remote $VSCODE_EXTENSION_DIR
     echo "build document of trek vscode extension"
     cd $VSCODE_EXTENSION_DIR
+    echo "pip install"
     pip install -r requirements-docs.txt
     cd docs
+    echo "rm**"
     rm -rf ./reference/commands/*
     make clean
     make html
