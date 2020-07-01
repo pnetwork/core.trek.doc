@@ -40,7 +40,7 @@ while test $# -gt 0; do
   esac
 done
 
-make clean
+# make clean
 
 # copy references from trek repo
 if [ "$BUILD_TREK" = "1" ]; then
@@ -89,24 +89,24 @@ fi
 if [ "$BUILD_EXT" = "1" ]; then
     echo "git clone vscode extension repo"
     cd submodule
-    git submodule sync $VSCODE_EXTENSION_DIR
+    git submodule sync -- $VSCODE_EXTENSION_DIR
     git submodule update --init --remote $VSCODE_EXTENSION_DIR
     echo "build document of trek vscode extension"
-    cd $VSCODE_EXTENSION_DIR
-    echo "pip install"
-    pip install -r requirements-docs.txt
-    cd docs
-    echo "rm**"
-    rm -rf ./reference/commands/*
-    make clean
-    make html
-    cd ../../../
-    rm -rf ./source/reference/extension/*
-    cp -r submodule/$VSCODE_EXTENSION_DIR/docs/reference/commands source/reference/extension/commands/
-    cp submodule/$VSCODE_EXTENSION_DIR/CHANGELOG.md source/reference/extension/CHANGELOG.md
+    # cd $VSCODE_EXTENSION_DIR
+    # echo "pip install"
+    # pip install -r requirements-docs.txt
+    # cd docs
+    # echo "rm**"
+    # rm -rf ./reference/commands/*
+    # make clean
+    # make html
+    # cd ../../../
+    # rm -rf ./source/reference/extension/*
+    # cp -r submodule/$VSCODE_EXTENSION_DIR/docs/reference/commands source/reference/extension/commands/
+    # cp submodule/$VSCODE_EXTENSION_DIR/CHANGELOG.md source/reference/extension/CHANGELOG.md
 fi
 
-make html
+# make html
 
 # .nojekyll
 touch ./build/html/.nojekyll
