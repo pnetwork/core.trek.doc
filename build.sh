@@ -45,8 +45,14 @@ make clean
 # copy references from trek repo
 if [ "$BUILD_TREK" = "1" ]; then
     echo "git clone trek repo"
-    cd submodule
-    git submodule update --init --remote $TREK_DIR
+    br=$(git config -f .gitmodules --get submodule.submodule/$TREK_DIR.branch)
+    cd submodule/$TREK_DIR
+    echo "git checkout branch $br"
+    git checkout -b $br
+    echo "git fetch branch $br"
+    git fetch origin $br
+    git reset --hard FETCH_HEAD
+    git clean -df
     echo "build document of trek"
     cd $TREK_DIR
     pip install -r requirements-docs.txt
@@ -64,8 +70,14 @@ fi
 # copy references from blcks sdk repo
 if [ "$BUILD_BLCKS" = "1" ]; then
     echo "git clone blcks sdk repo"
-    cd submodule
-    git submodule update --init --remote $BLKCS_SDK_DIR
+    br=$(git config -f .gitmodules --get submodule.submodule/$BLKCS_SDK_DIR.branch)
+    cd submodule/$BLKCS_SDK_DIR
+    echo "git checkout branch $br"
+    git checkout -b $br
+    echo "git fetch branch $br"
+    git fetch origin $br
+    git reset --hard FETCH_HEAD
+    git clean -df
     echo "build document of blcks sdk"
     cd $BLKCS_SDK_DIR
     pip install -r requirements-docs.txt
@@ -92,12 +104,10 @@ if [ "$BUILD_EXT" = "1" ]; then
     cd submodule/$VSCODE_EXTENSION_DIR
     echo "git checkout branch $br"
     git checkout -b $br
-    echo "git pull branch $br"
+    echo "git fetch branch $br"
     git fetch origin $br
     git reset --hard FETCH_HEAD
     git clean -df
-    
-    git log -n 1 --pretty=format:%H -- requirements-docs.txt 
     echo "build document of trek vscode extension"
     pip install -r requirements-docs.txt
     cd docs
