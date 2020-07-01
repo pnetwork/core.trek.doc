@@ -99,13 +99,10 @@ if [ "$BUILD_EXT" = "1" ]; then
     make html
     cd ../../../
     rm -rf ./source/reference/extension/*
+    pwd
     cp -r submodule/$VSCODE_EXTENSION_DIR/docs/reference/commands ./source/reference/extension/commands/
+    ls -al source/reference/extension/commands/
     cp submodule/$VSCODE_EXTENSION_DIR/CHANGELOG.md ./source/reference/extension/CHANGELOG.md
-fi
-
-# copy references from extension repo
-if [ "$BUILD_EXT" = "1" ]; then
-    echo "build document of vscode extension"
 fi
 
 make html
