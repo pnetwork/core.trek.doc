@@ -5,7 +5,7 @@
 [submodule "submodule/core.vscode.extension.mflow"]
 	path = submodule/core.vscode.extension.mflow
 	url = https://github.com/pnetwork/core.vscode.extension.mflow.git
-	branch = p/3658/chelsea_fix_doc_import
+	branch = master
 [submodule "submodule/core.tool.python.mflow"]
 	path = submodule/core.tool.python.mflow
 	url = https://github.com/pnetwork/core.tool.python.mflow.git
