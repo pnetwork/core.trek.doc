@@ -13,7 +13,15 @@ jobs:
       USER_NAME: ${{ github.event.head_commit.author.name }}
       USER_EMAIL: ${{ github.event.head_commit.author.email }}
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+          submodules: true
+          token: ${{ secrets.CHELSEA_TEST }}
+      - name: TTT
+        run: |-
+          ls -al submodule/core.tool.python.mflow
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
         with:
