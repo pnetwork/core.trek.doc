@@ -54,7 +54,6 @@ if [ "$BUILD_TREK" = "1" ]; then
     git reset --hard FETCH_HEAD
     git clean -df
     echo "build document of trek"
-    cd $TREK_DIR
     pip install -r requirements-docs.txt
     cd docs
     rm -rf ./reference/commands/*
@@ -79,7 +78,6 @@ if [ "$BUILD_BLCKS" = "1" ]; then
     git reset --hard FETCH_HEAD
     git clean -df
     echo "build document of blcks sdk"
-    cd $BLKCS_SDK_DIR
     pip install -r requirements-docs.txt
     python setup.py build
     python setup.py install
