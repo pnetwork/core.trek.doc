@@ -88,7 +88,7 @@ fi
 # copy references from trek vscode extension repo
 if [ "$BUILD_EXT" = "1" ]; then
     echo "git clone vscode extension repo"
-    br=$(git config -f ../.gitmodules --get submodule.submodule/$VSCODE_EXTENSION_DIR.branch)
+    br=$(git config -f .gitmodules --get submodule.submodule/$VSCODE_EXTENSION_DIR.branch)
     cd submodule/$VSCODE_EXTENSION_DIR
     echo "git checkout and pull branch $br"
     git checkout -b $br
