@@ -88,10 +88,11 @@ fi
 # copy references from trek vscode extension repo
 if [ "$BUILD_EXT" = "1" ]; then
     echo "git clone vscode extension repo"
-    cd submodule
-    git submodule sync $VSCODE_EXTENSION_DIR
-    git submodule update --init --recursive --remote $VSCODE_EXTENSION_DIR
-    cd $VSCODE_EXTENSION_DIR
+    br=$(git config -f ../.gitmodules --get submodule.submodule/$VSCODE_EXTENSION_DIR.branch)
+    cd submodule/$VSCODE_EXTENSION_DIR
+    echo "git checkout and pull branch $br"
+    git checkout -b $br
+    git pull origin $br
     echo "build document of trek vscode extension"
     pip install -r requirements-docs.txt
     cd docs
