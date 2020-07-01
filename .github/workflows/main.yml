@@ -19,9 +19,6 @@ jobs:
           fetch-depth: 1
           submodules: true
           token: ${{ secrets.CHELSEA_SECRET }}
-      - name: TTT
-        run: |-
-          ls -al submodule/core.sdk.python.blcks
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
         with:
@@ -36,10 +33,8 @@ jobs:
           git config --local user.name "$USER_NAME"
       - name: Rebuild document files
         run: |
-          git config user.email "$USER_EMAIL"
-          git config user.name "$USER_NAME"
           chmod +x ./build.sh
-          sh ./build.sh --blcks
+          sh ./build.sh --blcks --trek --vse
       - name: Commit and push built files
         run: |
           git add . -A
