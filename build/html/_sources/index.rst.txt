@@ -29,7 +29,7 @@ Marvin Automation Development Guide
 
 
 .. toctree::
-   :caption: ABOUT123
+   :caption: ABOUT
 
    reference/cli/CHANGELOG.md
    reference/extension/CHANGELOG.md
