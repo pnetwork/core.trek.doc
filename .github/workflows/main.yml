@@ -21,7 +21,7 @@ jobs:
           token: ${{ secrets.CHELSEA_SECRET }}
       - name: TTT
         run: |-
-          ls -al submodule/core.tool.python.mflow
+          ls -al submodule/core.sdk.python.blcks
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
         with:
@@ -39,7 +39,7 @@ jobs:
           git config user.email "$USER_EMAIL"
           git config user.name "$USER_NAME"
           chmod +x ./build.sh
-          sh ./build.sh --trek
+          sh ./build.sh --blcks
       - name: Commit and push built files
         run: |
           git add . -A
