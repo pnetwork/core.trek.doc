@@ -99,7 +99,7 @@ if [ "$BUILD_EXT" = "1" ]; then
     make html
     cd ../../../
     rm -rf ./source/reference/extension/*
-    cp -r submodule/$VSCODE_EXTENSION_DIR/docs/reference/commands ./source/reference/extension/
+    cp -r submodule/$VSCODE_EXTENSION_DIR/docs/reference/commands ./source/reference/extension/commands/
     cp submodule/$VSCODE_EXTENSION_DIR/CHANGELOG.md ./source/reference/extension/CHANGELOG.md
 fi
 
