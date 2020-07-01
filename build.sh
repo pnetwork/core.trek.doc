@@ -90,10 +90,10 @@ if [ "$BUILD_EXT" = "1" ]; then
     echo "git clone vscode extension repo"
     br=$(git config -f .gitmodules --get submodule.submodule/$VSCODE_EXTENSION_DIR.branch)
     cd submodule/$VSCODE_EXTENSION_DIR
-    git reset --hard HEAD
     echo "git checkout branch $br"
     git checkout -b $br
     echo "git pull branch $br"
+    git reset --hard HEAD
     git pull --force origin $br
     git log -n 1 --pretty=format:%H -- requirements-docs.txt 
     echo "build document of trek vscode extension"
