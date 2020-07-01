@@ -18,7 +18,7 @@ jobs:
         with:
           fetch-depth: 1
           submodules: true
-          token: ${{ secrets.CHELSEA_TEST }}
+          token: ${{ secrets.CHELSEA_SECRET }}
       - name: TTT
         run: |-
           ls -al submodule/core.tool.python.mflow
