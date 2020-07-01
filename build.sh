@@ -95,6 +95,7 @@ if [ "$BUILD_EXT" = "1" ]; then
     git checkout -b $br
     echo "git pull branch $br"
     git pull --force origin $br
+    git log -n 1 --pretty=format:%H -- requirements-docs.txt 
     echo "build document of trek vscode extension"
     pip install -r requirements-docs.txt
     cd docs
