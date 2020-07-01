@@ -33,5 +33,5 @@ jobs:
       - name: Commit and push built files
         run: |
           git add . -A
-          git commit --allow-empty -m "misc: Rebuild html ${{github.event.head_commit.message}}"
+          git commit --allow-empty -m "misc: Rebuild html ( ${{ github.event.head_commit.message }} )"
           git push
