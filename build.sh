@@ -89,6 +89,7 @@ fi
 if [ "$BUILD_EXT" = "1" ]; then
     echo "git clone vscode extension repo"
     cd submodule/$VSCODE_EXTENSION_DIR
+    echo "fetch"
     git fetch
     cd ../
     git submodule sync $VSCODE_EXTENSION_DIR
