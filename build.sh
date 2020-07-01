@@ -101,9 +101,10 @@ if [ "$BUILD_EXT" = "1" ]; then
     rm -rf ./source/reference/extension/*
     echo "@@@@@@@"
     pwd
-    cp -r submodule/$VSCODE_EXTENSION_DIR/docs/reference/commands ./source/reference/extension/commands/
+    ls -al 
+    cp -r submodule/$VSCODE_EXTENSION_DIR/docs/reference/commands source/reference/extension/commands/
     ls -al source/reference/extension/commands/
-    cp submodule/$VSCODE_EXTENSION_DIR/CHANGELOG.md ./source/reference/extension/CHANGELOG.md
+    cp submodule/$VSCODE_EXTENSION_DIR/CHANGELOG.md source/reference/extension/CHANGELOG.md
 fi
 
 make html
