@@ -125,6 +125,8 @@
 </ul>
 <p class="caption"><span class="caption-text">ABOUT</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../reference/cli/CHANGELOG.html">Trek CLI Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/extension/CHANGELOG.html">Trek VSCode Extension Changelog</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/issues/">Issues Report</a></li>
 </ul>
 
@@ -212,7 +214,7 @@
 <blockquote>
 <div><ol class="arabic simple">
 <li><p><a class="reference internal" href="../config/index.html#script-repo"><span class="std std-ref">script_repository</span></a>：安裝下載腳本時使用到。</p></li>
-<li><p><a class="reference internal" href="../config/index.html#marvin-url"><span class="std std-ref">marvin_url *</span></a> 和 <a class="reference internal" href="../config/index.html#marvin-jwt"><span class="std std-ref">marvin_JWT *</span></a>：拿取服務器資產時使用。若不知道如何設置可以在 Step 1. 建立完專案後，在專案位置下指令「<span class="xref std std-doc">../reference/cli/commands/login</span>」即自動設置完成。</p></li>
+<li><p><a class="reference internal" href="../config/index.html#marvin-url"><span class="std std-ref">marvin_url *</span></a> 和 <a class="reference internal" href="../config/index.html#marvin-jwt"><span class="std std-ref">marvin_JWT *</span></a>：拿取服務器資產時使用。若不知道如何設置可以在 Step 1. 建立完專案後，在專案位置下指令「<a class="reference internal" href="../reference/cli/commands/login.html"><span class="doc">login</span></a>」即自動設置完成。</p></li>
 </ol>
 </div></blockquote>
 <div class="admonition note">
@@ -223,7 +225,7 @@
 <h2>Step 1. Create project<a class="headerlink" href="#step-1-create-project" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line">開始建立一個 Trek 專案。</div>
-<div class="line">執行 <span class="xref std std-doc">../../reference/cli/commands/createproject</span> 指令建立 Trek 專案「host.detect.redis」，接著會詢問是否要進行 <code class="docutils literal notranslate"><span class="pre">config.json</span></code> 的設置，每個 Trek 專案都有一份設定檔 <code class="docutils literal notranslate"><span class="pre">config.json</span></code>，您可以決定要定義專案層級的設置、或是全局的設置，這裡問的是專案層級的設置，若不需要可以不輸入文字直接按下 enter：</div>
+<div class="line">執行 <a class="reference internal" href="../reference/cli/commands/createproject.html"><span class="doc">createproject</span></a> 指令建立 Trek 專案「host.detect.redis」，接著會詢問是否要進行 <code class="docutils literal notranslate"><span class="pre">config.json</span></code> 的設置，每個 Trek 專案都有一份設定檔 <code class="docutils literal notranslate"><span class="pre">config.json</span></code>，您可以決定要定義專案層級的設置、或是全局的設置，這裡問的是專案層級的設置，若不需要可以不輸入文字直接按下 enter：</div>
 <div class="line">想進一步了解 config 欄位 <a class="reference internal" href="../config/index.html#config-trek"><span class="std std-ref">請參考</span></a>。</div>
 </div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ trek createproject host.detect.redis
@@ -257,7 +259,7 @@ host.detect.redis/
 <h2>Step 2. Create Blcks<a class="headerlink" href="#step-2-create-blcks" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line">建立一個 Blcks 腳本，用來檢查 redis 連線。</div>
-<div class="line">在專案目錄下，執行 <span class="xref std std-doc">../../reference/cli/commands/createblcks</span> 指令產生 Blcks detectredis 腳本：</div>
+<div class="line">在專案目錄下，執行 <a class="reference internal" href="../reference/cli/commands/createblcks.html"><span class="doc">createblcks</span></a> 指令產生 Blcks detectredis 腳本：</div>
 </div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> host.detect.redis
 $ trek createblcks detectredis
@@ -525,7 +527,7 @@ $ tree -a
 <h2>Step 3. Install scripts<a class="headerlink" href="#step-3-install-scripts" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line">從 script repository 下載安裝腳本。</div>
-<div class="line">執行安裝指令 <span class="xref std std-doc">../../reference/cli/commands/install</span>，現在我們要安裝腳本：</div>
+<div class="line">執行安裝指令 <a class="reference internal" href="../reference/cli/commands/install.html"><span class="doc">install</span></a>，現在我們要安裝腳本：</div>
 </div>
 <ul class="simple">
 <li><p>資產設定標籤(blckssettags)</p></li>
@@ -781,7 +783,7 @@ $ tree -a
 </pre></div>
 </td></tr></table></div>
 <div class="line-block">
-<div class="line">編輯完成，若要使用進階功能查看 workflow 流程圖，可以下指令 <span class="xref std std-doc">graph</span>：</div>
+<div class="line">編輯完成，若要使用進階功能查看 workflow 流程圖，可以下指令 <a class="reference internal" href="../reference/cli/commands/graph.html"><span class="doc">graph</span></a>：</div>
 </div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nv">$trek</span> graph --show
 digraph <span class="s2">&quot;host.detect.redis&quot;</span> <span class="o">{</span>
@@ -812,7 +814,7 @@ digraph <span class="s2">&quot;host.detect.redis&quot;</span> <span class="o">{<
 <div class="section" id="auto-run">
 <span id="id1"></span><h3>方法 1. 自動執行<a class="headerlink" href="#auto-run" title="Permalink to this headline">¶</a></h3>
 <div class="line-block">
-<div class="line">使用自動執行，當程式有異動時，使用 <span class="xref std std-doc">run --auto</span> 自動偵測環境是否需要重啟。</div>
+<div class="line">使用自動執行，當程式有異動時，使用 <a class="reference internal" href="../reference/cli/commands/run.html"><span class="doc">run --auto</span></a> 自動偵測環境是否需要重啟。</div>
 </div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ trek run --auto
 Warning! lost containers: <span class="o">[</span>notification, detectredis<span class="o">]</span>
@@ -843,8 +845,8 @@ Done. <span class="o">[</span>host.detect.redis<span class="o">]</span>
 <span id="id2"></span><h3>方法 2. 手動執行<a class="headerlink" href="#manual-run" title="Permalink to this headline">¶</a></h3>
 <div class="line-block">
 <div class="line">不需要靠系統自動偵測，直接手動啟動或停止執行環境。</div>
-<div class="line">當 <code class="docutils literal notranslate"><span class="pre">config.json</span></code> 的環境參數、或是 workflow template 的圖結構有異動時，需要重啟 (先 <span class="xref std std-doc">../../reference/cli/commands/shutdownenv</span> 再 <span class="xref std std-doc">../../reference/cli/commands/initenv</span>)。</div>
-<div class="line">首先使用指令 <span class="xref std std-doc">../../reference/cli/commands/initenv</span> 啟動執行環境：</div>
+<div class="line">當 <code class="docutils literal notranslate"><span class="pre">config.json</span></code> 的環境參數、或是 workflow template 的圖結構有異動時，需要重啟 (先 <a class="reference internal" href="../reference/cli/commands/shutdownenv.html"><span class="doc">shutdownenv</span></a> 再 <a class="reference internal" href="../reference/cli/commands/initenv.html"><span class="doc">initenv</span></a>)。</div>
+<div class="line">首先使用指令 <a class="reference internal" href="../reference/cli/commands/initenv.html"><span class="doc">initenv</span></a> 啟動執行環境：</div>
 </div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ trek initenv
 Starting environment...
@@ -876,7 +878,7 @@ Done. <span class="o">[</span>host.detect.redis<span class="o">]</span>
 <div class="line-block">
 <div class="line">執行完成後可以查看剛剛設定在 workflow template 的 chatbot，若 redis 連線異常會有告警訊息!</div>
 <div class="line"><br /></div>
-<div class="line">如果想要手動停止執行環境，可以使用 <span class="xref std std-doc">../../reference/cli/commands/shutdownenv</span> 指令：</div>
+<div class="line">如果想要手動停止執行環境，可以使用 <a class="reference internal" href="../reference/cli/commands/shutdownenv.html"><span class="doc">shutdownenv</span></a> 指令：</div>
 </div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ trek shutdownenv
 Closing environment...
@@ -897,7 +899,7 @@ Done
 </div>
 <div class="section" id="auto-deploy">
 <span id="id3"></span><h3>方法 1. 自動佈署<a class="headerlink" href="#auto-deploy" title="Permalink to this headline">¶</a></h3>
-<p>自動佈署 <span class="xref std std-doc">../../reference/cli/commands/deploy</span> 動作包含建置、打包、佈署：</p>
+<p>自動佈署 <a class="reference internal" href="../reference/cli/commands/deploy.html"><span class="doc">deploy</span></a> 動作包含建置、打包、佈署：</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ trek deploy -a --autobuildpush --autopack
 Deploy workflow with all packages...
 Build blcks: detectredis
@@ -927,7 +929,7 @@ Done
 <div class="section" id="manual-deploy">
 <span id="id4"></span><h3>方法 2. 手動佈署<a class="headerlink" href="#manual-deploy" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic">
-<li><p><span class="xref std std-doc">../../reference/cli/commands/build</span>: 手動佈署首先要建置腳本的 image 檔</p>
+<li><p><a class="reference internal" href="../reference/cli/commands/build.html"><span class="doc">build</span></a>: 手動佈署首先要建置腳本的 image 檔</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ trek build
 Build blcks: detectredis
 Path: <span class="o">{</span>your_trek_project_path<span class="o">}</span>/host.detect.redis/src/blcks/detectredis/handler
@@ -943,7 +945,7 @@ Finish building. <span class="o">[</span>detectredis<span class="o">]</span>
 </pre></div>
 </div>
 </li>
-<li><p><span class="xref std std-doc">../../reference/cli/commands/push</span>: 將 image 檔推到 dockerhub 上</p>
+<li><p><a class="reference internal" href="../reference/cli/commands/push.html"><span class="doc">push</span></a>: 將 image 檔推到 dockerhub 上</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ trek push
 Push blcks: detectredis
 Path: <span class="o">{</span>your_trek_project_path<span class="o">}</span>/host.detect.redis/src/blcks/detectredis/handler
@@ -954,7 +956,7 @@ Finish pushing. <span class="o">[</span>detectredis<span class="o">]</span>
 </pre></div>
 </div>
 </li>
-<li><p><span class="xref std std-doc">../../reference/cli/commands/pack</span>: 打包要上傳到 marvin 平台的檔案：</p>
+<li><p><a class="reference internal" href="../reference/cli/commands/pack.html"><span class="doc">pack</span></a>: 打包要上傳到 marvin 平台的檔案：</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ trek pack -a
 Success packing, output: <span class="o">{</span>your_trek_project_path<span class="o">}</span>/host.detect.redis/bin/host.detect.redis-0.0.0.zip
 Packing blcks: <span class="o">{</span>your_trek_project_path<span class="o">}</span>/host.detect.redis/src/blcks/detectredis
@@ -962,7 +964,7 @@ Success packing, output: <span class="o">{</span>your_trek_project_path<span cla
 </pre></div>
 </div>
 </li>
-<li><p><span class="xref std std-doc">../../reference/cli/commands/deploy</span>: 佈署至 marvin 平台：</p>
+<li><p><a class="reference internal" href="../reference/cli/commands/deploy.html"><span class="doc">deploy</span></a>: 佈署至 marvin 平台：</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ trek deploy -a
 Deploy workflow with all packages...
 Deploying: <span class="o">{</span>your_trek_project_path<span class="o">}</span>/host.detect.redis/bin/blcks.detectredis-0.1.0.zip
