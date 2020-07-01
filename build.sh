@@ -96,7 +96,7 @@ if [ "$BUILD_EXT" = "1" ]; then
     git config pull.rebase true
     git pull --ff-only
     echo "git pull branch $br"
-    git pull origin $br
+    git pull --force origin $br
     echo "build document of trek vscode extension"
     pip install -r requirements-docs.txt
     cd docs
