@@ -92,6 +92,7 @@ if [ "$BUILD_EXT" = "1" ]; then
     git submodule sync -- $VSCODE_EXTENSION_DIR
     git submodule update --init --remote $VSCODE_EXTENSION_DIR
     echo "build document of trek vscode extension"
+    
     # cd $VSCODE_EXTENSION_DIR
     # echo "pip install"
     # pip install -r requirements-docs.txt
