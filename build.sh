@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#!/bin/bash
 DIR=core.trek.doc
 TREK_DIR=core.tool.python.mflow
 BLKCS_SDK_DIR=core.sdk.python.blcks
@@ -40,12 +41,17 @@ done
 make clean
 
 # copy references from trek repo
-if [ "$BUILD_TREK" == "1" ]; then
+if [ "$BUILD_TREK" = "1" ]; then
     echo "git clone trek repo"
-    cd submodule
-    git submodule update --init --recursive $TREK_DIR
+    br=$(git config -f .gitmodules --get submodule.submodule/$TREK_DIR.branch)
+    cd submodule/$TREK_DIR
+    echo "git checkout branch $br"
+    git checkout -b $br
+    echo "git fetch branch $br"
+    git fetch origin $br
+    git reset --hard FETCH_HEAD
+    git clean -df
     echo "build document of trek"
-    cd $TREK_DIR
     pip install -r requirements-docs.txt
     cd docs
     rm -rf ./reference/commands/*
@@ -59,12 +65,17 @@ fi
 
 
 # copy references from blcks sdk repo
-if [ "$BUILD_BLCKS" == "1" ]; then
+if [ "$BUILD_BLCKS" = "1" ]; then
     echo "git clone blcks sdk repo"
-    cd submodule
-    git submodule update --init --recursive $BLKCS_SDK_DIR
+    br=$(git config -f .gitmodules --get submodule.submodule/$BLKCS_SDK_DIR.branch)
+    cd submodule/$BLKCS_SDK_DIR
+    echo "git checkout branch $br"
+    git checkout -b $br
+    echo "git fetch branch $br"
+    git fetch origin $br
+    git reset --hard FETCH_HEAD
+    git clean -df
     echo "build document of blcks sdk"
-    cd $BLKCS_SDK_DIR
     pip install -r requirements-docs.txt
     python setup.py build
     python setup.py install
@@ -83,12 +94,17 @@ if [ "$BUILD_BLCKS" == "1" ]; then
 fi
 
 # copy references from trek vscode extension repo
-if [ "$BUILD_EXT" == "1" ]; then
+if [ "$BUILD_EXT" = "1" ]; then
     echo "git clone vscode extension repo"
-    cd submodule
-    git submodule update --init --recursive $VSCODE_EXTENSION_DIR
+    br=$(git config -f .gitmodules --get submodule.submodule/$VSCODE_EXTENSION_DIR.branch)
+    cd submodule/$VSCODE_EXTENSION_DIR
+    echo "git checkout branch $br"
+    git checkout -b $br
+    echo "git fetch branch $br"
+    git fetch origin $br
+    git reset --hard FETCH_HEAD
+    git clean -df
     echo "build document of trek vscode extension"
-    cd $VSCODE_EXTENSION_DIR
     pip install -r requirements-docs.txt
     cd docs
     rm -rf ./reference/commands/*
@@ -96,13 +112,8 @@ if [ "$BUILD_EXT" == "1" ]; then
     make html
     cd ../../../
     rm -rf ./source/reference/extension/*
-    cp -r submodule/$VSCODE_EXTENSION_DIR/docs/reference/commands ./source/reference/extension/
+    cp -r submodule/$VSCODE_EXTENSION_DIR/docs/reference/commands ./source/reference/extension/commands
     cp submodule/$VSCODE_EXTENSION_DIR/CHANGELOG.md ./source/reference/extension/CHANGELOG.md
-fi
-
-# copy references from extension repo
-if [ "$BUILD_EXT" == "1" ]; then
-    echo "build document of vscode extension"
 fi
 
 make html
