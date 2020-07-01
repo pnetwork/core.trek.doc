@@ -120,6 +120,8 @@
 </ul>
 <p class="caption"><span class="caption-text">ABOUT</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../reference/cli/CHANGELOG.html">Trek CLI Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/extension/CHANGELOG.html">Trek VSCode Extension Changelog</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/issues/">Issues Report</a></li>
 </ul>
 
@@ -192,7 +194,7 @@
 在 Blcks 專案中，Blcks para file 通常以 Blcks function name 方式命名，para file 的位置預設在 <code class="docutils literal notranslate"><span class="pre">{your_Blcks_project}/{Blcks_function_name}.para</span></code>。</p>
 <div class="section" id="where-is-para-file">
 <h2>Where is para file?<a class="headerlink" href="#where-is-para-file" title="Permalink to this headline">¶</a></h2>
-<p>以 Blcks 專案來說，使用 <span class="xref std std-doc">trek createblcks</span> detectredis 指令建立 Blcks 專案時，會產生一個 <a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/host.detect.redis/src/blcks/">detectredis/</a> 資料夾，主程式檔案 <a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/host.detect.redis/src/blcks/detectredis/handler/handler.py#L14">handler/handler.py</a> 會以 <code class="docutils literal notranslate"><span class="pre">detectredis</span></code> 當作 openfaas function name，同時產生一個 <a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/host.detect.redis/src/blcks/detectredis/detectredis.para#L12">detectredis.para</a> 參數設定檔。</p>
+<p>以 Blcks 專案來說，使用 <a class="reference internal" href="../reference/cli/commands/createblcks.html"><span class="doc">trek createblcks</span></a> detectredis 指令建立 Blcks 專案時，會產生一個 <a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/host.detect.redis/src/blcks/">detectredis/</a> 資料夾，主程式檔案 <a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/host.detect.redis/src/blcks/detectredis/handler/handler.py#L14">handler/handler.py</a> 會以 <code class="docutils literal notranslate"><span class="pre">detectredis</span></code> 當作 openfaas function name，同時產生一個 <a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/host.detect.redis/src/blcks/detectredis/detectredis.para#L12">detectredis.para</a> 參數設定檔。</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ trek createblcks detectredis
 Blcks <span class="o">[</span>detectredis<span class="o">]</span> creating...
 Done
