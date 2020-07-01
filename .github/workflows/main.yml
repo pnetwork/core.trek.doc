@@ -34,7 +34,7 @@ jobs:
       - name: Rebuild document files
         run: |
           chmod +x ./build.sh
-          sh ./build.sh --vse
+          sh ./build.sh --blcks --trek --vse
       - name: Commit and push built files
         run: |
           git add . -A
