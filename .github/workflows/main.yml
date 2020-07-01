@@ -13,12 +13,12 @@ jobs:
       USER_NAME: ${{ github.event.head_commit.author.name }}
       USER_EMAIL: ${{ github.event.head_commit.author.email }}
     steps:
-      - name: Checkout repo 
+      - name: Checkout repo
         uses: actions/checkout@v2
         with:
           fetch-depth: 1
           submodules: true
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.CHELSEA_SECRET }}
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
         with:
