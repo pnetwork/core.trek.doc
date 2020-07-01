@@ -90,9 +90,10 @@ if [ "$BUILD_EXT" = "1" ]; then
     echo "git clone vscode extension repo"
     br=$(git config -f .gitmodules --get submodule.submodule/$VSCODE_EXTENSION_DIR.branch)
     cd submodule/$VSCODE_EXTENSION_DIR
+    git reset --hard HEAD
     echo "git checkout branch $br"
     git checkout -b $br
-    git config pull.rebase true 
+    git config pull.rebase true
     git pull --ff-only
     echo "git pull branch $br"
     git pull origin $br
