@@ -1,6 +1,9 @@
 name: Chelsea test
 
-on: push
+on: 
+  push:
+    branches:
+      - p/3658/chelsea_test
 
 jobs:
   build:
