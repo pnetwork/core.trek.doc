@@ -8,9 +8,7 @@ Marvin 提供以下腳本和 workflow template 可以使用。
 Scripts list
 ------------------------
 
-.. raw:: html
-    :file: scripts_list.html
-
+.. include:: scripts_list.rst
 
 
 
@@ -19,5 +17,4 @@ Scripts list
 Workflows list
 ------------------------
 
-.. raw:: html
-    :file: workflows_list.html
+.. include:: workflows_list.rst
