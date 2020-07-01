@@ -122,6 +122,7 @@
 </ul>
 <p class="caption"><span class="caption-text">ABOUT</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../reference/cli/CHANGELOG.html">Trek CLI Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/extension/CHANGELOG.html">Trek VSCode Extension Changelog</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/issues/">Issues Report</a></li>
 </ul>
@@ -209,13 +210,13 @@
 <blockquote>
 <div><ol class="arabic simple">
 <li><p><a class="reference internal" href="../config/index.html#script-repo"><span class="std std-ref">script_repository</span></a>：安裝下載腳本時使用到。</p></li>
-<li><p><a class="reference internal" href="../config/index.html#marvin-url"><span class="std std-ref">marvin_url *</span></a> 和 <a class="reference internal" href="../config/index.html#marvin-jwt"><span class="std std-ref">marvin_JWT *</span></a>：拿取 marvin 資產時使用。若不知道如何設置可以在 Step 1. 建立完專案後，在專案位置下指令「<span class="xref std std-doc">../reference/cli/commands/login</span>」即自動設置完成。</p></li>
+<li><p><a class="reference internal" href="../config/index.html#marvin-url"><span class="std std-ref">marvin_url *</span></a> 和 <a class="reference internal" href="../config/index.html#marvin-jwt"><span class="std std-ref">marvin_JWT *</span></a>：拿取 marvin 資產時使用。若不知道如何設置可以在 Step 1. 建立完專案後，在專案位置下指令「<a class="reference internal" href="../reference/cli/commands/login.html"><span class="doc">login</span></a>」即自動設置完成。</p></li>
 </ol>
 </div></blockquote>
 <div class="section" id="step-1-create-a-sample-project">
 <h3>Step 1. Create a sample project<a class="headerlink" href="#step-1-create-a-sample-project" title="Permalink to this headline">¶</a></h3>
 <div class="line-block">
-<div class="line">執行 <span class="xref std std-doc">../../reference/cli/commands/createproject</span> 指令建立 Trek 專案「sample.project」，接著會詢問是否要進行專案層級的 <code class="docutils literal notranslate"><span class="pre">config.json</span></code> 設置，若不需要可以不輸入文字直接按下 enter：</div>
+<div class="line">執行 <a class="reference internal" href="../reference/cli/commands/createproject.html"><span class="doc">createproject</span></a> 指令建立 Trek 專案「sample.project」，接著會詢問是否要進行專案層級的 <code class="docutils literal notranslate"><span class="pre">config.json</span></code> 設置，若不需要可以不輸入文字直接按下 enter：</div>
 </div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ trek createproject --example sample.project
 Project <span class="o">[</span>sample.project<span class="o">]</span> creating...
@@ -263,7 +264,7 @@ sample.project/
  <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
-<p>我們可以直接執行指令 <span class="xref std std-doc">../../reference/cli/commands/install</span> 從 script repository 下載安裝腳本：</p>
+<p>我們可以直接執行指令 <a class="reference internal" href="../reference/cli/commands/install.html"><span class="doc">install</span></a> 從 script repository 下載安裝腳本：</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>傳送訊息至指定頻道(notification)</p></li>
@@ -311,7 +312,7 @@ $ tree -a
 </div>
 <div class="section" id="step-3-view-workflow-template">
 <h3>Step 3. View workflow template<a class="headerlink" href="#step-3-view-workflow-template" title="Permalink to this headline">¶</a></h3>
-<p>我們可以使用進階功能查看 sample workflow 流程圖，可以下指令 <span class="xref std std-doc">graph</span>：</p>
+<p>我們可以使用進階功能查看 sample workflow 流程圖，可以下指令 <a class="reference internal" href="../reference/cli/commands/graph.html"><span class="doc">graph</span></a>：</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ trek graph --show
 digraph <span class="s2">&quot;sample.project&quot;</span> <span class="o">{</span>
     <span class="nv">dpi</span><span class="o">=</span><span class="m">150</span> <span class="nv">rankdir</span><span class="o">=</span>LR <span class="nv">size</span><span class="o">=</span><span class="s2">&quot;8,5&quot;</span>
@@ -353,7 +354,7 @@ digraph <span class="s2">&quot;sample.project&quot;</span> <span class="o">{</sp
 <h3>Step 5. Run<a class="headerlink" href="#step-5-run" title="Permalink to this headline">¶</a></h3>
 <div class="line-block">
 <div class="line">接著開始在本機執行 workflow 。</div>
-<div class="line">當程式有異動時，使用 <span class="xref std std-doc">run --auto</span> 自動偵測環境是否需要重啟。</div>
+<div class="line">當程式有異動時，使用 <a class="reference internal" href="../reference/cli/commands/run.html"><span class="doc">run --auto</span></a> 自動偵測環境是否需要重啟。</div>
 </div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ trek run --auto
 Warning! lost containers: <span class="o">[</span>notification, callservice<span class="o">]</span>
@@ -378,7 +379,7 @@ Done. <span class="o">[</span>sample.project<span class="o">]</span>
 <div class="line-block">
 <div class="line">執行完成後可以到 chatbot 中查看已發出的訊息!</div>
 <div class="line"><br /></div>
-<div class="line">如果想要手動停止執行環境，可以使用 <span class="xref std std-doc">../../reference/cli/commands/shutdownenv</span> 指令：</div>
+<div class="line">如果想要手動停止執行環境，可以使用 <a class="reference internal" href="../reference/cli/commands/shutdownenv.html"><span class="doc">shutdownenv</span></a> 指令：</div>
 </div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ trek shutdownenv
 Closing environment...
@@ -395,7 +396,7 @@ Done
 <div class="line">當在本機開發測試一切就續後，我們可以透過佈署指令直接把腳本、工作流程安裝到 marvin 平台，並在 marvin 平台上實際上操作使用。</div>
 </div>
 <div class="line-block">
-<div class="line">自動佈署 <span class="xref std std-doc">../../reference/cli/commands/deploy</span> 動作包含建置、打包、佈署：</div>
+<div class="line">自動佈署 <a class="reference internal" href="../reference/cli/commands/deploy.html"><span class="doc">deploy</span></a> 動作包含建置、打包、佈署：</div>
 </div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ trek deploy -a --autobuildpush --autopack
 Deploy workflow with all packages...
