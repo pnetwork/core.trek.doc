@@ -30,7 +30,7 @@ jobs:
       - name: Rebase gh-pages with master
         run: |
           git branch
-          git rebase -s recursive -X theirs p/3658/chelsea_test2
+          git rebase -s recursive -X theirs origin/p/3658/chelsea_test2
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
         with:
