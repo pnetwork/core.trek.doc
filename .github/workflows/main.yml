@@ -30,7 +30,7 @@ jobs:
       - name: Rebase gh-pages with master
         run: |
           git rebase -s recursive -X theirs origin/master
-          cp .gitignore.gh-pages  .gitignore
+          cp .gitignore.gh-pages .gitignore
           git add .gitignore
           git commit --allow-empty -m "misc: .gitignore replcate with .gitignore.gh-pages"
           git push -f
