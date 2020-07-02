@@ -29,6 +29,7 @@ jobs:
           git config --local user.name "$USER_NAME"
       - name: Rebase gh-pages with master
         run: |
+          git branch
           git rebase -s recursive -X theirs p/3658/chelsea_test2
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
