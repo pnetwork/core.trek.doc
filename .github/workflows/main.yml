@@ -19,19 +19,9 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
         with:
-          ref: p/3658/chelsea_test
           fetch-depth: 1
           submodules: true
           token: ${{ secrets.CHELSEA_SECRET }}
-      - name: Set github config
-        run: |
-          git config --local user.email "$USER_EMAIL"
-          git config --local user.name "$USER_NAME"
-      - name: Rebase gh-pages with master
-        run: |
-          git branch
-          git rebase -s recursive -X theirs origin/p/3658/chelsea_test2
-          git push -f
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
         with:
@@ -40,13 +30,16 @@ jobs:
         run: |-
           python -m pip install --upgrade pip
           pip install -r requirements-docs.txt
+      - name: Set github config
+        run: |
+          git config --local user.email "$USER_EMAIL"
+          git config --local user.name "$USER_NAME"
       - name: Rebuild document files
         run: |
           chmod +x ./build.sh
           sh ./build.sh --blcks --trek --vse
       - name: Commit and push built files
         run: |
-          git branch
           git add . -A
           git commit --allow-empty -m "${{ github.event.head_commit.message }}"
           git push

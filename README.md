@@ -25,5 +25,4 @@ $ sh build.sh
 # 先 build trek 後再一併產生文件
 $ sh build.sh --trek
 ```
-
-123
+123123
