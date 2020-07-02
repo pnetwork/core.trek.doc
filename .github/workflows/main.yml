@@ -3,7 +3,7 @@ name: Chelsea test
 on: 
   push:
     branches:
-      - p/3658/chelsea_test2
+      - master
 
 jobs:
   build:
