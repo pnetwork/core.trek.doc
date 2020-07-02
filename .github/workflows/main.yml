@@ -31,6 +31,7 @@ jobs:
         run: |
           git branch
           git rebase -s recursive -X theirs origin/p/3658/chelsea_test2
+          git push -f
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
         with:
