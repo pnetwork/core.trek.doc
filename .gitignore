@@ -14,4 +14,6 @@ example/host.detect.redis/.pytest.cache
 example/host.detect.redis/.trek/last_run
 example/host.detect.redis/.trek/last_up
 example/host.detect.redis/.trek/logs
-
+library/scripts/*
+library/scripts_list.rst
+library/workflows_list.rst
