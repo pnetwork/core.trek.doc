@@ -31,7 +31,7 @@ jobs:
         run: |
           echo "****"
           git branch
-          git rebase -s recursive -X theirs p/3658/chelsea_add_github_action
+          git rebase -s recursive -X theirs refs/remotes/origin/p/3658/chelsea_add_github_action
           cp .gitignore.gh-pages .gitignore
           git add .gitignore
           git commit --allow-empty -m "misc: .gitignore replcate with .gitignore.gh-pages"
