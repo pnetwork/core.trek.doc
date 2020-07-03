@@ -23,6 +23,6 @@ Pentium Internet (奔騰網路) 提供多種開發環境，你可以透過 CLI �
 $ sh build.sh -h
 # 產生文件
 $ sh build.sh
-# 先 build trek 後再一併產生文件
-$ sh build.sh --trek
+# 先 build 後再一併產生文件
+$ sh build.sh --trek --vse --blcks
 ```

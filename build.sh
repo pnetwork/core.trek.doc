@@ -7,6 +7,7 @@ VSCODE_EXTENSION_DIR=core.vscode.extension.mflow
 BUILD_TREK="0"
 BUILD_EXT="0"
 BUILD_BLCKS="0"
+CRAWL_SCRIPT_WF="0"
 
 while test $# -gt 0; do
   case "$1" in
@@ -18,6 +19,7 @@ while test $# -gt 0; do
       echo "--trek                    build from trek repo"
       echo "--vse                     build from VSCode extension repo"
       echo "--blcks                   build from blcks sdk repo"
+      echo "--no-script-wf            do not crawl script and workflow template from nexus server"
       exit 0
       ;;
     --trek)
@@ -30,6 +32,10 @@ while test $# -gt 0; do
       ;;
     --blcks)
       BUILD_BLCKS="1"  
+      shift
+      ;;
+    --no-script-wf )
+      CRAWL_SCRIPT_WF="1"  
       shift
       ;;
     *)
@@ -114,6 +120,12 @@ if [ "$BUILD_EXT" = "1" ]; then
     rm -rf ./source/reference/extension/*
     cp -r submodule/$VSCODE_EXTENSION_DIR/docs/reference/commands ./source/reference/extension/commands
     cp submodule/$VSCODE_EXTENSION_DIR/CHANGELOG.md ./source/reference/extension/CHANGELOG.md
+fi
+
+# crawl script and workflow template on nexus server
+if [ "$CRAWL_SCRIPT_WF" = "0" ]; then
+    echo "crawl script and workflow template on nexus server"
+    python3 source/crawler/script_wf_producer.py
 fi
 
 make html

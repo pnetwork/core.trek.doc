@@ -178,8 +178,10 @@ if __name__ == "__main__":
     wf_result = get_wf_list()
     with open(WF_SAVE_PATH, "w") as f:
         f.write(wf_result)
+    print("workflow template crawler finish.")
 
     script_result = get_script_list()
     with open(SCRIPT_SAVE_PATH, "w") as f:
         f.write(script_result)
+    print("script crawler finish.")
 
