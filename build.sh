@@ -9,6 +9,8 @@ BUILD_EXT="0"
 BUILD_BLCKS="0"
 CRAWL_SCRIPT_WF="0"
 
+pwd
+
 while test $# -gt 0; do
   case "$1" in
     -h|--help)

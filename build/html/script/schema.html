@@ -1,0 +1,1002 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Para Schema &mdash; Pentium</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/table.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Developer Blcks" href="blcks/index.html" />
+    <link rel="prev" title="Developer Script" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Marvin Development Guide
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">GETTING STARTED</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../start/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../start/index.html#system-requirements">System Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../start/index.html#installing-trek-cli">Installing Trek CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../start/quick_start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../start/project_folder.html">The Project Directory Structure</a></li>
+</ul>
+<p class="caption"><span class="caption-text">USER GUIDE</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../config/index.html">Configuring the Trek CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow/index.html">Developer Workflow</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Developer Script</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Para Schema</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#where-is-para-file">Where is para file?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-defind-the-para-schema">How to defind the para schema?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="blcks/index.html">Developer Blcks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansible.html">Developer Ansible</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../extension/vscode/index.html">Working with VSCode Extension</a></li>
+</ul>
+<p class="caption"><span class="caption-text">REFERENCES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cli/commands.html">CLI Command Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extension/vscode/commands.html">VSCode Extension Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../library/index.html">Library List</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/">Samples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ABOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../reference/cli/CHANGELOG.html">Trek CLI Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/extension/CHANGELOG.html">Trek VSCode Extension Changelog</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/issues/">Issues Report</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Marvin Development Guide</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Developer Script</a> &raquo;</li>
+        
+      <li>Para Schema</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="para-schema">
+<h1>Para Schema<a class="headerlink" href="#para-schema" title="Permalink to this headline">¶</a></h1>
+<p>Para schema 為 yaml 格式，用來定義腳本的輸入、輸出。
+在 Blcks 專案中，Blcks para file 通常以 Blcks function name 方式命名，para file 的位置預設在 <code class="docutils literal notranslate"><span class="pre">{your_Blcks_project}/{Blcks_function_name}.para</span></code>。</p>
+<div class="section" id="where-is-para-file">
+<h2>Where is para file?<a class="headerlink" href="#where-is-para-file" title="Permalink to this headline">¶</a></h2>
+<p>以 Blcks 專案來說，使用 <a class="reference internal" href="../reference/cli/commands/createblcks.html"><span class="doc">trek createblcks</span></a> detectredis 指令建立 Blcks 專案時，會產生一個 <a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/host.detect.redis/src/blcks/">detectredis/</a> 資料夾，主程式檔案 <a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/host.detect.redis/src/blcks/detectredis/handler/handler.py#L14">handler/handler.py</a> 會以 <code class="docutils literal notranslate"><span class="pre">detectredis</span></code> 當作 openfaas function name，同時產生一個 <a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/host.detect.redis/src/blcks/detectredis/detectredis.para#L12">detectredis.para</a> 參數設定檔。</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ trek createblcks detectredis
+Blcks <span class="o">[</span>detectredis<span class="o">]</span> creating...
+Done
+$ tree -a
+.
+<span class="hll">└── detectredis
+</span>    ├── .gitignore
+    ├── .trek
+    │   └── config.json
+    ├── Makefile
+<span class="hll">    ├── detectredis.para
+</span>    ├── flake8.jenkins
+    ├── handler
+    │   ├── __init__.py
+<span class="hll">    │   ├── handler.py
+</span>    │   └── requirements.txt
+    ├── inputs
+    │   └── event.yml
+    ├── openfaas.yml
+    ├── requirements-test.txt
+    ├── skaffold.yaml
+    ├── tests
+    │   ├── conftest.py
+    │   └── test_blcks.py
+    └── tox.ini
+</pre></div>
+</div>
+<table class="colwidths-given noborder docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="highlight-yaml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># detectredis.para</span>
+<span class="nn">---</span>
+<span class="hll"><span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">detectredis</span>
+</span><span class="nt">schemaVersion</span><span class="p">:</span> <span class="s">&#39;0.2&#39;</span>
+<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">detectredis</span>
+<span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">detectredis</span>
+<span class="nt">version</span><span class="p">:</span> <span class="s">&quot;0.1.0&quot;</span>
+<span class="nt">description</span><span class="p">:</span> <span class="s">&quot;&quot;</span>
+<span class="nt">namespace</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">network.pentium</span>
+<span class="nt">assets</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">SCRIPT</span>
+
+<span class="nt">required</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">tag_name</span>
+
+<span class="nt">inputs</span><span class="p">:</span>
+    <span class="nt">message</span><span class="p">:</span>
+        <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test input</span>
+        <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test input</span>
+        <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+
+<span class="nt">outputs</span><span class="p">:</span>
+    <span class="nt">code</span><span class="p">:</span>
+        <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">result message code</span>
+        <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">result message code</span>
+        <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">integer</span>
+        <span class="nt">description</span><span class="p">:</span> <span class="s">&quot;&quot;</span>
+    <span class="nt">msg</span><span class="p">:</span>
+        <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">result message</span>
+        <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">result message</span>
+        <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+        <span class="nt">description</span><span class="p">:</span> <span class="s">&quot;&quot;</span>
+    <span class="nt">result</span><span class="p">:</span>
+        <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">result</span>
+        <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">result</span>
+        <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+        <span class="nt">description</span><span class="p">:</span> <span class="s">&quot;&quot;</span>
+</pre></div>
+</td></tr></table></div>
+</td>
+<td><div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># handler/handler.py</span>
+<span class="kn">from</span> <span class="nn">blcks</span> <span class="kn">import</span> <span class="n">blcks</span>
+
+<span class="hll"><span class="n">FAAS_METHOD_NAME</span> <span class="o">=</span> <span class="s2">&quot;detectredis&quot;</span>
+</span><span class="n">logger</span> <span class="o">=</span> <span class="n">blcks</span><span class="o">.</span><span class="n">logger</span>
+
+
+<span class="nd">@blcks</span>
+<span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+
+<span class="hll"><span class="nd">@blcks</span><span class="o">.</span><span class="n">script</span><span class="p">(</span><span class="n">FAAS_METHOD_NAME</span><span class="p">)</span>
+</span><span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;code&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;msg&quot;</span><span class="p">:</span> <span class="n">message</span><span class="p">,</span>
+        <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="c1"># Doing something here...</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+</td></tr></table></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="how-to-defind-the-para-schema">
+<h2>How to defind the para schema?<a class="headerlink" href="#how-to-defind-the-para-schema" title="Permalink to this headline">¶</a></h2>
+<p>Para schema 可以區分為三大區塊，我們會一一做介紹：</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><a class="reference internal" href="#para-metadata"><span class="std std-ref">1. Para Metadata</span></a>：Id, name, assets...</div>
+<div class="line"><a class="reference internal" href="#para-inputs"><span class="std std-ref">2. Para Inputs</span></a>：定義腳本的輸入欄位。</div>
+<div class="line"><a class="reference internal" href="#para-require"><span class="std std-ref">3. Para Inputs Required</span></a>：定義腳本的輸入欄位哪些是必填。</div>
+<div class="line"><a class="reference internal" href="#para-outputs"><span class="std std-ref">4. Para Outputs</span></a>：定義腳本的回傳欄位。</div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">Para 的 inputs 和 outputs 欄位決定的是腳本主程式的輸入輸出，以 Blcks 來說，主程式就是 <a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/host.detect.redis/src/blcks/detectredis/handler/handler.py#L15">handler/handler.py process function</a>，下面以 Blcks 專案來說明：</div>
+</div>
+<ol class="arabic simple">
+<li><p>Function parameters 需和 <a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/host.detect.redis/src/blcks/detectredis/detectredis.para">detectredis.para</a> 的 inputs 欄位相同。</p></li>
+<li><p>Function 回傳的結果也需和 <a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/host.detect.redis/src/blcks/detectredis/detectredis.para">detectredis.para</a> 的 outputs 欄位相同。</p></li>
+</ol>
+<div class="highlight-yaml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">detectredis</span>
+ <span class="p p-Indicator">{</span> <span class="nv">Para metadata...</span> <span class="p p-Indicator">}</span>
+ <span class="nt">inputs</span><span class="p">:</span>
+     <span class="p p-Indicator">{</span> <span class="nv">Para inputs column...</span> <span class="p p-Indicator">}</span>
+ <span class="nt">required</span><span class="p">:</span>
+     <span class="p p-Indicator">{</span> <span class="nv">Para inputs required column...</span> <span class="p p-Indicator">}</span>
+ <span class="nt">outputs</span><span class="p">:</span>
+     <span class="p p-Indicator">{</span> <span class="nv">Para outputs column...</span> <span class="p p-Indicator">}</span>
+</pre></div>
+</td></tr></table></div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="para-metadata">
+<span id="id1"></span><h3>1. Para Metadata<a class="headerlink" href="#para-metadata" title="Permalink to this headline">¶</a></h3>
+<p>定義腳本 para 的基本資料，可定義的欄位如下：</p>
+<div class="highlight-yaml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">detectredis</span>                                 <span class="c1"># 腳本 Id</span>
+ <span class="nt">schemaVersion</span><span class="p">:</span> <span class="s">&#39;0.2&#39;</span>                            <span class="c1"># Para schema version</span>
+ <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Redis connection monitor</span>                  <span class="c1"># 腳本名稱</span>
+ <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Redis connection monitor</span>                 <span class="c1"># Title</span>
+ <span class="nt">version</span><span class="p">:</span> <span class="s">&quot;0.1.0&quot;</span>                                <span class="c1"># 腳本 version</span>
+ <span class="nt">description</span><span class="p">:</span> <span class="s">&quot;Detect</span><span class="nv"> </span><span class="s">host</span><span class="nv"> </span><span class="s">redis</span><span class="nv"> </span><span class="s">connection.&quot;</span>    <span class="c1"># Description</span>
+ <span class="nt">namespace</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">network.pentium</span>                      <span class="c1"># 腳本 namespace</span>
+ <span class="nt">assets</span><span class="p">:</span>                                         <span class="c1"># 腳本所屬資產類型</span>
+     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">HOST</span>
+</pre></div>
+</td></tr></table></div>
+<div class="line-block">
+<div class="line">其中，<code class="docutils literal notranslate"><span class="pre">id</span></code> 需為唯一值，當有兩個 para 的 id 和 version 相同時，需要進版才能允許覆蓋。</div>
+<div class="line">assets 為腳本的所屬的資產類型，可以是多類型，共有以下種類：</div>
+</div>
+<div class="highlight-yaml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="nt">assets</span><span class="p">:</span>             <span class="c1"># 腳本所屬資產類型</span>
+     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">SCRIPT</span>            <span class="c1"># 腳本</span>
+     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">HOST</span>              <span class="c1"># 服務器</span>
+     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">DOMAIN</span>            <span class="c1"># 域名</span>
+     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">CDN</span>               <span class="c1"># CDN</span>
+     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">CLOUDACCOUNT</span>      <span class="c1"># 雲帳號</span>
+     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">CERTIFICATE</span>       <span class="c1"># 憑證</span>
+</pre></div>
+</td></tr></table></div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="para-inputs">
+<span id="id2"></span><h3>2. Para Inputs<a class="headerlink" href="#para-inputs" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">定義腳本允許的傳入參數，在 inputs 下定義每個輸入欄位：</div>
+<div class="line">欄位需與主程式 <a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/host.detect.redis/src/blcks/detectredis/handler/handler.py#L15">handler/handler.py process function</a> 的傳入參數相同。</div>
+</div>
+<div class="highlight-yaml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="nt">inputs</span><span class="p">:</span>
+     <span class="nt">tag_name</span><span class="p">:</span>
+         <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Tag name</span>
+         <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Tag name</span>
+         <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+     <span class="nt">array_tags_name</span><span class="p">:</span>
+         <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">array</span>
+         <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">The tags name.</span>
+         <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Tags name array.</span>
+         <span class="nt">items</span><span class="p">:</span>
+             <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+</pre></div>
+</td></tr></table></div>
+<p>輸入欄位大致分成兩種 <a class="reference internal" href="#para-inputs1"><span class="std std-ref">2.1. 一般的欄位定義</span></a>、和Pentium 提供的 <a class="reference internal" href="#para-inputs2"><span class="std std-ref">2.2. 特化輸入欄位定義</span></a>：</p>
+<div class="section" id="para-inputs1">
+<span id="id3"></span><h4>2.1. 一般的欄位定義<a class="headerlink" href="#para-inputs1" title="Permalink to this headline">¶</a></h4>
+<p>提供以下欄位資料型態：</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Inputs Data Type</p></th>
+<th class="head"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>string</p></td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">tag_name</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Tag name</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Tag name</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>number</p></td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">expired_within_days</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">幾天後過期</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">幾天後過期</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">integer</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">幾天後過期(&gt;0)：範例 10</span>
+    <span class="nt">examples</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">10</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>boolean</p></td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">has_any_valid_project</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">是否通過任一白名單項目</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">是否通過任一白名單項目</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">是否通過任一白名單項目</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">boolean</span>
+    <span class="nt">examples</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>string enum</p></td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">provider</span><span class="p">:</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">The provider name of IM which only slack, telegram and potato are supported.</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">The provider of IM.</span>
+    <span class="nt">enum</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">slack</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">telegram</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">potato</span>
+    <span class="nt">enumNames</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">slack</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">telegram</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">potato</span>
+    <span class="nt">example</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">telegram</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>object</p></td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">certificate</span><span class="p">:</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">SSL證書</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">object</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">SSL證書</span>
+    <span class="nt">examples</span><span class="p">:</span> <span class="s">&quot;{&#39;source&#39;:</span><span class="nv"> </span><span class="s">&#39;NEW&#39;,</span><span class="nv"> </span><span class="s">&#39;name&#39;:</span><span class="nv"> </span><span class="s">&#39;cert_name&#39;,</span><span class="nv"> </span><span class="s">&#39;certificate&#39;:</span><span class="nv"> </span><span class="s">&#39;xxx&#39;}&quot;</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>array</p></td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># array of string</span>
+<span class="nt">array_tags_name</span><span class="p">:</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">array</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">The tags name.</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Tags name array.</span>
+    <span class="nt">items</span><span class="p">:</span>
+        <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+
+<span class="c1"># array of object</span>
+<span class="nt">expired_hosts</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">到期服務器列表</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">到期服務器列表</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">array</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">到期服務器列表</span>
+    <span class="nt">items</span><span class="p">:</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">object</span>
+    <span class="nt">properties</span><span class="p">:</span>
+        <span class="nt">id</span><span class="p">:</span>
+            <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">服務器ID</span>
+            <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">服務器ID</span>
+            <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+            <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">服務器ID</span>
+            <span class="nt">examples</span><span class="p">:</span>
+            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">S-ajvw371v9</span>
+        <span class="nt">name</span><span class="p">:</span>
+            <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">服務器名稱</span>
+            <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">服務器名稱</span>
+            <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">服務器名稱</span>
+            <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+            <span class="nt">examples</span><span class="p">:</span>
+            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">OS-Ubuntu18.04</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="para-inputs2">
+<span id="id4"></span><h4>2.2. 特化輸入欄位定義<a class="headerlink" href="#para-inputs2" title="Permalink to this headline">¶</a></h4>
+<p>Pentium 提供特別的欄位資料型態，可以在 marvin 上顯示選取資產多選欄、textarea... 的特殊顯示欄位：</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 20%" />
+<col style="width: 35%" />
+<col style="width: 35%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Inputs Data Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Schema</p></th>
+<th class="head"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>pn_ids_host</p></td>
+<td><p>顯示服務器資產清單列表的多選選單</p></td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">帶入資產</span>
+<span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">帶入資產</span>
+<span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">請選擇相對應服務器</span>
+<span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">array</span>
+<span class="nt">items</span><span class="p">:</span>
+<span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+</pre></div>
+</div>
+</td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">resourceIds</span><span class="p">:</span>
+    <span class="nt">$ref</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pn_ids_host</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>pn_ids_domain</p></td>
+<td><p>顯示域名資產清單列表的多選選單</p></td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">帶入資產</span>
+<span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">帶入資產</span>
+<span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">請選擇相對應域名</span>
+<span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">array</span>
+<span class="nt">items</span><span class="p">:</span>
+<span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+</pre></div>
+</div>
+</td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">resourceIds</span><span class="p">:</span>
+    <span class="nt">$ref</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pn_ids_domain</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>pn_ids_cdn</p></td>
+<td><p>顯示 CDN 資產清單列表的多選選單</p></td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">帶入資產</span>
+<span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">帶入資產</span>
+<span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">請選擇相對應CDN</span>
+<span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">array</span>
+<span class="nt">items</span><span class="p">:</span>
+<span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+</pre></div>
+</div>
+</td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">resourceIds</span><span class="p">:</span>
+    <span class="nt">$ref</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pn_ids_cdn</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>pn_ids_script</p></td>
+<td><p>顯示腳本清單列表的多選選單</p></td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">帶入資產</span>
+<span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">帶入資產</span>
+<span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">請選擇相對應腳本</span>
+<span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">array</span>
+<span class="nt">items</span><span class="p">:</span>
+<span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+</pre></div>
+</div>
+</td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">resourceIds</span><span class="p">:</span>
+    <span class="nt">$ref</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pn_ids_script</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>pn_ids_chatpair</p></td>
+<td><p>顯示通訊帳號資產清單列表的多選選單</p></td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">帶入資產</span>
+<span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">帶入資產</span>
+<span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">請選擇相對應通訊帳號</span>
+<span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">array</span>
+<span class="nt">items</span><span class="p">:</span>
+<span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+</pre></div>
+</div>
+</td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">bot_infos</span><span class="p">:</span>
+    <span class="nt">$ref</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pn_ids_chatpair</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>pn_id_keypair</p></td>
+<td><p>顯示密鑰資產清單列表的多選選單</p></td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">帶入資產</span>
+<span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">帶入資產</span>
+<span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">請選擇相對應密鑰</span>
+<span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+</pre></div>
+</div>
+</td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">key_id</span><span class="p">:</span>
+    <span class="nt">$ref</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pn_id_keypair</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>pn_sp_password</p></td>
+<td><p>輸入文字有密碼遮罩的 input text</p></td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">密碼</span>
+<span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">密碼</span>
+<span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+</pre></div>
+</div>
+</td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">password</span><span class="p">:</span>
+    <span class="nt">$ref</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pn_sp_password</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>pn_sp_change_password</p></td>
+<td><div class="line-block">
+<div class="line">修改密碼用，含 [舊密碼] 和 [新密碼] 的 input text，</div>
+<div class="line">輸入文字皆有密碼遮罩</div>
+</div>
+</td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">修改密碼</span>
+<span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">修改密碼</span>
+<span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">object</span>
+<span class="nt">properties</span><span class="p">:</span>
+<span class="nt">old_password</span><span class="p">:</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">請輸入舊密碼</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">舊密碼</span>
+<span class="nt">new_password</span><span class="p">:</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">請輸入新密碼</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">新密碼</span>
+</pre></div>
+</div>
+</td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">password</span><span class="p">:</span>
+    <span class="nt">$ref</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pn_sp_change_password</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>pn_sp_textarea_str</p></td>
+<td><p>支援多行的文字輸入欄位</p></td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Text inputs</span>
+<span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Text inputs</span>
+<span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+</pre></div>
+</div>
+</td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">str_message</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Message context.</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Message context.</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">The message used to send to the specified channel.</span>
+    <span class="nt">$ref</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pn_sp_textarea_str</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>pn_sp_textarea_array</p></td>
+<td><p>支援多行的文字輸入欄位，傳至腳本後為 array of string。</p></td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Text inputs</span>
+<span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Text inputs</span>
+<span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">array</span>
+<span class="nt">items</span><span class="p">:</span>
+<span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+</pre></div>
+</div>
+</td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">str_message</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Message context.</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Message context.</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">The message used to send to the specified channel.</span>
+    <span class="nt">$ref</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pn_sp_textarea_str</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>pn_id_cloudcredential</p></td>
+<td><div class="line-block">
+<div class="line">雲帳號資產用，含 [提供商]、[帳號] 以及 [密鑰]</div>
+<div class="line">的下拉式選單</div>
+</div>
+</td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">帶入資產</span>
+<span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">帶入資產</span>
+<span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">請選擇相對應雲帳號</span>
+<span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">object</span>
+<span class="nt">properties</span><span class="p">:</span>
+<span class="nt">provider_id</span><span class="p">:</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="nt">cloud_account_id</span><span class="p">:</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="nt">cloud_credential</span><span class="p">:</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+</pre></div>
+</div>
+</td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">resolverKey</span><span class="p">:</span>
+    <span class="nt">$ref</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pn_id_cloudcredential</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>pn_sp_nsrecord</p></td>
+<td><div class="line-block">
+<div class="line">域名註冊商資訊用，包含 [域名解析商]、[帳號]、[密鑰]</div>
+<div class="line">的下拉式選單，和 [NS] 的 input text</div>
+</div>
+</td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">域名註冊商</span>
+<span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">域名註冊商資訊</span>
+<span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">object</span>
+<span class="nt">properties</span><span class="p">:</span>
+<span class="nt">resolverId</span><span class="p">:</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="s">&quot;the</span><span class="nv"> </span><span class="s">resolver</span><span class="nv"> </span><span class="s">id&quot;</span>
+<span class="nt">resolverAccount</span><span class="p">:</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="s">&quot;the</span><span class="nv"> </span><span class="s">account</span><span class="nv"> </span><span class="s">id</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">resolver</span><span class="nv"> </span><span class="s">account&quot;</span>
+<span class="nt">resolverKeyId</span><span class="p">:</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="s">&quot;the</span><span class="nv"> </span><span class="s">ID</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">credential&quot;</span>
+<span class="nt">nameServers</span><span class="p">:</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">array</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="s">&quot;the</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">servers&quot;</span>
+    <span class="nt">minItems</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>
+    <span class="nt">maxItems</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>
+    <span class="nt">items</span><span class="p">:</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+</pre></div>
+</div>
+</td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">resolver</span><span class="p">:</span>
+    <span class="nt">$ref</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pn_sp_nsrecord</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>pn_sp_origins</p></td>
+<td><p>CDN origins，包含 [源站協議]、[源站類型]、[源站地址]</p></td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">批量修改源站設置</span>
+<span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">批量修改 CDN 的 origins</span>
+<span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">array</span>
+<span class="nt">items</span><span class="p">:</span>
+<span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">object</span>
+<span class="nt">properties</span><span class="p">:</span>
+    <span class="nt">resourceId</span><span class="p">:</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">the unique id of cdn</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">the unique id of cdn</span>
+    <span class="nt">originProtocol</span><span class="p">:</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="s">&#39;the</span><span class="nv"> </span><span class="s">supported</span><span class="nv"> </span><span class="s">protocols&#39;</span>
+    <span class="nt">enum</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">http</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">https</span>
+    <span class="nt">originType</span><span class="p">:</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="s">&#39;the</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">origin&#39;</span>
+    <span class="nt">enum</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ip</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">cname</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">cos</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ipaddr</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">domain</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">oss</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">hostname</span>
+    <span class="nt">originAddresses</span><span class="p">:</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">array</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">list of all origins</span>
+    <span class="nt">items</span><span class="p">:</span>
+        <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+</pre></div>
+</div>
+</td>
+<td><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">data</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">CDN origins.</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">CDN origins.</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">CDN origins.</span>
+    <span class="nt">$ref</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pn_sp_origins</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="para-inputs-required">
+<span id="para-require"></span><h3>3. Para Inputs Required<a class="headerlink" href="#para-inputs-required" title="Permalink to this headline">¶</a></h3>
+<p>腳本輸入欄位的必填值，若沒有必填值可不用填：</p>
+<div class="highlight-yaml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="nt">required</span><span class="p">:</span>
+     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">bot_infos</span>
+     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">str_message</span>
+</pre></div>
+</td></tr></table></div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="para-outputs">
+<span id="id5"></span><h3>4. Para Outputs<a class="headerlink" href="#para-outputs" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">執行完腳本後的回傳欄位，可以給下一個腳本做 input 使用。</div>
+<div class="line">欄位需與主程式 <a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/host.detect.redis/src/blcks/detectredis/handler/handler.py#L15">handler/handler.py process function</a> 的回傳值相同。</div>
+</div>
+<div class="highlight-yaml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="nt">outputs</span><span class="p">:</span>
+     <span class="nt">code</span><span class="p">:</span>
+         <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">result message code</span>
+         <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">result message code</span>
+         <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">integer</span>
+         <span class="nt">description</span><span class="p">:</span> <span class="s">&quot;&quot;</span>
+</pre></div>
+</td></tr></table></div>
+<p>回傳欄位定義方式請參考 <a class="reference internal" href="#para-inputs1"><span class="std std-ref">2.1. 一般的欄位定義</span></a>。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="blcks/index.html" class="btn btn-neutral float-right" title="Developer Blcks" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Developer Script" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Pentium Network Technology Ltd. All rights reserved.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

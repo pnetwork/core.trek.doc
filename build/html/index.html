@@ -1,0 +1,414 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Marvin Automation Development Guide &mdash; Pentium</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/table.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Introduction" href="start/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home" alt="Documentation Home"> Marvin Development Guide
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">GETTING STARTED</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="start/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="start/index.html#system-requirements">System Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="start/index.html#installing-trek-cli">Installing Trek CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="start/quick_start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="start/project_folder.html">The Project Directory Structure</a></li>
+</ul>
+<p class="caption"><span class="caption-text">USER GUIDE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="config/index.html">Configuring the Trek CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow/index.html">Developer Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="script/index.html">Developer Script</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extension/vscode/index.html">Working with VSCode Extension</a></li>
+</ul>
+<p class="caption"><span class="caption-text">REFERENCES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cli/commands.html">CLI Command Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extension/vscode/commands.html">VSCode Extension Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library/index.html">Library List</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/">Samples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ABOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="reference/cli/CHANGELOG.html">Trek CLI Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/extension/CHANGELOG.html">Trek VSCode Extension Changelog</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/issues/">Issues Report</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Marvin Development Guide</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Marvin Automation Development Guide</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="marvin-automation-development-guide">
+<h1>Marvin Automation Development Guide<a class="headerlink" href="#marvin-automation-development-guide" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">GETTING STARTED</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="start/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="start/index.html#system-requirements">System Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="start/index.html#installing-trek-cli">Installing Trek CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="start/quick_start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="start/project_folder.html">The Project Directory Structure</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">USER GUIDE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="config/index.html">Configuring the Trek CLI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="config/index.html#marvin-url">marvin_url <span class="red">*</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="config/index.html#marvin-jwt">marvin_JWT <span class="red">*</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="config/index.html#router-port">router_port</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config/index.html#action-timeout">action_timeout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config/index.html#blcks-code-base">blcks_code_base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config/index.html#ansible-code-base">ansible_code_base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config/index.html#shell-script-base">shell_script_base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config/index.html#script-repository">script_repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config/index.html#input-data-path">input_data_path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config/index.html#input-event-path">input_event_path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config/index.html#env">env</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config/index.html#flow-home">flow_home</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config/index.html#local-inventory-file">local_inventory_file</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="workflow/index.html">Developer Workflow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="workflow/schema.html">Workflow Schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workflow/example.html">The First Workflow Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workflow/conditional.html">Workflow Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workflow/conditional.html#workflow-logical-operators">Workflow Logical Operators</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="script/index.html">Developer Script</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="script/schema.html">Para Schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="script/blcks/index.html">Developer Blcks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="script/ansible.html">Developer Ansible</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="extension/vscode/index.html">Working with VSCode Extension</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="extension/vscode/install.html">System Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extension/vscode/install.html#installing-trek-vscode-extension">Installing Trek VSCode Extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extension/vscode/example.html">Before you begin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extension/vscode/example.html#the-first-workflow-project">The First Workflow Project</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">REFERENCES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cli/commands.html">CLI Command Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/build.html">build</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/buildblcks.html">buildblcks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/config.html">config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/createansible.html">createansible</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/createblcks.html">createblcks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/createproject.html">createproject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/createshell.html">createshell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/createterraform.html">createterraform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/deploy.html">deploy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/deployansible.html">deployansible</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/deployblcks.html">deployblcks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/deployshell.html">deployshell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/deployterraform.html">deployterraform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/graph.html">graph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/init.html">init</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/initansible.html">initansible</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/initblcks.html">initblcks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/initenv.html">initenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/initshell.html">initshell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/initterraform.html">initterraform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/install.html">install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/listscripts.html">listscripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/login.html">login</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/logs.html">logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/pack.html">pack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/packansible.html">packansible</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/packblcks.html">packblcks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/packshell.html">packshell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/packterraform.html">packterraform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/push.html">push</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/pushblcks.html">pushblcks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/run.html">run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/runansible.html">runansible</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/runblcks.html">runblcks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/runshell.html">runshell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/runterraform.html">runterraform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/shutdownenv.html">shutdownenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/uninstall.html">uninstall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/version.html">version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/commands/webserver.html">webserver</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="extension/vscode/commands.html">VSCode Extension Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/trek_ansible_create.html">Trek Ansible: Create Ansible</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/trek_ansible_deploy.html">Trek Ansible: Deploy Packed Packages to Marvin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/trek_ansible_deploy_auto.html">Trek Ansible: Deploy to Marvin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/trek_ansible_pack.html">Trek Ansible: Pack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/trek_ansible_run.html">Trek Ansible: Run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/trek_blcks_build.html">Trek Blcks: Build and Push</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/trek_blcks_create.html">Trek Blcks: Create Blcks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/trek_blcks_deploy.html">Trek Blcks: Deploy Packed Packages to Marvin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/trek_blcks_deploy_auto.html">Trek Blcks: Deploy to Marvin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/trek_blcks_pack.html">Trek Blcks: Pack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/trek_blcks_run.html">Trek Blcks: Run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/trek_build.html">Trek: Build and Push</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/trek_create_project.html">Trek: Create Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/trek_deploy.html">Trek: Deploy Packed Packages to Marvin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/trek_deploy_auto.html">Trek: Deploy to Marvin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/trek_down.html">Trek: Shutdown Env</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/trek_install_script.html">Trek: Install Script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/trek_login.html">Trek: Login to Marvin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/trek_pack.html">Trek: Pack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/trek_remote_scripts.html">Trek: List Remote Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/trek_run.html">Trek: Run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/trek_shell_create.html">Trek Shell: Create Shell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/trek_shell_deploy.html">Trek Shell: Deploy Packed Packages to Marvin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/trek_shell_deploy_auto.html">Trek Shell: Deploy to Marvin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/trek_shell_pack.html">Trek Shell: Pack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/trek_shell_run.html">Trek Shell: Run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/trek_show_installed.html">Trek: List Installed Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/trek_show_logs.html">Trek: Logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/trek_show_version.html">Trek: Version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/trek_terraform_create.html">Trek Terraform: Create Terraform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/trek_terraform_deploy.html">Trek Terraform: Deploy Packed Packages to Marvin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/trek_terraform_deploy_auto.html">Trek Terraform: Deploy to Marvin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/trek_terraform_pack.html">Trek Terraform: Pack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/trek_terraform_run.html">Trek Terraform: Run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/trek_uninstall_script.html">Trek: Uninstall Script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/commands/trek_up.html">Trek: Init Env</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="library/index.html">Library List</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="library/index.html#scripts-list">Scripts list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library/index.html#workflows-list">Workflows list</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/">Samples</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">ABOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="reference/cli/CHANGELOG.html">Trek CLI Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/CHANGELOG.html#beta6">1.0.0-beta6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/CHANGELOG.html#beta5">1.0.0-beta5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/CHANGELOG.html#beta4">1.0.0-beta4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/CHANGELOG.html#beta3">1.0.0-beta3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/CHANGELOG.html#beta2">1.0.0-beta2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/CHANGELOG.html#beta1">1.0.0-beta1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/cli/CHANGELOG.html#beta">1.0.0-beta</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="reference/extension/CHANGELOG.html">Trek VSCode Extension Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/CHANGELOG.html#beta6">1.0.0-beta6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/CHANGELOG.html#beta5">1.0.0-beta5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/CHANGELOG.html#beta4">1.0.0-beta4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/CHANGELOG.html#beta3">1.0.0-beta3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/CHANGELOG.html#beta2">1.0.0-beta2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/extension/CHANGELOG.html#beta1">1.0.0-beta1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/issues/">Issues Report</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="start/index.html" class="btn btn-neutral float-right" title="Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Pentium Network Technology Ltd. All rights reserved.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
