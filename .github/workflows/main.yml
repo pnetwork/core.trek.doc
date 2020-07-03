@@ -29,6 +29,7 @@ jobs:
           git config --local user.name "$USER_NAME"
       - name: Rebase gh-pages with master
         run: |
+          git pull
           echo "****"
           git branch
           git rebase -s recursive -X theirs refs/remotes/origin/p/3658/chelsea_add_github_action
