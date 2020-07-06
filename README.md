@@ -1,4 +1,4 @@
-![](https://github.com/pnetwork/core.trek.doc/workflows/Build%20Trek%20document%20to%20gh-pages%20branch/badge.svg?branch=gh-pages)
+![](https://github.com/pnetwork/core.trek.doc/workflows/Build%20Trek%20document%20to%20gh-pages%20branch/badge.svg?branch=master)
 
 # Marvin Automation Development Guide
 
