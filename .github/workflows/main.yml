@@ -15,26 +15,39 @@ jobs:
     env:
       USER_NAME: ${{ github.event.head_commit.author.name }}
       USER_EMAIL: ${{ github.event.head_commit.author.email }}
+      RELEASE_BRANCH: gh-pages
+      TOKEN: ${{ secrets.CHELSEA_SECRET }}
     steps:
-      - name: Checkout gh-pages repo include submodule
+      - name: Extract source branch name
+        shell: bash
+        run: echo "##[set-output name=source_br;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_br
+      - name: Checkout source branch (${{ steps.extract_br.outputs.source_br }}) repo
         uses: actions/checkout@v2
         with:
-          ref: p/3658/chelsea_add_github_action
-          fetch-depth: 1
-          submodules: true
-          token: ${{ secrets.CHELSEA_SECRET }}
-      - name: Set github config
+          ref: ${{ env.GITHUB_REF }}
+          token: ${{ env.TOKEN }}
+      - name: Set github config and extract source branch last commit id
         run: |
           git config --local user.email "$USER_EMAIL"
           git config --local user.name "$USER_NAME"
-      - name: Rebase gh-pages with master
+          echo "##[set-output name=commit_id;]$(echo `git rev-parse --short ${{ github.event.head_commit.id }}`)"
+        id: extract_commit
+      - name: Force merge and push to ${{ env.RELEASE_BRANCH }}
         run: |
-          git fetch
-          git checkout chelsea_test_target
-          git merge -X theirs p/3658/chelsea_add_github_action --no-commit
+          git push --force origin $GITHUB_REF:$RELEASE_BRANCH
+      - name: Checkout target branch (${{ env.RELEASE_BRANCH }}) repo include submodule
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ env.RELEASE_BRANCH }}
+          fetch-depth: 1
+          submodules: true
+          token: ${{ env.TOKEN }}
+      - name: Overwrite .gitignore to unignore build/html files
+        run: |
           cp .gitignore.gh-pages .gitignore
           git add .gitignore
-          git commit --allow-empty -m "misc: .gitignore replcate with .gitignore.gh-pages"
+          git commit --allow-empty -m "misc: replace .gitignore to .gitignore.gh-pages (${{ steps.extract_commit.outputs.commit_id }})"
           git push -f
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
@@ -51,5 +64,5 @@ jobs:
       - name: Commit and push built files
         run: |
           git add . -A
-          git commit --allow-empty -m "${{ github.event.head_commit.message }}"
+          git commit --allow-empty -m "misc: rebuild html (${{ steps.extract_commit.outputs.commit_id }})"
           git push
