@@ -1,3 +1,5 @@
+![](https://github.com/pnetwork/core.trek.doc/workflows/Build%20Trek%20document%20to%20gh-pages%20branch/badge.svg?branch=gh-pages)
+
 # Marvin Automation Development Guide
 
 Pentium Internet (奔騰網路) 提供多種開發環境，你可以透過 CLI 界面或 VScode 擴展開發自動化流程腳本。 
@@ -7,7 +9,6 @@ Pentium Internet (奔騰網路) 提供多種開發環境，你可以透過 CLI �
 
 - Trek CLI
 - Trek VSCode Extension
-
 
 ## How to build documents
 
@@ -22,7 +23,6 @@ Pentium Internet (奔騰網路) 提供多種開發環境，你可以透過 CLI �
 $ sh build.sh -h
 # 產生文件
 $ sh build.sh
-# 先 build trek 後再一併產生文件
-$ sh build.sh --trek
+# 先 build 後再一併產生文件
+$ sh build.sh --trek --vse --blcks
 ```
-

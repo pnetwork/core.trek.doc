@@ -1,6 +1,5 @@
 build/doctrees/
 source/_build
-build/
 .vscode
 *.vsix
 run.sh
@@ -14,6 +13,3 @@ example/host.detect.redis/.pytest.cache
 example/host.detect.redis/.trek/last_run
 example/host.detect.redis/.trek/last_up
 example/host.detect.redis/.trek/logs
-source/library/scripts/*
-source/library/scripts_list.rst
-source/library/workflows_list.rst
