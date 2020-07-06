@@ -1,0 +1,12 @@
+build/doctrees/
+source/_build
+.vscode
+*.vsix
+run.sh
+*.doctrees
+*.pickle
+.DS_Store
+example/host.detect.redis/.pytest.cache
+example/host.detect.redis/.trek/last_run
+example/host.detect.redis/.trek/last_up
+example/host.detect.redis/.trek/logs

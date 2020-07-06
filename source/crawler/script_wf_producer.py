@@ -5,6 +5,8 @@ import os
 from io import BytesIO
 import zipfile
 from urllib.request import urlopen
+from concurrent.futures import ThreadPoolExecutor
+import time
 
 dirname = os.path.dirname(__file__)
 
@@ -18,6 +20,8 @@ SCRIPT_BASE_URL = (
 WF_ENTRY_FILE = "manifest.json"
 WF_SAVE_PATH = os.path.join(dirname, os.pardir, "library", "workflows_list.rst")
 SCRIPT_SAVE_PATH = os.path.join(dirname, os.pardir, "library", "scripts_list.rst")
+WORKERS_LIMIT = 10
+DEFAULT_THREADS_EXECUTION_TIMEOUT = 300
 
 
 def to_tuple(version_str):
@@ -35,6 +39,17 @@ def get_last_version(url_str):
     v_urls = get_href(url_str)
     last_version = max(to_tuple(h.string) for h in v_urls[1:])
     return ".".join(str(v) for v in last_version)
+
+
+def service_threads_handler(
+        service_method,
+        *args,
+        workers=WORKERS_LIMIT,
+        timeouts=DEFAULT_THREADS_EXECUTION_TIMEOUT,
+):
+    with ThreadPoolExecutor(max_workers=workers) as executor:
+        futures = executor.map(service_method, *args, timeout=timeouts)
+        return list(futures)
 
 
 def extract_wf(download_url):
@@ -55,6 +70,33 @@ def extract_wf(download_url):
     return yaml.safe_load(wf)
 
 
+def get_wf_content(i):
+    href = i.get("href")
+    wf_dir_url = os.path.join(WF_BASE_URL, href)
+    version = get_last_version(wf_dir_url)
+
+    wf_url = os.path.join(wf_dir_url, version)
+    wf_href = get_href(wf_url)
+
+    download_url = None
+    for i in wf_href:
+        if i.get("href", "").endswith(".zip"):
+            download_url = i["href"]
+            break
+    wf = extract_wf(download_url)
+
+    wf_name = wf.get("graph", {}).get("metadata", {}).get("title")
+    wf_desc = wf.get("graph", {}).get("metadata", {}).get("description")
+    wf_id = wf.get("graph", {}).get("metadata", {}).get("templateId")
+
+    result = f"""
+
+   * - {wf_name}
+     - {wf_id}
+     - {wf_desc} """
+    return result
+
+
 def get_wf_list():
     r = requests.get(WF_BASE_URL)
     soup = BeautifulSoup(r.content, "html.parser")
@@ -68,31 +110,9 @@ def get_wf_list():
      - Template id
      - Description
 """
-    for i in wf_urls:
-        href = i.get("href")
-        wf_dir_url = os.path.join(WF_BASE_URL, href)
-        version = get_last_version(wf_dir_url)
 
-        wf_url = os.path.join(wf_dir_url, version)
-        wf_href = get_href(wf_url)
-
-        download_url = None
-        for i in wf_href:
-            if i.get("href", "").endswith(".zip"):
-                download_url = i["href"]
-                break
-        wf = extract_wf(download_url)
-
-        wf_name = wf.get("graph", {}).get("metadata", {}).get("title")
-        wf_desc = wf.get("graph", {}).get("metadata", {}).get("description")
-        wf_id = wf.get("graph", {}).get("metadata", {}).get("templateId")
-
-        result += f"""
-
-   * - {wf_name}
-     - {wf_id}
-     - {wf_desc} """
-    return result
+    results = service_threads_handler(get_wf_content, wf_urls)
+    return result + "".join(results)
 
 
 def extract_script(download_url):
@@ -110,6 +130,55 @@ def extract_script(download_url):
     return yaml.safe_load(script)
 
 
+def get_script_content(i):
+    href = i.get("href")
+    dir_url = os.path.join(SCRIPT_BASE_URL, href)
+    version = get_last_version(dir_url)
+
+    script_url = os.path.join(dir_url, version, "dist")
+    script_href = get_href(script_url)
+
+    download_url = None
+    for i in script_href:
+        if i.get("href", "").endswith(".zip"):
+            download_url = i["href"]
+            break
+    script = extract_script(download_url)
+
+    script_name = script.get("name")
+    script_desc = script.get("description")
+    if "\n" in script_desc:
+        script_desc = "| " + script_desc.replace("\n", "\n       | ")
+    script_id = script.get("id")
+
+    stream = yaml.dump(script, sort_keys=False, allow_unicode=True)
+
+    with open(
+            os.path.join(dirname, os.pardir, "library", "scripts", script_id + ".rst"), "w"
+    ) as f:
+        f.writelines(
+            [
+                script_id,
+                "\n**********************************\n| ",
+                script_name,
+                "\n| ",
+                script_desc,
+                "\n\n.. code-block:: yaml\n",
+                "\n    ",
+            ]
+        )
+        f.write(stream.replace("\n", "\n    "))
+
+    return f"""
+
+   * - {script_name}
+     - {script_id}
+     - {script_desc}
+     - :doc:`view schema<scripts/{script_id}>`"""
+
+    return result
+
+
 def get_script_list():
     r = requests.get(SCRIPT_BASE_URL)
     soup = BeautifulSoup(r.content, "html.parser")
@@ -125,61 +194,22 @@ def get_script_list():
      - Description
      - Para schema file
 """
-    for i in script_urls:
-        href = i.get("href")
-        dir_url = os.path.join(SCRIPT_BASE_URL, href)
-        version = get_last_version(dir_url)
-
-        script_url = os.path.join(dir_url, version, "dist")
-        script_href = get_href(script_url)
-
-        download_url = None
-        for i in script_href:
-            if i.get("href", "").endswith(".zip"):
-                download_url = i["href"]
-                break
-        script = extract_script(download_url)
-
-        script_name = script.get("name")
-        script_desc = script.get("description")
-        if "\n" in script_desc:
-            script_desc = "| " + script_desc.replace("\n", "\n       | ")
-        script_id = script.get("id")
-
-        stream = yaml.dump(script, sort_keys=False, allow_unicode=True)
-
-        with open(
-            os.path.join(dirname, os.pardir, "library", "scripts", script_id + ".rst"),
-            "w",
-        ) as f:
-            f.writelines(
-                [
-                    script_id,
-                    "\n**********************************\n| ",
-                    script_name,
-                    "\n| ",
-                    script_desc,
-                    "\n\n.. code-block:: yaml\n",
-                    "\n    ",
-                ]
-            )
-            f.write(stream.replace("\n", "\n    "))
-
-        result += f"""
-
-   * - {script_name}
-     - {script_id}
-     - {script_desc}
-     - :doc:`view schema<scripts/{script_id}>`"""
-    return result
+    results = service_threads_handler(get_script_content, script_urls)
+    return result + "".join(results)
 
 
 if __name__ == "__main__":
+    start_time = time.time()
+
     wf_result = get_wf_list()
     with open(WF_SAVE_PATH, "w") as f:
         f.write(wf_result)
+    print("--- %s seconds ---" % (time.time() - start_time))
+    print("workflow template crawler finish.")
 
+    start_time = time.time()
     script_result = get_script_list()
     with open(SCRIPT_SAVE_PATH, "w") as f:
         f.write(script_result)
-
+    print("--- %s seconds ---" % (time.time() - start_time))
+    print("script crawler finish.")
