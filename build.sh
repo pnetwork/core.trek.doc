@@ -61,12 +61,12 @@ clone_repo(){
     repo_name=$1
     br_name=$2
     rm -rf ${repo_name}
-    echo "$repo_name"
+
+    token_prefix=""
     if [ "$GITHUB_TOKEN" ]; then
-        git clone -b ${br_name} https://${GITHUB_TOKEN}@github.com/pnetwork/${repo_name}.git
-    else
-        git clone -b ${br_name} https://github.com/pnetwork/${repo_name}.git
+        token_prefix="${GITHUB_TOKEN}@"
     fi
+    git clone -b ${br_name} https://${token_prefix}github.com/pnetwork/${repo_name}.git
 }
 
 # copy references from trek repo
