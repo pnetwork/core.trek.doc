@@ -1,4 +1,0 @@
-[submodule "submodule/core.vscode.extension.mflow"]
-	path = submodule/core.vscode.extension.mflow
-	url = https://github.com/pnetwork/core.vscode.extension.mflow.git
-	branch = master
