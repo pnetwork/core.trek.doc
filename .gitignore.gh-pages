@@ -6,6 +6,7 @@ run.sh
 *.doctrees
 *.pickle
 .DS_Store
+reference_repos/*
 example/host.detect.redis/.pytest.cache
 example/host.detect.redis/.trek/last_run
 example/host.detect.redis/.trek/last_up

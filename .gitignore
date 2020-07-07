@@ -7,6 +7,7 @@ run.sh
 *.doctrees
 *.pickle
 .DS_Store
+reference_repos/*
 source/reference/cli/*
 source/reference/extension/*
 source/reference/blcks/*
