@@ -40,8 +40,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: ${{ env.RELEASE_BRANCH }}
-          fetch-depth: 1
-          submodules: true
           token: ${{ env.TOKEN }}
       - name: Overwrite .gitignore to unignore build/html files
         run: |
