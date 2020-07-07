@@ -40,8 +40,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: ${{ env.RELEASE_BRANCH }}
-          fetch-depth: 1
-          submodules: true
           token: ${{ env.TOKEN }}
       - name: Overwrite .gitignore to unignore build/html files
         run: |
@@ -60,7 +58,7 @@ jobs:
       - name: Rebuild document files
         run: |
           chmod +x ./build.sh
-          sh ./build.sh --blcks --trek --vse
+          sh ./build.sh --blcks --trek --vse --token $TOKEN
       - name: Commit and push built files
         run: |
           git add . -A
