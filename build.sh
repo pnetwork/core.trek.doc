@@ -70,7 +70,7 @@ clone_repo(){
 }
 
 # copy references from trek repo
-if [ "$BUILD_TREK" == "1" ]; then
+if [ "$BUILD_TREK" = "1" ]; then
     echo "git clone trek repo"
     cd reference_repos
     clone_repo ${TREK_DIR} ${REF_REPO_BR}

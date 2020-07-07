@@ -60,7 +60,7 @@ jobs:
       - name: Rebuild document files
         run: |
           chmod +x ./build.sh
-          sh ./build.sh --blcks --trek --vse
+          sh ./build.sh --blcks --trek --vse --token $TOKEN
       - name: Commit and push built files
         run: |
           git add . -A
