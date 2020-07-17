@@ -136,4 +136,7 @@ local_inventory_file
            value: _local_ # 當 value 為 _local_ 時，服務器位置及登入資訊為 config.json 中的 local_inventory_file 設置
            type: string
 
-
+.. note::
+    | 1. 設定 ``_local_`` 表示使用本地的 inventory 檔案
+    | 2. 在執行命令 ``runansible/runshell`` 加上 ``--localhost``，表示直接在本地執行
+    | 這兩者意義上有些不太一樣。（請參考 :ref:`Ansible Default Inputs<ansible_default_inputs>`）

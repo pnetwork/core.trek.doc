@@ -54,6 +54,7 @@ exclude_patterns = []
 
 
 def setup(app):
+    app.add_css_file("css/main.css")
     app.add_css_file("css/table.css")
 
 
