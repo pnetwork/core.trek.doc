@@ -53,6 +53,44 @@ Configuration
 | 若想知道 *config.json* 的詳細介紹，請參考 :trekdoclink:`Configuring Properties<config/config_list.html>`
 
 
+.. _ansible_default_inputs:
+
+Default Inputs
+**************
+
+Ansible 腳本內定有幾個輸入參數，描述於 para 檔中：
+
+.. list-table:: 
+   :widths: 5 10 5 5
+   :header-rows: 1
+
+   * - Name
+     - Description
+     - Example
+     - Required
+
+   * - resourceIds
+     -  要執行的遠端服務器 id，
+        當填為 ``_local_`` 表示使用 ``local_inventory_file`` 的檔案，
+        請參考 :trekdoclink:`Configuring Properties<config/config_list.html>`
+     - S-okbrdo6as
+     - No
+
+   * - localhost
+     - 表示是否直接在本地 (127.0.0.1) 執行腳本，執行 ``runansible`` 時加上 ``--localhost`` 可使用此功能，或是於 ``event.yml`` 將 localhost 設為 true 也會啟用
+     - true
+     - No
+
+在 para 檔中的表示如下：
+
+.. code:: yaml
+
+    inputs:
+      resourceIds:
+        $ref: pn_ids_host
+      localhost:
+        type: boolean
+        default: false
 
 
 Working with Trek CLI

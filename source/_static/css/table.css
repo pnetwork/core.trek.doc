@@ -63,3 +63,7 @@ th p {
     margin-bottom: 10px !important;
     /* vertical-align: middle !important; */
 }
+
+.wy-table-responsive table td {
+    white-space: normal;
+}
