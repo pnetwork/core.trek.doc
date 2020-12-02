@@ -49,7 +49,6 @@ Where is para file?
             ---
             id: detectredis
             schemaVersion: '0.2'
-            name: detectredis
             title: detectredis
             version: "0.1.0"
             description: ""
@@ -62,23 +61,19 @@ Where is para file?
 
             inputs:
                 message:
-                    name: test input
                     title: test input
                     type: string
 
             outputs:
                 code:
-                    name: result message code
                     title: result message code
                     type: integer
                     description: ""
                 msg:
-                    name: result message
                     title: result message
                     type: string
                     description: ""
                 result:
-                    name: result
                     title: result
                     type: string
                     description: ""
@@ -113,7 +108,7 @@ How to defind the para schema?
 **********************************************
 Para schema 可以區分為三大區塊，我們會一一做介紹：
 
-    | :ref:`para_metadata`：Id, name, assets...
+    | :ref:`para_metadata`：Id, assets...
     | :ref:`para_inputs`：定義腳本的輸入欄位。
     | :ref:`para_require`：定義腳本的輸入欄位哪些是必填。
     | :ref:`para_outputs`：定義腳本的回傳欄位。
@@ -148,7 +143,6 @@ Para schema 可以區分為三大區塊，我們會一一做介紹：
 
     id: detectredis                                 # 腳本 Id
     schemaVersion: '0.2'                            # Para schema version
-    name: Redis connection monitor                  # 腳本名稱
     title: Redis connection monitor                 # Title
     version: "0.1.0"                                # 腳本 version
     description: "Detect host redis connection."    # Description
@@ -185,7 +179,6 @@ Para schema 可以區分為三大區塊，我們會一一做介紹：
 
     inputs:
         tag_name:
-            name: Tag name
             title: Tag name
             type: string
         array_tags_name:
@@ -213,14 +206,12 @@ Para schema 可以區分為三大區塊，我們會一一做介紹：
      - .. code-block:: yaml
 
             tag_name:
-                name: Tag name
                 title: Tag name
                 type: string
    * - number
      - .. code-block:: yaml
 
             expired_within_days:
-                name: 幾天後過期
                 title: 幾天後過期
                 type: integer
                 description: 幾天後過期(>0)：範例 10
@@ -230,7 +221,6 @@ Para schema 可以區分為三大區塊，我們會一一做介紹：
      - .. code-block:: yaml
             
             has_any_valid_project:
-                name: 是否通過任一白名單項目
                 title: 是否通過任一白名單項目
                 description: 是否通過任一白名單項目
                 type: boolean
@@ -273,7 +263,6 @@ Para schema 可以區分為三大區塊，我們會一一做介紹：
             
             # array of object
             expired_hosts:
-                name: 到期服務器列表
                 title: 到期服務器列表
                 type: array
                 description: 到期服務器列表
@@ -281,14 +270,12 @@ Para schema 可以區分為三大區塊，我們會一一做介紹：
                 type: object
                 properties:
                     id:
-                        name: 服務器ID
                         title: 服務器ID
                         type: string
                         description: 服務器ID
                         examples:
                         - S-ajvw371v9
                     name:
-                        name: 服務器名稱
                         title: 服務器名稱
                         description: 服務器名稱
                         type: string
@@ -317,7 +304,6 @@ Pentium 提供特別的欄位資料型態，可以在 marvin 上顯示選取資�
      - .. code-block:: yaml
 
             ---
-            name: 帶入資產
             title: 帶入資產
             description: 請選擇相對應服務器
             type: array
@@ -333,7 +319,6 @@ Pentium 提供特別的欄位資料型態，可以在 marvin 上顯示選取資�
      - .. code-block:: yaml
 
             ---
-            name: 帶入資產
             title: 帶入資產
             description: 請選擇相對應域名
             type: array
@@ -349,7 +334,6 @@ Pentium 提供特別的欄位資料型態，可以在 marvin 上顯示選取資�
      - .. code-block:: yaml
 
             ---
-            name: 帶入資產
             title: 帶入資產
             description: 請選擇相對應CDN
             type: array
@@ -367,7 +351,6 @@ Pentium 提供特別的欄位資料型態，可以在 marvin 上顯示選取資�
      - .. code-block:: yaml
 
             ---
-            name: 帶入資產
             title: 帶入資產
             description: 請選擇相對應腳本
             type: array
@@ -383,7 +366,6 @@ Pentium 提供特別的欄位資料型態，可以在 marvin 上顯示選取資�
      - .. code-block:: yaml
 
             ---
-            name: 帶入資產
             title: 帶入資產
             description: 請選擇相對應通訊帳號
             type: array
@@ -399,7 +381,6 @@ Pentium 提供特別的欄位資料型態，可以在 marvin 上顯示選取資�
      - .. code-block:: yaml
 
             ---
-            name: 帶入資產
             title: 帶入資產
             description: 請選擇相對應密鑰
             type: string     
@@ -414,7 +395,7 @@ Pentium 提供特別的欄位資料型態，可以在 marvin 上顯示選取資�
      - .. code-block:: yaml
 
             ---
-            name: 密碼
+            title: 密碼
             description: 密碼
             type: string     
 
@@ -429,7 +410,7 @@ Pentium 提供特別的欄位資料型態，可以在 marvin 上顯示選取資�
      - .. code-block:: yaml
 
             ---
-            name: 修改密碼
+            title: 修改密碼
             description: 修改密碼
             type: object
             properties:
@@ -452,14 +433,13 @@ Pentium 提供特別的欄位資料型態，可以在 marvin 上顯示選取資�
      - .. code-block:: yaml
 
             ---
-            name: Text inputs
+            title: Text inputs
             description: Text inputs
             type: string
 
      - .. code-block:: yaml
 
             str_message:
-                name: Message context.
                 title: Message context.
                 description: The message used to send to the specified channel.
                 $ref: pn_sp_textarea_str
@@ -468,7 +448,7 @@ Pentium 提供特別的欄位資料型態，可以在 marvin 上顯示選取資�
      - .. code-block:: yaml
 
             ---
-            name: Text inputs
+            title: Text inputs
             description: Text inputs
             type: array
             items:
@@ -476,7 +456,6 @@ Pentium 提供特別的欄位資料型態，可以在 marvin 上顯示選取資�
      - .. code-block:: yaml
 
             str_message:
-                name: Message context.
                 title: Message context.
                 description: The message used to send to the specified channel.
                 $ref: pn_sp_textarea_str
@@ -487,7 +466,6 @@ Pentium 提供特別的欄位資料型態，可以在 marvin 上顯示選取資�
      - .. code-block:: yaml
 
             ---
-            name: 帶入資產
             title: 帶入資產
             description: 請選擇相對應雲帳號
             type: object
@@ -509,7 +487,7 @@ Pentium 提供特別的欄位資料型態，可以在 marvin 上顯示選取資�
      - .. code-block:: yaml  
 
             ---
-            name: 域名註冊商
+            title: 域名註冊商
             description: 域名註冊商資訊
             type: object
             properties:
@@ -538,7 +516,7 @@ Pentium 提供特別的欄位資料型態，可以在 marvin 上顯示選取資�
      - CDN origins，包含 [源站協議]、[源站類型]、[源站地址]
      - .. code-block:: yaml
 
-            name: 批量修改源站設置
+            title: 批量修改源站設置
             description: 批量修改 CDN 的 origins
             type: array
             items:
@@ -573,7 +551,6 @@ Pentium 提供特別的欄位資料型態，可以在 marvin 上顯示選取資�
      - .. code-block:: yaml
 
             data:
-                name: CDN origins.
                 title: CDN origins.
                 description: CDN origins.
                 $ref: pn_sp_origins
@@ -608,7 +585,6 @@ Pentium 提供特別的欄位資料型態，可以在 marvin 上顯示選取資�
 
     outputs:
         code:
-            name: result message code
             title: result message code
             type: integer
             description: ""
