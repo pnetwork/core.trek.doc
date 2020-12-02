@@ -460,14 +460,14 @@ Pentium 提供特別的欄位資料型態，可以在 marvin 上顯示選取資�
                 description: The message used to send to the specified channel.
                 $ref: pn_sp_textarea_str
  
-   * - pn_id_cloudcredential
+   * - pn_sp_cdn_credential
      - | 雲帳號資產用，含 [提供商]、[帳號] 以及 [密鑰]
        | 的下拉式選單
      - .. code-block:: yaml
 
             ---
-            title: 帶入資產
-            description: 請選擇相對應雲帳號
+            title: Select asset(s)
+            description: Please select applied cloud account(s)
             type: object
             properties:
             provider_id:
@@ -479,7 +479,7 @@ Pentium 提供特別的欄位資料型態，可以在 marvin 上顯示選取資�
      - .. code-block:: yaml
 
             resolverKey:
-                $ref: pn_id_cloudcredential
+                $ref: pn_sp_cdn_credential
 
    * - pn_sp_nsrecord
      - | 域名註冊商資訊用，包含 [域名解析商]、[帳號]、[密鑰] 
