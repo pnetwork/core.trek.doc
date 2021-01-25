@@ -1,0 +1,653 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>CDN &mdash; Pentium</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/main.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/table.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="CertificateManager" href="certificate.html" />
+    <link rel="prev" title="Services" href="../../../script/blcks/services.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Marvin Development Guide
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">GETTING STARTED</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../start/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../start/index.html#system-requirements">System Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../start/index.html#installing-trek-cli">Installing Trek CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../start/quick_start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../start/project_folder.html">The Project Directory Structure</a></li>
+</ul>
+<p class="caption"><span class="caption-text">USER GUIDE</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../config/index.html">Configuring the Trek CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../workflow/index.html">Developer Workflow</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../script/index.html">Developer Script</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../script/schema.html">Para Schema</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../script/blcks/index.html">Developer Blcks</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quickstart.html">Quick Start</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../../script/blcks/services.html">Services</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../script/ansible.html">Developer Ansible</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../extension/vscode/index.html">Working with VSCode Extension</a></li>
+</ul>
+<p class="caption"><span class="caption-text">REFERENCES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../cli/commands.html">CLI Command Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../extension/vscode/commands.html">VSCode Extension Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../library/index.html">Library List</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/">Samples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ABOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cli/CHANGELOG.html">Trek CLI Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/CHANGELOG.html">Trek VSCode Extension Changelog</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/issues/">Issues Report</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Marvin Development Guide</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../../script/index.html">Developer Script</a> &raquo;</li>
+        
+          <li><a href="../../../script/blcks/index.html">Developer Blcks</a> &raquo;</li>
+        
+          <li><a href="../../../script/blcks/services.html">Services</a> &raquo;</li>
+        
+      <li>CDN</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cdn">
+<h1>CDN<a class="headerlink" href="#cdn" title="Permalink to this headline">¶</a></h1>
+<p>Pentium CDN (content distribution network) service class</p>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">blcks.services.cdn.</code><code class="sig-name descname">CDN</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cred</span></em>, <em class="sig-param"><span class="n">event</span></em>, <em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span></dt>
+<dd><p>CDN base class</p>
+<p>Since class might inheritant from multiple base classes,
+all the functions need a prefix or postfix to distinguish the difference</p>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">bindCDN</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">identifiers</span></em><span class="sig-paren">)</span></dt>
+<dd><p>auto bind CDNs with CNAME</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>identifiers</strong> (<em>list</em>) -- Include identifiers for CDN assets.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>return the message of execution</p>
+</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;subdomain&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>AssertionError, ServiceError, AuthenticationError, ClientError</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">createCDNs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cacheType</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">CDNZone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">originProtocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">originType</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">originAddresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">providerId</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">accountId</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keyId</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subdomainId</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">projectIds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloudCertificateId</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span></dt>
+<dd><p>bulkly create cdns</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cacheType</strong> (<em>str</em>) -- </p></li>
+<li><p><strong>CDNZone</strong> (<em>str</em>) -- </p></li>
+<li><p><strong>originProtocol</strong> (<em>str</em>) -- </p></li>
+<li><p><strong>originAddresses</strong> (<em>list</em>) -- </p></li>
+<li><p><strong>providerId</strong> (<em>ProviderId</em><em>(</em><em>official support</em><em>)</em>) -- </p></li>
+<li><p><strong>accountId</strong> (<em>str</em>) -- </p></li>
+<li><p><strong>keyId</strong> (<em>str</em>) -- </p></li>
+<li><p><strong>subdomainId</strong> (<em>str</em>) -- </p></li>
+<li><p><strong>projectIds</strong> (<em>list</em>) -- </p></li>
+<li><p><strong>cloudCertificateId</strong> (<em>str</em>) -- </p></li>
+<li><p><strong>description</strong> (<em>str</em>) -- </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>return the created data</p>
+</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s2">&quot;same data with getCDN&quot;</span><span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>AssertionError, ServiceError, AuthenticationError, ClientError</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">deleteCDN</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">composedIds</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span></dt>
+<dd><p>delete all given composedIds</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>composedIds</strong> (<em>list</em>) -- list of combination of CDNId and subdomainId</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>return a list of deleted ids</p>
+</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;string&quot;</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>AssertionError, ServiceError, AuthenticationError, ClientError</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">getCDN</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">identifier</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Get specific cdn info</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>identifier</strong> (<em>str</em>) -- The identifier of CDN assets.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>return the specified CDN’s information</p>
+</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;CDNId&quot;</span><span class="p">:</span> <span class="s2">&quot;01d8b927cfdda37ca4cb387c75099918&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;caches&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;paths&quot;</span><span class="p">:</span> <span class="s2">&quot;images/*.jpg&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;ttl&quot;</span><span class="p">:</span> <span class="mi">86400</span><span class="p">,</span>
+                <span class="nt">&quot;weight&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="nt">&quot;isGlobal&quot;</span><span class="p">:</span> <span class="kc">false</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;certificateId&quot;</span><span class="p">:</span> <span class="s2">&quot;arn:aws:acm:us-east-1:657315558120:certificate/                        71084e3a-3ef1-40a7-96e2-d71ae4d1404a&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;certificateName&quot;</span><span class="p">:</span> <span class="s2">&quot;marvin_ca_12333112421&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;composedId&quot;</span><span class="p">:</span> <span class="s2">&quot;CDN-aaaaaaaaa:SD-bbbbbbbbb&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;fqdn&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;fqdnStatus&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nt">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nt">&quot;CDNAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;cdn.aliyun.cn&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;projects&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;subdomain&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;bindingStatus&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;isBound&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;canBind&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;boundAt&quot;</span><span class="p">:</span> <span class="mi">1234567890</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="mi">1234567890</span><span class="p">,</span>
+        <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="mi">1234567890</span><span class="p">,</span>
+        <span class="nt">&quot;purgedAt&quot;</span><span class="p">:</span> <span class="mi">1234567890</span><span class="p">,</span>
+        <span class="nt">&quot;warmupAt&quot;</span><span class="p">:</span> <span class="mi">1234567890</span><span class="p">,</span>
+        <span class="nt">&quot;pendingAt&quot;</span><span class="p">:</span> <span class="mi">1234567890</span><span class="p">,</span>
+        <span class="nt">&quot;permission&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;DELETE&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="nt">&quot;DEPLOY&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;READ&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;REFRESH_PURGE&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;SYNC&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;UPDATE&quot;</span><span class="p">:</span> <span class="kc">false</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;syncFailed&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nt">&quot;accountName&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;contents&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;purgedAt&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="nt">&quot;warmupAt&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="mi">0</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;keyName&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;keyStatus&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;provider&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;isValid&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nt">&quot;failedAt&quot;</span><span class="p">:</span> <span class="mi">0</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;originPort&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;originalFQDN&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;providerName&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;resourceType&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;uniqIndex&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;createdBy&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;account&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;updatedBy&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;account&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;httpHeaders&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;content-type=application/json&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;cacheType&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;CDNZone&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;originProtocol&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;originType&quot;</span><span class="p">:</span> <span class="s2">&quot;ip&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;originAddresses&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;1.2.3.4&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;4.5.6.7&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;providerId&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;accountId&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;keyId&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>AssertionError, ServiceError, AuthenticationError, ClientError</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">getCDNs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sort</span><span class="o">=</span><span class="default_value">'createdAt'</span></em>, <em class="sig-param"><span class="n">order</span><span class="o">=</span><span class="default_value">'desc'</span></em>, <em class="sig-param"><span class="n">offset</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">limit</span><span class="o">=</span><span class="default_value">30</span></em>, <em class="sig-param"><span class="n">search</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Get all CDNs info</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sort</strong> (<em>str</em>) -- field to sort, default is createdAt</p></li>
+<li><p><strong>order</strong> (<em>str</em>) -- sorting order, default is desc</p></li>
+<li><p><strong>offset</strong> (<em>int</em>) -- The offset for returned data</p></li>
+<li><p><strong>limit</strong> (<em>int</em>) -- The number of data to present</p></li>
+<li><p><strong>search</strong> (<em>str</em>) -- return only search</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>return all information of CDNs</p>
+</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;limit&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;offset&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;order&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;search&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;sort&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s2">&quot;same data with getCDN&quot;</span><span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>AssertionError, ServiceError, AuthenticationError, ClientError</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">getCloudCDNs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">providerId</span></em>, <em class="sig-param"><span class="n">keyId</span></em>, <em class="sig-param"><span class="n">fqdn</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Get specific cdn info from cloud provider</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>providerId</strong> (<em>str</em>) -- The unique ID of cloud service provider</p></li>
+<li><p><strong>keyId</strong> (<em>str</em>) -- The unique ID of credential key</p></li>
+<li><p><strong>fqdn</strong> (<em>str</em>) -- The fqdn is used to associates with CDN</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dictionary contains all information of this CDN from cloud provider</p>
+</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;fqdn&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;CDNAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;cacheType&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;httpHeaders&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;authorization&quot;</span><span class="p">:</span> <span class="s2">&quot;ooxx-1234&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;fqdnStatus&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;caches&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;paths&quot;</span><span class="p">:</span> <span class="s2">&quot;images/*.jpg&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;ttl&quot;</span><span class="p">:</span> <span class="mi">86400</span><span class="p">,</span>
+                    <span class="nt">&quot;weight&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                    <span class="nt">&quot;isGlobal&quot;</span><span class="p">:</span> <span class="kc">false</span>
+                <span class="p">}</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;certificateId&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">0</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>AssertionError, ServiceError, AuthenticationError, ClientError</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">partialUpdateCDN</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">identifier</span></em>, <em class="sig-param"><span class="n">dataJson</span></em><span class="sig-paren">)</span></dt>
+<dd><p>partial update cdn</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>identifier</strong> (<em>str</em>) -- The identifier of CDN assets.</p></li>
+<li><p><strong>dataJson</strong> (<em>dict</em>) -- dictionary contains all information to update CDN</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">updateCDN</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">identifier</span></em>, <em class="sig-param"><span class="n">originType</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">originAddresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">originProtocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subdomainId</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">httpHeaders</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">projectIds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloudCertificateId</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cacheTime</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Update CDN with some fields</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>identifier</strong> (<em>str</em>) -- The identifier of CDN assets.</p></li>
+<li><p><strong>originType</strong> -- </p></li>
+<li><p><strong>originAddresses</strong> (<em>list</em>) -- </p></li>
+<li><p><strong>originProtocol</strong> (<em>str</em>) -- </p></li>
+<li><p><strong>enabled</strong> (<em>bool</em>) -- </p></li>
+<li><p><strong>description</strong> (<em>str</em>) -- </p></li>
+<li><p><strong>subdomainId</strong> (<em>str</em>) -- </p></li>
+<li><p><strong>httpHeaders</strong> (<em>list</em>) -- </p></li>
+<li><p><strong>projectIds</strong> (<em>list</em>) -- </p></li>
+<li><p><strong>cloudCertificateId</strong> (<em>string</em>) -- </p></li>
+<li><p><strong>cacheTime</strong> (<em>integer</em>) -- </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>return the specified CND’s information</p>
+</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s2">&quot;same data with getCDN&quot;</span><span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>AssertionError, ServiceError, AuthenticationError, ClientError</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">upsertCDNs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cacheType</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">CDNZone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">originProtocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">originType</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">originAddresses</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">providerId</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">accountId</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keyId</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fqdn</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">projectIds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloudCertificateId</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Upsert CDNs in bulks
+return origin cdn object if cdn exists, or create a new one</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cacheType</strong> (<em>str</em>) -- </p></li>
+<li><p><strong>CDNZone</strong> (<em>str</em>) -- </p></li>
+<li><p><strong>originProtocol</strong> (<em>str</em>) -- </p></li>
+<li><p><strong>originAddresses</strong> (<em>list</em>) -- </p></li>
+<li><p><strong>providerId</strong> (<em>ProviderId</em><em>(</em><em>official support</em><em>)</em>) -- </p></li>
+<li><p><strong>accountId</strong> (<em>str</em>) -- </p></li>
+<li><p><strong>keyId</strong> (<em>str</em>) -- </p></li>
+<li><p><strong>fqdn</strong> (<em>str</em>) -- </p></li>
+<li><p><strong>projectIds</strong> (<em>list</em>) -- </p></li>
+<li><p><strong>cloudCertificateId</strong> (<em>str</em>) -- </p></li>
+<li><p><strong>description</strong> (<em>str</em>) -- </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>return the created data</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>AssertionError, ServiceError, AuthenticationError, ClientError</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="certificate.html" class="btn btn-neutral float-right" title="CertificateManager" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../../../script/blcks/services.html" class="btn btn-neutral float-left" title="Services" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Pentium Network Technology Ltd. All rights reserved..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

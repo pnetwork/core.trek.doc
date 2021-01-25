@@ -1,0 +1,370 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>vsphere-clone-from-template-win &mdash; Pentium</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/main.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/table.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Marvin Development Guide
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">GETTING STARTED</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../start/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../start/index.html#system-requirements">System Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../start/index.html#installing-trek-cli">Installing Trek CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../start/quick_start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../start/project_folder.html">The Project Directory Structure</a></li>
+</ul>
+<p class="caption"><span class="caption-text">USER GUIDE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../config/index.html">Configuring the Trek CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../workflow/index.html">Developer Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../script/index.html">Developer Script</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/vscode/index.html">Working with VSCode Extension</a></li>
+</ul>
+<p class="caption"><span class="caption-text">REFERENCES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cli/commands.html">CLI Command Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension/vscode/commands.html">VSCode Extension Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Library List</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/">Samples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ABOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/cli/CHANGELOG.html">Trek CLI Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/extension/CHANGELOG.html">Trek VSCode Extension Changelog</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/issues/">Issues Report</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Marvin Development Guide</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>vsphere-clone-from-template-win</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="vsphere-clone-from-template-win">
+<h1>vsphere-clone-from-template-win<a class="headerlink" href="#vsphere-clone-from-template-win" title="Permalink to this headline">¶</a></h1>
+<div class="line-block">
+<div class="line">创建 vSphere 服务器 (微软作业系统)</div>
+<div class="line">透过 terraform 创建微软作业系统之 VMware 服务器。</div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">vsphere-clone-from-template-win</span>
+<span class="nt">schemaVersion</span><span class="p">:</span> <span class="s">&#39;0.2&#39;</span>
+<span class="nt">version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.6.0</span>
+<span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">创建 vSphere 服务器 (微软作业系统)</span>
+<span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">透过 terraform 创建微软作业系统之 VMware 服务器。</span>
+<span class="nt">namespace</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">network.pentium</span>
+<span class="nt">assets</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">SCRIPT</span>
+<span class="nt">inputs</span><span class="p">:</span>
+  <span class="nt">server</span><span class="p">:</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">vCenter Server 主机</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">vCenter Server 主机</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+    <span class="nt">examples</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">192.168.1.30</span>
+  <span class="nt">user</span><span class="p">:</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">用户</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">用户</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+    <span class="nt">examples</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">admin@domain.com</span>
+  <span class="nt">password</span><span class="p">:</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">密码</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">密码</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+  <span class="nt">allow_unverified_ssl</span><span class="p">:</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">允许未认证证书</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">当使用自签证书时，需要允许未认证证书</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">boolean</span>
+  <span class="nt">terraform_command</span><span class="p">:</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">terraform 执行指令</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">terraform 执行指令介面，目前支援 apply 和 destroy，apply 为建立或更新，destroy 可删除 tfstate</span>
+      <span class="l l-Scalar l-Scalar-Plain">所管理的 terraform 资料。</span>
+    <span class="nt">enum</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">apply</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">destroy</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+    <span class="nt">default</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">apply</span>
+  <span class="nt">tfstate</span><span class="p">:</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">terraform 执行结果</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">在本地端执行 terraform 成功后，会在执行目录下留存 terraform.tfstate，内容为该次执行完成后的资源描述。</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">object</span>
+  <span class="nt">datacenter</span><span class="p">:</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">资料中心</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">vSphere 资料中心名稱</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+  <span class="nt">datastore</span><span class="p">:</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">资料存放区</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">vSphere 资料存放区(datastore)</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+  <span class="nt">resource_pool</span><span class="p">:</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">资源集区</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">vSphere 资源集区(resource_pool)</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+  <span class="nt">network</span><span class="p">:</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">网路</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">vSphere 网路名称</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+  <span class="nt">template</span><span class="p">:</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">虚拟机器范本</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">虚拟机器范本</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+  <span class="nt">name</span><span class="p">:</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">服务器名称</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">服务器名称</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+  <span class="nt">num_cpus</span><span class="p">:</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">服务器 CPU 数量</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">服务器 CPU 数量</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">integer</span>
+  <span class="nt">memory</span><span class="p">:</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">服务器记忆体</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">服务器记忆体，单位 MB。</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">integer</span>
+  <span class="nt">disk_size</span><span class="p">:</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">硬盘容量</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">硬盘容量大小，不填则使用虚拟机器范本硬盘大小，单位 GB。</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">integer</span>
+  <span class="nt">wait_for_guest_net_timeout</span><span class="p">:</span>
+    <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">逾时设定值</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">逾时设定值，预设为 5 分钟。</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="nt">required</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">server</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">user</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">password</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">datacenter</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">datastore</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">resource_pool</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">network</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">template</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span>
+<span class="nt">outputs</span><span class="p">:</span>
+  <span class="nt">stdout</span><span class="p">:</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">脚本执行标准输出内容</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
+    <span class="nt">examples</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="s">&#39;---</span>
+
+      <span class="s">aws_instance.ins[0]:</span><span class="nv"> </span><span class="s">Creating...</span>
+
+      <span class="s">aws_instance.ins[0]:</span><span class="nv"> </span><span class="s">Still</span><span class="nv"> </span><span class="s">creating...</span><span class="nv"> </span><span class="s">[10s</span><span class="nv"> </span><span class="s">elapsed]</span>
+
+      <span class="s">aws_instance.ins[0]:</span><span class="nv"> </span><span class="s">Still</span><span class="nv"> </span><span class="s">creating...</span><span class="nv"> </span><span class="s">[20s</span><span class="nv"> </span><span class="s">elapsed]</span>
+
+      <span class="s">aws_instance.ins[0]:</span><span class="nv"> </span><span class="s">Creation</span><span class="nv"> </span><span class="s">complete</span><span class="nv"> </span><span class="s">after</span><span class="nv"> </span><span class="s">23s</span><span class="nv"> </span><span class="s">[id=i-0cdd466a32cbae878]</span>
+
+      <span class="s">Apply</span><span class="nv"> </span><span class="s">complete!</span><span class="nv"> </span><span class="s">Resources:</span><span class="nv"> </span><span class="s">1</span><span class="nv"> </span><span class="s">added,</span><span class="nv"> </span><span class="s">0</span><span class="nv"> </span><span class="s">changed,</span><span class="nv"> </span><span class="s">0</span><span class="nv"> </span><span class="s">destroyed.</span>
+
+      <span class="s">Outputs:</span>
+
+      <span class="s">instance_id</span><span class="nv"> </span><span class="s">=</span><span class="nv"> </span><span class="s">[</span>
+
+      <span class="s">...</span>
+
+      <span class="s">&#39;</span>
+  <span class="nt">tfstate</span><span class="p">:</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">terraform.tfstate 输出内容</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">object</span>
+    <span class="nt">examples</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="s">&quot;{\n</span><span class="nv">  </span><span class="s">\&quot;version\&quot;:</span><span class="nv"> </span><span class="s">4,\n</span><span class="nv">  </span><span class="s">\&quot;terraform_version\&quot;:</span><span class="nv"> </span><span class="s">\&quot;0.12.24\&quot;,\n</span><span class="nv">  </span><span class="s">\&quot;serial\&quot;:\</span>
+      <span class="s">\ 13,\n</span><span class="nv">  </span><span class="s">\&quot;lineage\&quot;:</span><span class="nv"> </span><span class="s">\&quot;a76b53d0-47fd-3492-05f7-e62d9db54697\&quot;,\n</span><span class="nv">  </span><span class="s">\&quot;outputs\&quot;\</span>
+      <span class="s">:</span><span class="nv"> </span><span class="s">{\n</span><span class="nv">    </span><span class="s">\&quot;instance_info\&quot;:</span><span class="nv"> </span><span class="s">{}\n</span><span class="nv">  </span><span class="s">},\n</span><span class="nv">  </span><span class="s">\&quot;resources\&quot;:</span><span class="nv"> </span><span class="s">[\n</span><span class="nv">    </span><span class="s">{\n</span><span class="nv">      </span><span class="s">\&quot;mode\&quot;\</span>
+      <span class="s">:</span><span class="nv"> </span><span class="s">\&quot;managed\&quot;,\n</span><span class="nv">      </span><span class="s">\&quot;type\&quot;:</span><span class="nv"> </span><span class="s">\&quot;alicloud_instance\&quot;,\n</span><span class="nv">      </span><span class="s">\&quot;name\&quot;:</span><span class="nv"> </span><span class="s">\&quot;ins\&quot;\</span>
+      <span class="s">,\n</span><span class="nv">      </span><span class="s">\&quot;provider\&quot;:</span><span class="nv"> </span><span class="s">\&quot;provider.alicloud\&quot;,\n</span><span class="nv">      </span><span class="s">\&quot;instances\&quot;:</span><span class="nv"> </span><span class="s">[\n</span><span class="nv">    </span><span class="s">\</span>
+      <span class="s">\ </span><span class="nv">   </span><span class="s">{\n</span><span class="nv">          </span><span class="s">\&quot;schema_version\&quot;:</span><span class="nv"> </span><span class="s">0,\n</span><span class="nv">          </span><span class="s">\&quot;attributes\&quot;:</span><span class="nv"> </span><span class="s">{\n</span><span class="nv">    </span><span class="s">\</span>
+      <span class="s">\ </span><span class="nv">       </span><span class="s">\&quot;host_name\&quot;:</span><span class="nv"> </span><span class="s">\&quot;iZj6ch1vukq7bn1fbo2s0gZ\&quot;,\n</span><span class="nv">            </span><span class="s">\&quot;id\&quot;:</span><span class="nv"> </span><span class="s">\&quot;\</span>
+      <span class="s">i-j6ch1vukq7bn1fbo2s0g\&quot;,\n</span><span class="nv">            </span><span class="s">\&quot;image_id\&quot;:</span><span class="nv"> </span><span class="s">\&quot;centos_6_09_64_20G_alibase_20180326.vhd\&quot;\</span>
+      <span class="s">,\n</span><span class="nv">            </span><span class="s">\&quot;instance_name\&quot;:</span><span class="nv"> </span><span class="s">\&quot;ECS-Instance\&quot;,\n</span><span class="nv">            </span><span class="s">\&quot;instance_type\&quot;\</span>
+      <span class="s">:</span><span class="nv"> </span><span class="s">\&quot;ecs.t5-lc2m1.nano\&quot;,\n</span><span class="nv">            </span><span class="s">\&quot;internet_charge_type\&quot;:</span><span class="nv"> </span><span class="s">\&quot;PayByTraffic\&quot;\</span>
+      <span class="s">,\n</span><span class="nv">            </span><span class="s">\&quot;private_ip\&quot;:</span><span class="nv"> </span><span class="s">\&quot;172.31.220.103\&quot;\n</span><span class="nv">          </span><span class="s">}\n</span><span class="nv">        </span><span class="s">]\n\</span>
+      <span class="s">\ </span><span class="nv">     </span><span class="s">}\n</span><span class="nv">    </span><span class="s">]\n</span><span class="nv">  </span><span class="s">}\n&quot;</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Pentium Network Technology Ltd. All rights reserved..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

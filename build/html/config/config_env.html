@@ -1,0 +1,362 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Environment Variables for Debugging &mdash; Pentium</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/main.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/table.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Developer Workflow" href="../workflow/index.html" />
+    <link rel="prev" title="Configuring the Trek CLI" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Marvin Development Guide
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">GETTING STARTED</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../start/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../start/index.html#system-requirements">System Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../start/index.html#installing-trek-cli">Installing Trek CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../start/quick_start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../start/project_folder.html">The Project Directory Structure</a></li>
+</ul>
+<p class="caption"><span class="caption-text">USER GUIDE</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Configuring the Trek CLI</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#marvin-url">marvin_url <span class="red">*</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#marvin-jwt">marvin_JWT <span class="red">*</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#router-port">router_port</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#action-timeout">action_timeout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#blcks-code-base">blcks_code_base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#ansible-code-base">ansible_code_base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#shell-script-base">shell_script_base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#script-repository">script_repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#input-data-path">input_data_path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#input-event-path">input_event_path</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#env">env</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Environment Variables for Debugging</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#flow-home">flow_home</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#local-inventory-file">local_inventory_file</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow/index.html">Developer Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../script/index.html">Developer Script</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extension/vscode/index.html">Working with VSCode Extension</a></li>
+</ul>
+<p class="caption"><span class="caption-text">REFERENCES</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cli/commands.html">CLI Command Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extension/vscode/commands.html">VSCode Extension Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../library/index.html">Library List</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/tree/gh-pages/example/">Samples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ABOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../reference/cli/CHANGELOG.html">Trek CLI Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/extension/CHANGELOG.html">Trek VSCode Extension Changelog</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/pnetwork/core.trek.doc/issues/">Issues Report</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Marvin Development Guide</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Configuring the Trek CLI</a> &raquo;</li>
+        
+      <li>Environment Variables for Debugging</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="environment-variables-for-debugging">
+<h1>Environment Variables for Debugging<a class="headerlink" href="#environment-variables-for-debugging" title="Permalink to this headline">¶</a></h1>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 10%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>環境變數</p></th>
+<th class="head"><p>設定值</p></th>
+<th class="head"><p>描述</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#blcks-debug-log-mode">BLCKS_DEBUG_LOG_MODE</a></p></td>
+<td><p>normal / table</p></td>
+<td><p>設定 log 印出來的樣式，有 normal, table 兩種</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#blcks-debug-log-table-width">BLCKS_DEBUG_LOG_TABLE_WIDTH</a></p></td>
+<td><p>數字，如：100</p></td>
+<td><p>設定 log 表格寬度</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#blcks-debug-log-fields">BLCKS_DEBUG_LOG_FIELDS</a></p></td>
+<td><p>data,taskId, ...</p></td>
+<td><p>設定要印的 log 欄位，以逗號分隔</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#blcks-debug-log-format">BLCKS_DEBUG_LOG_FORMAT</a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Coordinates:</span> <span class="pre">{latitude},</span> <span class="pre">{longitude}</span></code></p></td>
+<td><p>設定 normal 模式下要顯示的 log 樣式</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#show-debug-logs">SHOW_DEBUG_LOGS</a></p></td>
+<td><p>1 (有此變數就生效)</p></td>
+<td><p>印出一些 request 相關資訊</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="blcks-debug-log-mode">
+<h2>BLCKS_DEBUG_LOG_MODE<a class="headerlink" href="#blcks-debug-log-mode" title="Permalink to this headline">¶</a></h2>
+<p>有 normal / table 兩種可以設定，當沒設定時印出的 log 為 json format。</p>
+<img alt="../_images/env_log_none.png" src="../_images/env_log_none.png" />
+<ul class="simple">
+<li><p><cite>normal</cite> 為單行模式，可以透過 <cite>BLCKS_DEBUG_LOG_FORMAT</cite> 來設定樣式</p></li>
+</ul>
+<img alt="../_images/env_log_normal.png" src="../_images/env_log_normal.png" />
+<ul class="simple">
+<li><p><cite>table</cite> 為表格模式，將原本 json 格式依照欄位用表格印出，其中 message 欄位一定會印</p></li>
+</ul>
+<img alt="../_images/env_log_table.png" src="../_images/env_log_table.png" />
+</div>
+<div class="section" id="blcks-debug-log-table-width">
+<h2>BLCKS_DEBUG_LOG_TABLE_WIDTH<a class="headerlink" href="#blcks-debug-log-table-width" title="Permalink to this headline">¶</a></h2>
+<p><cite>BLCKS_DEBUG_LOG_MODE</cite> 為 table 時，可設定 log 表格寬度，預設為 100</p>
+</div>
+<div class="section" id="blcks-debug-log-fields">
+<h2>BLCKS_DEBUG_LOG_FIELDS<a class="headerlink" href="#blcks-debug-log-fields" title="Permalink to this headline">¶</a></h2>
+<p>設定要印的 log 欄位，以逗號分隔，設定範例：</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="c1">// ...</span>
+    <span class="s2">&quot;envs&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;BLCKS_DEBUG_LOG_FIELDS&quot;</span><span class="o">:</span> <span class="s2">&quot;data,taskId&quot;</span><span class="p">,</span>
+        <span class="c1">// ...</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>table 模式下影響的為顯示的 row</p></li>
+<li><p>normal 模式下影響的為 <cite>BLCKS_DEBUG_LOG_FORMAT</cite> 可使用的 key</p></li>
+</ul>
+</div>
+<div class="section" id="blcks-debug-log-format">
+<h2>BLCKS_DEBUG_LOG_FORMAT<a class="headerlink" href="#blcks-debug-log-format" title="Permalink to this headline">¶</a></h2>
+<p>設定 normal 模式下要顯示的 log 樣式，以 <code class="docutils literal notranslate"><span class="pre">Coordinates:</span> <span class="pre">{latitude},</span> <span class="pre">{longitude}</span></code> 這樣的形式設定</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="c1">// ...</span>
+    <span class="s2">&quot;envs&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;BLCKS_DEBUG_LOG_FORMAT&quot;</span><span class="o">:</span> <span class="s2">&quot;{message} =&gt; data: {data[inputParamsStr]}, taskId: {taskId}&quot;</span><span class="p">,</span>
+        <span class="c1">// ...</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// 輸出的 log 會為</span>
+<span class="c1">// bot_infos: [&#39;CH-bka2bbkpl&#39;], str_message: sero1: 4 =&gt; data: , taskId: trek-task-id</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="show-debug-logs">
+<h2>SHOW_DEBUG_LOGS<a class="headerlink" href="#show-debug-logs" title="Permalink to this headline">¶</a></h2>
+<p>有設定此變數則生效，一般會直接設為 <code class="docutils literal notranslate"><span class="pre">1</span></code></p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="c1">// ...</span>
+    <span class="s2">&quot;envs&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;SHOW_DEBUG_LOGS&quot;</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span>
+        <span class="c1">// ...</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>印出一些 request 相關資訊，目前包含的有：</p>
+<ul class="simple">
+<li><p>收到的 event 內容</p></li>
+<li><p>送出的 request 資訊</p></li>
+<li><p>收到的 response 資訊</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../workflow/index.html" class="btn btn-neutral float-right" title="Developer Workflow" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Configuring the Trek CLI" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Pentium Network Technology Ltd. All rights reserved..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
