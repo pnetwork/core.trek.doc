@@ -49,7 +49,8 @@ def service_threads_handler(
 ):
     with ThreadPoolExecutor(max_workers=workers) as executor:
         futures = executor.map(service_method, *args, timeout=timeouts)
-        return list(futures)
+        result = list(filter(None, list(futures)))
+        return result
 
 
 def extract_wf(download_url):
@@ -66,8 +67,11 @@ def extract_wf(download_url):
         wf_name = manifest.get("entry")
         break
 
-    wf = wf_zip.open(wf_name).read()
-    return yaml.safe_load(wf)
+    try:
+        wf = wf_zip.open(wf_name).read()
+        return yaml.safe_load(wf)
+    except Exception:
+        pass
 
 
 def get_wf_content(i):
@@ -84,6 +88,8 @@ def get_wf_content(i):
             download_url = i["href"]
             break
     wf = extract_wf(download_url)
+    if not wf:
+        return
 
     wf_name = wf.get("graph", {}).get("metadata", {}).get("title")
     wf_desc = wf.get("graph", {}).get("metadata", {}).get("description")
@@ -126,8 +132,11 @@ def extract_script(download_url):
         script_name = name
         break
 
-    script = script_zip.open(script_name).read()
-    return yaml.safe_load(script)
+    try:
+        script = script_zip.open(script_name).read()
+        return yaml.safe_load(script)
+    except Exception:
+        pass
 
 
 def get_script_content(i):
@@ -144,8 +153,10 @@ def get_script_content(i):
             download_url = i["href"]
             break
     script = extract_script(download_url)
+    if not script:
+        return
 
-    script_name = script.get("name")
+    script_name = script.get("title")
     script_desc = script.get("description")
     if "\n" in script_desc:
         script_desc = "| " + script_desc.replace("\n", "\n       | ")
